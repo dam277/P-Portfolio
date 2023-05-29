@@ -11,7 +11,7 @@
     <img height="50" src="https://github.com/dam277/dam277/raw/master/src/images/Javascript.png" />
                                                                                      <br />
     <h3> Databases </h3>
-    <img height="50" src="https://github.com/dam277/dam277/raw/master/src/images/Sql.png" />
+    -
                                                                                      <br />
     <h3> Libraries </h3>
     <img height="50" src="https://github.com/dam277/dam277/raw/master/src/images/React.png" />
