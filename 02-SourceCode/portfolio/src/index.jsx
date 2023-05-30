@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter as Router, Routes, Route } from'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './pages/includes/Header';
 import Footer from './pages/includes/Footer';
@@ -8,6 +8,7 @@ import Nav from './pages/includes/Nav';
 import Lang from './pages/includes/Lang';
 
 import Home from './pages/views/home';
+import Competences from './pages/views/about/Competences';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
             <Lang />
             <Routes>
                 <Route path='/' element={<Home />}/>
+                <Route path='/competences' element={<Competences />}/>
             </Routes>
             <Footer />
         </Router>
