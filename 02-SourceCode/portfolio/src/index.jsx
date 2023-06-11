@@ -4,22 +4,31 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './pages/includes/Header';
 import Footer from './pages/includes/Footer';
-import Nav from './pages/includes/Nav';
-import Lang from './pages/includes/Lang';
 
+// Import views
 import Home from './pages/views/home';
-import Competences from './pages/views/about/Competences';
+import About from './pages/views/home/about';
+import Works from './pages/views/works';
+import Details from './pages/views/works/details';
+import E404 from './pages/views/errors/404';
+
+// Import components
+import Competences from './pages/components/about/competences';
+import StudyPath from './pages/components/about/studyPath';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Router>
             <Header />
-            <Nav />
-            <Lang />
             <Routes>
                 <Route path='/' element={<Home />}/>
-                <Route path='/competences' element={<Competences />}/>
+                <Route path='/about' element={<About />}>
+                    <Route path='studyPath' element={<StudyPath />} />
+                    <Route path='competences' element={<Competences />} />
+                </Route>
+                <Route path='/works' element={<Works />}/>
+                <Route path='*' element={<E404 />}/>
             </Routes>
             <Footer />
         </Router>
