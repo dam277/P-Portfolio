@@ -27,7 +27,10 @@ root.render(
                     <Route path='studyPath' element={<StudyPath />} />
                     <Route path='competences' element={<Competences />} />
                 </Route>
-                <Route path='/works' element={<Works />}/>
+                <Route path='/works'>
+                    <Route index element={<Works />} />
+                    <Route path=':id' element={< Details />} />
+                </Route>
                 <Route path='*' element={<E404 />}/>
             </Routes>
             <Footer />
