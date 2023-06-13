@@ -1,7 +1,12 @@
+// Import libraries
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
+// Import css
+import './resources/css/globalStyle.css';
+
+// Import includes
 import Header from './pages/includes/Header';
 import Footer from './pages/includes/Footer';
 

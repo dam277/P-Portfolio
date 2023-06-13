@@ -5,7 +5,7 @@ function Header()
 {
     return(
         <header>
-            header
+            <h1></h1>
             <Nav />
             <Lang />
         </header>

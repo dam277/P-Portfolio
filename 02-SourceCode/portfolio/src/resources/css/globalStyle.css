@@ -1,0 +1,25 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 1000px;
+}
+
+header 
+{
+    background-color: #000022;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+main
+{
+    margin-top: 150px;
+}
+
+footer
+{
+    
+}
