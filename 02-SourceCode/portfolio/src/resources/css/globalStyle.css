@@ -5,13 +5,72 @@ body
     height: 1000px;
 }
 
-header 
+/*================================= NAV =================================*/
+nav
+{
+    flex: 7;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+header
 {
     background-color: #000022;
     color: white;
     position: fixed;
     top: 0;
     width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+/*Navlinks*/
+.navlink
+{
+    flex: 1;
+    text-align: center;
+    margin: 100px;
+    max-width: 150px;
+    color: #b9b9b9;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.navlink:hover
+{
+    color: white;
+}
+.underline-animation 
+{
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: rgb(62, 62, 73);
+    transition: width 0.5s ease;
+}
+.navlink:hover .underline-animation
+{
+    width: 100%;
+}
+.active-navlink-decoration
+{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(62, 62, 73);
+}
+.active-navlink
+{
+    color: white;
+}
+    
+/*Lang div*/
+.lang
+{
+    flex: 1; 
 }
 
 main

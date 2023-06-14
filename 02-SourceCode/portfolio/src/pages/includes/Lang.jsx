@@ -1,7 +1,7 @@
 function Lang()
 {
     return(
-        <div>
+        <div className="lang">
             lang
         </div>
     )

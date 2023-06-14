@@ -5,10 +5,10 @@ function About()
     return(
         <main>
             About
-            <nav>
+            <div>
                 <Link to="studyPath">Mon parcours</Link>
                 <Link to="competences">Mes compétences</Link>
-            </nav>
+            </div>
             <Outlet />
         </main>
     )
