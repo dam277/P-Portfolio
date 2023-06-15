@@ -7,7 +7,14 @@ import { responsive } from './styles'
 export const Title = style.h3
 `
     flex: 2;
-    margin-left: 50px;
+    margin-left: 20px;
+    font-size: 12px;
+
+    @media (min-width: ${responsive.laptop}) 
+    {
+        font-size: 20px;
+        margin-left: 50px;
+    }
 `
 
 /**
@@ -16,8 +23,14 @@ export const Title = style.h3
 export const Logo = style.img
 `
     position: relative;
-    height: 70px;
-    left: 20px;
+    height: 50px;
+    left: 10px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        height: 70px;
+        left: 20px;
+    }
 `
 
 /**
@@ -29,17 +42,18 @@ export const TitleContainer = style.div
     align-items: center;
     color: white;
     text-decoration: none;
+    
 `
 
 export const MenuButton = style.button
 `
-    width: 90%;
-    padding: 10px 20px;
+    width: 80%;
+    height: 20px;
     background-color: hsl(240, 100%, 4%);
     border: 1px solid white;
     border-radius: 4px;
     color: white;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -52,7 +66,7 @@ export const MenuButton = style.button
         box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
     }
 
-    @media (min-width: ${responsive.laptop}) 
+    @media (min-width: ${responsive.mobile}) 
     {
         display: none;
     }
@@ -74,13 +88,19 @@ export const LanguageContainer = style.div
 export const LanguageSelector = style.select
 `
     width: 80%;
-    min-width:100px;
+    min-width:50px;
     max-width:200px;
-    height: 40%;
+    height: 20px;
     background-color: hsl(240, 100%, 4%);
     color: white;
     text-align: center;
     margin-right: 10px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        min-width: 100px;
+        height: 40%;
+    }
 `
 
 /**

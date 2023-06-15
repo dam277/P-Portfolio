@@ -75,6 +75,22 @@ footer
 }
 
 /*================================= RESPONSIVE =================================*/
+@media (min-width: 650px) 
+{
+    .navlink
+    {
+        display: block;
+        flex: 1;
+        text-align: center;
+        margin: 7%;
+        max-width: 150px;
+        color: #b9b9b9;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
 @media (min-width: 1024px) 
 {
     .navlink
