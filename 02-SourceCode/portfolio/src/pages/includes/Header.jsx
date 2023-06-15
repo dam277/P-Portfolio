@@ -34,7 +34,6 @@ function Header()
                     <Logo src={logo} />
                 </Link>
                 <Title>Portfolio - Damien Loup</Title>  
-                
             </TitleContainer>
             <Nav translations={translations}/>
             <Lang translations={translations} language={language} setLanguage={setLanguage}/>

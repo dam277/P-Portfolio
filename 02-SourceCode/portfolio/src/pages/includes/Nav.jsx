@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
+import { MenuButton } from "../../resources/css/headerStyle";
 
 function Nav({ translations })
 {
     return(
         <nav>
+            <MenuButton>Menu</MenuButton>
             <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink"} to="/">
             {({ isActive }) => (
                 <>
