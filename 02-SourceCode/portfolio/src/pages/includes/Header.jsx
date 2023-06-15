@@ -16,6 +16,8 @@ import en from "../../resources/langs/en/includes.json"
 // Import globals
 import getTranslations from "../../utils/globals/getTranslations";
 
+import { Link } from "react-router-dom";
+
 // Import the styles
 import { Title, Logo, TitleContainer } from '../../resources/css/headerStyle';
 
@@ -27,9 +29,12 @@ function Header()
 
     return(
         <header>
-            <TitleContainer href='/'>
+            <TitleContainer>
+                <Link to="/">
+                    <Logo src={logo} />
+                </Link>
                 <Title>Portfolio - Damien Loup</Title>  
-                <Logo src={logo} />
+                
             </TitleContainer>
             <Nav translations={translations}/>
             <Lang translations={translations} language={language} setLanguage={setLanguage}/>

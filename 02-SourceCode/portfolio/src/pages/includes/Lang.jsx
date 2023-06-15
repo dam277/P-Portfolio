@@ -8,7 +8,7 @@ function Lang({language, setLanguage, translations})
 {
     return(
         <LanguageContainer>
-            <LanguageSelector onChange={(e) => setLanguage(e.target.value)}>
+            <LanguageSelector value={language} onChange={(e) => setLanguage(e.target.value)}>
                 {languages.map((actualLanguage, index) => (
                     <LanguageOption key={actualLanguage-index} value={actualLanguage}>
                         {translations.header[actualLanguage.toLowerCase()]}

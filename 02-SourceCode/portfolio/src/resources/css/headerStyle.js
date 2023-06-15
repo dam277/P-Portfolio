@@ -14,15 +14,15 @@ export const Title = style.h3
  */
 export const Logo = style.img
 `
-    position: absolute;
-    height: 70%;
-    left: 15px;
+    position: relative;
+    height: 70px;
+    left: 20px;
 `
 
 /**
  * Container for the title and logo to redirect to the homepage
  */
-export const TitleContainer = style.a
+export const TitleContainer = style.div
 `
     display: flex;
     align-items: center;
