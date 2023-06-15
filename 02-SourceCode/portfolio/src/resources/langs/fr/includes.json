@@ -4,7 +4,9 @@
         "home" : "Accueil",
         "about" : "A propos",
         "works" : "Travaux",
-        "language" : "Langage"
+        "language" : "Langage",
+        "en" : "Anglais",
+        "fr" : "Français"
     },
     "footer" : 
     {

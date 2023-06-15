@@ -1,8 +1,17 @@
-import { useState } from "react"
+import { func } from "prop-types";
+import { useState, createContext } from "react"
 
-export const LangProvider = ({ children }) => 
+export const LangContext = createContext()
+
+const LangProvider = ({ children }) => 
 {
-    const [language, setLanguage] = useState("en")
+    const [language, setLanguage] = useState("EN");
 
-    return
+    return (
+        <LangContext.Provider value={{ language, setLanguage }}>
+            {children}
+        </LangContext.Provider>
+    )
 }
+
+export default LangProvider;

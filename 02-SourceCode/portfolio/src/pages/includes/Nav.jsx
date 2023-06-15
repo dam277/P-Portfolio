@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 
-function Nav()
+function Nav({ translations })
 {
     return(
         <nav>
             <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink"} to="/">
             {({ isActive }) => (
                 <>
-                    <span>Accueil</span>
+                    <span>{translations.header.home}</span>
                     <div className={isActive ? "active-navlink-decoration" : "underline-animation"} />
                 </>
             )}
@@ -15,7 +15,7 @@ function Nav()
             <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink"} to="/about">
             {({ isActive }) => (
                 <>
-                    <span>A propos</span>
+                    <span>{translations.header.about}</span>
                     <div className={isActive ? "active-navlink-decoration" : "underline-animation"} />
                 </>
             )}
@@ -23,7 +23,7 @@ function Nav()
             <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink"} to="/works">
             {({ isActive }) => (
                 <>
-                    <span>Travaux</span>
+                    <span>{translations.header.works}</span>
                     <div className={isActive ? "active-navlink-decoration" : "underline-animation"} />
                 </>
             )}

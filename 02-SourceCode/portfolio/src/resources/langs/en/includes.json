@@ -1,0 +1,15 @@
+{
+    "header" : 
+    {
+        "home" : "Home",
+        "about" : "About",
+        "works" : "Works",
+        "language" : "Language",
+        "en" : "English",
+        "fr" : "French"
+    },
+    "footer" : 
+    {
+        "copyright" : "Copyright © 2023 - Damien Loup - All rights reserved"
+    }
+}
