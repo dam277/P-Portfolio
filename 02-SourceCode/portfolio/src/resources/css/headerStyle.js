@@ -1,6 +1,20 @@
 import style from 'styled-components'
 import { responsive } from './styles'
 
+/** Title ================================================================================================*/
+
+/**
+ * Container for the title and logo to redirect to the homepage
+ */
+export const TitleContainer = style.div
+`
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    
+`
+
 /**
  * Title of the page
  */
@@ -33,44 +47,7 @@ export const Logo = style.img
     }
 `
 
-/**
- * Container for the title and logo to redirect to the homepage
- */
-export const TitleContainer = style.div
-`
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    
-`
-
-export const MenuButton = style.button
-`
-    width: 80%;
-    height: 20px;
-    background-color: hsl(240, 100%, 4%);
-    border: 1px solid white;
-    border-radius: 4px;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    &:hover {
-        background-color: #ddd;
-    }
-    $:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
-    }
-
-    @media (min-width: ${responsive.mobile}) 
-    {
-        display: none;
-    }
-`
+/** LANGUAGES ================================================================================================*/
 
 /**
  * Container for the language part
@@ -108,4 +85,40 @@ export const LanguageSelector = style.select
  */
 export const LanguageOption = style.option
 `
+`
+
+/** MENU ================================================================================================*/
+export const MenuButton = style.button
+`
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 20px;
+    background-color: hsl(240, 100%, 4%);
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: hsl(240, 100%, 18%);
+    }
+    $:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+    }
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        display: none;
+    }
+`
+
+export const MenuButtonImage = style.img
+`
+    margin-right: 5px;
+    height: 55%;
 `

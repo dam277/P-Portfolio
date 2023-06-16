@@ -1,4 +1,3 @@
-import { func } from "prop-types";
 import { useState, createContext } from "react"
 
 export const LangContext = createContext()
