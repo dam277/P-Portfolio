@@ -1,6 +1,8 @@
 // Import rooting elements
 import { NavLink } from "react-router-dom";
 
+import { NavLinkText } from "../../resources/css/headerStyle";
+
 /**
  * Nav component for the header navigation menu
  * @param {Array} translations array of translations 
@@ -14,23 +16,29 @@ function Nav({ isMenuOpen, translations, isBig })
         <nav className={isMenuOpen && !isBig ? "nav-opened" : "" }>
             {isMenuOpen && !isBig ? 
             (
-                <>
-                    <NavLink className="navlink" to="/">
-                    {({ isActive }) => (
-                        <span>{translations.header.home}</span>
-                    )}
-                    </NavLink>
-                    <NavLink to="/about">
-                    {({ isActive }) => (
-                        <span>{translations.header.about}</span>
-                    )}
-                    </NavLink>
-                    <NavLink to="/works">
-                    {({ isActive }) => (
-                        <span>{translations.header.works}</span>
-                    )}
-                    </NavLink>
-                </>
+                <ul>
+                    <li>
+                        <NavLink className={({ isActive }) => isActive ? "active-navlink  navlink" : "navlink navlink-move"} to="/">
+                        {({ isActive }) => (
+                            <span>{isActive && "> "}{translations.header.home}</span>
+                        )}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={({ isActive }) => isActive ? "active-navlink  navlink" : "navlink navlink-move"} to="/about">
+                        {({ isActive }) => (
+                            <span>{isActive && "> "}{translations.header.about}</span>
+                        )}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={({ isActive }) => isActive ? "active-navlink  navlink" : "navlink navlink-move"} to="/works">
+                        {({ isActive }) => (
+                            <span>{isActive && "> "}{translations.header.works}</span>
+                        )}
+                        </NavLink>
+                    </li>
+                </ul>
             ) 
             : 
             (

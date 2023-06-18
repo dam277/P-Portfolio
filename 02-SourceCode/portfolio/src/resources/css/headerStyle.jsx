@@ -10,7 +10,7 @@ export const TitleContainer = style.div
 `
     display: flex;
     align-items: center;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     
 `
@@ -23,6 +23,12 @@ export const Title = style.h3
     flex: 2;
     margin-left: 20px;
     font-size: 12px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        font-size: 15px;
+        margin-left: 30px;
+    }
 
     @media (min-width: ${responsive.laptop}) 
     {
@@ -54,9 +60,6 @@ export const Logo = style.img
  */
 export const LanguageContainer = style.div
 `
-    flex: 1; 
-    display: flex;
-    align-items: center;
 `
 
 /**
@@ -64,19 +67,28 @@ export const LanguageContainer = style.div
  */
 export const LanguageSelector = style.select
 `
-    width: 80%;
-    min-width:50px;
-    max-width:200px;
+    width:50px;
     height: 20px;
-    background-color: hsl(240, 100%, 4%);
-    color: white;
+    background-color: #000014;
+    color: #ffffff;
     text-align: center;
     margin-right: 10px;
+    font-size: 12px;
+    flex: 1;
 
     @media (min-width: ${responsive.mobile}) 
     {
         min-width: 100px;
-        height: 40%;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    
+    @media (min-width: ${responsive.laptop}) 
+    {
+        min-width: 100px;
+        height: 40px;
+        font-size: 15px;
     }
 `
 
@@ -90,25 +102,25 @@ export const LanguageOption = style.option
 /** MENU ================================================================================================*/
 export const MenuButton = style.button
 `
-    flex: 1;
+    flex: 5;
     margin-left: 10px;
     margin-right: 10px;
     height: 20px;
     background-color: hsl(240, 100%, 4%);
     border: 1px solid white;
     border-radius: 4px;
-    color: white;
+    color: #ffffff;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.3s ease;
     &:hover {
-        background-color: hsl(240, 100%, 18%);
+        background-color: #00005c;
     }
     $:focus {
         outline: none;
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+        box-shadow: 0 0 0 3px #007bff4c;
     }
 
     @media (min-width: ${responsive.mobile}) 
@@ -117,8 +129,15 @@ export const MenuButton = style.button
     }
 `
 
+/**
+ * Image for the menu button
+ */
 export const MenuButtonImage = style.img
 `
-    margin-right: 5px;
     height: 55%;
+
+    @media (min-width: ${responsive.mobile_small}) 
+    {
+        margin-right: 5px;
+    }
 `

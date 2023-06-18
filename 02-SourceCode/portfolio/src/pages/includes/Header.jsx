@@ -30,12 +30,20 @@ function Header()
     const { language, setLanguage } = useContext(LangContext);
     const translations = getTranslations(language, fr, en);
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);        // State to check if the menu is opened
 
     // Check if the website is bigger than a certain media px to change the styles
-    const checkIsBig = () => window.matchMedia(`(min-width: ${responsive.mobile})`).matches;
-    const [isBig, setIsBig] = useState(checkIsBig());
-    window.addEventListener("resize", () => setIsBig(checkIsBig()));
+    const checkSize = (size) => window.matchMedia(`(min-width: ${size})`).matches;
+    const [isBig, setIsBig] = useState(checkSize(responsive.mobile));               // State to check if the site of the page is big
+    const [isSmall, setIsSmall] = useState(checkSize(responsive.mobile_small));     // State to check if the site of the page is small
+    
+    // Add event handlers when resizing the page
+    window.addEventListener("resize", () => 
+    {
+        // Set the states of the styles when the page is resized
+        setIsBig(checkSize(responsive.mobile));
+        setIsSmall(checkSize(responsive.mobile_small));
+    });
 
     return(
         <header>
@@ -47,7 +55,7 @@ function Header()
             </TitleContainer>
             <MenuButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <MenuButtonImage src={menuBar} />
-                Menu
+                {isSmall ? "Menu" : ""}
             </MenuButton>
             <Nav isMenuOpen={isMenuOpen} translations={translations} isBig={isBig}/>
             <Lang translations={translations} language={language} setLanguage={setLanguage} isBig={isBig}/>
