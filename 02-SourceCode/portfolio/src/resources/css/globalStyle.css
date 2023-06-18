@@ -3,7 +3,6 @@ body
 {
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 /*================================= HEADER =================================*/
@@ -14,7 +13,6 @@ header
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px;
     display: flex;
     align-items: center;
 }
@@ -32,10 +30,11 @@ nav
 /*Navlinks*/
 .navlink
 {
+    display: block;
+    padding: 20px;
     color: #b9b9b9;
     text-transform: uppercase;
     text-decoration: none;
-    width: 100% ;
 }
 .navlink:hover
 {
@@ -61,7 +60,6 @@ nav
 
 .nav-opened > ul > li
 {
-    padding: 20px;
     border-bottom: 1px solid white;
     background-color: #000022;
 }
@@ -127,6 +125,7 @@ footer
 {
     .navlink
     {
+        padding: 0;
         margin-top: 5px;
         display: block;
         margin-left: 8%;

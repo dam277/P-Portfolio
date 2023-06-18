@@ -18,21 +18,21 @@ function Nav({ isMenuOpen, translations, isBig })
             (
                 <ul>
                     <li>
-                        <NavLink className={({ isActive }) => isActive ? "active-navlink  navlink" : "navlink navlink-move"} to="/">
+                        <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink navlink-move"} to="/">
                         {({ isActive }) => (
                             <span>{isActive && "> "}{translations.header.home}</span>
                         )}
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className={({ isActive }) => isActive ? "active-navlink  navlink" : "navlink navlink-move"} to="/about">
+                        <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink navlink-move"} to="/about">
                         {({ isActive }) => (
                             <span>{isActive && "> "}{translations.header.about}</span>
                         )}
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className={({ isActive }) => isActive ? "active-navlink  navlink" : "navlink navlink-move"} to="/works">
+                        <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink navlink-move"} to="/works">
                         {({ isActive }) => (
                             <span>{isActive && "> "}{translations.header.works}</span>
                         )}
