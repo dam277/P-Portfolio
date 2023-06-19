@@ -1,6 +1,6 @@
 // Impot hooks
 import { useContext, useState } from "react";
-import { LangContext } from "../../utils/contexts/LangContext";// Import styles
+import { LangContext } from "../../utils/contexts/LangContext";
 
 // Import includes
 import Nav from './Nav'

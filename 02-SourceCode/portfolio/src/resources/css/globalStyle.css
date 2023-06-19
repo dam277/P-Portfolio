@@ -115,12 +115,14 @@ main
 /*================================= FOOTER =================================*/
 footer
 {
-    bottom: 0;
-    width: 100%;
-    background-color: red;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background-color: #000022;
+    align-items: center;
 }
 
-/*================================= RESPONSIVE =================================*/
+/*================================= RESPONSIVE DESIGN =================================*/
 @media (min-width: 650px) 
 {
     .navlink
@@ -128,8 +130,8 @@ footer
         padding: 0;
         margin-top: 5px;
         display: block;
-        margin-left: 8%;
-        margin-right: 8%;
+        margin-left: 5%;
+        margin-right: 15%;
         font-size: 12px;
         text-align: center;
     }
@@ -143,7 +145,7 @@ footer
         display: flex;
         flex: 10;
         align-items: center;
-        left: 10px;        
+        margin-left: 7%;       
     }
 
 }
@@ -153,9 +155,14 @@ footer
     .navlink
     {
         display: block;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 5%;
+        margin-right: 20%;
         font-size: 20px;
+    }
+
+    nav
+    {
+        margin-left: 10%;  
     }
 }
 

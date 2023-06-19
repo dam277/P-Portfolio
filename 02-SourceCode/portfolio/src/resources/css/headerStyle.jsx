@@ -1,4 +1,4 @@
-import style from 'styled-components'
+import { styled } from 'styled-components'
 import { responsive } from './styles'
 
 /** Title ================================================================================================*/
@@ -6,8 +6,7 @@ import { responsive } from './styles'
 /**
  * Container for the title and logo to redirect to the homepage
  */
-export const TitleContainer = style.div
-`
+export const TitleContainer = styled.div`
     display: flex;
     align-items: center;
     color: #ffffff;
@@ -18,8 +17,7 @@ export const TitleContainer = style.div
 /**
  * Title of the page
  */
-export const Title = style.h3
-`
+export const Title = styled.h1`
     flex: 2;
     margin-left: 20px;
     font-size: 12px;
@@ -40,8 +38,7 @@ export const Title = style.h3
 /**
  * Logo of the site
  */
-export const Logo = style.img
-`
+export const Logo = styled.img`
     position: relative;
     height: 50px;
     left: 10px;
@@ -58,15 +55,14 @@ export const Logo = style.img
 /**
  * Container for the language part
  */
-export const LanguageContainer = style.div
-`
+export const LanguageContainer = styled.div`
+    flex: 1;
 `
 
 /**
  * Selector for the language part
  */
-export const LanguageSelector = style.select
-`
+export const LanguageSelector = styled.select`
     width:50px;
     height: 20px;
     background-color: #000014;
@@ -75,6 +71,8 @@ export const LanguageSelector = style.select
     margin-right: 10px;
     font-size: 12px;
     flex: 1;
+
+    cursor: pointer;
 
     @media (min-width: ${responsive.mobile}) 
     {
@@ -95,13 +93,11 @@ export const LanguageSelector = style.select
 /**
  * Option of the language part
  */
-export const LanguageOption = style.option
-`
+export const LanguageOption = styled.option`
 `
 
 /** MENU ================================================================================================*/
-export const MenuButton = style.button
-`
+export const MenuButton = styled.button`
     flex: 5;
     margin-left: 10px;
     margin-right: 10px;
@@ -116,11 +112,7 @@ export const MenuButton = style.button
     cursor: pointer;
     transition: background-color 0.3s ease;
     &:hover {
-        background-color: #00005c;
-    }
-    $:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px #007bff4c;
+        background-color: #007bff4c;
     }
 
     @media (min-width: ${responsive.mobile}) 
@@ -132,8 +124,7 @@ export const MenuButton = style.button
 /**
  * Image for the menu button
  */
-export const MenuButtonImage = style.img
-`
+export const MenuButtonImage = styled.img`
     height: 55%;
 
     @media (min-width: ${responsive.mobile_small}) 

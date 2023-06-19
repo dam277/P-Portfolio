@@ -10,6 +10,8 @@
     },
     "footer" : 
     {
-        "copyright" : "Copyright © 2023 - Damien Loup - Tous droits résérvés"
+        "copyright" : "Copyright © 2023 - Damien Loup - Tous droits résérvés",
+        "creator" : "Créateur",
+        "profileImageAlt" : "Image de profile github"
     }
 }
