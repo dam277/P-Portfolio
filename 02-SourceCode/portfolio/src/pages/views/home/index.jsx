@@ -2,7 +2,10 @@ function Home()
 {
     return(
         <main>
-            Home
+            <p>
+            Homeadadadadadadadadadadadadadadad
+            </p>
+            
         </main>
     )
 }

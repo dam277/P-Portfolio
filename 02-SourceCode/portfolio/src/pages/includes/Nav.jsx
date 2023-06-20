@@ -1,7 +1,8 @@
 // Import rooting elements
 import { NavLink } from "react-router-dom";
 
-import { NavLinkText } from "../../resources/css/headerStyle";
+/** Import styles */
+import { NavContainer, SmallUl, SmallLi } from "../../resources/css/headerStyle";
 
 /**
  * Nav component for the header navigation menu
@@ -9,36 +10,34 @@ import { NavLinkText } from "../../resources/css/headerStyle";
  * @returns {HTMLElement} html elements containing the navigation menu
  */
 function Nav({ isMenuOpen, translations, isBig })
-{   
-    console.log(isMenuOpen);
-
+{
     return(
-        <nav className={isMenuOpen && !isBig ? "nav-opened" : "" }>
+        <NavContainer isOpen={isMenuOpen && !isBig}>
             {isMenuOpen && !isBig ? 
             (
-                <ul>
-                    <li>
+                <SmallUl>
+                    <SmallLi>
                         <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink navlink-move"} to="/">
                         {({ isActive }) => (
                             <span>{isActive && "> "}{translations.header.home}</span>
                         )}
                         </NavLink>
-                    </li>
-                    <li>
+                    </SmallLi>
+                    <SmallLi>
                         <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink navlink-move"} to="/about">
                         {({ isActive }) => (
                             <span>{isActive && "> "}{translations.header.about}</span>
                         )}
                         </NavLink>
-                    </li>
-                    <li>
+                    </SmallLi>
+                    <SmallLi>
                         <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink navlink-move"} to="/works">
                         {({ isActive }) => (
                             <span>{isActive && "> "}{translations.header.works}</span>
                         )}
                         </NavLink>
-                    </li>
-                </ul>
+                    </SmallLi>
+                </SmallUl>
             ) 
             : 
             (
@@ -69,7 +68,7 @@ function Nav({ isMenuOpen, translations, isBig })
                     </NavLink>
                 </>
             )}
-        </nav>
+        </NavContainer>
     )
 }
 

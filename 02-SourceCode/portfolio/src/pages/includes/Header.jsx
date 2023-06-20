@@ -21,7 +21,7 @@ import getTranslations from "../../utils/globals/getTranslations";
 import { Link } from "react-router-dom";
 
 // Import the styles
-import { Title, Logo, TitleContainer, MenuButton, MenuButtonImage } from '../../resources/css/headerStyle';
+import { HeaderContainer, Title, Logo, TitleContainer, MenuButton, MenuButtonImage } from '../../resources/css/headerStyle';
 import { responsive } from "../../resources/css/styles";
 
 function Header()
@@ -46,7 +46,7 @@ function Header()
     });
 
     return(
-        <header>
+        <HeaderContainer>
             <TitleContainer>
                 <Link to="/">
                     <Logo src={logo} />
@@ -59,7 +59,7 @@ function Header()
             </MenuButton>
             <Nav isMenuOpen={isMenuOpen} translations={translations} isBig={isBig}/>
             <Lang translations={translations} language={language} setLanguage={setLanguage} isBig={isBig}/>
-        </header>
+        </HeaderContainer>
     )
 }
 

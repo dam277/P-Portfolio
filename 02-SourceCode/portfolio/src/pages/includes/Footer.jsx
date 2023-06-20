@@ -1,5 +1,5 @@
 // Import styles
-import { AboutProject, Copyright, Table, Td, A, Hr, FooterArticle, FooterSection} from "../../resources/css/footerStyle";
+import { FooterContainer, AboutProject, Copyright, Table, Td, A, Hr, FooterArticle, FooterSection, ImgProfile, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4, } from "../../resources/css/footerStyle";
 
 // Import hooks
 import { useContext } from "react";
@@ -11,7 +11,8 @@ import { LangContext } from "../../utils/contexts/LangContext";
 import getTranslations from "../../utils/globals/getTranslations";
 
 // Import datas
-import { Creator } from "../../resources/datas/creator";
+import { Creator } from "../../resources/datas/footer/creator";
+import { Languages, Libraries } from "../../resources/datas/footer/programs";
 
 // Import translations
 import fr from "../../resources/langs/fr/includes.json"
@@ -23,9 +24,9 @@ function Footer()
     const translations = getTranslations(language, fr, en);
 
     return(
-        <footer>
+        <FooterContainer>
             <FooterArticle>
-                <FooterSection>
+                <FooterSection flex={1}>
                     <Table>
                         <tr>
                             <th>{translations.footer.creator}</th>
@@ -37,7 +38,7 @@ function Footer()
                         </tr>
                         <tr>
                             <Td>
-                                <img src={Creator.profileImage} alt={translations.footer.profileImageAlt} />
+                                <ImgProfile src={Creator.profileImage} alt={translations.footer.profileImageAlt} />
                             </Td>
                         </tr>
                         <tr>
@@ -47,17 +48,37 @@ function Footer()
                         </tr>
                     </Table>
                 </FooterSection>
-                <FooterSection>
+                <Hr doNotDisplay={true}/>
+                <FooterSection flex={5}>
                     <AboutProject>
-
+                        <H2>{translations.footer.aboutTitle}</H2>
+                        {translations.footer.projectDescription.map((line, index) => 
+                        (
+                            <p key={index}>{line}</p>
+                        ))}
+                        <H3>{translations.footer.programsTitle}</H3>
+                        <ProgramsContainer>
+                            <ProgramTypeContainer>
+                                <H4>{translations.footer.languages}</H4>
+                                {Languages.map((language, index) => 
+                                (
+                                    <ImgProgram key={`${language}-${index}`} src={language} />
+                                ))}
+                            </ProgramTypeContainer>
+                            <ProgramTypeContainer>
+                                <H4>{translations.footer.libraries}</H4>
+                                {Libraries.map((library, index) => 
+                                (
+                                    <ImgProgram key={`${library}-${index}`} src={library} />
+                                ))}
+                            </ProgramTypeContainer>
+                        </ProgramsContainer>
                     </AboutProject>
                 </FooterSection>
-                <Hr />
-                <FooterSection>
-                    <Copyright>{translations.footer.copyright}</Copyright>
-                </FooterSection>
             </FooterArticle>
-        </footer>
+            <Hr />
+            <Copyright>{translations.footer.copyright}</Copyright>
+        </FooterContainer>
     )
 }
 

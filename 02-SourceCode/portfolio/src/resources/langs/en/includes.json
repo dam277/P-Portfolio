@@ -12,6 +12,22 @@
     {
         "copyright" : "Copyright © 2023 - Damien Loup - All rights reserved",
         "creator" : "Creator",
-        "profileImageAlt" : "Github profile image"
+        "profileImageAlt" : "Github profile image",
+        "aboutTitle" : "About project",
+        "programsTitle" : "Languages and libraries used for this project",
+        "languages" : "Languages",
+        "libraries" : "Libraries",
+        "projectDescription" : 
+        [
+            "The project consists to create my own portfolio of my skill level and tell what about me.",
+            "This portfolio will show you what projects i did and what i learned.",
+            "Every projects have a website who present itself what about and the documentation. This portfolio will have redirection buttons to these other sites."
+        ],
+        "logo" : "Logo realised by Damien Loup",
+        "description" : [
+            "I'm Damien - 19 Years old - 3rd year apprentice developer",
+            "I love and I'm passionated about software and web development",
+            "This site here has been made entirely by myself !"
+        ]
     }
 }

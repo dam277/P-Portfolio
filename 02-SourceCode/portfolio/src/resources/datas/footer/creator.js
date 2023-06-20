@@ -1,4 +1,4 @@
-import profileImg from "../images/profileImage.png";
+import profileImg from "../../images/profileImage.png";
 
 export const Creator =
 {
