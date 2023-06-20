@@ -1,0 +1,137 @@
+/*================================= VARIABLES =================================*/
+:root
+{
+    /** === Primary === */
+    --primary--backgroundDefault: #000022;
+    --primary--colorDefault: #FFFFFF;
+
+    /** === Header === */
+    /** Links */
+    --header--link--color: #B9B9B9;
+    --header--link--hover--color: #FFFFFF;
+    --header--link--active--color: #FFFFFF;
+    --header--link--underline--backgroundColor: #3e3e49;
+    /** Buttons */
+    --header--button--backgroundColor: #000014;
+    --header--button--border: #FFFFFF;
+    --header--button--hover--backgroundColor: #002347;
+    --header--button--active--backgroundColor: #002347;
+
+    /** === Main === */
+    /** Buttons */
+    --main--button--color: linear-gradient(#250717, #C7046A);
+    --main--button--border: linear-gradient(#250717, #C7046A);
+    --main--button--hover--backgroundColor: linear-gradient(#250717, #C7046A);
+    --main--button--hover--color: #FFFFFF;
+
+    /** === Footer === */
+    /** Tables */
+    --footer--table--backgroundColor: #000014;
+    --footer--table--border: #FFFFFF;
+    /** Links */
+    --footer--link--color: #0059b3;
+    --footer--link--hover--backgroundColor: #0059b3;
+    --footer--link--hover--color: #FFFFFF;
+}
+
+/*================================= BODY =================================*/
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+/*================================= NAV =================================*/
+/*Navlinks*/
+.navlink
+{
+    display: block;
+    padding: 20px;
+    color: var(--header--link--color);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.navlink:hover
+{
+    color: var(--header--link--hover--color);
+}
+
+/*================================= NAV SMALL =================================*/
+.navlink-move:hover
+{
+    position: relative;
+    animation-name: moveText;
+    animation-duration: 0.3s;  
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveText 
+{
+    from {left: 0px;}
+    to {left: 10px}
+}
+
+/*================================= NAV BIG =================================*/
+.underline-animation 
+{
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: var(--header--link--underline--backgroundColor);
+    transition: width 0.5s ease;
+}
+.navlink:hover .underline-animation
+{
+    width: 100%;
+}
+.active-navlink-decoration
+{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--header--link--underline--backgroundColor);
+}
+.active-navlink
+{
+    color: var(--header--link--active--color);
+}
+
+/*================================= MAIN =================================*/
+main
+{
+    margin-top: 150px;
+    height: 2000px;
+}
+
+/*================================= RESPONSIVE DESIGN =================================*/
+@media (min-width: 650px) 
+{
+    .navlink
+    {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 0;
+        margin-top: 5px;
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        flex: 1;
+    }
+
+
+}
+
+@media (min-width: 1024px) 
+{
+    .navlink
+    {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1440px) 
+{
+    
+}
