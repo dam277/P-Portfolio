@@ -56,6 +56,10 @@ export const colorPalette =
                     "#C7046A"
                 ]
             }
+        },
+        text: {
+            color: "#C7046A",
+            border: "#C7046A"
         }
     },
     footer: {
