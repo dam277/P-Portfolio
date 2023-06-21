@@ -12,17 +12,18 @@ export const MainContainer = styled.div`
 export const Messages = styled.section`
     display: inline-block;
     margin-top: 5%;
+    margin-left : 2%;
     font-size: 16px;
 
     @media (min-width: ${responsive.mobile}) 
     {
-        margin-left : 10%;
+        margin-left : 7.5%;
         font-size: 30px;
     }
     
     @media (min-width: ${responsive.laptop})  
     {
-        margin-left : 15%;
+        margin-left : 10%;
         font-size: 45px;
     }
 `
