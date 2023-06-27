@@ -106,18 +106,15 @@ export const ProjectImage = styled.img`
     height: 100%;
     width: 100%;
     border: 1px solid ${colorPalette.main.image.border};
-    min-height: 400px;
 
     @media (min-width: ${responsive.mobile}) 
     {
         max-height: 500px;
-        min-height: 400px;
     }
 
     @media (min-width: ${responsive.laptop}) 
     {
         max-height: 700px;
-        min-height: 700px;
     }
 
     @media (min-width: ${responsive.desktop})  
