@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
 
 export const Messages = styled.section`
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 65px;
     margin-left : 2%;
     font-size: 15px;
     flex: 0;
@@ -46,7 +46,7 @@ export const Text = styled.span`
 
 export const Works = styled.section`
     flex: 6;
-    margin-top: 5%;
+    margin-top: 20%;
     color: ${colorPalette.primary.colorDefault};
     display: flex;
     flex-direction: column;
@@ -56,6 +56,7 @@ export const Works = styled.section`
 
     @media (min-width: ${responsive.mobile}) 
     {
+        margin-top: 10%;
         font-size: 13px;
     }
 
@@ -103,23 +104,18 @@ export const PointButton = styled.input`
 `
 
 export const ProjectImage = styled.img`
-    height: 100%;
+    height: 250px;
     width: 100%;
     border: 1px solid ${colorPalette.main.image.border};
 
     @media (min-width: ${responsive.mobile}) 
     {
-        max-height: 500px;
+        height: 400px;
     }
 
     @media (min-width: ${responsive.laptop}) 
     {
-        max-height: 700px;
-    }
-
-    @media (min-width: ${responsive.desktop})  
-    {
-        max-height: 800px;
+        height: 500px;
     }
 `
 
