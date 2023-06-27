@@ -92,7 +92,14 @@ export const PageButtonsContainer = styled.div`
 `
 
 export const PointButton = styled.input`
+    height: 10px;
+    width: 10px;
 
+    @media (min-width: ${responsive.mobile}) 
+    {
+        height: 15px;
+        width: 15px;
+    }
 `
 
 export const ProjectImage = styled.img`
