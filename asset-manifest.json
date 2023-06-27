@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/P-Portfolio/static/css/main.ff3fab4b.css",
-    "main.js": "/P-Portfolio/static/js/main.a70cc481.js",
+    "main.js": "/P-Portfolio/static/js/main.7197fb16.js",
     "static/media/portfolio.png": "/P-Portfolio/static/media/portfolio.2bf2c54b28c90ec5818e.png",
     "static/media/profileImage.png": "/P-Portfolio/static/media/profileImage.1d24bbd3abf0966e261b.png",
     "static/media/SpaceInvader.png": "/P-Portfolio/static/media/SpaceInvader.100417edec3c2b576313.png",
     "index.html": "/P-Portfolio/index.html",
     "main.ff3fab4b.css.map": "/P-Portfolio/static/css/main.ff3fab4b.css.map",
-    "main.a70cc481.js.map": "/P-Portfolio/static/js/main.a70cc481.js.map"
+    "main.7197fb16.js.map": "/P-Portfolio/static/js/main.7197fb16.js.map"
   },
   "entrypoints": [
     "static/css/main.ff3fab4b.css",
-    "static/js/main.a70cc481.js"
+    "static/js/main.7197fb16.js"
   ]
 }
