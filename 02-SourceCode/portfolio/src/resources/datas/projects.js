@@ -1,4 +1,5 @@
 import portfolio from "../images/projects/portfolio.png";
+import spaceInvader from "../images/projects/SpaceInvader.png";
 
 export const Projects = 
 [
@@ -8,7 +9,12 @@ export const Projects =
         "image" : portfolio,
         "isFinished" : false,
         "isWorkingOn" : true
+    },
+    {
+        "id": 1,
+        "name" : "SpaceInvader",
+        "image" : spaceInvader,
+        "isFinished" : true,
+        "isWorkingOn" : false
     }
 ]
-
-export const ActualProject = Projects[0]
