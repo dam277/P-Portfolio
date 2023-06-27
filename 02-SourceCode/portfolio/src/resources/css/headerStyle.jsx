@@ -11,6 +11,11 @@ export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     height: 75px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        height: 100px;
+    }
 `
 
 /** Title ================================================================================================*/

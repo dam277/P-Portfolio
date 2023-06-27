@@ -29,6 +29,8 @@ export const Button = styled.button`
         }
     }
 
+    //margin-left: 1000px; 
+
     &:hover {
         color: ${colorPalette.main.button.hover.color};
         background: linear-gradient(${colorPalette.main.button.color[0]}, ${colorPalette.main.button.color[1]});

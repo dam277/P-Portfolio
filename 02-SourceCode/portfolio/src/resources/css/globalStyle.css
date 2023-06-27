@@ -102,9 +102,8 @@ body
 /*================================= MAIN =================================*/
 main
 {
-    height: 95vh;
+    height: 94vh;
     margin-top: 75px;
-    background-color: black;
 }
 
 /*================================= RESPONSIVE DESIGN =================================*/
@@ -120,6 +119,11 @@ main
         font-size: 12px;
         text-align: center;
         flex: 1;
+    }
+
+    main
+    {
+        margin-top: 100px;
     }
 
 
