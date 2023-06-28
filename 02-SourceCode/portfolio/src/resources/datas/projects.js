@@ -1,5 +1,6 @@
 import portfolio from "../images/projects/portfolio.png";
 import spaceInvader from "../images/projects/SpaceInvader.png";
+import skillioFramework from "../images/projects/SkillioFramework.png";
 
 export const Projects = 
 [
@@ -12,6 +13,13 @@ export const Projects =
     },
     {
         "id": 1,
+        "name" : "Skllio Framework",
+        "image" : skillioFramework,
+        "isFinished" : false,
+        "isWorkingOn" : true
+    },
+    {
+        "id": 2,
         "name" : "SpaceInvader",
         "image" : spaceInvader,
         "isFinished" : true,

@@ -4,8 +4,8 @@ import { styled } from "styled-components";
 // Import styles
 import { responsive, colorPalette } from "./styles";
 
-export const MainContainer = styled.div`
-    height: 100%;
+export const MainContainer = styled.main`
+    background: linear-gradient(115.75deg, #700C0C -16.42%, #2E1F4D 49.58%, #1E0C61 77.68%, #000000 109.13%);
     display: flex;
     flex-direction: column;
 `
@@ -56,7 +56,7 @@ export const Works = styled.section`
 
     @media (min-width: ${responsive.mobile}) 
     {
-        margin-top: 10%;
+        margin-top: 7%;
         font-size: 13px;
     }
 
@@ -107,6 +107,7 @@ export const ProjectImage = styled.img`
     height: 250px;
     width: 100%;
     border: 1px solid ${colorPalette.main.image.border};
+    cursor: pointer;
 
     @media (min-width: ${responsive.mobile}) 
     {

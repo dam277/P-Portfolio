@@ -102,7 +102,6 @@ body
 /*================================= MAIN =================================*/
 main
 {
-    background: linear-gradient(115.75deg, #700C0C -16.42%, #2E1F4D 49.58%, #1E0C61 77.68%, #000000 109.13%);
     height: 100%;
     min-height: 100vh;
     margin-top: 75px;

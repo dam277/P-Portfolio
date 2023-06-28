@@ -34,66 +34,64 @@ function Home()
     const projectsWorkingOn = Projects.filter(project => project.isWorkingOn);
 
     return(
-        <main>
-            <MainContainer>
-                <Messages>
+        <MainContainer>
+            <Messages>
+                <Paragraph>
+                    {translations.welcomeMessage.map((message, index) =>
+                    (
+                        <Text isPair={isPair(index)}>{message}</Text>
+                    ))}
+                </Paragraph>
+                <Presentation>
                     <Paragraph>
-                        {translations.welcomeMessage.map((message, index) =>
+                        {translations.presentation.aboutMe.map((message, index) =>
                         (
-                            <Text isPair={isPair(index)}>{message}</Text>
+                            <Text isPair={!isPair(index)}>{message}</Text>
                         ))}
                     </Paragraph>
-                    <Presentation>
-                        <Paragraph>
-                            {translations.presentation.aboutMe.map((message, index) =>
+                    <Paragraph>
+                        {translations.presentation.work.map((message, index) =>
+                        (
+                            <Text isPair={!isPair(index)}>{message}</Text>
+                        ))}
+                    </Paragraph>
+                </Presentation>
+            </Messages>
+            <Works>
+                <LastProject>
+                    <WorkTitle>{translations.works.last}</WorkTitle>
+                    <Carousel>
+                        <ProjectImage src={projectsFinished.length > 0 && projectsFinished[pageLast - 1].image} />
+                        <PageButtonsContainer>
+                            <PointButton type="radio" id={0} value={1} name="pageLast" onClick={(e) => setPageLast(e.target.value)}/>
+                            {projectsFinished.map((project, index) => 
                             (
-                                <Text isPair={!isPair(index)}>{message}</Text>
+                                index < projectsFinished.length - 1 &&
+                                (
+                                    <PointButton key={project.id} type="radio" id={project.id} value={index + 2} name="pageLast" onClick={(e) => setPageLast(e.target.value)}/>
+                                )
                             ))}
-                        </Paragraph>
-                        <Paragraph>
-                            {translations.presentation.work.map((message, index) =>
+                        </PageButtonsContainer>
+                    </Carousel>
+                </LastProject>
+                <ActualProject>
+                    <WorkTitle>{translations.works.actual}</WorkTitle>
+                    <Carousel>
+                        <ProjectImage src={projectsWorkingOn.length > 0 && projectsWorkingOn[pageActual - 1].image} />
+                        <PageButtonsContainer>
+                            <PointButton type="radio" id={0} value={1} name="pageActual" onClick={(e) => setPageActual(e.target.value)}/>
+                            {projectsWorkingOn.map((project, index) => 
                             (
-                                <Text isPair={!isPair(index)}>{message}</Text>
+                                index < projectsWorkingOn.length - 1 &&
+                                (
+                                    <PointButton key={project.id} type="radio" id={project.id} value={index + 2} name="pageActual" onClick={(e) => setPageActual(e.target.value)}/>
+                                )
                             ))}
-                        </Paragraph>
-                    </Presentation>
-                </Messages>
-                <Works>
-                    <LastProject>
-                        <WorkTitle>{translations.works.last}</WorkTitle>
-                        <Carousel>
-                            <ProjectImage src={projectsFinished.length > 0 && projectsFinished[pageLast - 1].image} />
-                            <PageButtonsContainer>
-                                <PointButton type="radio" id={0} value={1} name="pageLast" onClick={(e) => setPageLast(e.target.value)} checked/>
-                                {projectsFinished.map((project, index) => 
-                                (
-                                    index < projectsFinished.length - 1 &&
-                                    (
-                                        <PointButton key={project.id} type="radio" id={project.id} value={index + 2} name="pageLast" onClick={(e) => setPageLast(e.target.value)}/>
-                                    )
-                                ))}
-                            </PageButtonsContainer>
-                        </Carousel>
-                    </LastProject>
-                    <ActualProject>
-                        <WorkTitle>{translations.works.actual}</WorkTitle>
-                        <Carousel>
-                            <ProjectImage src={projectsWorkingOn.length > 0 && projectsWorkingOn[pageActual - 1].image} />
-                            <PageButtonsContainer>
-                                <PointButton type="radio" id={0} value={1} name="pageActual" onClick={(e) => setPageActual(e.target.value)} checked/>
-                                {projectsWorkingOn.map((project, index) => 
-                                (
-                                    index < projectsWorkingOn.length - 1 &&
-                                    (
-                                        <PointButton key={project.id} type="radio" id={project.id} value={index + 2} name="pageActual" onClick={(e) => setPageActual(e.target.value)}/>
-                                    )
-                                ))}
-                            </PageButtonsContainer>
-                        </Carousel>
-                    </ActualProject>
-                </Works>
-            </MainContainer>
-        </main>
+                        </PageButtonsContainer>
+                    </Carousel>
+                </ActualProject>
+            </Works>
+        </MainContainer>
     )
 }
 
