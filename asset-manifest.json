@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/P-Portfolio/static/css/main.ff3fab4b.css",
-    "main.js": "/P-Portfolio/static/js/main.685984d6.js",
+    "main.css": "/P-Portfolio/static/css/main.b61b9a5d.css",
+    "main.js": "/P-Portfolio/static/js/main.deac792b.js",
     "static/media/portfolio.png": "/P-Portfolio/static/media/portfolio.2bf2c54b28c90ec5818e.png",
+    "static/media/SkillioFramework.png": "/P-Portfolio/static/media/SkillioFramework.6c6611599c86d44fa1ba.png",
     "static/media/profileImage.png": "/P-Portfolio/static/media/profileImage.1d24bbd3abf0966e261b.png",
     "static/media/SpaceInvader.png": "/P-Portfolio/static/media/SpaceInvader.100417edec3c2b576313.png",
     "index.html": "/P-Portfolio/index.html",
-    "main.ff3fab4b.css.map": "/P-Portfolio/static/css/main.ff3fab4b.css.map",
-    "main.685984d6.js.map": "/P-Portfolio/static/js/main.685984d6.js.map"
+    "main.b61b9a5d.css.map": "/P-Portfolio/static/css/main.b61b9a5d.css.map",
+    "main.deac792b.js.map": "/P-Portfolio/static/js/main.deac792b.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff3fab4b.css",
-    "static/js/main.685984d6.js"
+    "static/css/main.b61b9a5d.css",
+    "static/js/main.deac792b.js"
   ]
 }
