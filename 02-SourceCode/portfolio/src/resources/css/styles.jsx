@@ -6,7 +6,9 @@ export const responsive =
     desktop: "1440px",
     laptop: "1024px",
     mobile: "650px",
-    mobile_small: "365px"
+    mobile_small: "365px",
+    laptop_height: "1210px",
+    mobile_height: "500px"
 }
 
 /**
@@ -56,6 +58,13 @@ export const colorPalette =
                     "#C7046A"
                 ]
             }
+        },
+        text: {
+            color: "#C7046A",
+            border: "#C7046A"
+        },
+        image: {
+            border: "#4e0028"
         }
     },
     footer: {
