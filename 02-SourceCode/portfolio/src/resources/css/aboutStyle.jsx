@@ -16,8 +16,13 @@ export const MainContainer = styled.main`
 export const Presentation = styled.section`
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 50px 0;
     border-bottom: 1px solid ${colorPalette.primary.colorDefault};
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        padding: 50px;
+    }
 
     @media (min-width: ${responsive.laptop}) 
     {
@@ -26,10 +31,15 @@ export const Presentation = styled.section`
 `
 
 export const PresentationText = styled.div`
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 30px;
+    margin: 0 10px;
 
     @media (min-width: ${responsive.mobile})  
+    {
+        padding: 70px;
+    }
+
+    @media (min-width: ${responsive.laptop})  
     {
         padding: 100px;
     }
@@ -39,8 +49,15 @@ export const MainImgContainer = styled.div`
 `
 
 export const MainImg = styled.img`
-    height: 525px;
-    width: 360px;
+    height: 355px;
+    width: 260px;
+
+    @media (min-width: ${responsive.mobile})  
+    {
+        height: 525px;
+        width: 360px;
+    }
+
 `
 
 export const SocialNetworksContainer = styled.section`
