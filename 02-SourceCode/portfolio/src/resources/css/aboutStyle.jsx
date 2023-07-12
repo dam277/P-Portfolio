@@ -26,18 +26,24 @@ export const Presentation = styled.section`
 `
 
 export const PresentationText = styled.div`
-    padding: 100px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    @media (min-width: ${responsive.mobile})  
+    {
+        padding: 100px;
+    }
 `
 
-export const PortraitContainer = styled.table`
-
+export const MainImgContainer = styled.div`
 `
 
 export const MainImg = styled.img`
-
+    height: 525px;
+    width: 360px;
 `
 
-export const SocialNetworksContainer = styled.div`
+export const SocialNetworksContainer = styled.section`
     display: flex;
     align-items: center;
 `
@@ -58,7 +64,29 @@ export const SocialNetwork = styled.img`
     }
 `
 
+export const Introduction = styled.section`
+    width: 70%;
+`
+
+export const IntroductionTitle = styled.h2`
+    font-size: 35px;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px ${colorPalette.main.text.color};
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        font-size: 50px;
+    }
+
+    @media (min-width: ${responsive.laptop}) 
+    {
+        font-size: 60px;
+    }
+`
+
 export const Supplements = styled.section`
     width: 100%;
     height: 100%;
+    margin-top: 50px;
 `

@@ -6,7 +6,7 @@ import { Outlet, Link } from "react-router-dom";
 import { LangContext } from "../../../utils/contexts/LangContext";
 
 // Import styles
-import { MainContainer, MainImg, Supplements, Presentation, SocialNetworksContainer, PresentationText, SocialNetwork } from "../../../resources/css/aboutStyle";
+import { MainContainer, MainImg, Supplements, Presentation, MainImgContainer, SocialNetworksContainer, PresentationText, SocialNetwork, Introduction, IntroductionTitle } from "../../../resources/css/aboutStyle";
 import { Text } from "../../../resources/css/mainStyle";
 import { Button } from "../../../resources/css/mainStyle";
 
@@ -22,6 +22,7 @@ import en from "../../../resources/langs/en/about.json";
 
 // Import datas
 import { socialNetworks } from "../../../resources/datas/socialNetworks";
+import { colorPalette } from "../../../resources/css/styles";
 
 function About()
 {
@@ -32,11 +33,13 @@ function About()
     return(
         <MainContainer>
             <Presentation>
-                <MainImg src={smallPortrait} />
+                <MainImgContainer>
+                    <MainImg src={smallPortrait} />
+                </MainImgContainer>
                 <PresentationText>
                     {translations.presentation.map((content) => 
                     (
-                        <Text color={content.color}>
+                        <Text size="18" color={content.color}>
                             {content.text}
                         </Text>
                     ))}
@@ -50,6 +53,15 @@ function About()
                     </a>
                 ))}
             </SocialNetworksContainer>
+            <Introduction>
+                <IntroductionTitle>{translations.introduction.title}</IntroductionTitle>
+                {translations.introduction.texts.map((content) => 
+                (
+                    <Text color={colorPalette.main.text.paragraph.color} margin="10px">
+                        {content.text}
+                    </Text>
+                ))}
+            </Introduction>
             <Supplements>
                 <Link to="studyPath">
                     <Button>Mon parcours</Button>

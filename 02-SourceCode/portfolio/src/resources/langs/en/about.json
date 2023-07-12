@@ -7,5 +7,18 @@
         { "text" : "Badminton - Development - Video games", "color" : "#C7046A"},
         { "text" : "I am a third year development apprentice at the ETML in Switzerland", "color" : ""},
         { "text" : "I am doing Front-end and Back-end but my favourite is Back-end", "color" : ""}
-    ]
+    ],
+    "introduction" : 
+    {
+        "title" : "Introduction",
+        "texts" : 
+        [
+
+            { "text" : "I am a skilled developer with experience in multiple programming languages.", "color" : ""},
+            { "text" : "I engage in daily programming activities to learn new languages, libraries, frameworks, etc., as well as to work on personal projects. I enjoy acquiring new knowledge and expanding my skillset to optimize the quality of my projects and work. I never give up at the first sign of a problem!", "color" : ""},
+            { "text" : "I have a quick learning curve and easily familiarize myself with the tools used in development.", "color" : ""},
+            { "text" : "Since 2018, I have developed a strong interest in programming and related fields. Programming has become my predominant passion.", "color" : ""},
+            { "text" : "My main goal is to become a full-stack developer and independently acquire new skills in other domains to design more complex projects.", "color" : ""}
+        ]
+    }
 }

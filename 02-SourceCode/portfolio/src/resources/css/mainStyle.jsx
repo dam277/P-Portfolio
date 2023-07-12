@@ -39,6 +39,24 @@ export const Button = styled.button`
 `
 
 export const Text = styled.p`
-    color: ${(props) => props.color != "" ? props.color : colorPalette.primary.colorDefault};
-    font-size : 18px;
+    color: ${(props) => props.color ? props.color : colorPalette.primary.colorDefault};
+    font-size : ${(props) => props.size ? props.size : "18"}px;
+    margin: ${(props) => props.margin && props.margin};
+    padding: ${(props) => props.padding && props.padding};
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        color: ${(props) => props.color ? props.color : colorPalette.primary.colorDefault};
+        font-size : ${(props) => props.size ? props.size : "19"}px;
+        margin: ${(props) => props.margin && props.margin};
+        padding: ${(props) => props.padding && props.padding};
+    }
+
+    @media (min-width: ${responsive.laptop}) 
+    {
+        color: ${(props) => props.color ? props.color : colorPalette.primary.colorDefault};
+        font-size : ${(props) => props.size ? props.size : "20"}px;
+        margin: ${(props) => props.margin && props.margin};
+        padding: ${(props) => props.padding && props.padding};
+    }
 `

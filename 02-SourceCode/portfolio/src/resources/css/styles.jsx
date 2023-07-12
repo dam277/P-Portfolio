@@ -61,6 +61,9 @@ export const colorPalette =
             }
         },
         text: {
+            paragraph: {
+                color: "#BBBBBB"
+            },
             color: "#C7046A",
             border: "#C7046A"
         },
