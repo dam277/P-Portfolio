@@ -10,7 +10,7 @@ export const HeaderContainer = styled.header`
     width: 100%;
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 99;
     height: 75px;
 
     @media (min-width: ${responsive.mobile}) 

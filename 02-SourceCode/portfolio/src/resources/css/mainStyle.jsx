@@ -37,3 +37,8 @@ export const Button = styled.button`
         border: ${(props) => props.border ? props.border : `1`}px solid white;
     }
 `
+
+export const Text = styled.p`
+    color: ${(props) => props.color != "" ? props.color : colorPalette.primary.colorDefault};
+    font-size : 18px;
+`

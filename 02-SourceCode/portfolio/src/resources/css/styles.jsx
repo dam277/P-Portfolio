@@ -42,6 +42,7 @@ export const colorPalette =
         }
     },
     main: {
+        backGroundDefault: "#1c1c1c",
         button: {
             color: [
                 "#250717",

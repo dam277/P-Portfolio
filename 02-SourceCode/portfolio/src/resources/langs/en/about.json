@@ -1,0 +1,11 @@
+{
+    "presentation" : 
+    [
+        { "text" : "HELLO", "color" : "#4e0028"},
+        { "text" : "My name is Damien and I am 19 years old !", "color" : ""},
+        { "text" : "My passions are :", "color" : ""},
+        { "text" : "Badminton - Development - Video games", "color" : "#C7046A"},
+        { "text" : "I am a third year development apprentice at the ETML in Switzerland", "color" : ""},
+        { "text" : "I am doing Front-end and Back-end but my favourite is Back-end", "color" : ""}
+    ]
+}

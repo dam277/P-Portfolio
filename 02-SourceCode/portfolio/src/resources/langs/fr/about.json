@@ -1,0 +1,11 @@
+{
+    "presentation" : 
+    [
+        { "text" : "BONJOUR", "color" : "#4e0028"},
+        { "text" : "Je m'appelle Damien et j'ai 19 ans !", "color" : ""},
+        { "text" : "Mes passions sont :", "color" : ""},
+        { "text" : "Badminton - Développement - Jeux vidéo", "color" : "#C7046A"},
+        { "text" : "Je suis apprenti en développement en 3ème année à l'ETML en Suisse", "color" : ""},
+        { "text" : "Je fais du Front-end et du Back-end, mais je préfère le Back-end", "color" : ""}
+    ]
+}
