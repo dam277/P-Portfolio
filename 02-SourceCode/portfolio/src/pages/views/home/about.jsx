@@ -7,8 +7,7 @@ import { LangContext } from "../../../utils/contexts/LangContext";
 
 // Import styles
 import { MainContainer, MainImg, Supplements, Presentation, MainImgContainer, SocialNetworksContainer, PresentationText, SocialNetwork, Introduction, IntroductionTitle } from "../../../resources/css/aboutStyle";
-import { Text } from "../../../resources/css/mainStyle";
-import { Button } from "../../../resources/css/mainStyle";
+import { Text, Button } from "../../../resources/css/mainStyle";
 
 // Import images
 import smallPortrait from "../../../resources/images/about/smallPortait.png"
@@ -39,7 +38,7 @@ function About()
                 <PresentationText>
                     {translations.presentation.map((content) => 
                     (
-                        <Text size="18" color={content.color}>
+                        <Text setResponsive={true} size="18" color={content.color}>
                             {content.text}
                         </Text>
                     ))}

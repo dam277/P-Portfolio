@@ -43,9 +43,10 @@ export const colorPalette =
     },
     main: {
         backGroundDefault: "#1c1c1c",
+        cardBackgroundColor: "#130207",
         button: {
             color: [
-                "#250717",
+                "#250707",
                 "#C7046A"
             ],
             border: [
@@ -68,7 +69,10 @@ export const colorPalette =
             border: "#C7046A"
         },
         image: {
-            border: "#4e0028"
+            border: [
+                "#250717",
+                "#C7046A"
+            ],
         }
     },
     footer: {

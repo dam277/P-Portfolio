@@ -40,23 +40,29 @@ export const Button = styled.button`
 
 export const Text = styled.p`
     color: ${(props) => props.color ? props.color : colorPalette.primary.colorDefault};
-    font-size : ${(props) => props.size ? props.size : "18"}px;
+    font-size : ${(props) => props.size ? props.size : "18"};
     margin: ${(props) => props.margin && props.margin};
     padding: ${(props) => props.padding && props.padding};
 
     @media (min-width: ${responsive.mobile}) 
     {
-        color: ${(props) => props.color ? props.color : colorPalette.primary.colorDefault};
-        font-size : ${(props) => props.size ? props.size : "19"}px;
-        margin: ${(props) => props.margin && props.margin};
-        padding: ${(props) => props.padding && props.padding};
+        ${(props) => props.setResponsive && 
+        {
+            "color": `${props.mobileColor && props.mobileColor}`,
+            "font-size": `${props.mobileSize ? props.mobileSize : "19"}px`,
+            "margin": `${props.mobileMargin && props.mobileMargin}`,
+            "padding": `${props.mobilePadding && props.mobilePadding}`
+        }}
     }
 
     @media (min-width: ${responsive.laptop}) 
     {
-        color: ${(props) => props.color ? props.color : colorPalette.primary.colorDefault};
-        font-size : ${(props) => props.size ? props.size : "20"}px;
-        margin: ${(props) => props.margin && props.margin};
-        padding: ${(props) => props.padding && props.padding};
+        ${(props) => props.setResponsive && 
+        {
+            "color": `${props.laptopColor && props.laptopColor}`,
+            "font-size": `${props.laptopSize ? props.laptopSize : "20"}px`,
+            "margin": `${props.laptopMargin && props.laptopMargin}`,
+            "padding": `${props.laptopPadding && props.laptopPadding}`
+        }}
     }
 `

@@ -106,7 +106,7 @@ export const PointButton = styled.input`
 export const ProjectImage = styled.img`
     height: 250px;
     width: 100%;
-    border: 1px solid ${colorPalette.main.image.border};
+    border: 1px solid ${colorPalette.main.image.border[1]};
     cursor: pointer;
 
     @media (min-width: ${responsive.mobile}) 

@@ -33,6 +33,7 @@ export const Presentation = styled.section`
 export const PresentationText = styled.div`
     padding-top: 30px;
     margin: 0 10px;
+    text-align: center;
 
     @media (min-width: ${responsive.mobile})  
     {
@@ -74,7 +75,7 @@ export const SocialNetwork = styled.img`
     border-bottom: 1px solid ${colorPalette.primary.colorDefault};
 
     &:hover {
-        border: 1px solid ${colorPalette.main.image.border};
+        border: 1px solid ${colorPalette.main.image.border[1]};
         height: 50px;
         width: 50px;
         transition: .5s ease-in-out;
@@ -82,7 +83,12 @@ export const SocialNetwork = styled.img`
 `
 
 export const Introduction = styled.section`
-    width: 70%;
+    width: 95%;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        width: 70%;
+    }
 `
 
 export const IntroductionTitle = styled.h2`
