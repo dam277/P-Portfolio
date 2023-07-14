@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/P-Portfolio/static/css/main.b61b9a5d.css",
-    "main.js": "/P-Portfolio/static/js/main.30adf97e.js",
+    "main.js": "/P-Portfolio/static/js/main.41f185f5.js",
     "static/media/portfolio.png": "/P-Portfolio/static/media/portfolio.2bf2c54b28c90ec5818e.png",
-    "static/media/StyledComponents.png": "/P-Portfolio/static/media/StyledComponents.7e3be038a38af0245bcb.png",
+    "static/media/StyledComponents.png": "/P-Portfolio/static/media/StyledComponents.13efd064d512cbfccf65.png",
     "static/media/UnrealEngine.png": "/P-Portfolio/static/media/UnrealEngine.ad280a2fe859cc81c507.png",
     "static/media/Angular.png": "/P-Portfolio/static/media/Angular.b6d2a9dec3e43e0ffb95.png",
     "static/media/SkillioFramework.png": "/P-Portfolio/static/media/SkillioFramework.6c6611599c86d44fa1ba.png",
@@ -13,13 +13,14 @@
     "static/media/profileImage.png": "/P-Portfolio/static/media/profileImage.1d24bbd3abf0966e261b.png",
     "static/media/Sqlite.png": "/P-Portfolio/static/media/Sqlite.b0c9e1e6144572d619ca.png",
     "static/media/Laravel.png": "/P-Portfolio/static/media/Laravel.279e3fcb19d440713887.png",
+    "static/media/Mvc.png": "/P-Portfolio/static/media/Mvc.730c186b14832b1f8efa.png",
     "static/media/SpaceInvader.png": "/P-Portfolio/static/media/SpaceInvader.100417edec3c2b576313.png",
     "index.html": "/P-Portfolio/index.html",
     "main.b61b9a5d.css.map": "/P-Portfolio/static/css/main.b61b9a5d.css.map",
-    "main.30adf97e.js.map": "/P-Portfolio/static/js/main.30adf97e.js.map"
+    "main.41f185f5.js.map": "/P-Portfolio/static/js/main.41f185f5.js.map"
   },
   "entrypoints": [
     "static/css/main.b61b9a5d.css",
-    "static/js/main.30adf97e.js"
+    "static/js/main.41f185f5.js"
   ]
 }
