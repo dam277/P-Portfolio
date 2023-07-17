@@ -1,5 +1,9 @@
 // Import styles
-import { FooterContainer, AboutProject, Copyright, Table, Td, A, Hr, FooterArticle, FooterSection, ImgProfile, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4, AboutSection} from "../../resources/css/footerStyle";
+import { FooterContainer, AboutProject, Copyright, A,ProfileText, Hr, FooterArticle, FooterSection, ProfileContainer, ProfileSection, LogoFooter, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4, AboutSection} from "../../resources/css/footerStyle";
+
+// Import images
+import github from "../../resources/images/socialNetworks/github.png";
+import gmail from "../../resources/images/socialNetworks/gmail.png";
 
 // Import hooks
 import { useContext } from "react";
@@ -28,26 +32,7 @@ function Footer()
         <FooterContainer>
             <FooterArticle>
                 <FooterSection flex={3}>
-                    <Table>
-                        <tr>
-                            <th>{translations.footer.creator}</th>
-                        </tr>
-                        <tr>
-                            <Td>
-                                <A href={Creator.githubLink} data-replace="get a link">{Creator.name}</A>
-                            </Td>
-                        </tr>
-                        <tr>
-                            <Td>
-                                <ImgProfile src={Creator.profileImage} alt={translations.footer.profileImageAlt} />
-                            </Td>
-                        </tr>
-                        <tr>
-                            <Td>
-                                <A href={"mailto:"+Creator.contact}>{Creator.contact}</A>
-                            </Td>
-                        </tr>
-                    </Table>
+                    <LogoFooter src={Creator.logoFooter} alt={translations.footer.logoFooterImageAlt} />
                 </FooterSection>
                 <Hr doNotDisplay={true}/>
                 <FooterSection flex={4}>
@@ -59,6 +44,16 @@ function Footer()
                                 <p key={index}>{line}</p>
                             ))}
                         </div>
+                        <ProfileContainer>
+                            <A href={Creator.githubLink}>
+                                <img src={github} height="35px" alt="Github logo" />
+                                <ProfileText>{Creator.name}</ProfileText>
+                            </A>
+                            <A href={"mailto:"+Creator.contact}>
+                                <img src={gmail} height="35px" alt="Gmail logo" />
+                                <ProfileText>{Creator.contact}</ProfileText>
+                            </A>
+                        </ProfileContainer>
                     </AboutProject>
                 </FooterSection>
                 <FooterSection flex={3}>

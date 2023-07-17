@@ -33,29 +33,18 @@ export const FooterSection = styled.section`
     flex: ${props => props.flex};
 `
 
-
-/** Table ================================================================================================*/
-export const Table = styled.table`
-    background-color: ${colorPalette.footer.table.backGroundColor};
-    border: 1px solid ${colorPalette.footer.table.border};
-    border-collapse: collapse;
-    width: 100%;
-    
-    @media (min-width: ${responsive.mobile}) 
-    {
-        margin-right: 20px;
-        margin-left: 10px;
-        width: 300px;
-    }
-    
-`
-
-export const Td = styled.td`
-    border: 1px solid ${colorPalette.footer.table.border};
+export const ProfileContainer = styled.div`
+    display: flex;
+    align-items: center;
 `
 
 export const A = styled.a`
-    display: block;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 10px;
+    padding: 2px;
     box-shadow: inset 0 0 0 0 ${colorPalette.footer.link.hover.backGroundColor};
     color: ${colorPalette.footer.link.color};
     transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
@@ -65,8 +54,12 @@ export const A = styled.a`
     }
 `
 
-export const ImgProfile = styled.img`
-    width: 100%;
+export const ProfileText = styled.span`
+    padding: 5px;
+`
+
+export const LogoFooter = styled.img`
+    width: 200px;
 `
 
 export const Hr = styled.hr`

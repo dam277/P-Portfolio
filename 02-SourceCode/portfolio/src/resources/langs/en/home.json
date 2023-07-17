@@ -7,7 +7,7 @@
         "aboutMe" : [
             "My name's ",
             "Damien ",
-            "and i am ",
+            "and I am ",
             "19 ",
             "years old"
         ],
@@ -20,7 +20,7 @@
         ]
     },
     "works" : {
-        "last" : "Last projects i did",
+        "last" : "Last projects I did",
         "actual" : "Actual project(s) i'm working on"
     }
 }
