@@ -1,5 +1,5 @@
 // Import styles
-import { FooterContainer, AboutProject, Copyright, Table, Td, A, Hr, FooterArticle, FooterSection, ImgProfile, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4, } from "../../resources/css/footerStyle";
+import { FooterContainer, AboutProject, Copyright, Table, Td, A, Hr, FooterArticle, FooterSection, ImgProfile, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4, AboutSection} from "../../resources/css/footerStyle";
 
 // Import hooks
 import { useContext } from "react";
@@ -17,6 +17,7 @@ import { Languages, Libraries } from "../../resources/datas/footer/programs";
 // Import translations
 import fr from "../../resources/langs/fr/includes.json"
 import en from "../../resources/langs/en/includes.json"
+import { Button } from "../../resources/css/mainStyle";
 
 function Footer()
 {
@@ -26,7 +27,7 @@ function Footer()
     return(
         <FooterContainer>
             <FooterArticle>
-                <FooterSection flex={1}>
+                <FooterSection flex={3}>
                     <Table>
                         <tr>
                             <th>{translations.footer.creator}</th>
@@ -49,31 +50,35 @@ function Footer()
                     </Table>
                 </FooterSection>
                 <Hr doNotDisplay={true}/>
-                <FooterSection flex={5}>
+                <FooterSection flex={4}>
                     <AboutProject>
-                        <H2>{translations.footer.aboutTitle}</H2>
-                        {translations.footer.projectDescription.map((line, index) => 
-                        (
-                            <p key={index}>{line}</p>
-                        ))}
-                        <H3>{translations.footer.programsTitle}</H3>
-                        <ProgramsContainer>
-                            <ProgramTypeContainer>
-                                <H4>{translations.footer.languages}</H4>
-                                {Languages.map((language, index) => 
-                                (
-                                    <ImgProgram key={`${language}-${index}`} src={language} />
-                                ))}
-                            </ProgramTypeContainer>
-                            <ProgramTypeContainer>
-                                <H4>{translations.footer.libraries}</H4>
-                                {Libraries.map((library, index) => 
-                                (
-                                    <ImgProgram key={`${library}-${index}`} src={library} />
-                                ))}
-                            </ProgramTypeContainer>
-                        </ProgramsContainer>
+                        <div>
+                            <H2>{translations.footer.aboutTitle}</H2>
+                            {translations.footer.projectDescription.map((line, index) => 
+                            (
+                                <p key={index}>{line}</p>
+                            ))}
+                        </div>
                     </AboutProject>
+                </FooterSection>
+                <FooterSection flex={3}>
+                    <H3>{translations.footer.programsTitle}</H3>
+                    <ProgramsContainer>
+                        <ProgramTypeContainer>
+                            <H4>{translations.footer.languages}</H4>
+                            {Languages.map((language, index) => 
+                            (
+                                <ImgProgram key={`${language}-${index}`} src={language} />
+                            ))}
+                        </ProgramTypeContainer>
+                        <ProgramTypeContainer>
+                            <H4>{translations.footer.libraries}</H4>
+                            {Libraries.map((library, index) => 
+                            (
+                                <ImgProgram key={`${library}-${index}`} src={library} />
+                            ))}
+                        </ProgramTypeContainer>
+                    </ProgramsContainer>
                 </FooterSection>
             </FooterArticle>
             <Hr />

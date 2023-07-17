@@ -32,7 +32,7 @@ export const Messages = styled.section`
 
 export const Presentation = styled.div`
     margin-left: 45px;
-    border-left: 1px solid ${colorPalette.main.text.border};
+    border-left: 1px solid ${colorPalette.primary.text.border};
 `
 
 export const Paragraph = styled.p`
@@ -41,7 +41,7 @@ export const Paragraph = styled.p`
 `
 
 export const Text = styled.span`
-    color: ${(props) => props.isPair ? colorPalette.main.text.color : colorPalette.primary.colorDefault};
+    color: ${(props) => props.isPair ? colorPalette.primary.text.color : colorPalette.primary.colorDefault};
 `
 
 export const Works = styled.section`

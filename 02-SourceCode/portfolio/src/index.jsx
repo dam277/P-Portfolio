@@ -17,9 +17,9 @@ import Works from './pages/views/works';
 import Details from './pages/views/works/details';
 import E404 from './pages/views/errors/404';
 
-// Import components
-import Competences from './pages/components/about/competences';
-import StudyPath from './pages/components/about/studyPath';
+// Import components subPages
+import Competences from './pages/components/subPages/about/Competences';
+import StudyPath from './pages/components/subPages/about/StudyPath';
 
 // Import contexts
 import LangContext from './utils/contexts/LangContext';

@@ -47,11 +47,14 @@ export const PresentationText = styled.div`
 `
 
 export const MainImgContainer = styled.div`
+
 `
 
 export const MainImg = styled.img`
     height: 355px;
     width: 260px;
+    border: 2px solid ${colorPalette.main.image.border[0]};
+    border-radius: 10px;
 
     @media (min-width: ${responsive.mobile})  
     {
@@ -95,7 +98,7 @@ export const IntroductionTitle = styled.h2`
     font-size: 35px;
     font-family: Poppins, sans-serif;
     font-weight: bold;
-    text-shadow: 1px 1px 2px ${colorPalette.main.text.color};
+    text-shadow: 1px 1px 2px ${colorPalette.primary.text.color};
 
     @media (min-width: ${responsive.mobile}) 
     {

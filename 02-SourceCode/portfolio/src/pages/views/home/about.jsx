@@ -56,7 +56,7 @@ function About()
                 <IntroductionTitle>{translations.introduction.title}</IntroductionTitle>
                 {translations.introduction.texts.map((content) => 
                 (
-                    <Text color={colorPalette.main.text.paragraph.color} margin="10px">
+                    <Text color={colorPalette.primary.text.paragraph.color} margin="10px">
                         {content.text}
                     </Text>
                 ))}

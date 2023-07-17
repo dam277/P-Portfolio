@@ -3,14 +3,14 @@ import { useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 // Import translations
-import fr from "../../../resources/langs/fr/about/studyPath.json";
-import en from "../../../resources/langs/en/about/studyPath.json";
+import fr from "../../../../resources/langs/fr/about/studyPath.json";
+import en from "../../../../resources/langs/en/about/studyPath.json";
 
 // Import globals
-import getTranslations from "../../../utils/globals/getTranslations";
+import getTranslations from "../../../../utils/globals/getTranslations";
 
 // Import contexts
-import { LangContext } from "../../../utils/contexts/LangContext";
+import { LangContext } from "../../../../utils/contexts/LangContext";
 
 function StudyPath()
 {

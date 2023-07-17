@@ -132,6 +132,7 @@ export const LanguageSelector = styled.select`
     font-size: 12px;
     float: right;
     cursor: pointer;
+    
 
     @media (min-width: ${responsive.mobile}) 
     {

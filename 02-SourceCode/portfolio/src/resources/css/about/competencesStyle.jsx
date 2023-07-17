@@ -5,7 +5,6 @@ import { responsive, colorPalette } from "../styles";
 export const CompetencesContainer = styled.div`   
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,7 +16,7 @@ export const CompetenceWrapper = styled.div`
     width: 300px;
     padding: 2px;
     margin: 10px;
-    background: linear-gradient(${colorPalette.main.button.color[0]}, ${colorPalette.main.button.color[1]});
+    background: linear-gradient(${colorPalette.primary.button.color[0]}, ${colorPalette.primary.button.color[1]});
 `
 
 export const Competence = styled.div`
@@ -35,14 +34,10 @@ export const Language = styled.section`
 
 export const Framework = styled.section`
     flex: 1;
-    display: flex;
-    flex-direction: column;
 `
 
 export const Library = styled.section`
     flex: 1;
-
-
 `
 
 export const Engine = styled.div`
@@ -53,7 +48,12 @@ export const CompetenceImage = styled.img`
     height : ${(props) => props.big ? "60" : "35"}px;
 `
 
-export const SubLanguageName = styled.sub`
+export const CompetenceSection = styled.section`
+    display: flex;
+    flex-direction: column;
+`
+
+export const SubName = styled.sub`
     padding: 10px;
-    color : ${colorPalette.main.text.color};
+    color : ${colorPalette.primary.text.color};
 `

@@ -85,6 +85,7 @@ export const LanguageCompetences =
         languages : 
         [
             { name : "Php", image : php, learned : true },
+            { name : "Blade", image : blade, learned : true }
         ],
         frameworks : 
         [
@@ -208,17 +209,6 @@ export const LanguageCompetences =
         languages : 
         [
             { name : "Python", image : python, learned : false },
-        ],
-        frameworks : 
-        [],
-        libraries : 
-        []
-    },
-    {
-        learned : true,
-        languages : 
-        [
-            { name : "Blade", image : blade, learned : true },
         ],
         frameworks : 
         [],

@@ -17,8 +17,32 @@ export const responsive =
 export const colorPalette = 
 {
     primary: {
-        backGroundDefault: "#000022",
+        backGroundDefault: "#040611",
         colorDefault: "#FFFFFF",
+        button: {
+            color: [
+                "#31091f",
+                "#C7046A"
+            ],
+            border: [
+                "#31091f",
+                "#C7046A"
+            ],
+            hover: {
+                color: "#FFFFFF",
+                backGroundColor: [
+                    "#31091f",
+                    "#C7046A"
+                ]
+            }
+        },
+        text: {
+            paragraph: {
+                color: "#BBBBBB"
+            },
+            color: "#C7046A",
+            border: "#C7046A"
+        },
     },
     header: {
         link: {
@@ -42,35 +66,11 @@ export const colorPalette =
         }
     },
     main: {
-        backGroundDefault: "#1c1c1c",
+        backGroundDefault: "#0c0c0c",
         cardBackgroundColor: "#130207",
-        button: {
-            color: [
-                "#250707",
-                "#C7046A"
-            ],
-            border: [
-                "#250717",
-                "#C7046A"
-            ],
-            hover: {
-                color: "#FFFFFF",
-                backGroundColor: [
-                    "#250717",
-                    "#C7046A"
-                ]
-            }
-        },
-        text: {
-            paragraph: {
-                color: "#BBBBBB"
-            },
-            color: "#C7046A",
-            border: "#C7046A"
-        },
         image: {
             border: [
-                "#250717",
+                "#31091f",
                 "#C7046A"
             ],
         }

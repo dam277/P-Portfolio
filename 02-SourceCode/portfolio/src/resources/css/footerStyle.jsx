@@ -15,19 +15,20 @@ export const FooterContainer = styled.footer`
 
 export const FooterArticle = styled.article`
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: ${responsive.mobile}) 
+    @media (min-width: ${responsive.laptop}) 
     {
         flex-direction: row;
     }
 `
 
 export const FooterSection = styled.section`
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     flex: ${props => props.flex};
 `
@@ -84,6 +85,12 @@ export const Hr = styled.hr`
 
 /** About ================================================================================================*/
 export const AboutProject = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`
+
+export const AboutSection = styled.div`
 `
 
 export const H2 = styled.h2`
