@@ -24,6 +24,13 @@ import StudyPath from './pages/components/about/studyPath';
 // Import contexts
 import LangContext from './utils/contexts/LangContext';
 
+// Get the AOS library
+import AOS from "aos";
+import 'aos/dist/aos.css';
+
+// Init libraries
+AOS.init();
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>

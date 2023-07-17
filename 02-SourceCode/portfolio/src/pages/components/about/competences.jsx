@@ -1,12 +1,12 @@
 // Import libraries
-import { useContext } from "react";
+import { useContext, useState, useRef, useEffect  } from "react";
 
 // Import translations
 import fr from "../../../resources/langs/fr/about/competences.json";
 import en from "../../../resources/langs/en/about/competences.json";
 
 // Import styles
-import { CompetencesContainer, Competence, CompetenceWrapper, Language, Framework, Engine, Library, CompetenceImage } from "../../../resources/css/about/competencesStyle";
+import { CompetencesContainer, Competence, CompetenceWrapper, Language, Framework, Engine, Library, CompetenceImage, SubLanguageName } from "../../../resources/css/about/competencesStyle";
 
 // Import datas
 import { LanguageCompetences, EngineCompetences } from "../../../resources/datas/about/competences";
@@ -25,36 +25,50 @@ function Competences()
 
     return(
         <CompetencesContainer>
-            {LanguageCompetences.map((competence) => 
+            {LanguageCompetences.map((competence, index) => 
             (
                 competence.learned && 
                 (
-                    <CompetenceWrapper>
+                    <CompetenceWrapper data-aos="zoom-in" key={index}>
                         <Competence>
                             <Language>
                                 {competence.languages.map((language) => 
                                 (
-                                    <>
-                                        <CompetenceImage src={language.image} />
-                                    </>
+                                    <CompetenceImage big={true} src={language.image} />
                                 ))}
                             </Language>
-                            {/* <Framework>
-                                {competence.frameworks.map((framework) => 
-                                (
-                                    <>
-                                        <CompetenceImage src={framework.image} />
-                                    </>
-                                ))}
+                            <Framework>
+                                <span>{translations.framework}</span>
+                                <div>
+                                    {competence.frameworks.map((framework) => 
+                                    (
+                                        framework.learned && 
+                                        (
+                                            <CompetenceImage src={framework.image} />
+                                        )
+                                    ))}
+                                </div>
                             </Framework>
                             <Library>
-                            {competence.libraries.map((librarie) => 
-                            (
-                                <>
-                                    <CompetenceImage src={librarie.image} />
-                                </>
-                            ))}
-                            </Library> */}
+                                <span>{translations.libraries}</span>
+                                <div>
+                                    {competence.libraries.map((librarie) => 
+                                    (
+                                        librarie.learned && 
+                                        (
+                                            <CompetenceImage src={librarie.image} />
+                                        )
+                                    ))}
+                                </div>
+                            </Library>
+                                <SubLanguageName>
+                                    {competence.languages.map((language, index) => 
+                                    (
+                                        <>
+                                            {competence.languages.length >= 2 && index == competence.languages.length - 1 ? " - " : ""}{language.name}
+                                        </>
+                                    ))}
+                                </SubLanguageName>
                         </Competence>
                     </CompetenceWrapper>
                 )

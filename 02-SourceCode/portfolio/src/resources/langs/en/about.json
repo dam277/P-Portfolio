@@ -20,5 +20,10 @@
             { "text" : "Since 2018, I have developed a strong interest in programming and related fields. Programming has become my predominant passion.", "color" : ""},
             { "text" : "My main goal is to excel in development and independently acquire new skills in other domains to design more complex projects.", "color" : ""}
         ]
+    },
+    "supplements" : 
+    {
+        "path" : "My career path",
+        "competences" : "My competences"
     }
 }

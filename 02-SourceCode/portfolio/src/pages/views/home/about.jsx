@@ -1,12 +1,12 @@
 // Import libraries
 import { useContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 // Import contexts
 import { LangContext } from "../../../utils/contexts/LangContext";
 
 // Import styles
-import { MainContainer, MainImg, Supplements, Presentation, MainImgContainer, SocialNetworksContainer, PresentationText, SocialNetwork, Introduction, IntroductionTitle } from "../../../resources/css/aboutStyle";
+import { MainContainer, MainImg, Supplements, Presentation, MainImgContainer, SocialNetworksContainer, PresentationText, SocialNetwork, Introduction, IntroductionTitle, Links } from "../../../resources/css/aboutStyle";
 import { Text, Button } from "../../../resources/css/mainStyle";
 
 // Import images
@@ -62,12 +62,20 @@ function About()
                 ))}
             </Introduction>
             <Supplements>
-                <Link to="studyPath">
-                    <Button>Mon parcours</Button>
-                </Link>
-                <Link to="competences">
-                    <Button>Mes compétences</Button>
-                </Link>
+                <Links>
+                    <NavLink to="studyPath">
+                        {({ isActive }) => 
+                        (
+                            <Button isActive={isActive} width="200px">{translations.supplements.path}</Button>
+                        )}
+                    </NavLink>
+                    <NavLink to="competences">
+                        {({ isActive }) => 
+                        (
+                            <Button isActive={isActive} width="200px">{translations.supplements.competences}</Button>
+                        )}
+                    </NavLink>
+                </Links>
                 <Outlet />
             </Supplements>
         </MainContainer>

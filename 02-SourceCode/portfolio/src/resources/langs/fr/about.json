@@ -19,5 +19,10 @@
             { "text" : "Depuis 2018, j'ai développé un vif intérêt pour la programmation et les domaines connexes. À présent, le développement est devenue ma passion prédominante.", "color" : ""},
             { "text" : "Mon objectif principal est de me performer en développement et d'acquérir par moi-même de nouvelles compétences dans d'autres domaines afin de concevoir des projets plus complexes.", "color" : ""}
         ]
+    },
+    "supplements" : 
+    {
+        "path" : "Mon parcours",
+        "competences" : "Mes competences"
     }
 }

@@ -5,14 +5,16 @@ import { responsive, colorPalette } from "../styles";
 export const CompetencesContainer = styled.div`   
     margin-left: 10%;
     margin-right: 10%;
-    display: block;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 `
 
 export const CompetenceWrapper = styled.div`
-    float: left;
     border-radius: 20px;
-    height: 100px;
-    width: 100px;
+    height: 300px;
+    width: 300px;
     padding: 2px;
     margin: 10px;
     background: linear-gradient(${colorPalette.main.button.color[0]}, ${colorPalette.main.button.color[1]});
@@ -22,40 +24,36 @@ export const Competence = styled.div`
     background-color: ${colorPalette.main.cardBackgroundColor};
     height: 100%;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 `
 
 export const Language = styled.section`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    justify-content: center; /* Centrer les images horizontalement */
-    gap: 10px;
+    margin-top: 10px;
+    flex: 1;
 `
 
 export const Framework = styled.section`
+    flex: 1;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    justify-content: center; /* Centrer les images horizontalement */
-    gap: 10px;
+    flex-direction: column;
 `
 
 export const Library = styled.section`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    justify-content: center; /* Centrer les images horizontalement */
-    gap: 10px;
+    flex: 1;
+
+
 `
 
 export const Engine = styled.div`
 
 `
 
-
 export const CompetenceImage = styled.img`
-    height : 35px;
+    height : ${(props) => props.big ? "60" : "35"}px;
+`
+
+export const SubLanguageName = styled.sub`
+    padding: 10px;
+    color : ${colorPalette.main.text.color};
 `

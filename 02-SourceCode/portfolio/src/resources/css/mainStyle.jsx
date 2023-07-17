@@ -13,6 +13,9 @@ export const Button = styled.button`
     border-image: linear-gradient(${colorPalette.main.button.border[0]}, ${colorPalette.main.button.border[1]}) 1;
     transition: .5s ease-in-out;
 
+    margin: ${(props) => props.margin && props.margin};
+    padding: ${(props) => props.padding && props.padding};
+
     cursor: pointer;
 
     ${(props) => 
@@ -29,7 +32,14 @@ export const Button = styled.button`
         }
     }
 
-    //margin-left: 1000px; 
+    ${(props) => 
+        props.isActive &&
+        {
+            "color": `${colorPalette.main.button.hover.color}`,
+            "background": `linear-gradient(${colorPalette.main.button.color[0]}, ${colorPalette.main.button.color[1]})`,
+            "border": `${props.border ? props.border : `1`}px solid white`
+        }
+    }
 
     &:hover {
         color: ${colorPalette.main.button.hover.color};
