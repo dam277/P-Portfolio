@@ -2,6 +2,19 @@
 import { useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 
+// Import styles
+import { CareerContainer, TimelineContainer, TimelineHead, TimelineStem, CardsContainer, CardContainer, CardImageContainer, CardImage, CardInfosContainer, Dates, CardInfosAssignation } from "../../../../resources/css/about/studyPathStyle";
+
+// Import components
+import StudyPathCard from "../../StudyPathCard";
+
+// Import datas
+import { CareerPath } from "../../../../resources/datas/about/careerPath";
+
+// Import images
+import assignationLeft from "../../../../resources/images/about/careerPath/assignationLeft.png";
+import assignationRight from "../../../../resources/images/about/careerPath/assignationRight.png";
+
 // Import translations
 import fr from "../../../../resources/langs/fr/about/studyPath.json";
 import en from "../../../../resources/langs/en/about/studyPath.json";
@@ -19,9 +32,40 @@ function StudyPath()
     const translations = getTranslations(language, fr, en);
 
     return(
-        <container>
-            StudyPath
-        </container>
+        <>
+            <CareerContainer>
+                <TimelineContainer>
+                    <TimelineStem />
+                    <TimelineHead />
+                </TimelineContainer>
+                <CardsContainer>
+                    {CareerPath.map(card =>
+                        (
+                            <CardContainer>
+                                <CardImageContainer data-aos="fade-down">
+                                    <CardImage src={card.image} alt="" />
+                                </CardImageContainer>
+                                <CardInfosContainer>
+                                    {card.position.card === "left" && (
+                                        <>
+                                            <StudyPathCard translations={translations} card={card} position={card.position.card} />
+                                            <CardInfosAssignation data-aos="fade-down" src={assignationLeft} position={card.position.card} />
+                                        </>
+                                    )}
+                                    <Dates data-aos="fade-down" position={card.position.date}>{card.dates}</Dates>
+                                    {card.position.card === "right" && (
+                                        <>
+                                            <CardInfosAssignation data-aos="fade-down" src={assignationRight} position={card.position.card} />
+                                            <StudyPathCard translations={translations} card={card} position={card.position.card} />
+                                        </>
+                                    )}
+                                </CardInfosContainer>
+                            </CardContainer>
+                        )
+                    )}
+                </CardsContainer>
+            </CareerContainer>
+        </>
     )
 }
 

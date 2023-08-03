@@ -68,6 +68,10 @@ export const colorPalette =
     main: {
         backGroundDefault: "#0c0c0c",
         cardBackgroundColor: "#130207",
+        cardBorderColor: [
+            "#31091f",
+            "#C7046A"
+        ],
         image: {
             border: [
                 "#31091f",

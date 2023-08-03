@@ -1,3 +1,38 @@
 {
-    
+    "school" : 
+    {
+        "title" : "School",
+        "subtitle" : "",
+        "place" : "Place : Cugy/Froideville - Switzerland",
+        "text" : 
+        [
+            ""
+        ]
+    },
+    "etml" : 
+    {
+        "title" : "Fullstack development learning",
+        "subtitle" : "ETML - Ecole des Métiers Lausanne",
+        "place" : "Place : Lausanne - Switzerland",
+        "text" : 
+        [
+            "Application and Web development with multiple programming languages like C#, JavaScript and PHP",
+            "Database creation with MySQL servers and phpMyAdmin to create some of applications",
+            "Developing mobile applications with SQLite and Xamarin in C#",
+            "Learned how to make some multithreaded applications and low level languages like assembly"
+        ]
+    },
+    "abraxas" : 
+    {
+        "title" : "QA Enginer + development",
+        "subtitle" : "Ecole des Métiers de Lausanne",
+        "place" : "Place : Morges - Switzerland",
+        "text" : 
+        [
+            "Doing manual QA tests to verify the developer work and notify them when problem occurs",
+            "Learning Cypress to make automatic QA tests with javascript scripts to simplify testing",
+            "Participating in daily meeting with all the developpment team",
+            "Using and assigning tickets to separate the work for every people"
+        ]
+    }
 }

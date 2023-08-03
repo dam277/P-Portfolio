@@ -35,7 +35,18 @@ export const FooterSection = styled.section`
 
 export const ProfileContainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+`
+
+export const ProfileLinkImage = styled.img`
+    height: 25px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        height: 35px;
+    }
 `
 
 export const A = styled.a`
@@ -56,16 +67,33 @@ export const A = styled.a`
 
 export const ProfileText = styled.span`
     padding: 5px;
+    font-size: 15px;
+    content: test;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        font-size: 18px;
+    }
 `
 
 export const LogoFooter = styled.img`
-    width: 200px;
+    width: 100px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        width: 150px;
+    }
+
+    @media (min-width: ${responsive.laptop}) 
+    {
+        width: 200px;
+    }
 `
 
 export const Hr = styled.hr`
     width: 100%;
 
-    @media (min-width: ${responsive.mobile}) 
+    @media (min-width: ${responsive.laptop}) 
     {
        ${(props) => 
             props.doNotDisplay && 
@@ -81,9 +109,6 @@ export const AboutProject = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-`
-
-export const AboutSection = styled.div`
 `
 
 export const H2 = styled.h2`

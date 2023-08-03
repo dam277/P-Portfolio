@@ -1,5 +1,6 @@
 // Import styles
-import { FooterContainer, AboutProject, Copyright, A,ProfileText, Hr, FooterArticle, FooterSection, ProfileContainer, ProfileSection, LogoFooter, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4, AboutSection} from "../../resources/css/footerStyle";
+import { FooterContainer, AboutProject, Copyright, A,ProfileText, Hr, FooterArticle, FooterSection, ProfileContainer, ProfileLinkImage, LogoFooter, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4 } from "../../resources/css/footerStyle";
+import { Text } from "../../resources/css/mainStyle";
 
 // Import images
 import github from "../../resources/images/socialNetworks/github.png";
@@ -41,16 +42,16 @@ function Footer()
                             <H2>{translations.footer.aboutTitle}</H2>
                             {translations.footer.projectDescription.map((line, index) => 
                             (
-                                <p key={index}>{line}</p>
+                                <Text key={index}>{line}</Text>
                             ))}
                         </div>
                         <ProfileContainer>
                             <A href={Creator.githubLink}>
-                                <img src={github} height="35px" alt="Github logo" />
+                                <ProfileLinkImage src={github} alt="Github logo" />
                                 <ProfileText>{Creator.name}</ProfileText>
                             </A>
                             <A href={"mailto:"+Creator.contact}>
-                                <img src={gmail} height="35px" alt="Gmail logo" />
+                                <ProfileLinkImage src={gmail} height="35px" alt="Gmail logo" />
                                 <ProfileText>{Creator.contact}</ProfileText>
                             </A>
                         </ProfileContainer>
