@@ -38,9 +38,11 @@ function About()
                 <PresentationText>
                     {translations.presentation.map((content) => 
                     (
-                        <Text setResponsive={true} size="18" color={content.color}>
-                            {content.text}
-                        </Text>
+                        <p>
+                            <Text setResponsive={true} size="18" color={content.color}>
+                                {content.text}
+                            </Text>
+                        </p>
                     ))}
                 </PresentationText>
             </Presentation>
@@ -56,9 +58,11 @@ function About()
                 <IntroductionTitle>{translations.introduction.title}</IntroductionTitle>
                 {translations.introduction.texts.map((content) => 
                 (
-                    <Text color={colorPalette.primary.text.paragraph.color} margin="10px">
-                        {content.text}
-                    </Text>
+                    <p>
+                        <Text color={colorPalette.primary.text.paragraph.color} margin="10px">
+                            {content.text}
+                        </Text>
+                    </p>
                 ))}
             </Introduction>
             <Supplements>

@@ -42,7 +42,9 @@ function Footer()
                             <H2>{translations.footer.aboutTitle}</H2>
                             {translations.footer.projectDescription.map((line, index) => 
                             (
-                                <Text key={index}>{line}</Text>
+                                <p>
+                                    <Text key={index}>{line}</Text>
+                                </p>
                             ))}
                         </div>
                         <ProfileContainer>

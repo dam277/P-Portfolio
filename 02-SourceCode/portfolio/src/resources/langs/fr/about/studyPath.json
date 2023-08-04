@@ -1,3 +1,38 @@
 {
-    
+    "school" : 
+    {
+        "title" : "Ecole obligatoire",
+        "subtitle" : "",
+        "place" : "Lieu : Cugy & Froideville - Suisse",
+        "text" : 
+        [
+            ""
+        ]
+    },
+    "etml" : 
+    {
+        "title" : "Apprentissage en développement Fullstack",
+        "subtitle" : "ETML - Ecole des Métiers Lausanne",
+        "place" : "Lieu : Lausanne - Suisse",
+        "text" : 
+        [
+            "Développement d'applications et de sites web avec plusieurs langages de programmation tels que C#, JavaScript et PHP",
+            "Création de bases de données avec des serveurs MySQL et utilisation de phpMyAdmin pour développer certaines applications",
+            "Développement d'applications mobiles avec SQLite et Xamarin en C#",
+            "J'ai appris à créer des applications multi-threadées et à utiliser des langages de bas niveau tels que l'assembleur"
+        ]
+    },
+    "abraxas" : 
+    {
+        "title" : "Ingénieur QA + développement",
+        "subtitle" : "Abraxas Cari",
+        "place" : "Lieu : Morges - Suisse",
+        "text" : 
+        [
+            "réalisation de tests QA manuels pour vérifier le travail des développeurs et leur en informer en cas de problème",
+            "Apprentissage de Cypress pour effectuer des tests de QA automatiques à l'aide de scripts JavaScript afin de simplifier ceux fait manuellement",
+            "Participation à des réunions quotidiennes avec toute l'équipe de développement",
+            "Utilisation et attributions de tickets afin de répartir le travail entre chaque membre de l'équipe"
+        ]
+    }
 }

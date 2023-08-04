@@ -41,25 +41,28 @@ function StudyPath()
                 <CardsContainer>
                     {CareerPath.map(card =>
                         (
-                            <CardContainer>
-                                <CardImageContainer data-aos="fade-down">
+                            <CardContainer data-aos="fade-down">
+                                {card.position.card === "left" ? (
+                                    <>
+                                        <StudyPathCard translations={translations} card={card} position={card.position.card} />
+                                        <CardInfosAssignation src={assignationLeft} position={card.position.card} />
+                                    </>
+                                ) : 
+                                (
+                                    <Dates position={card.position.date}>{card.dates}</Dates>
+                                )}
+                                <CardImageContainer>
                                     <CardImage src={card.image} alt="" />
                                 </CardImageContainer>
-                                <CardInfosContainer>
-                                    {card.position.card === "left" && (
-                                        <>
-                                            <StudyPathCard translations={translations} card={card} position={card.position.card} />
-                                            <CardInfosAssignation data-aos="fade-down" src={assignationLeft} position={card.position.card} />
-                                        </>
-                                    )}
-                                    <Dates data-aos="fade-down" position={card.position.date}>{card.dates}</Dates>
-                                    {card.position.card === "right" && (
-                                        <>
-                                            <CardInfosAssignation data-aos="fade-down" src={assignationRight} position={card.position.card} />
-                                            <StudyPathCard translations={translations} card={card} position={card.position.card} />
-                                        </>
-                                    )}
-                                </CardInfosContainer>
+                                {card.position.card === "right" ? (
+                                    <>
+                                        <CardInfosAssignation src={assignationRight} position={card.position.card} />
+                                        <StudyPathCard translations={translations} card={card} position={card.position.card} />
+                                    </>
+                                ) : 
+                                ( 
+                                    <Dates position={card.position.date}>{card.dates}</Dates>
+                                )}
                             </CardContainer>
                         )
                     )}
@@ -70,3 +73,25 @@ function StudyPath()
 }
 
 export default StudyPath;
+
+
+{/* <CardContainer>
+<CardImageContainer data-aos="fade-down">
+    <CardImage src={card.image} alt="" />
+</CardImageContainer>
+<CardInfosContainer>
+    {card.position.card === "left" && (
+        <>
+            <StudyPathCard translations={translations} card={card} position={card.position.card} />
+            <CardInfosAssignation data-aos="fade-down" src={assignationLeft} position={card.position.card} />
+        </>
+    )}
+    <Dates data-aos="fade-down" position={card.position.date}>{card.dates}</Dates>
+    {card.position.card === "right" && (
+        <>
+            <CardInfosAssignation data-aos="fade-down" src={assignationRight} position={card.position.card} />
+            <StudyPathCard translations={translations} card={card} position={card.position.card} />
+        </>
+    )}
+</CardInfosContainer>
+</CardContainer> */}

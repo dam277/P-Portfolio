@@ -18,7 +18,7 @@ export const colorPalette =
 {
     primary: {
         backGroundDefault: "#040611",
-        colorDefault: "#FFFFFF",
+        colorDefault: "#FFFFFE",
         button: {
             color: [
                 "#31091f",

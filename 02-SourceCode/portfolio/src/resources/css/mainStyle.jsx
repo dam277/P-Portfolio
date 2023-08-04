@@ -48,7 +48,7 @@ export const Button = styled.button`
     }
 `
 
-export const Text = styled.p`
+export const Text = styled.span`
     color: ${(props) => props.color ? props.color : colorPalette.primary.colorDefault};
     font-size : ${(props) => props.size ? props.size : "18"};
     margin: ${(props) => props.margin && props.margin};
