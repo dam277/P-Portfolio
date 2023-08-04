@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 // Import styles
-import { CareerContainer, TimelineContainer, TimelineHead, TimelineStem, CardsContainer, CardContainer, CardImageContainer, CardImage, CardInfosContainer, Dates, CardInfosAssignation } from "../../../../resources/css/about/studyPathStyle";
+import { CareerContainer, TimelineContainer, TimelineHead, TimelineStem, CardsContainer, CardContainer, CardImageContainer, CardImage, Dates, CardInfosAssignation } from "../../../../resources/css/about/studyPathStyle";
 
 // Import components
 import StudyPathCard from "../../StudyPathCard";
@@ -27,6 +27,19 @@ import { LangContext } from "../../../../utils/contexts/LangContext";
 
 function StudyPath()
 {
+    // Get the current date
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const year = today.getFullYear();
+    const formattedDate = `${day}.${month}.${year}`;
+
+    // Replace the elements (like {today} to the current date)
+    CareerPath.map((card, index) => 
+    {
+        card.dates = card.dates.replace("{today}", formattedDate);
+    });
+
     // Get the translations
     const { language, setLanguage } = useContext(LangContext);
     const translations = getTranslations(language, fr, en);
@@ -39,9 +52,9 @@ function StudyPath()
                     <TimelineHead />
                 </TimelineContainer>
                 <CardsContainer>
-                    {CareerPath.map(card =>
+                    {CareerPath.map((card, index) =>
                         (
-                            <CardContainer data-aos="fade-down">
+                            <CardContainer key={`${card.name}-${index}`} data-aos="fade-down">
                                 {card.position.card === "left" ? (
                                     <>
                                         <StudyPathCard translations={translations} card={card} position={card.position.card} />
@@ -52,7 +65,7 @@ function StudyPath()
                                     <Dates position={card.position.date}>{card.dates}</Dates>
                                 )}
                                 <CardImageContainer>
-                                    <CardImage src={card.image} alt="" />
+                                    <CardImage src={card.image} alt={card.name} />
                                 </CardImageContainer>
                                 {card.position.card === "right" ? (
                                     <>
@@ -73,25 +86,3 @@ function StudyPath()
 }
 
 export default StudyPath;
-
-
-{/* <CardContainer>
-<CardImageContainer data-aos="fade-down">
-    <CardImage src={card.image} alt="" />
-</CardImageContainer>
-<CardInfosContainer>
-    {card.position.card === "left" && (
-        <>
-            <StudyPathCard translations={translations} card={card} position={card.position.card} />
-            <CardInfosAssignation data-aos="fade-down" src={assignationLeft} position={card.position.card} />
-        </>
-    )}
-    <Dates data-aos="fade-down" position={card.position.date}>{card.dates}</Dates>
-    {card.position.card === "right" && (
-        <>
-            <CardInfosAssignation data-aos="fade-down" src={assignationRight} position={card.position.card} />
-            <StudyPathCard translations={translations} card={card} position={card.position.card} />
-        </>
-    )}
-</CardInfosContainer>
-</CardContainer> */}

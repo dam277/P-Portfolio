@@ -19,13 +19,14 @@
             "Application and Web development with multiple programming languages like C#, JavaScript and PHP",
             "Database creation with MySQL servers and phpMyAdmin to create some of applications",
             "Developing mobile applications with SQLite and Xamarin in C#",
-            "Learned how to make some multithreaded applications and low level languages like assembly"
+            "Learned how to make some multithreaded applications and low level languages like assembly",
+            "One year stage in a company : as QA enginer at Abraxas"
         ]
     },
     "abraxas" : 
     {
         "title" : "QA Enginer + development",
-        "subtitle" : "Ecole des Métiers de Lausanne",
+        "subtitle" : "Abraxas cari",
         "place" : "Place : Morges - Switzerland",
         "text" : 
         [

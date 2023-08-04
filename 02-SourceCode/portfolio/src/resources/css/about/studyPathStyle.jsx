@@ -54,26 +54,37 @@ export const CardContainer = styled.div`
 export const CardImageContainer = styled.div` 
     flex: 1;
     margin: 0 10px;
-    
-    @media (min-width: ${responsive.mobile}) 
-    {
-        margin: 0 40px;
-    } 
-`
-
-export const CardImage = styled.img`
-    width: ${cardContainerSize}px;
-    height: ${cardContainerSize}px;
+    max-width: ${cardContainerSize-15}px;
+    max-height: ${cardContainerSize-15}px;
     border-top: 3px solid ${colorPalette.main.image.border[1]};
     border-bottom: 3px solid ${colorPalette.main.image.border[1]};
     background-color: ${colorPalette.primary.colorDefault};
     border-radius: 20px;
+
+    // Flex
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        margin: 0 40px;
+        max-width: ${cardContainerSize}px;
+        max-height: ${cardContainerSize}px;
+    } 
 `
 
-export const CardInfosContainer = styled.div`
-    color: ${colorPalette.primary.text.paragraph.color};
-    width: 100%;
-    height: 80px;
+export const CardImage = styled.img`
+    max-width: ${cardContainerSize-15}px;
+    max-height: ${cardContainerSize-15}px;
+    border-radius: 20px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        margin: 0 40px;
+        max-width: ${cardContainerSize}px;
+        max-height: ${cardContainerSize}px;
+    } 
 `
 
 export const Dates = styled.span`

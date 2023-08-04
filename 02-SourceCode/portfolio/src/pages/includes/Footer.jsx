@@ -42,8 +42,8 @@ function Footer()
                             <H2>{translations.footer.aboutTitle}</H2>
                             {translations.footer.projectDescription.map((line, index) => 
                             (
-                                <p>
-                                    <Text key={index}>{line}</Text>
+                                <p key={index}>
+                                    <Text>{line}</Text>
                                 </p>
                             ))}
                         </div>

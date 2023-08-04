@@ -20,9 +20,9 @@ function StudyPathCard({position, translations, card})
                )
             }
             <CardInfosPlace>{translations[card.name].place}</CardInfosPlace>
-            {translations[card.name].text.map((paragraph) => 
+            {translations[card.name].text.map((paragraph, index) => 
             (
-               <p>
+               <p key={index}>
                   <Text color={colorPalette.primary.text.paragraph.color}>
                      {paragraph}
                   </Text>

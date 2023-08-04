@@ -36,9 +36,9 @@ function About()
                     <MainImg src={smallPortrait} />
                 </MainImgContainer>
                 <PresentationText>
-                    {translations.presentation.map((content) => 
+                    {translations.presentation.map((content, index) => 
                     (
-                        <p>
+                        <p key={index}>
                             <Text setResponsive={true} size="18" color={content.color}>
                                 {content.text}
                             </Text>
@@ -47,18 +47,18 @@ function About()
                 </PresentationText>
             </Presentation>
             <SocialNetworksContainer>
-                {socialNetworks.map((network) => 
+                {socialNetworks.map((network, index) => 
                 (
-                    <a href={network.url}>
+                    <a key={index} href={network.url}>
                         <SocialNetwork src={network.image} />
                     </a>
                 ))}
             </SocialNetworksContainer>
             <Introduction>
                 <IntroductionTitle>{translations.introduction.title}</IntroductionTitle>
-                {translations.introduction.texts.map((content) => 
+                {translations.introduction.texts.map((content, index) => 
                 (
-                    <p>
+                    <p key={index}>
                         <Text color={colorPalette.primary.text.paragraph.color} margin="10px">
                             {content.text}
                         </Text>

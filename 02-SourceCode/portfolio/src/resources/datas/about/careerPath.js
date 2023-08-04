@@ -8,7 +8,7 @@ export const CareerPath =
     {
         name: "school",
         image: school,
-        dates: "2010 - 2018",
+        dates: "01.01.2008 - 31.08.2018",
         position: 
         {
             date: "right",
@@ -18,7 +18,7 @@ export const CareerPath =
     {
         name: "etml",
         image: etml,
-        dates: "2019 - today",
+        dates: "01.02.2019 - {today}",
         position: 
         {
             date: "left",
@@ -28,7 +28,7 @@ export const CareerPath =
     {
         name: "abraxas",
         image: abraxas,
-        dates: "2022 - today",
+        dates: "01.02.2023 - {today}",
         position: 
         {
             date: "left",
