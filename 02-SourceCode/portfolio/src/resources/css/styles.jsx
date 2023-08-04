@@ -6,7 +6,7 @@ export const responsive =
     desktop: "1440px",
     laptop: "1024px",
     mobile: "650px",
-    mobile_small: "365px",
+    mobile_small: "400px",
     laptop_height: "1210px",
     mobile_height: "500px"
 }

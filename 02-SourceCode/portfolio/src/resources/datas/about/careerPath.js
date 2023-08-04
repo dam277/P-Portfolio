@@ -8,7 +8,12 @@ export const CareerPath =
     {
         name: "school",
         image: school,
-        dates: "01.01.2008 - 31.08.2018",
+        current: false,
+        dates: 
+        {
+            "start" : "01.01.2008",
+            "end" : "31.08.2018"
+        },
         position: 
         {
             date: "right",
@@ -18,7 +23,12 @@ export const CareerPath =
     {
         name: "etml",
         image: etml,
-        dates: "01.02.2019 - {today}",
+        current: true,
+        dates:         
+        {
+            "start" : "01.02.2019",
+            "end" : "{today}"
+        },
         position: 
         {
             date: "left",
@@ -28,7 +38,12 @@ export const CareerPath =
     {
         name: "abraxas",
         image: abraxas,
-        dates: "01.02.2023 - {today}",
+        current: true,
+        dates:         
+        {
+            "start" : "01.02.2023",
+            "end" : "{today}"
+        },
         position: 
         {
             date: "left",

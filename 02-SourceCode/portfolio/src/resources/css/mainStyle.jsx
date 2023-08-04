@@ -53,26 +53,42 @@ export const Text = styled.span`
     font-size : ${(props) => props.size ? props.size : "18"};
     margin: ${(props) => props.margin && props.margin};
     padding: ${(props) => props.padding && props.padding};
+    text-align: ${(props) => props.align && props.align};
+    visibility: ${(props) => props.visibility && props.visibility};
+
+    @media (min-width: ${responsive.mobile_small}) 
+    {
+        ${(props) => props.setResponsiveMobileSmall && 
+        {
+            "color": `${props.mobileSmallColor && props.mobileSmallColor}`,
+            "font-size": `${props.mobileSmallSize ? props.mobileSmallSize : "19"}px`,
+            "margin": `${props.mobileSmallMargin && props.mobileSmallMargin}`,
+            "padding": `${props.mobileSmallPadding && props.mobileSmallPadding}`,
+            "visibility": `${props.mobileSmallVisibility && props.mobileSmallVisibility}`
+        }}
+    }
 
     @media (min-width: ${responsive.mobile}) 
     {
-        ${(props) => props.setResponsive && 
+        ${(props) => props.setResponsiveMobile && 
         {
             "color": `${props.mobileColor && props.mobileColor}`,
             "font-size": `${props.mobileSize ? props.mobileSize : "19"}px`,
             "margin": `${props.mobileMargin && props.mobileMargin}`,
-            "padding": `${props.mobilePadding && props.mobilePadding}`
+            "padding": `${props.mobilePadding && props.mobilePadding}`,
+            "visibility": `${props.mobileVisibility && props.mobileVisibility}`
         }}
     }
 
     @media (min-width: ${responsive.laptop}) 
     {
-        ${(props) => props.setResponsive && 
+        ${(props) => props.setResponsiveLaptop && 
         {
             "color": `${props.laptopColor && props.laptopColor}`,
             "font-size": `${props.laptopSize ? props.laptopSize : "20"}px`,
             "margin": `${props.laptopMargin && props.laptopMargin}`,
-            "padding": `${props.laptopPadding && props.laptopPadding}`
+            "padding": `${props.laptopPadding && props.laptopPadding}`,
+            "visibility": `${props.laptopVisibility && props.laptopVisibility}`
         }}
     }
 `

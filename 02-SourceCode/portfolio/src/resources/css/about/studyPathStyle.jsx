@@ -68,9 +68,9 @@ export const CardImageContainer = styled.div`
 
     @media (min-width: ${responsive.mobile}) 
     {
-        margin: 0 40px;
         max-width: ${cardContainerSize}px;
         max-height: ${cardContainerSize}px;
+        margin: 0 40px;
     } 
 `
 
@@ -81,7 +81,6 @@ export const CardImage = styled.img`
 
     @media (min-width: ${responsive.mobile}) 
     {
-        margin: 0 40px;
         max-width: ${cardContainerSize}px;
         max-height: ${cardContainerSize}px;
     } 
@@ -89,9 +88,23 @@ export const CardImage = styled.img`
 
 export const Dates = styled.span`
     display: flex;
+    text-align: ${(props) => props.position === "left" ? "right" : "left"};
     justify-content: ${(props) => props.position === "left" ? "right" : "left"};
-    margin-top: ${cardContainerHalfSize-6}px;
-    flex: 8;
+    color: ${(props) => props.current ? "green" : "red"};
+    margin-top: ${cardContainerHalfSize-22}px;
+    font-size: 14px;
+    flex: 10;
+
+    @media (min-width: ${responsive.mobile_small})  
+    {
+        margin-top: ${cardContainerHalfSize-12}px;
+    } 
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        font-size: 16px;
+        margin-top: ${cardContainerHalfSize-6}px;
+    } 
 `
 
 export const CardInfosAssignation = styled.img`
@@ -116,7 +129,7 @@ export const CardInfosAssignation = styled.img`
 `
 
 export const CardInfos = styled.div`
-    flex: 8;
+    flex: 10;
     display: flex;
     justify-content: ${(props) => props.position === "left" ? "right" : "left"};
 `

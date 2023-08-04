@@ -4,6 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 
 // Import styles
 import { CareerContainer, TimelineContainer, TimelineHead, TimelineStem, CardsContainer, CardContainer, CardImageContainer, CardImage, Dates, CardInfosAssignation } from "../../../../resources/css/about/studyPathStyle";
+import { Text } from "../../../../resources/css/mainStyle";
 
 // Import components
 import StudyPathCard from "../../StudyPathCard";
@@ -24,6 +25,7 @@ import getTranslations from "../../../../utils/globals/getTranslations";
 
 // Import contexts
 import { LangContext } from "../../../../utils/contexts/LangContext";
+import { responsive } from "../../../../resources/css/styles";
 
 function StudyPath()
 {
@@ -37,8 +39,13 @@ function StudyPath()
     // Replace the elements (like {today} to the current date)
     CareerPath.map((card, index) => 
     {
-        card.dates = card.dates.replace("{today}", formattedDate);
+        card.dates.start = card.dates.start.replace("{today}", formattedDate);
+        card.dates.end = card.dates.end.replace("{today}", formattedDate);
     });
+
+    // Get the window width
+    const windowWidth = window.innerWidth;
+    console.log(windowWidth);
 
     // Get the translations
     const { language, setLanguage } = useContext(LangContext);
@@ -62,7 +69,9 @@ function StudyPath()
                                     </>
                                 ) : 
                                 (
-                                    <Dates position={card.position.date}>{card.dates}</Dates>
+                                    <Dates current={card.current} position={card.position.date}>
+                                        {card.dates.start} - {card.dates.end}
+                                    </Dates>
                                 )}
                                 <CardImageContainer>
                                     <CardImage src={card.image} alt={card.name} />
@@ -74,7 +83,9 @@ function StudyPath()
                                     </>
                                 ) : 
                                 ( 
-                                    <Dates position={card.position.date}>{card.dates}</Dates>
+                                    <Dates current={card.current} position={card.position.date}>
+                                        {card.dates.start} - {card.dates.end}
+                                    </Dates>
                                 )}
                             </CardContainer>
                         )
