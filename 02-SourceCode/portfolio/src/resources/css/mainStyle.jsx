@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled, keyframes } from "styled-components";
 
 import { responsive, colorPalette } from "./styles";
 
@@ -91,4 +91,29 @@ export const Text = styled.span`
             "visibility": `${props.laptopVisibility && props.laptopVisibility}`
         }}
     }
+`
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`
+
+export const LoaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+export const Loader = styled.div`
+  padding: 10px;
+  border: 6px solid black;
+  border-bottom-color: transparent;
+  border-radius: 22px;
+  animation: ${rotate} 1s infinite linear;
+  height: 0;
+  width: 0;
 `
