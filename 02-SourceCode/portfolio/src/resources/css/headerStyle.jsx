@@ -10,7 +10,7 @@ export const HeaderContainer = styled.header`
     width: 100%;
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 99;
     height: 75px;
 
     @media (min-width: ${responsive.mobile}) 
@@ -132,6 +132,7 @@ export const LanguageSelector = styled.select`
     font-size: 12px;
     float: right;
     cursor: pointer;
+    
 
     @media (min-width: ${responsive.mobile}) 
     {

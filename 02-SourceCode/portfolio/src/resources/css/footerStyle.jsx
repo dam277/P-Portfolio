@@ -15,46 +15,47 @@ export const FooterContainer = styled.footer`
 
 export const FooterArticle = styled.article`
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: ${responsive.mobile}) 
+    @media (min-width: ${responsive.laptop}) 
     {
         flex-direction: row;
     }
 `
 
 export const FooterSection = styled.section`
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     flex: ${props => props.flex};
 `
 
-
-/** Table ================================================================================================*/
-export const Table = styled.table`
-    background-color: ${colorPalette.footer.table.backGroundColor};
-    border: 1px solid ${colorPalette.footer.table.border};
-    border-collapse: collapse;
-    width: 100%;
-    
-    @media (min-width: ${responsive.mobile}) 
-    {
-        margin-right: 20px;
-        margin-left: 10px;
-        width: 300px;
-    }
-    
+export const ProfileContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 `
 
-export const Td = styled.td`
-    border: 1px solid ${colorPalette.footer.table.border};
+export const ProfileLinkImage = styled.img`
+    height: 25px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        height: 35px;
+    }
 `
 
 export const A = styled.a`
-    display: block;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 10px;
+    padding: 2px;
     box-shadow: inset 0 0 0 0 ${colorPalette.footer.link.hover.backGroundColor};
     color: ${colorPalette.footer.link.color};
     transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
@@ -64,14 +65,35 @@ export const A = styled.a`
     }
 `
 
-export const ImgProfile = styled.img`
-    width: 100%;
+export const ProfileText = styled.span`
+    padding: 5px;
+    font-size: 15px;
+    content: test;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        font-size: 18px;
+    }
+`
+
+export const LogoFooter = styled.img`
+    width: 100px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        width: 150px;
+    }
+
+    @media (min-width: ${responsive.laptop}) 
+    {
+        width: 200px;
+    }
 `
 
 export const Hr = styled.hr`
     width: 100%;
 
-    @media (min-width: ${responsive.mobile}) 
+    @media (min-width: ${responsive.laptop}) 
     {
        ${(props) => 
             props.doNotDisplay && 
@@ -84,6 +106,9 @@ export const Hr = styled.hr`
 
 /** About ================================================================================================*/
 export const AboutProject = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 `
 
 export const H2 = styled.h2`

@@ -1,5 +1,10 @@
 // Import styles
-import { FooterContainer, AboutProject, Copyright, Table, Td, A, Hr, FooterArticle, FooterSection, ImgProfile, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4, } from "../../resources/css/footerStyle";
+import { FooterContainer, AboutProject, Copyright, A,ProfileText, Hr, FooterArticle, FooterSection, ProfileContainer, ProfileLinkImage, LogoFooter, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4 } from "../../resources/css/footerStyle";
+import { Text } from "../../resources/css/mainStyle";
+
+// Import images
+import github from "../../resources/images/socialNetworks/github.png";
+import gmail from "../../resources/images/socialNetworks/gmail.png";
 
 // Import hooks
 import { useContext } from "react";
@@ -17,6 +22,7 @@ import { Languages, Libraries } from "../../resources/datas/footer/programs";
 // Import translations
 import fr from "../../resources/langs/fr/includes.json"
 import en from "../../resources/langs/en/includes.json"
+import { Button } from "../../resources/css/mainStyle";
 
 function Footer()
 {
@@ -26,54 +32,51 @@ function Footer()
     return(
         <FooterContainer>
             <FooterArticle>
-                <FooterSection flex={1}>
-                    <Table>
-                        <tr>
-                            <th>{translations.footer.creator}</th>
-                        </tr>
-                        <tr>
-                            <Td>
-                                <A href={Creator.githubLink} data-replace="get a link">{Creator.name}</A>
-                            </Td>
-                        </tr>
-                        <tr>
-                            <Td>
-                                <ImgProfile src={Creator.profileImage} alt={translations.footer.profileImageAlt} />
-                            </Td>
-                        </tr>
-                        <tr>
-                            <Td>
-                                <A href={"mailto:"+Creator.contact}>{Creator.contact}</A>
-                            </Td>
-                        </tr>
-                    </Table>
+                <FooterSection flex={3}>
+                    <LogoFooter src={Creator.logoFooter} alt={translations.footer.logoFooterImageAlt} />
                 </FooterSection>
                 <Hr doNotDisplay={true}/>
-                <FooterSection flex={5}>
+                <FooterSection flex={4}>
                     <AboutProject>
-                        <H2>{translations.footer.aboutTitle}</H2>
-                        {translations.footer.projectDescription.map((line, index) => 
-                        (
-                            <p key={index}>{line}</p>
-                        ))}
-                        <H3>{translations.footer.programsTitle}</H3>
-                        <ProgramsContainer>
-                            <ProgramTypeContainer>
-                                <H4>{translations.footer.languages}</H4>
-                                {Languages.map((language, index) => 
-                                (
-                                    <ImgProgram key={`${language}-${index}`} src={language} />
-                                ))}
-                            </ProgramTypeContainer>
-                            <ProgramTypeContainer>
-                                <H4>{translations.footer.libraries}</H4>
-                                {Libraries.map((library, index) => 
-                                (
-                                    <ImgProgram key={`${library}-${index}`} src={library} />
-                                ))}
-                            </ProgramTypeContainer>
-                        </ProgramsContainer>
+                        <div>
+                            <H2>{translations.footer.aboutTitle}</H2>
+                            {translations.footer.projectDescription.map((line, index) => 
+                            (
+                                <p key={index}>
+                                    <Text>{line}</Text>
+                                </p>
+                            ))}
+                        </div>
+                        <ProfileContainer>
+                            <A href={Creator.githubLink}>
+                                <ProfileLinkImage src={github} alt="Github logo" />
+                                <ProfileText>{Creator.name}</ProfileText>
+                            </A>
+                            <A href={"mailto:"+Creator.contact}>
+                                <ProfileLinkImage src={gmail} height="35px" alt="Gmail logo" />
+                                <ProfileText>{Creator.contact}</ProfileText>
+                            </A>
+                        </ProfileContainer>
                     </AboutProject>
+                </FooterSection>
+                <FooterSection flex={3}>
+                    <H3>{translations.footer.programsTitle}</H3>
+                    <ProgramsContainer>
+                        <ProgramTypeContainer>
+                            <H4>{translations.footer.languages}</H4>
+                            {Languages.map((language, index) => 
+                            (
+                                <ImgProgram key={`${language}-${index}`} src={language} />
+                            ))}
+                        </ProgramTypeContainer>
+                        <ProgramTypeContainer>
+                            <H4>{translations.footer.libraries}</H4>
+                            {Libraries.map((library, index) => 
+                            (
+                                <ImgProgram key={`${library}-${index}`} src={library} />
+                            ))}
+                        </ProgramTypeContainer>
+                    </ProgramsContainer>
                 </FooterSection>
             </FooterArticle>
             <Hr />

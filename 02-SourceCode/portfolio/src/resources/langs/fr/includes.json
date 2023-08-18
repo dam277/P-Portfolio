@@ -12,7 +12,7 @@
     {
         "copyright" : "Copyright © 2023 - Damien Loup - Tous droits résérvés",
         "creator" : "Créateur",
-        "profileImageAlt" : "Image de profile github",
+        "logoFooterImageAlt" : "Logo du site web",
         "aboutTitle" : "A propos du projet",
         "programsTitle" : "Langages et librairies utilisées pour ce projet",
         "languages" : "Langages",

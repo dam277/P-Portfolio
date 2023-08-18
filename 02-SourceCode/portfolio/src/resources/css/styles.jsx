@@ -6,7 +6,7 @@ export const responsive =
     desktop: "1440px",
     laptop: "1024px",
     mobile: "650px",
-    mobile_small: "365px",
+    mobile_small: "400px",
     laptop_height: "1210px",
     mobile_height: "500px"
 }
@@ -17,8 +17,32 @@ export const responsive =
 export const colorPalette = 
 {
     primary: {
-        backGroundDefault: "#000022",
-        colorDefault: "#FFFFFF",
+        backGroundDefault: "#040611",
+        colorDefault: "#FFFFFE",
+        button: {
+            color: [
+                "#31091f",
+                "#C7046A"
+            ],
+            border: [
+                "#31091f",
+                "#C7046A"
+            ],
+            hover: {
+                color: "#FFFFFF",
+                backGroundColor: [
+                    "#31091f",
+                    "#C7046A"
+                ]
+            }
+        },
+        text: {
+            paragraph: {
+                color: "#BBBBBB"
+            },
+            color: "#C7046A",
+            border: "#C7046A"
+        },
     },
     header: {
         link: {
@@ -42,29 +66,17 @@ export const colorPalette =
         }
     },
     main: {
-        button: {
-            color: [
-                "#250717",
-                "#C7046A"
-            ],
-            border: [
-                "#250717",
-                "#C7046A"
-            ],
-            hover: {
-                color: "#FFFFFF",
-                backGroundColor: [
-                    "#250717",
-                    "#C7046A"
-                ]
-            }
-        },
-        text: {
-            color: "#C7046A",
-            border: "#C7046A"
-        },
+        backGroundDefault: "#0c0c0c",
+        cardBackgroundColor: "#130207",
+        cardBorderColor: [
+            "#31091f",
+            "#C7046A"
+        ],
         image: {
-            border: "#4e0028"
+            border: [
+                "#31091f",
+                "#C7046A"
+            ],
         }
     },
     footer: {

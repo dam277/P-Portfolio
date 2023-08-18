@@ -1,0 +1,28 @@
+{
+    "presentation" : 
+    [
+        { "text" : "BONJOUR", "color" : "#4e0028"},
+        { "text" : "Je m'appelle Damien et j'ai 19 ans !", "color" : ""},
+        { "text" : "Mes passions sont :", "color" : ""},
+        { "text" : "Badminton - Développement - Jeux vidéo", "color" : "#C7046A"},
+        { "text" : "Je suis apprenti en développement en 3ème année à l'ETML en Suisse", "color" : ""},
+        { "text" : "Je suis un développeur avec une expertise particulière en développement Back-end.", "color" : ""}
+    ],
+    "introduction" : 
+    {
+        "title" : "Introduction",
+        "texts" : 
+        [
+            { "text" : "Je suis un développeur compétent avec de l'expérience sur plusieurs langages de programmation.", "color" : ""},
+            { "text" : "Je fais quotidiennement de la programmation pour apprendre des langages, librairies, framework, etc... ou y faire des projets personnels et j'aime apprendre de nouvelles choses afin d'élargir  mes connaissances et mettre mon maximum pour optimiser la qualité de mes projets et travaux, ainsi, je n'abandonne pas au premier problème !", "color" : ""},
+            { "text" : "J'apprends et me familiarise rapidement avec les outils utilisés.", "color" : ""},
+            { "text" : "Depuis 2018, j'ai développé un vif intérêt pour la programmation et les domaines connexes. À présent, le développement est devenue ma passion prédominante.", "color" : ""},
+            { "text" : "Mon objectif principal est de me performer en développement et d'acquérir par moi-même de nouvelles compétences dans d'autres domaines afin de concevoir des projets plus complexes.", "color" : ""}
+        ]
+    },
+    "supplements" : 
+    {
+        "path" : "Mon parcours",
+        "competences" : "Mes competences"
+    }
+}

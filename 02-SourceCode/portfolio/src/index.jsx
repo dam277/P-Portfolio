@@ -17,12 +17,21 @@ import Works from './pages/views/works';
 import Details from './pages/views/works/details';
 import E404 from './pages/views/errors/404';
 
-// Import components
-import Competences from './pages/components/about/competences';
-import StudyPath from './pages/components/about/studyPath';
+// Import components subPages
+import Competences from './pages/components/subPages/about/Competences';
+import StudyPath from './pages/components/subPages/about/StudyPath';
 
 // Import contexts
 import LangContext from './utils/contexts/LangContext';
+
+// Get the AOS library
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import Admin from './pages/views/admin';
+import Login from './pages/views/admin/login';
+
+// Init libraries
+AOS.init();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -39,6 +48,10 @@ root.render(
                     <Route path='/works'>
                         <Route index element={<Works />} />
                         <Route path=':id' element={< Details />} />
+                    </Route>
+                    <Route path='/admin'>
+                        <Route index element={<Admin />}></Route>
+                        <Route path='login' element={<Login />} />
                     </Route>
                     <Route path='*' element={<E404 />}/>
                 </Routes>

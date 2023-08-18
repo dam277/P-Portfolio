@@ -103,10 +103,9 @@ body
 main
 {
     height: 100%;
-    min-height: 100vh;
+    min-height: 93vh;
     margin-top: 75px;
 }
-
 /*================================= RESPONSIVE DESIGN =================================*/
 @media (min-width: 650px) 
 {
