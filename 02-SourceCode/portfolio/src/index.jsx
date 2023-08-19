@@ -27,8 +27,6 @@ import LangContext from './utils/contexts/LangContext';
 // Get the AOS library
 import AOS from "aos";
 import 'aos/dist/aos.css';
-import Admin from './pages/views/admin';
-import Login from './pages/views/admin/login';
 
 // Init libraries
 AOS.init();
@@ -48,10 +46,6 @@ root.render(
                     <Route path='/works'>
                         <Route index element={<Works />} />
                         <Route path=':id' element={< Details />} />
-                    </Route>
-                    <Route path='/admin'>
-                        <Route index element={<Admin />}></Route>
-                        <Route path='login' element={<Login />} />
                     </Route>
                     <Route path='*' element={<E404 />}/>
                 </Routes>
