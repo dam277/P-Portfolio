@@ -1,0 +1,27 @@
+{
+    "title" : "Travaux de Damien Loup",
+    "subtitle" : "Development Web & d'applications",
+    "filters" : 
+    {
+        "searchBar" : "Rechercher...",
+        "projectType" : 
+        {
+            "software" : ["Applications", "Bureau"],
+            "web" : ["Applications", "Web"],
+            "mobile" : ["Applications", "Mobiles"]
+        },
+        "projectCompletion" : 
+        {
+            "all" : "tous",
+            "finished" : "finis",
+            "inDevelopment" : "en cours",
+            "notStarted" : "pas commencés"
+        },
+        "workType" : 
+        {
+            "all" : "tous",
+            "courses" : "cours",
+            "projects" : "projets"
+        }
+    }
+}

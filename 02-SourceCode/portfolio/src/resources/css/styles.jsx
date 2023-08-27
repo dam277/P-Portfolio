@@ -77,6 +77,24 @@ export const colorPalette =
                 "#31091f",
                 "#C7046A"
             ],
+        },
+        filters: 
+        {
+            card : 
+            {
+                backGroundColor : "#1F1F1F",
+                borderColor : "#808080",
+                borderColorChecked : "#C7046A",
+                radio : 
+                {
+                    borderColor: "#8300446c",
+                    backGroundColor: "#C7046A"
+                }
+            },
+            searchBar : 
+            {
+                borderColor: "#C7046A"
+            }
         }
     },
     footer: {

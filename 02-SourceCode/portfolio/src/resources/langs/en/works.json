@@ -1,0 +1,27 @@
+{
+    "title" : "Works of Damien Loup",
+    "subtitle" : "Web & Software development",
+    "filters" : 
+    {
+        "searchBar" : "Search...",
+        "projectType" : 
+        { 
+            "software" : ["Software", "Applications"],
+            "web" : ["Web", "Applications"],
+            "mobile" : ["Mobile", "Applications"]
+        },
+        "projectCompletion" : 
+        {
+            "all" : "all",
+            "finished" : "finished",
+            "inDevelopment" : "in development",
+            "notStarted" : "not started"
+        },
+        "workType" : 
+        {
+            "all" : "all",
+            "courses" : "courses",
+            "projects" : "projects"
+        }
+    }
+}
