@@ -6,5 +6,5 @@ export const socialNetworks =
 [
     {image : linkedin, url : "https://www.linkedin.com/in/damien-loup-797a94257/"},
     {image : github, url : "https://github.com/dam277"},
-    {image : gmail, url : "mailto: damien.loup14@gmail.com"}
+    {image : gmail, url : "mailto:damien.loup14@gmail.com"}
 ]
