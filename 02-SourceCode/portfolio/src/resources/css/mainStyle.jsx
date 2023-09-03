@@ -50,7 +50,7 @@ export const Button = styled.button`
 
 export const Text = styled.span`
     color: ${(props) => props.color ? props.color : colorPalette.primary.colorDefault};
-    font-size : ${(props) => props.size ? props.size : "18"};
+    font-size : ${(props) => props.size ? props.size : "18"}px;
     margin: ${(props) => props.margin && props.margin};
     padding: ${(props) => props.padding && props.padding};
     text-align: ${(props) => props.align && props.align};

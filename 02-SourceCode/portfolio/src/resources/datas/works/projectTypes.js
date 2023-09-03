@@ -6,15 +6,15 @@ import mobile from '../../images/works/projectTypeCards/mobile.png';
 const ProjectTypes = 
 [
     {
-        id: "web",
+        id: "ptype-web",
         image: web,
     },
     {
-        id: "software",
+        id: "ptype-software",
         image: software,
     },
     {
-        id: "mobile",
+        id: "ptype-mobile",
         image: mobile,
     }
 ];

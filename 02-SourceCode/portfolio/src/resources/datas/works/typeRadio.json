@@ -1,0 +1,17 @@
+[
+    {
+        "id" : "type-all",
+        "value" : "all",
+        "defaultCheck" : true
+    },
+    {
+        "id" : "type-courses",
+        "value" : "courses",
+        "defaultCheck" : false
+    },
+    {
+        "id" : "type-projects",
+        "value" : "projects",
+        "defaultCheck" : false
+    }
+]

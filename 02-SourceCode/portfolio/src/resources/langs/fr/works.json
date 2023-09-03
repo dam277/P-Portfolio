@@ -6,22 +6,22 @@
         "searchBar" : "Rechercher...",
         "projectType" : 
         {
-            "software" : ["Applications", "Bureau"],
-            "web" : ["Applications", "Web"],
-            "mobile" : ["Applications", "Mobiles"]
+            "ptype-software" : ["Applications", "Bureau"],
+            "ptype-web" : ["Applications", "Web"],
+            "ptype-mobile" : ["Applications", "Mobiles"]
         },
         "projectCompletion" : 
         {
-            "all" : "tous",
-            "finished" : "finis",
-            "inDevelopment" : "en cours",
-            "notStarted" : "pas commencés"
+            "completion-all" : "tous",
+            "completion-finished" : "finis",
+            "completion-inDevelopment" : "en cours",
+            "completion-notStarted" : "pas commencés"
         },
         "workType" : 
         {
-            "all" : "tous",
-            "courses" : "cours",
-            "projects" : "projets"
+            "type-all" : "tous",
+            "type-courses" : "cours",
+            "type-projects" : "projets"
         }
     }
 }

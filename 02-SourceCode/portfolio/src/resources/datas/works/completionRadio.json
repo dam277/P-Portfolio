@@ -1,0 +1,22 @@
+[
+    {
+        "id" : "completion-all",
+        "value" : "all",
+        "defaultCheck" : true
+    },
+    {
+        "id" : "completion-finished",
+        "value" : "finished",
+        "defaultCheck" : false
+    },
+    {
+        "id" : "completion-inDevelopment",
+        "value" : "in development",
+        "defaultCheck" : false
+    },
+    {
+        "id" : "completion-notStarted",
+        "value" : "not started",
+        "defaultCheck" : false
+    }
+]

@@ -6,22 +6,22 @@
         "searchBar" : "Search...",
         "projectType" : 
         { 
-            "software" : ["Software", "Applications"],
-            "web" : ["Web", "Applications"],
-            "mobile" : ["Mobile", "Applications"]
+            "ptype-software" : ["Software", "Applications"],
+            "ptype-web" : ["Web", "Applications"],
+            "ptype-mobile" : ["Mobile", "Applications"]
         },
         "projectCompletion" : 
         {
-            "all" : "all",
-            "finished" : "finished",
-            "inDevelopment" : "in development",
-            "notStarted" : "not started"
+            "completion-all" : "all",
+            "completion-finished" : "finished",
+            "completion-inDevelopment" : "in development",
+            "completion-notStarted" : "not started"
         },
         "workType" : 
         {
-            "all" : "all",
-            "courses" : "courses",
-            "projects" : "projects"
+            "type-all" : "all",
+            "type-courses" : "courses",
+            "type-projects" : "projects"
         }
     }
 }

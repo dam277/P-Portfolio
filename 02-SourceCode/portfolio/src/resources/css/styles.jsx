@@ -3,12 +3,13 @@
  */
 export const responsive = 
 {
+    desktop_big: "1604px",
     desktop: "1440px",
+    laptop_big: "1110px",
     laptop: "1024px",
+    laptop_small: "899px",
     mobile: "650px",
     mobile_small: "400px",
-    laptop_height: "1210px",
-    mobile_height: "500px"
 }
 
 /**
@@ -94,6 +95,16 @@ export const colorPalette =
             searchBar : 
             {
                 borderColor: "#C7046A"
+            },
+            radioButton : 
+            {
+                borderColor: "#808080",
+                backGroundColor: "transparent",
+                checked : 
+                [
+                    "#C7046A",
+                    "#31091f"
+                ]
             }
         }
     },
