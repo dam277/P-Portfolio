@@ -20,8 +20,7 @@ import eProjectCompletion from "../../../resources/datas/enums/eProjectCompletio
 function Home()
 {
     // Get the translations
-    const { language, setLanguage } = useContext(LangContext);
-    const translations = getTranslations(language, fr, en);
+    const translations = getTranslations(fr, en);
 
     // Set a state for the page of the carousel
     const [pageLast, setPageLast] = useState(1);

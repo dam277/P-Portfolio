@@ -1,6 +1,5 @@
 // Impot hooks
-import { useContext, useEffect, useState } from "react";
-import { LangContext } from "../../../utils/contexts/LangContext";
+import { useState } from "react";
 
 // Import components
 import Filters from "../../components/works/Filters";
@@ -28,8 +27,7 @@ import Projects from "../../../resources/datas/projects";
 function Works()
 {
     // Get the translations
-    const { language, setLanguage } = useContext(LangContext);
-    const translations = getTranslations(language, fr, en);
+    const translations = getTranslations(fr, en);
 
     // Set a state fot the searchbar, project types cards, radio buttons and languages
     const [searchbar, setSearchbar] = useState("");

@@ -1,9 +1,4 @@
-// Import libraries
-import { useContext } from "react";
 import { Outlet, NavLink } from "react-router-dom";
-
-// Import contexts
-import { LangContext } from "../../../utils/contexts/LangContext";
 
 // Import styles
 import { MainContainer, MainImg, Supplements, Presentation, MainImgContainer, SocialNetworksContainer, PresentationText, SocialNetwork, Introduction, IntroductionTitle, Links } from "../../../resources/css/aboutStyle";
@@ -26,8 +21,7 @@ import { colorPalette } from "../../../resources/css/styles";
 function About()
 {
     // Get the translations
-    const { language, setLanguage } = useContext(LangContext);
-    const translations = getTranslations(language, fr, en);
+    const translations = getTranslations(fr, en);
 
     return(
         <MainContainer>
