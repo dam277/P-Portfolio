@@ -1,43 +1,58 @@
-// Import styles
-import { FooterContainer, AboutProject, Copyright, A,ProfileText, Hr, FooterArticle, FooterSection, ProfileContainer, ProfileLinkImage, LogoFooter, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4 } from "../../resources/css/footerStyle";
-import { Text } from "../../resources/css/mainStyle";
+/**
+ * @author : Damien Loup
+ * @component : Footer
+ * @description : This component is responsible for displaying the footer of the website
+ */
 
-// Import images
-import github from "../../resources/images/socialNetworks/github.png";
-import gmail from "../../resources/images/socialNetworks/gmail.png";
+// Import Hooks
 
-// Import hooks
-import { useContext } from "react";
+// Import Globals
+import GetTranslations from "../../utils/globals/getTranslations";
 
-// Import contexts
-import { LangContext } from "../../utils/contexts/LangContext";
+// Import Enums 
 
-// Import globals
-import getTranslations from "../../utils/globals/getTranslations";
+// Import Contexts
 
-// Import datas
+// Import Components
+
+// Import Translations
+import fr from "../../resources/langs/fr/includes.json"
+import en from "../../resources/langs/en/includes.json"
+
+// Import Datas
 import { Creator } from "../../resources/datas/footer/creator";
 import Programs from "../../resources/datas/footer/programs";
 
-// Import translations
-import fr from "../../resources/langs/fr/includes.json"
-import en from "../../resources/langs/en/includes.json"
-import { Button } from "../../resources/css/mainStyle";
+// Import Styles
+import { FooterContainer, AboutProject, Copyright, A, ProfileText, Hr, FooterArticle, FooterSection, ProfileContainer, ProfileLinkImage, LogoFooter, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4 } from "../../resources/css/footerStyle";
+import { Text } from "../../resources/css/mainStyle";
 
+// Import Images
+import github from "../../resources/images/socialNetworks/github.png";
+import gmail from "../../resources/images/socialNetworks/gmail.png";
+
+/**
+ * Display the footer of the website
+ * @returns {HTMLElement} Footer html elements
+ */
 function Footer()
 {
-    const { language } = useContext(LangContext);
-    const translations = getTranslations(language, fr, en);
+    // Get the translations
+    const translations = GetTranslations(fr, en);
 
+    // Return html elements
     return(
         <FooterContainer>
             <FooterArticle>
+                {/* Big logo */}
                 <FooterSection flex={3}>
                     <LogoFooter src={Creator.logoFooter} alt={translations.footer.logoFooterImageAlt} />
                 </FooterSection>
                 <Hr doNotDisplay={true}/>
+                {/* About project section */}
                 <FooterSection flex={4}>
                     <AboutProject>
+                        {/* Title and description */}
                         <div>
                             <H2>{translations.footer.aboutTitle}</H2>
                             {translations.footer.projectDescription.map((line, index) => 
@@ -47,6 +62,7 @@ function Footer()
                                 </p>
                             ))}
                         </div>
+                        {/* Github and Gmail links */}
                         <ProfileContainer>
                             <A href={Creator.githubLink}>
                                 <ProfileLinkImage src={github} alt="Github logo" />
@@ -59,6 +75,7 @@ function Footer()
                         </ProfileContainer>
                     </AboutProject>
                 </FooterSection>
+                {/* Languages and libraries used for project */}
                 <FooterSection flex={3}>
                     <H3>{translations.footer.programsTitle}</H3>
                     <ProgramsContainer>
@@ -80,6 +97,7 @@ function Footer()
                 </FooterSection>
             </FooterArticle>
             <Hr />
+            {/* Copyright */}
             <Copyright>{translations.footer.copyright}</Copyright>
         </FooterContainer>
     )

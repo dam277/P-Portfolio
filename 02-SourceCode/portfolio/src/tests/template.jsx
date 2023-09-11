@@ -1,3 +1,11 @@
+/**
+ * @author : Damien Loup
+ * @component :
+ * @description :
+ */
+
+// Import Libraries
+
 // Import Hooks
 
 // Import Globals
@@ -16,23 +24,35 @@
 
 // Import Images
 
-function Component({})
+/**
+ * Component description
+ * @param {} param1 =>  
+ * @param {} param2 =>  
+ * @returns {HTMLElement} component html elements
+ */
+function Component({param1, param2})
 {
-    // UseEffect
-
+    // Important elements
+    
     // Set States
 
-    // Handles functions
+    // UseEffect
 
+    // Handle functions
+    
     // Other functions
-
+    
     // Set the translations
 
-    // Return {HtmlElement}
+    // Events
+
+    // Return html elements
     return (
         <>
         </>
     )
+
+    
 }
 
 export default Component;
