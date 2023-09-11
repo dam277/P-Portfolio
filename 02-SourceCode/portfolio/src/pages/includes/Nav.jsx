@@ -1,20 +1,47 @@
-// Import rooting elements
+/**
+ * @author : Damien Loup
+ * @component : Nav
+ * @description : Display the navigation menu to navigate to the specified page
+ */
+
+// Import Libraries
 import { NavLink } from "react-router-dom";
 
-/** Import styles */
+// Import Hooks
+
+// Import Globals
+
+// Import Enums 
+
+// Import Contexts
+
+// Import Components
+
+// Import Translations
+
+// Import Datas
+
+// Import Styles
 import { NavContainer, SmallUl, SmallLi } from "../../resources/css/headerStyle";
 
+// Import Images
+
 /**
- * Nav component for the header navigation menu
- * @param {Array} translations array of translations 
- * @returns {HTMLElement} html elements containing the navigation menu
+ * Component description
+ * @param {boolean} isMenuOpen => Define if the menu is open (in small page like phone)
+ * @param {object} translations => Translations in the right language
+ * @param {boolean} isBig => Define if the size of the page is big
+ * @returns {HTMLElement} Nav html elements
  */
 function Nav({ isMenuOpen, translations, isBig })
 {
+    // Return html elements
     return(
         <NavContainer isOpen={isMenuOpen && !isBig}>
+            {/* Display the menu small or big */}
             {isMenuOpen && !isBig ? 
             (
+                // Smallmenu
                 <SmallUl>
                     <SmallLi>
                         <NavLink className={({ isActive }) => isActive ? "active-navlink navlink" : "navlink navlink-move"} to="/">
@@ -41,6 +68,7 @@ function Nav({ isMenuOpen, translations, isBig })
             ) 
             : 
             (
+                // Big menu
                 <>
                     <NavLink className={({ isActive }) => isActive ? "active-navlink  navlink" : "navlink"} to="/">
                     {({ isActive }) => (
