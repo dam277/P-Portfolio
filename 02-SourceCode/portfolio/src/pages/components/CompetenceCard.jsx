@@ -1,12 +1,55 @@
-// Import styles
-import { Competence, CompetenceWrapper, Language, Framework, Engine, Library, CompetenceImage, SubName } from "../../resources/css/about/competencesStyle";
+/**
+ * @author : Damien Loup 
+ * @component : CompetenceCard
+ * @description : Display a competence card in the about page
+ */
 
+//#region - Import Libraries
+//#endregion
+
+//#region - Import Hooks
+//#endregion
+
+//#region - Import Globals
+//#endregion
+
+//#region - Import Enums 
+//#endregion
+
+//#region - Import Contexts
+//#endregion
+
+//#region - Import Components
+//#endregion
+
+//#region - Import Translations
+//#endregion
+
+//#region - Import Datas
+//#endregion
+
+//#region - Import Styles
+import { Competence, CompetenceWrapper, Language, Framework, Engine, Library, CompetenceImage, SubName } from "../../resources/css/about/competencesStyle";
+//#endregion
+
+//#region - Import Images
+//#endregion
+
+/**
+ * Component description
+ * @param {number} index => Index of the competence
+ * @param {object} translations => Translations of the page
+ * @param {object} competence => Competence object
+ * @param {string} type => Type of competence (engine or language)
+ * @returns {HTMLElement} CompetenceCard html elements
+ */
 function CompetenceCard({index, translations, competence, type})
 {
-
+    // Return html elements
     return (
         <CompetenceWrapper data-aos="zoom-in" key={index}>
             <Competence>
+                {/* Check if the competence is an engine to display it first */}
                 {type === "engine" && 
                 (
                     <Engine>
@@ -19,7 +62,9 @@ function CompetenceCard({index, translations, competence, type})
                         ))}
                     </Engine>
                 )}
+                {/* Display the languages */}
                 <Language>
+                    {/* Check if the type is an engine to display the language second */}
                     {type === "engine" && (<span>{translations.languages}</span>)}
                     {competence.languages.map((language, index) => 
                     (
@@ -29,6 +74,7 @@ function CompetenceCard({index, translations, competence, type})
                         )
                     ))}
                 </Language>
+                {/* Check if the type is a language to display frameworks */}
                 {type === "language" && 
                 ( 
                     <Framework>
@@ -44,6 +90,7 @@ function CompetenceCard({index, translations, competence, type})
                         </div>
                     </Framework>
                 )}
+                {/* Display the libraries */}
                 <Library>
                     <span>{translations.libraries}</span>
                     <div>
@@ -56,7 +103,9 @@ function CompetenceCard({index, translations, competence, type})
                         ))}
                     </div>
                 </Library>
+                {/* Display a subName */}
                 <SubName>
+                    {/* Check if the type is engine or language to write the correct name */}
                     {type === "engine" ?
                     (
                         <>

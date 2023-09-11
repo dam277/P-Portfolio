@@ -1,40 +1,79 @@
-// Import hooks
-import { useContext, useState } from "react";
-import { LangContext } from "../../../utils/contexts/LangContext";
+/**
+ * @author : Damien Loup
+ * @component : Home
+ * @description : Display the homepage
+ */
 
-// Import styles
-import { Button } from "../../../resources/css/mainStyle";
-import { MainContainer, Messages, Presentation, Paragraph, Text, Works, LastProject, Carousel, PageButtonsContainer, PointButton, ActualProject, WorkTitle, ProjectImage } from "../../../resources/css/homeStyle";
+//#region - Import Libraries
+//#endregion
 
-// Import globals
+//#region - Import Hooks
+import { useState } from "react";
+//#endregion
+
+//#region - Import Globals
 import getTranslations from "../../../utils/globals/getTranslations";
+//#endregion
 
-// Import datas
-import Projects  from "../../../resources/datas/projects";
+//#region - Import Enums 
+import eProjectCompletion from "../../../resources/datas/enums/eProjectCompletion";
+//#endregion
 
-// Import translations
+//#region - Import Contexts
+//#endregion
+
+//#region - Import Components
+//#endregion
+
+//#region - Import Translations
 import fr from "../../../resources/langs/fr/home.json";
 import en from "../../../resources/langs/en/home.json"
-import eProjectCompletion from "../../../resources/datas/enums/eProjectCompletion";
+//#endregion
 
+//#region - Import Datas
+import Projects  from "../../../resources/datas/projects";
+//#endregion
+
+//#region - Import Styles
+import { MainContainer, Messages, Presentation, Paragraph, Text, Works, LastProject, Carousel, PageButtonsContainer, PointButton, ActualProject, WorkTitle, ProjectImage } from "../../../resources/css/homeStyle";
+//#endregion
+
+//#region - Import Images
+//#endregion
+
+/**
+ * Display the home page with the projects selected
+ * @returns {HTMLElement} Home html elements
+ */
 function Home()
 {
-    // Get the translations
-    const translations = getTranslations(fr, en);
-
-    // Set a state for the page of the carousel
-    const [pageLast, setPageLast] = useState(1);
-    const [pageActual, setPageActual] = useState(1);
-
-    // Check if the index is pair
+    //#region - Important elements
+    const projectsFinished = Projects.filter(project => project.completion === eProjectCompletion.finished);            // Project finished successfully
+    const projectsWorkingOn = Projects.filter(project => project.completion === eProjectCompletion.inDevelopment);      // Project in development
+    //#endregion
+    
+    //#region - Set States
+    const [pageLast, setPageLast] = useState(1);            // Last page of the carousel    
+    const [pageActual, setPageActual] = useState(1);        // Actual page of the carousel
+    //#endregion
+    
+    //#region - Other functions
+    /**
+     * Check if the index is pair
+     * @param {number} index => Index of the array
+     * @returns boolean 
+     */
     const isPair = (index) => index % 2 === 0;
+    //#endregion
+    
+    //#region - Set the translations
+    const translations = getTranslations(fr, en);
+    //#endregion
 
-    // Set a finished project list
-    const projectsFinished = Projects.filter(project => project.completion === eProjectCompletion.finished);
-    const projectsWorkingOn = Projects.filter(project => project.completion === eProjectCompletion.inDevelopment);
-
+    // Return html elements
     return(
         <MainContainer>
+            {/* Firt messages (welcome) */}
             <Messages>
                 <Paragraph>
                     {translations.welcomeMessage.map((message, index) =>
@@ -57,7 +96,9 @@ function Home()
                     </Paragraph>
                 </Presentation>
             </Messages>
+            {/* Carousels of last and current works */}
             <Works>
+                {/* Last project */}
                 <LastProject>
                     <WorkTitle>{translations.works.last}</WorkTitle>
                     <Carousel>
@@ -74,6 +115,7 @@ function Home()
                         </PageButtonsContainer>
                     </Carousel>
                 </LastProject>
+                {/* Actual project */}
                 <ActualProject>
                     <WorkTitle>{translations.works.actual}</WorkTitle>
                     <Carousel>

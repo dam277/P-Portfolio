@@ -4,32 +4,41 @@
  * @description : This component is responsible for displaying the footer of the website
  */
 
-// Import Hooks
+//#region - Import Hooks
+//#endregion
 
-// Import Globals
+//#region - Import Globals
 import GetTranslations from "../../utils/globals/getTranslations";
+//#endregion
 
-// Import Enums 
+//#region - Import Enums 
+//#endregion
 
-// Import Contexts
+//#region - Import Contexts
+//#endregion
 
-// Import Components
+//#region - Import Components
+//#endregion
 
-// Import Translations
+//#region - Import Translations
 import fr from "../../resources/langs/fr/includes.json"
 import en from "../../resources/langs/en/includes.json"
+//#endregion
 
-// Import Datas
+//#region - Import Datas
 import { Creator } from "../../resources/datas/footer/creator";
 import Programs from "../../resources/datas/footer/programs";
+//#endregion
 
-// Import Styles
+//#region - Import Styles
 import { FooterContainer, AboutProject, Copyright, A, ProfileText, Hr, FooterArticle, FooterSection, ProfileContainer, ProfileLinkImage, LogoFooter, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4 } from "../../resources/css/footerStyle";
 import { Text } from "../../resources/css/mainStyle";
+//#endregion
 
-// Import Images
+//#region - Import Images
 import github from "../../resources/images/socialNetworks/github.png";
 import gmail from "../../resources/images/socialNetworks/gmail.png";
+//#endregion
 
 /**
  * Display the footer of the website
@@ -37,8 +46,9 @@ import gmail from "../../resources/images/socialNetworks/gmail.png";
  */
 function Footer()
 {
-    // Get the translations
+    //#region - Set the translations
     const translations = GetTranslations(fr, en);
+    //#endregion    
 
     // Return html elements
     return(

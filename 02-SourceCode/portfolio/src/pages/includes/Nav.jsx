@@ -4,27 +4,37 @@
  * @description : Display the navigation menu to navigate to the specified page
  */
 
-// Import Libraries
+//#region Import Libraries
 import { NavLink } from "react-router-dom";
+//#endregion
 
-// Import Hooks
+//#region - Import Hooks
+//#endregion
 
-// Import Globals
+//#region - Import Globals
+//#endregion
 
-// Import Enums 
+//#region - Import Enums 
+//#endregion
 
-// Import Contexts
+//#region - Import Contexts
+//#endregion
 
-// Import Components
+//#region - Import Components
+//#endregion
 
-// Import Translations
+//#region - Import Translations
+//#endregion
 
-// Import Datas
+//#region - Import Datas
+//#endregion
 
-// Import Styles
+//#region - Import Styles
 import { NavContainer, SmallUl, SmallLi } from "../../resources/css/headerStyle";
+//#endregion
 
-// Import Images
+//#region - Import Images
+//#endregion
 
 /**
  * Component description

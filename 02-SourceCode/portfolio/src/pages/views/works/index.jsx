@@ -1,41 +1,70 @@
-// Impot hooks
-import { useState } from "react";
+/**
+ * @author : Damien Loup
+ * @component : Works
+ * @description : Display the works page with the filters and works
+ */
 
-// Import components
+//#region - Import Libraries
+//#endregion
+
+//#region - Import Hooks
+import { useState } from "react";
+//#endregion
+
+//#region - Import Globals
+import GetTranslations from "../../../utils/globals/getTranslations";
+//#endregion
+
+//#region - Import Enums 
+//#endregion
+
+//#region - Import Contexts
+//#endregion
+
+//#region - Import Components
 import Filters from "../../components/works/Filters";
 import Work from "../../components/works/Work";
+//#endregion
 
-// Import styles
-import { MainContainer, TitleSection, Title, Subtitle, WorksSection } from "../../../resources/css/worksStyle";
-
-// Import translations
+//#region - Import Translations
 import fr from "../../../resources/langs/fr/works.json";
 import en from "../../../resources/langs/en/works.json"
-import getTranslations from "../../../utils/globals/getTranslations";
+//#endregion
 
-// Import datas
+//#region - Import Datas
 import ProjectTypes from "../../../resources/datas/works/projectTypes";
 import typeRadioButtons from "../../../resources/datas/works/typeRadio.json";
 import completionRadioButtons from "../../../resources/datas/works/completionRadio.json";
 import LanguagesButtons from "../../../resources/datas/works/languagesButtons";
 import Projects from "../../../resources/datas/projects";
+//#endregion
+
+//#region - Import Styles
+import { MainContainer, TitleSection, Title, Subtitle, WorksSection } from "../../../resources/css/worksStyle";
+//#endregion
+
+//#region - Import Images
+//#endregion
 
 /**
- * Works component
- * @returns {HTMLElement} Virtual dom
+ * Display the works page
+ * @returns {HTMLElement} Works html elements
  */
 function Works()
 {
-    // Get the translations
-    const translations = getTranslations(fr, en);
-
-    // Set a state fot the searchbar, project types cards, radio buttons and languages
+    //#region - Set States
     const [searchbar, setSearchbar] = useState("");
     const [cards, setCards] = useState(ProjectTypes.map((card) => ({id: card.id, checked: card.defaultCheck}))); 
     const [typeRadio, setTypeRadio] = useState("type-all");
     const [completionRadio, setCompletionRadio] = useState("completion-all");
     const [languages, setLanguages] = useState(LanguagesButtons.map((language) => ({id: language.id, checked: language.defaultCheck})));
+    //#endregion
 
+    //#region - Set the translations
+    const translations = GetTranslations(fr, en);
+    //#endregion
+
+    // Return html elements
     return(
         <MainContainer>
             {/* Title */}

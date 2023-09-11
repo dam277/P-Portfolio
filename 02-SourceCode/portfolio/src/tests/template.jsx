@@ -4,25 +4,35 @@
  * @description :
  */
 
-// Import Libraries
+//#region - Import Libraries
+//#endregion
 
-// Import Hooks
+//#region - Import Hooks
+//#endregion
 
-// Import Globals
+//#region - Import Globals
+//#endregion
 
-// Import Enums 
+//#region - Import Enums 
+//#endregion
 
-// Import Contexts
+//#region - Import Contexts
+//#endregion
 
-// Import Components
+//#region - Import Components
+//#endregion
 
-// Import Translations
+//#region - Import Translations
+//#endregion
 
-// Import Datas
+//#region - Import Datas
+//#endregion
 
-// Import Styles
+//#region - Import Styles
+//#endregion
 
-// Import Images
+//#region - Import Images
+//#endregion
 
 /**
  * Component description
@@ -32,19 +42,26 @@
  */
 function Component({param1, param2})
 {
-    // Important elements
+    //#region - Important elements
+    //#endregion
     
-    // Set States
+    //#region - Set States
+    //#endregion
 
-    // UseEffect
+    //#region - UseEffect
+    //#endregion
 
-    // Handle functions
+    //#region - Handle functions
+    //#endregion
     
-    // Other functions
+    //#region - Other functions
+    //#endregion
     
-    // Set the translations
+    //#region - Set the translations
+    //#endregion
 
-    // Events
+    //#region - Events
+    //#endregion
 
     // Return html elements
     return (

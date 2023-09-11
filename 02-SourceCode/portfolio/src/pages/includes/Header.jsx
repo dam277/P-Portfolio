@@ -4,37 +4,47 @@
  * @description : This component is used to display the header of the website
  */
 
-// Import Libraries
+//#region - Import Libraries
 import { Link } from "react-router-dom";
+//#endregion
 
-// Import Hooks
+//#region - Import Hooks
 import { useContext, useState } from "react";
+//#endregion
 
-// Import Globals
+//#region - Import Globals
 import GetTranslations from "../../utils/globals/getTranslations";
+//#endregion
 
-// Import Enums 
+//#region - Import Enums 
+//#endregion
 
-// Import Contexts
+//#region - Import Contexts
 import { LangContext } from "../../utils/contexts/LangContext";
+//#endregion
 
-// Import Components
+//#region - Import Components
 import Nav from './Nav'
 import Lang from './Lang'
+//#endregion
 
-// Import translations
+//#region - Import translations
 import fr from "../../resources/langs/fr/includes.json"
 import en from "../../resources/langs/en/includes.json"
+//#endregion
 
-// Import Datas
+//#region - Import Datas
+//#endregion
 
-// Import Styles
+//#region - Import Styles
 import { HeaderContainer, Title, Logo, TitleContainer, MenuButton, MenuButtonImage } from '../../resources/css/headerStyle';
 import { responsive } from "../../resources/css/styles";
+//#endregion
 
-// Import images
+//#region - Import images
 import logo from '../../resources/images/logo.png'
 import menuBar from "../../resources/images/nav-bar.png";
+//#endregion
 
 /**
  * Header component
@@ -42,19 +52,22 @@ import menuBar from "../../resources/images/nav-bar.png";
  */
 function Header()
 {
-    // Important elements
+    //#region - Important elements
     const checkSize = (size) => window.matchMedia(`(min-width: ${size})`).matches; // Check if the website is bigger than a certain media px to change the styles
+    //#endregion
 
-    // Set States
+    //#region - Set States
     const [isMenuOpen, setIsMenuOpen] = useState(false);                            // State to check if the menu is opened
     const [isBig, setIsBig] = useState(checkSize(responsive.mobile));               // State to check if the site of the page is big
     const [isSmall, setIsSmall] = useState(checkSize(responsive.mobile_small));     // State to check if the site of the page is small
+    //#endregion
 
-    // Set the translations
+    //#region - Set the translations
     const { language, setLanguage } = useContext(LangContext);
     const translations = GetTranslations(fr, en);
+    //#endregion
 
-    // Events
+    //#region - Events
     /**
      *  Add event handlers when resizing the page 
      */
@@ -64,6 +77,7 @@ function Header()
         setIsBig(checkSize(responsive.mobile));
         setIsSmall(checkSize(responsive.mobile_small));
     });
+    //#endregion
 
     // Return html elements
     return(

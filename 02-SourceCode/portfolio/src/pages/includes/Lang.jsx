@@ -4,27 +4,37 @@
  * @description : Display the language selector to select the current language
  */
 
-// Import Libraries
+//#region - Import Libraries
+//#endregion
 
-// Import Hooks
+//#region - Import Hooks
+//#endregion
 
-// Import Globals
+//#region - Import Globals
+//#endregion
 
-// Import Enums 
+//#region - Import Enums 
+//#endregion
 
-// Import Contexts
+//#region - Import Contexts
+//#endregion
 
-// Import Components
+//#region - Import Components
+//#endregion
 
-// Import Translations
+//#region - Import Translations
+//#endregion
 
-// Import Datas
+//#region - Import Datas
 import languages from "../../resources/datas/langs.json";
+//#endregion
 
-// Import Styles
+//#region - Import Styles
 import { LanguageContainer, LanguageSelector, LanguageOption } from "../../resources/css/headerStyle";
+//#endregion
 
-// Import Images
+//#region - Import Images
+//#endregion
 
 /**
  * Display Lang selector and change the current language

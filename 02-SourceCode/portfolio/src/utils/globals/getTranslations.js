@@ -1,8 +1,15 @@
-// Import Hooks
-import { useContext } from "react";
+/**
+ * @author : Damien Loup
+ * @description : Get the translations from the different languages received
+ */
 
-// Import Contexts
+//#region - Import Hooks
+import { useContext } from "react";
+//#endregion
+
+//#region - Import Contexts
 import { LangContext } from "../contexts/LangContext";
+//#endregion
 
 /**
  * Get the translations of the current language

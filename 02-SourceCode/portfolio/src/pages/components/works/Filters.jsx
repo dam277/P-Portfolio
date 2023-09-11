@@ -1,9 +1,63 @@
-// Import styles
+/**
+ * @author : Damien Loup
+ * @component : Filters
+ * @description : Displays the filters in the works page
+ */
+
+//#region - Import Libraries
+//#endregion
+
+//#region - Import Hooks
+//#endregion
+
+//#region - Import Globals
+//#endregion
+
+//#region - Import Enums 
+//#endregion
+
+//#region - Import Contexts
+//#endregion
+
+//#region - Import Components
+//#endregion
+
+//#region - Import Translations
+//#endregion
+
+//#region - Import Datas
+//#endregion
+
+//#region - Import Styles
 import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, ProjectRadiosContainer, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
 import { Text } from "../../../resources/css/mainStyle";
+//#endregion
 
+//#region - Import Images
+//#endregion
+
+/**
+ * Component description
+ * @param {object} translations => Translations of the page
+ * @param {state(string)} searchbar => Searchbar value
+ * @param {state(function)} setSearchbar =>  Searchbar value setter
+ * @param {state(array)} cards => Cards value
+ * @param {state(function)} setCards => Cards value setter
+ * @param {state(string)} typeRadio => Type radio value
+ * @param {state(function)} setTypeRadio => Type radio value setter
+ * @param {state(string)} completionRadio => Completion radio value
+ * @param {state(function)} setCompletionRadio => Completion radio value setter
+ * @param {state(array)} languages => Languages value
+ * @param {state(function)} setLanguages => Languages value setter 
+ * @param {object} projectTypes => Project types filters
+ * @param {object} typeRadioButtons => Type radio buttons filters
+ * @param {object} completionRadioButtons =>  Completion radio buttons filters
+ * @param {object} languagesButtons => Language buttons filters
+ * @returns {HTMLElement} Filters html elements
+ */
 function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRadio, setTypeRadio, completionRadio, setCompletionRadio, languages, setLanguages, projectTypes, typeRadioButtons, completionRadioButtons, languagesButtons})
 {
+    //#region - Handle functions
     /**
      * Handle a card change to modify its state
      * @param {string} id => Id of the checkbox
@@ -65,7 +119,9 @@ function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRa
         else if(name === "completion")
             setCompletionRadio(id);
     }
-
+    //#endregion
+    
+    // Return html elements
     return (
         <FiltersSection>
             {/* Filter line */}
