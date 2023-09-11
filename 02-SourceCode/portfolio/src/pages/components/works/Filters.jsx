@@ -1,41 +1,25 @@
 // Import styles
-import { useEffect } from "react";
 import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, ProjectRadiosContainer, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
 import { Text } from "../../../resources/css/mainStyle";
 
 function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRadio, setTypeRadio, completionRadio, setCompletionRadio, languages, setLanguages, projectTypes, typeRadioButtons, completionRadioButtons, languagesButtons})
 {
-    // Using useEffect to initialize the inputs in the array
-    useEffect(() =>
-    {
-        // Get checkboxes
-        const checkboxes = document.querySelectorAll('input[type="checkbox"][name="projectType"]');
-
-        // Run each checkbox to put it in the inputs state
-        checkboxes.forEach((checkbox) =>
-        {
-            const id = checkbox.id;
-            const value = checkbox.checked;
-            handleInput(id, value);
-        });
-    }, []);
-
     /**
-     * Handle an input change to modify its state
+     * Handle a card change to modify its state
      * @param {string} id => Id of the checkbox
      * @param {boolean} value => Value of the checkbox
      */
-    function handleInput(id, value)
+    function handleCards(id, value)
     {
         // Get the current input just changed yet
-        const currentInput = cards.find((input) => input.id === id);
+        const currentCard = cards.find((card) => card.id === id);
 
         // Check if the current input is already in the state
-        if (currentInput)
+        if (currentCard)
         {
             // Get all the inputs without the current to update the state
-            const inputsWithoutCurrentInput = cards.filter((input) => input.id !== id);
-            setCards([...inputsWithoutCurrentInput, { id: id, checked: value }]);
+            const cardsWithoutCurrentCard = cards.filter((card) => card.id !== id);
+            setCards([...cardsWithoutCurrentCard, { id: id, checked: value }]);
         }
         else
         {
@@ -44,17 +28,43 @@ function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRa
         }
     }
 
+    /**
+     * Handle a language change to modify its state
+     * @param {string} id => Id of the checkbox
+     * @param {boolean} value => Value of the checkbox
+     */
+    function handleLanguages(id, value)
+    {
+        if (id === "languages-all")
+        {
+            setLanguages(languagesButtons.map((language) => ({id: language.id, checked: language.defaultCheck})));
+            return;
+        }
+        else
+        {
+            // Get all 
+            const all = languages.find((language) => language.id === "languages-all");
+
+            // Set the languages without all and current
+            const languagesWithoutAllAndCurrent = languages.filter((language) => language.id !== all.id && language.id !== id);
+
+            setLanguages([...languagesWithoutAllAndCurrent, { id: all.id, checked: false }, { id: id, checked: value }]);
+        }
+    }
+
+    /**
+     * Handle an input change to modify its state
+     * @param {string} id => Id of the radio button
+     * @param {boolean} name => Value of the radio button
+     */
     function handleRadio(id, name)
     {
+        // Check the name of the radio button to set the value to the correct state
         if(name === "type")
             setTypeRadio(id);
         else if(name === "completion")
             setCompletionRadio(id);
-
-        console.log(completionRadio);
     }
-
-    //console.log(completionRadio);
 
     return (
         <FiltersSection>
@@ -68,9 +78,9 @@ function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRa
                         {/* Radio buttons under search bar */}
                         <ProjectRadiosContainer>
                             <RadioSection>
-                                {completionRadioButtons.map((button) => 
+                                {completionRadioButtons.map((button, index) => 
                                 (
-                                    <RadioWrapper key={`${button.id}`} checked={completionRadio === button.id}>
+                                    <RadioWrapper key={`${button.id}-${index}`} checked={completionRadio === button.id}>
                                         <RadioLabel htmlFor={button.id}>
                                             <RadioButton type="radio" name="completion" id={button.id} value={button.value} onChange={(e) => handleRadio(e.target.id, e.target.name)} defaultChecked={button.defaultCheck}/>
                                             <RadioDesign checked={completionRadio === button.id} />
@@ -80,9 +90,9 @@ function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRa
                                 ))}
                             </RadioSection>
                             <RadioSection>
-                                {typeRadioButtons.map((button) => 
+                                {typeRadioButtons.map((button, index) => 
                                 (
-                                    <RadioWrapper key={`${button.id}`} checked={typeRadio === button.id}>
+                                    <RadioWrapper key={`${button.id}-${index}`} checked={typeRadio === button.id}>
                                         <RadioLabel htmlFor={button.id}>
                                             <RadioButton type="radio" name="type" id={button.id} value={button.value} onChange={(e) => handleRadio(e.target.id, e.target.name)} defaultChecked={button.defaultCheck}/>
                                             <RadioDesign checked={typeRadio === button.id} />
@@ -101,9 +111,9 @@ function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRa
                     (
                         <ProjectTypeLabel key={`${type.id}-${index}`} htmlFor={type.id}>
                             {/* checkbox input */}
-                            <ProjectTypeInput type="checkbox" name="projectType" id={type.id} onChange={(e) => handleInput(e.target.id, e.target.checked)} defaultChecked/>
+                            <ProjectTypeInput type="checkbox" name="projectType" id={type.id} onChange={(e) => handleCards(e.target.id, e.target.checked)} checked={cards.find((input) => input.id === type.id)?.checked} defaultChecked={projectTypes.defaultCheck}/>
                             <ProjectTypeContentWrapper checked={cards.find((input) => input.id === type.id)?.checked}>
-                                <ProjectTypeRadioButton checked={cards.find((input) => input.id === type.id)?.checked} />
+                                <ProjectTypeRadioButton checked={cards.find((input) => input.id === type.id)?.checked}/>
                                 {/* Content of the card */}
                                 <ProjectTypeContent>
                                     <ProjectTypeImage src={type.image} />
@@ -116,10 +126,17 @@ function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRa
             </FiltersLineSection>
             <FiltersLineSection>
                 <LanguagesContainer>
-                    <LanguageLabel>
-                        <LanguageCheckbox type="checkbox"/>
-                        <LanguageImage src={languagesButtons[1].image} />
-                    </LanguageLabel>
+                    {/* Languages */}
+                    {languagesButtons.map((language, index) =>
+                    (
+                        <>
+                            <LanguageLabel key={`${language.id}-${index}`}>
+                                <LanguageCheckbox id={language.id} name="languages" type="checkbox" onChange={(e) => handleLanguages(e.target.id, e.target.checked)} checked={languages.find((input) => input.id === language.id)?.checked} defaultChecked={language.defaultCheck}/>
+                                <LanguageImage checked={languages.find((input) => input.id === language.id)?.checked} src={language.image} />
+                            </LanguageLabel>
+                            {index === 0 && (<hr />)}
+                        </>
+                    ))}
                 </LanguagesContainer>
             </FiltersLineSection>
         </FiltersSection>

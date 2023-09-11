@@ -2,7 +2,7 @@
 import { LanguageContainer, LanguageSelector, LanguageOption } from "../../resources/css/headerStyle";
 
 // Import datas
-import languages from "../../resources/datas/languages.json";
+import languages from "../../resources/datas/langs.json";
 
 function Lang({language, setLanguage, translations, isBig})
 {

@@ -1,28 +1,35 @@
+// Import images
 import portfolio from "../images/projects/portfolio.png";
 import spaceInvader from "../images/projects/SpaceInvader.png";
 import skillioFramework from "../images/projects/SkillioFramework.png";
 
-export const Projects = 
+// Import enums
+import eProjectCompletion from "./enums/eProjectCompletion";
+
+const Projects = 
 [
     {
-        "id": 0,
-        "name" : "Portfolio",
-        "image" : portfolio,
-        "isFinished" : false,
-        "isWorkingOn" : true
+        id: "work-0",
+        name: "Portfolio",
+        image: portfolio,
+        completion: eProjectCompletion.inDevelopment,
+        languages : 
+        [
+
+        ]
     },
     {
-        "id": 1,
-        "name" : "Skllio Framework",
-        "image" : skillioFramework,
-        "isFinished" : false,
-        "isWorkingOn" : true
+        id: "work-1",
+        name: "Skllio Framework",
+        image: skillioFramework,
+        completion: eProjectCompletion.inDevelopment
     },
     {
-        "id": 2,
-        "name" : "SpaceInvader",
-        "image" : spaceInvader,
-        "isFinished" : true,
-        "isWorkingOn" : false
+        id: "work-2",
+        name: "SpaceInvader",
+        image: spaceInvader,
+        completion: eProjectCompletion.finished
     }
 ]
+
+export default Projects;

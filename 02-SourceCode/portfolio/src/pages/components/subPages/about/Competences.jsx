@@ -22,16 +22,14 @@ import { LangContext } from "../../../../utils/contexts/LangContext";
 // Import components
 import CompetenceCard from "../../CompetenceCard";
 
+// Import enums
+import eCompetencesTypes from "../../../../resources/datas/enums/eCompetencesTypes";
+
 function Competences()
 {
     // Get the translations
     const { language } = useContext(LangContext);
     const translations = getTranslations(language, fr, en);
-
-    const types = {
-        Languages : "language",
-        Engine : "engine",
-    }
 
     return(
         <>
@@ -41,14 +39,14 @@ function Competences()
                 (
                     competence.learned && 
                     (
-                        <CompetenceCard index={index} translations={translations} competence={competence} type={types.Language}/>
+                        <CompetenceCard key={`languagesComp-${index}`} index={index} translations={translations} competence={competence} type={eCompetencesTypes.language}/>
                     )
                 ))}
                 {EngineCompetences.map((competence, index) => 
                 (
                     competence.learned && 
                     (
-                        <CompetenceCard index={index} translations={translations} competence={competence} type={types.Engine}/>
+                        <CompetenceCard key={`enginesComp-${index}`} index={index} translations={translations} competence={competence} type={eCompetencesTypes.engine}/>
                     )
                 ))}
             </CompetencesContainer>

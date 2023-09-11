@@ -7,50 +7,85 @@ function CompetenceCard({index, translations, competence, type})
     return (
         <CompetenceWrapper data-aos="zoom-in" key={index}>
             <Competence>
+                {type === "engine" && 
+                (
+                    <Engine>
+                        {competence.engines.map((engine, index) => 
+                        (
+                            engine.learned && 
+                            (
+                                <CompetenceImage key={`${engine.name}-${index}`} big={true} src={engine.image} />
+                            )
+                        ))}
+                    </Engine>
+                )}
                 <Language>
-                    {competence.languages.map((language) => 
+                    {type === "engine" && (<span>{translations.languages}</span>)}
+                    {competence.languages.map((language, index) => 
                     (
                         language.learned && 
                         (
-                            <CompetenceImage big={true} src={language.image} />
+                            <CompetenceImage key={`${language.name}-${index}`} big={true} src={language.image} />
                         )
                     ))}
                 </Language>
-                <Framework>
-                    <span>{translations.framework}</span>
-                    <div>
-                        {competence.frameworks.map((framework) => 
-                        (
-                            framework.learned && 
+                {type === "language" && 
+                ( 
+                    <Framework>
+                        <span>{translations.framework}</span>
+                        <div>
+                            {competence.frameworks.map((framework, index) => 
                             (
-                                <CompetenceImage src={framework.image} />
-                            )
-                        ))}
-                    </div>
-                </Framework>
+                                framework.learned && 
+                                (
+                                    <CompetenceImage key={`${framework.name}-${index}`} src={framework.image} />
+                                )
+                            ))}
+                        </div>
+                    </Framework>
+                )}
                 <Library>
                     <span>{translations.libraries}</span>
                     <div>
-                        {competence.libraries.map((librarie) => 
+                        {competence.libraries.map((librarie, index) => 
                         (
                             librarie.learned && 
                             (
-                                <CompetenceImage src={librarie.image} />
+                                <CompetenceImage key={`${librarie.name}-${index}`} src={librarie.image} />
                             )
                         ))}
                     </div>
                 </Library>
-                    <SubName>
-                        {competence.languages.map((language, index) => 
-                        (
-                            language.learned && 
+                <SubName>
+                    {type === "engine" ?
+                    (
+                        <>
+                            {competence.engines.map((engine, index) => 
                             (
-                                <>
-                                    {competence.languages.length >= 2 && index == competence.languages.length - 1 ? " - " : ""}{language.name}
-                                </>
-                            )
-                        ))}
-                    </SubName>
+                                engine.learned && 
+                                (
+                                    <span key={`${engine.name}-${index}`} >
+                                        {competence.engines.length >= 2 && index == competence.engines.length - 1 ? " - " : ""}{engine.name}
+                                    </span>
+                                )
+                            ))}
+                        </>
+                    ) 
+                    : 
+                    (
+                        <>
+                            {competence.languages.map((language, index) => 
+                            (
+                                language.learned && 
+                                (
+                                    <span key={`${language.name}-${index}`} >
+                                        {competence.languages.length >= 2 && index == competence.languages.length - 1 ? " - " : ""}{language.name}
+                                    </span>
+                                )
+                            ))}
+                        </>
+                    )}
+                </SubName>
             </Competence>
         </CompetenceWrapper>
     )

@@ -1,4 +1,4 @@
-// Impot hooks
+// Import hooks
 import { useContext, useState } from "react";
 import { LangContext } from "../../../utils/contexts/LangContext";
 
@@ -10,11 +10,12 @@ import { MainContainer, Messages, Presentation, Paragraph, Text, Works, LastProj
 import getTranslations from "../../../utils/globals/getTranslations";
 
 // Import datas
-import { Projects } from "../../../resources/datas/projects";
+import Projects  from "../../../resources/datas/projects";
 
 // Import translations
 import fr from "../../../resources/langs/fr/home.json";
 import en from "../../../resources/langs/en/home.json"
+import eProjectCompletion from "../../../resources/datas/enums/eProjectCompletion";
 
 function Home()
 {
@@ -30,8 +31,8 @@ function Home()
     const isPair = (index) => index % 2 === 0;
 
     // Set a finished project list
-    const projectsFinished = Projects.filter(project => project.isFinished);
-    const projectsWorkingOn = Projects.filter(project => project.isWorkingOn);
+    const projectsFinished = Projects.filter(project => project.completion === eProjectCompletion.finished);
+    const projectsWorkingOn = Projects.filter(project => project.completion === eProjectCompletion.inDevelopment);
 
     return(
         <MainContainer>

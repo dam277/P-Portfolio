@@ -8,14 +8,17 @@ const ProjectTypes =
     {
         id: "ptype-web",
         image: web,
+        defaultCheck : true,
     },
     {
         id: "ptype-software",
         image: software,
+        defaultCheck : true,
     },
     {
         id: "ptype-mobile",
         image: mobile,
+        defaultCheck : true,
     }
 ];
 

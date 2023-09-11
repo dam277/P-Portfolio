@@ -23,5 +23,14 @@
             "type-courses" : "cours",
             "type-projects" : "projets"
         }
+    },
+    "works" : 
+    {
+        "completion" : 
+        {
+            "finished" : "Finis",
+            "inDevelopment" : "En cours de developpement",
+            "notStarted" : "Pas commencé"
+        }
     }
 }

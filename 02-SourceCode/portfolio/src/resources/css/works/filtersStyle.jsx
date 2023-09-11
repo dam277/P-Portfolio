@@ -11,7 +11,6 @@ export const FiltersSection = styled.section`
 
 export const FiltersLineSection = styled.div`
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -187,7 +186,7 @@ export const ProjectTypeContentWrapper = styled.div`
     padding: 10px;
     transition: 200ms linear;
 
-    ${(props) => (props.checked || props.checked === undefined) && 
+    ${(props) => (props.checked) && 
     {
         "border": `1px solid ${colorPalette.main.filters.card.borderColorChecked}`,
     }};
@@ -212,7 +211,7 @@ export const ProjectTypeRadioButton = styled.span`
         transition:  200ms linear;
         opacity: 0;
         
-        ${(props) => (props.checked || props.checked === undefined) && 
+        ${(props) => (props.checked) && 
         {
             "transform": "scale(1)",
             "opacity": "1",
@@ -262,18 +261,39 @@ export const ProjectTypeTitle = styled.h3`
 /** Languages filters */
 
 export const LanguagesContainer = styled.div`
-    background-color: gray;
-    width: 55%;
+    display: flex;
+    background-color: ${colorPalette.main.filters.languages.backGroundColor};
+    border: 2px solid ${colorPalette.main.filters.languages.borderColor};
+    padding: 5px 0 0 0;
+    margin-top: 20px;
+    overflow-x: auto;
+    width: 80%;
+
+    @media (min-width: ${responsive.desktop}) 
+    {
+        width: auto;
+    }
 `
 
 export const LanguageLabel = styled.label`
-    
+    margin: -16px 10px 3px 10px;
+    padding: 0;
+    cursor: pointer;
+
+    @media (min-width: ${responsive.desktop}) 
+    {
+        margin: 0 10px;
+    }
 `
 
 export const LanguageCheckbox = styled.input`
-    
+    height: 0;
+    width: 0;
+    appearance: none;
 `
 
 export const LanguageImage = styled.img`
-    height: 60px;
+    height: 40px;
+    transition: .3s ease-in-out;
+    ${(props) => !props.checked && "filter: grayscale(100%)"};
 `

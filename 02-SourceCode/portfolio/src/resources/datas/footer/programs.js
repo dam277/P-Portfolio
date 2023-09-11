@@ -1,17 +1,19 @@
-/** Import images */
-import javascript from "../../images/program/Javascript.png"
-import html from "../../images/program/Html.png"
-import css from "../../images/program/Css.png"
-import react from "../../images/program/React.png"
+// Import enums
+import eFrameworks from "../enums/eFrameworks";
+import eLanguages from "../enums/eLanguages"
 
-export const Languages = 
-[
-    javascript,
-    html,
-    css,
-]
+const Programs = 
+{
+    languages : 
+    [
+        eLanguages.javascript.image,
+        eLanguages.html.image,
+        eLanguages.css.image,
+    ],
+    frameworks : 
+    [
+        eFrameworks.react.image
+    ]
+}
 
-export const Libraries = 
-[
-    react
-]
+export default Programs;

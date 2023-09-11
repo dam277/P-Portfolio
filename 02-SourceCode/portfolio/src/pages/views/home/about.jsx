@@ -20,7 +20,7 @@ import fr from "../../../resources/langs/fr/about.json";
 import en from "../../../resources/langs/en/about.json";
 
 // Import datas
-import { socialNetworks } from "../../../resources/datas/socialNetworks";
+import SocialNetworks from "../../../resources/datas/socialNetworks";
 import { colorPalette } from "../../../resources/css/styles";
 
 function About()
@@ -38,7 +38,7 @@ function About()
                 <PresentationText>
                     {translations.presentation.map((content, index) => 
                     (
-                        <p key={index}>
+                        <p key={`presentation-${index}`}>
                             <Text setResponsive={true} size="18" color={content.color}>
                                 {content.text}
                             </Text>
@@ -47,9 +47,9 @@ function About()
                 </PresentationText>
             </Presentation>
             <SocialNetworksContainer>
-                {socialNetworks.map((network, index) => 
+                {SocialNetworks.map((network, index) => 
                 (
-                    <a key={index} href={network.url}>
+                    <a key={`${index}-${network.name}`} href={network.url}>
                         <SocialNetwork src={network.image} />
                     </a>
                 ))}
@@ -58,7 +58,7 @@ function About()
                 <IntroductionTitle>{translations.introduction.title}</IntroductionTitle>
                 {translations.introduction.texts.map((content, index) => 
                 (
-                    <p key={index}>
+                    <p key={`introduction-${index}`}>
                         <Text color={colorPalette.primary.text.paragraph.color} margin="10px">
                             {content.text}
                         </Text>

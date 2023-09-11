@@ -105,6 +105,29 @@ export const colorPalette =
                     "#C7046A",
                     "#31091f"
                 ]
+            },
+            languages : 
+            {
+                backGroundColor : "#1F1F1F",
+                borderColor : "#808080",
+            }
+        },
+        project : 
+        {
+            notStarted : 
+            {
+                backGroundColor : "#1F1F1F",
+                borderColor : "#808080",
+            },
+            inDevelopment : 
+            {
+                backGroundColor : "#130207",
+                borderColor : "#C7046A"
+            },
+            finished : 
+            {
+                backGroundColor : "#021307",
+                borderColor : "#008000"
             }
         }
     },

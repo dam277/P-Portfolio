@@ -41,7 +41,7 @@ export const Library = styled.section`
 `
 
 export const Engine = styled.div`
-
+    margin-top: 10px;
 `
 
 export const CompetenceImage = styled.img`

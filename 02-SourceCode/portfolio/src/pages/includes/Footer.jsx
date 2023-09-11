@@ -17,7 +17,7 @@ import getTranslations from "../../utils/globals/getTranslations";
 
 // Import datas
 import { Creator } from "../../resources/datas/footer/creator";
-import { Languages, Libraries } from "../../resources/datas/footer/programs";
+import Programs from "../../resources/datas/footer/programs";
 
 // Import translations
 import fr from "../../resources/langs/fr/includes.json"
@@ -64,16 +64,16 @@ function Footer()
                     <ProgramsContainer>
                         <ProgramTypeContainer>
                             <H4>{translations.footer.languages}</H4>
-                            {Languages.map((language, index) => 
+                            {Programs.languages.map((language, index) => 
                             (
                                 <ImgProgram key={`${language}-${index}`} src={language} />
                             ))}
                         </ProgramTypeContainer>
                         <ProgramTypeContainer>
                             <H4>{translations.footer.libraries}</H4>
-                            {Libraries.map((library, index) => 
+                            {Programs.frameworks.map((framework, index) => 
                             (
-                                <ImgProgram key={`${library}-${index}`} src={library} />
+                                <ImgProgram key={`${framework}-${index}`} src={framework} />
                             ))}
                         </ProgramTypeContainer>
                     </ProgramsContainer>
