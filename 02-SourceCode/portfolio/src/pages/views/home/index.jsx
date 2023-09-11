@@ -16,7 +16,7 @@ import getTranslations from "../../../utils/globals/getTranslations";
 //#endregion
 
 //#region - Import Enums 
-import eProjectCompletion from "../../../resources/datas/enums/eProjectCompletion";
+import eCompletionIds from "../../../resources/datas/enums/works/eCompletionIds";
 //#endregion
 
 //#region - Import Contexts
@@ -48,8 +48,8 @@ import { MainContainer, Messages, Presentation, Paragraph, Text, Works, LastProj
 function Home()
 {
     //#region - Important elements
-    const projectsFinished = Projects.filter(project => project.completion === eProjectCompletion.finished);            // Project finished successfully
-    const projectsWorkingOn = Projects.filter(project => project.completion === eProjectCompletion.inDevelopment);      // Project in development
+    const projectsFinished = Projects.filter(project => project.completion === eCompletionIds.finished);            // Project finished successfully
+    const projectsWorkingOn = Projects.filter(project => project.completion === eCompletionIds.inDevelopment);      // Project in development
     //#endregion
     
     //#region - Set States

@@ -1,5 +1,6 @@
 // Import enums
 import eLanguages from "../enums/eLanguages";
+import eLanguagesIds from "../enums/works/eLanguagesIds";
 
 // Import images
 import all from "../../images/works/filters/All.png";
@@ -7,97 +8,97 @@ import all from "../../images/works/filters/All.png";
 const LanguagesButtons = 
 [
     {
-        id : "languages-all",
+        id : eLanguagesIds.all,
         image : all,
         defaultCheck : true,
     },
     {
-        id : "languages-blade",
+        id : eLanguagesIds.blade,
         image : eLanguages.blade.image,
         defaultCheck : false,
     },
     {
-        id : "languages-c",
+        id : eLanguagesIds.c,
         image : eLanguages.c.image,
         defaultCheck : false,
     },
     {
-        id : "languages-cpp",
+        id : eLanguagesIds.cpp,
         image : eLanguages.cpp.image,
         defaultCheck : false,
     },
     {
-        id : "languages-csharp",
+        id : eLanguagesIds.csharp,
         image : eLanguages.csharp.image,
         defaultCheck : false,
     },
     {
-        id : "languages-css",
+        id : eLanguagesIds.css,
         image : eLanguages.css.image,
         defaultCheck : false,
     },
     {
-        id : "languages-dart",
+        id : eLanguagesIds.dart,
         image : eLanguages.dart.image,
         defaultCheck : false,
     },
     {
-        id : "languages-go",
+        id : eLanguagesIds.go,
         image : eLanguages.go.image,
         defaultCheck : false,
     },
     {
-        id : "languages-html",
+        id : eLanguagesIds.html,
         image : eLanguages.html.image,
         defaultCheck : false,
     },
     {
-        id : "languages-java",
+        id : eLanguagesIds.java,
         image : eLanguages.java.image,
         defaultCheck : false,
     },
     {
-        id : "languages-javascript",
+        id : eLanguagesIds.javascript,
         image : eLanguages.javascript.image,
         defaultCheck : false,
     },
     {
-        id : "languages-php",
+        id : eLanguagesIds.php,
         image : eLanguages.php.image,
         defaultCheck : false,
     },
     {
-        id : "languages-powershell",
+        id : eLanguagesIds.powershell,
         image : eLanguages.powershell.image,
         defaultCheck : false,
     },
     {
-        id : "languages-python",
+        id : eLanguagesIds.python,
         image : eLanguages.python.image,
         defaultCheck : false,
     },
     {
-        id : "languages-sql",
+        id : eLanguagesIds.sql,
         image : eLanguages.sql.image,
         defaultCheck : false,
     },
     {
-        id : "languages-sqlite",
+        id : eLanguagesIds.sqlite,
         image : eLanguages.sqlite.image,
         defaultCheck : false,
     },
     {
-        id : "languages-swift",
+        id : eLanguagesIds.swift,
         image : eLanguages.swift.image,
         defaultCheck : false,
     },
     {
-        id : "languages-typescript",
+        id : eLanguagesIds.typescript,
         image : eLanguages.typescript.image,
         defaultCheck : false,
     },
     {
-        id : "languages-rust",
+        id : eLanguagesIds.rust,
         image : eLanguages.rust.image,
         defaultCheck : false,
     },

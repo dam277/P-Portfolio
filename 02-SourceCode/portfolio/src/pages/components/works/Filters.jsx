@@ -41,8 +41,8 @@ import { Text } from "../../../resources/css/mainStyle";
  * @param {object} translations => Translations of the page
  * @param {state(string)} searchbar => Searchbar value
  * @param {state(function)} setSearchbar =>  Searchbar value setter
- * @param {state(array)} cards => Cards value
- * @param {state(function)} setCards => Cards value setter
+ * @param {state(array)} platform => Platform value
+ * @param {state(function)} setPlatform => Platform value setter
  * @param {state(string)} typeRadio => Type radio value
  * @param {state(function)} setTypeRadio => Type radio value setter
  * @param {state(string)} completionRadio => Completion radio value
@@ -55,7 +55,7 @@ import { Text } from "../../../resources/css/mainStyle";
  * @param {object} languagesButtons => Language buttons filters
  * @returns {HTMLElement} Filters html elements
  */
-function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRadio, setTypeRadio, completionRadio, setCompletionRadio, languages, setLanguages, projectTypes, typeRadioButtons, completionRadioButtons, languagesButtons})
+function Filters({translations, searchbar, setSearchbar, platforms, setPlatform, typeRadio, setTypeRadio, completionRadio, setCompletionRadio, languages, setLanguages, projectTypes, typeRadioButtons, completionRadioButtons, languagesButtons})
 {
     //#region - Handle functions
     /**
@@ -63,22 +63,22 @@ function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRa
      * @param {string} id => Id of the checkbox
      * @param {boolean} value => Value of the checkbox
      */
-    function handleCards(id, value)
+    function handlePlatform(id, value)
     {
         // Get the current input just changed yet
-        const currentCard = cards.find((card) => card.id === id);
+        const currentPlatform = platforms.find((card) => card.id === id);
 
         // Check if the current input is already in the state
-        if (currentCard)
+        if (currentPlatform)
         {
             // Get all the inputs without the current to update the state
-            const cardsWithoutCurrentCard = cards.filter((card) => card.id !== id);
-            setCards([...cardsWithoutCurrentCard, { id: id, checked: value }]);
+            const platformsWithoutCurrentPlatform = platforms.filter((platform) => platform.id !== id);
+            setPlatform([...platformsWithoutCurrentPlatform, { id: id, checked: value }]);
         }
         else
         {
             // Set the new input with all the state
-            setCards([...cards, { id: id, checked: value }]);
+            setPlatform([...platforms, { id: id, checked: value }]);
         }
     }
 
@@ -167,9 +167,9 @@ function Filters({translations, searchbar, setSearchbar, cards, setCards, typeRa
                     (
                         <ProjectTypeLabel key={`${type.id}-${index}`} htmlFor={type.id}>
                             {/* checkbox input */}
-                            <ProjectTypeInput type="checkbox" name="projectType" id={type.id} onChange={(e) => handleCards(e.target.id, e.target.checked)} checked={cards.find((input) => input.id === type.id)?.checked} defaultChecked={projectTypes.defaultCheck}/>
-                            <ProjectTypeContentWrapper checked={cards.find((input) => input.id === type.id)?.checked}>
-                                <ProjectTypeRadioButton checked={cards.find((input) => input.id === type.id)?.checked}/>
+                            <ProjectTypeInput type="checkbox" name="projectType" id={type.id} onChange={(e) => handlePlatform(e.target.id, e.target.checked)} checked={platforms.find((input) => input.id === type.id)?.checked} defaultChecked={projectTypes.defaultCheck}/>
+                            <ProjectTypeContentWrapper checked={platforms.find((input) => input.id === type.id)?.checked}>
+                                <ProjectTypeRadioButton checked={platforms.find((input) => input.id === type.id)?.checked}/>
                                 {/* Content of the card */}
                                 <ProjectTypeContent>
                                     <ProjectTypeImage src={type.image} />

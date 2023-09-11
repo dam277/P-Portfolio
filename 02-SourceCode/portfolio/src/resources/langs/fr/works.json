@@ -28,9 +28,14 @@
     {
         "completion" : 
         {
-            "finished" : "Finis",
-            "inDevelopment" : "En cours de developpement",
-            "notStarted" : "Pas commencé"
+            "completion-finished" : "Finis",
+            "completion-inDevelopment" : "En cours de developpement",
+            "completion-notStarted" : "Pas commencé"
+        },
+        "type" : 
+        {
+            "type-courses" : "Cours",
+            "type-projects" : "Projet"
         }
     }
 }

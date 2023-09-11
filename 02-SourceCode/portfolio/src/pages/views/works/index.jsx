@@ -33,8 +33,8 @@ import en from "../../../resources/langs/en/works.json"
 
 //#region - Import Datas
 import ProjectTypes from "../../../resources/datas/works/projectTypes";
-import typeRadioButtons from "../../../resources/datas/works/typeRadio.json";
-import completionRadioButtons from "../../../resources/datas/works/completionRadio.json";
+import TypeRadioButtons from "../../../resources/datas/works/typeRadioButtons";
+import CompletionRadioButtons from "../../../resources/datas/works/completionRadioButtons.js";
 import LanguagesButtons from "../../../resources/datas/works/languagesButtons";
 import Projects from "../../../resources/datas/projects";
 //#endregion
@@ -54,7 +54,7 @@ function Works()
 {
     //#region - Set States
     const [searchbar, setSearchbar] = useState("");
-    const [cards, setCards] = useState(ProjectTypes.map((card) => ({id: card.id, checked: card.defaultCheck}))); 
+    const [platform, setPlatform] = useState(ProjectTypes.map((platform) => ({id: platform.id, checked: platform.defaultCheck}))); 
     const [typeRadio, setTypeRadio] = useState("type-all");
     const [completionRadio, setCompletionRadio] = useState("completion-all");
     const [languages, setLanguages] = useState(LanguagesButtons.map((language) => ({id: language.id, checked: language.defaultCheck})));
@@ -73,12 +73,12 @@ function Works()
                 <Subtitle>{translations.subtitle}</Subtitle>
             </TitleSection>
             {/* Filters */}
-            <Filters translations={translations} searchbar={searchbar} setSearchbar={setSearchbar} cards={cards} setCards={setCards} typeRadio={typeRadio} setTypeRadio={setTypeRadio} completionRadio={completionRadio} setCompletionRadio={setCompletionRadio} languages={languages} setLanguages={setLanguages} projectTypes={ProjectTypes} typeRadioButtons={typeRadioButtons} completionRadioButtons={completionRadioButtons} languagesButtons={LanguagesButtons}/>
+            <Filters translations={translations} searchbar={searchbar} setSearchbar={setSearchbar} platforms={platform} setPlatform={setPlatform} typeRadio={typeRadio} setTypeRadio={setTypeRadio} completionRadio={completionRadio} setCompletionRadio={setCompletionRadio} languages={languages} setLanguages={setLanguages} projectTypes={ProjectTypes} typeRadioButtons={TypeRadioButtons} completionRadioButtons={CompletionRadioButtons} languagesButtons={LanguagesButtons}/>
             {/* All the works */}
             <WorksSection>
                 {Projects.map((project) => 
                 (
-                    <Work key={`${project.name}-${project.id}`} translations={translations} keyValue={`${project.name}-${project.id}`} image={project.image} title={project.name} completion={project.completion}/>
+                    <Work key={`${project.name}-${project.id}`} translations={translations} keyValue={`${project.name}-${project.id}`} image={project.image} title={project.name} completion={project.completion} type={project.type} languages={project.languages}/>
                 ))}
             </WorksSection>
         </MainContainer>
