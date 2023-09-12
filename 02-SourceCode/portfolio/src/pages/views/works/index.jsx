@@ -78,7 +78,7 @@ function Works()
             <WorksSection>
                 {Projects.map((project) => 
                 (
-                    <Work key={`${project.name}-${project.id}`} translations={translations} keyValue={`${project.name}-${project.id}`} image={project.image} title={project.name} completion={project.completion} type={project.type} languages={project.languages}/>
+                    <Work key={`${project.name}-${project.id}`} translations={translations} keyValue={`${project.name}-${project.id}`} work={project}/>
                 ))}
             </WorksSection>
         </MainContainer>

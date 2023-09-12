@@ -4,6 +4,7 @@ import { styled } from 'styled-components'
 /** Import styles */
 import { responsive, colorPalette } from '../styles'
 import eCompletionIds from '../../datas/enums/works/eCompletionIds'
+import GetColorFromCompletion from '../../../utils/globals/getColorFromCompletion'
 
 export const WorkContainer = styled.div`
     margin-top: 20px;
@@ -50,11 +51,19 @@ export const WorkTitleContainer = styled.div`
 
 export const WorkTitle = styled.h2`
     margin-left: 10px;
-    flex: 1;
+    margin-bottom: 0;
+    flex: 1.18;
+    font-size: 17px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        font-size: 28px;
+    }
 `
 
 export const WorkLanguagesImageContainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: right;
     align-items: center;
@@ -62,29 +71,49 @@ export const WorkLanguagesImageContainer = styled.div`
 `
 
 export const WorkLanguagesImage = styled.img`
-    height: 45px;
+    height: 30px;
     margin-right: 10px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        height: 42px;
+    }
 `
 
 export const WorkDescription = styled.p`
     margin-left: 10px;
+    margin-right: 10px;
+    font-size: 13px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        font-size: 18px;
+    }
+`
+
+export const WorkDescriptionTitle = styled.h3`
+    padding: 0;
+    margin-bottom: 5px;
+`
+
+export const WorkDescriptionParagraph = styled.p`
+    margin: 5px 10px;
+    font-size: 16px;
+    padding: 0;
+`
+
+export const WorkDescriptionAssociatedWorksContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
 `
 
 export const WorkCompletion = styled.sub`
     margin-left: 10%;
-`
+    font-size: 11px;
+    color: ${(props) => GetColorFromCompletion(props.completion).workCompletionColor};
 
-function GetColorFromCompletion(completion)
-{
-    switch (completion) 
+    @media (min-width: ${responsive.mobile}) 
     {
-        case eCompletionIds.notStarted:
-            return colorPalette.main.project.notStarted;
-        case eCompletionIds.inDevelopment:
-            return colorPalette.main.project.inDevelopment;
-        case eCompletionIds.finished:
-            return colorPalette.main.project.finished;
-        default:
-            return null;
+        font-size: 14px;
     }
-}
+`

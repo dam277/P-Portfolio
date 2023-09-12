@@ -30,6 +30,9 @@ const Projects =
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
             {id: eLanguagesIds.html, image: eLanguages.html.image},
             {id: eLanguagesIds.css, image: eLanguages.css.image},
+        ],
+        associatedProjects : 
+        [
         ]
     },
     {
@@ -48,6 +51,12 @@ const Projects =
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
             {id: eLanguagesIds.html, image: eLanguages.html.image},
             {id: eLanguagesIds.css, image: eLanguages.css.image},
+        ],
+        associatedProjects : 
+        [
+            "work-28",
+            "work-29",
+            "work-30"
         ]
     },
     {
@@ -63,6 +72,9 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
+        ],
+        associatedProjects : 
+        [
         ]
     },
     {
@@ -78,6 +90,9 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
+        ],
+        associatedProjects : 
+        [
         ]
     },
     {
@@ -93,6 +108,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -108,6 +127,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.python, image: eLanguages.python.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -123,6 +146,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -141,6 +168,10 @@ const Projects =
             {id: eLanguagesIds.blade, image: eLanguages.blade.image},
             {id: eLanguagesIds.html, image: eLanguages.html.image},
             {id: eLanguagesIds.css, image: eLanguages.css.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -156,6 +187,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -171,6 +206,12 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
+        ],
+        associatedProjects : 
+        [
+            "work-10",
+            "work-11",
+            "work-12",
         ]
     },
     {
@@ -186,6 +227,12 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image}
+        ],
+        associatedProjects : 
+        [
+            "work-9",
+            "work-11",
+            "work-12",
         ]
     },
     {
@@ -201,6 +248,12 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image}
+        ],
+        associatedProjects : 
+        [
+            "work-9",
+            "work-10",
+            "work-11",
         ]
     },
     {
@@ -216,6 +269,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image}
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -231,6 +288,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -246,6 +307,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -261,6 +326,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -276,6 +345,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.cpp, image: eLanguages.cpp.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -291,6 +364,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.rust, image: eLanguages.rust.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -306,6 +383,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -321,6 +402,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -336,6 +421,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            "work-22"
         ]
     },
     {
@@ -351,6 +440,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -366,6 +459,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            "work-20"
         ]
     },
     {
@@ -381,6 +478,13 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            "work-18",
+            "work-20",
+            "work-21",
+            "work-22"
         ]
     },
     {
@@ -397,6 +501,10 @@ const Projects =
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
             eLanguagesIds.sql
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -412,6 +520,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.go, image: eLanguages.go.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -427,6 +539,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.dart, image: eLanguages.dart.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -442,6 +558,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -459,6 +579,12 @@ const Projects =
             {id: eLanguagesIds.html, image: eLanguages.html.image},
             {id: eLanguagesIds.css, image: eLanguages.css.image},
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+        ],
+        associatedProjects : 
+        [
+            "work-1",
+            "work-29",
+            "work-30"
         ]
     },
     {
@@ -476,6 +602,12 @@ const Projects =
             {id: eLanguagesIds.php, image: eLanguages.php.image},
             {id: eLanguagesIds.html, image: eLanguages.html.image},
             {id: eLanguagesIds.css, image: eLanguages.css.image},
+        ],
+        associatedProjects : 
+        [
+            "work-1",
+            "work-28",
+            "work-30"
         ]
     },
     {
@@ -491,6 +623,12 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+        ],
+        associatedProjects : 
+        [
+            "work-1",
+            "work-28",
+            "work-29"
         ]
     },
     {
@@ -506,6 +644,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -521,6 +663,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.typescript, image: eLanguages.typescript.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -536,6 +682,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -551,6 +701,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -566,6 +720,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.typescript, image: eLanguages.typescript.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -581,6 +739,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -596,6 +758,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -611,6 +777,10 @@ const Projects =
         languages :                                 // Languages
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -628,6 +798,10 @@ const Projects =
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
             {id: eLanguagesIds.sql, image: eLanguages.sql.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
     {
@@ -644,6 +818,10 @@ const Projects =
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
             {id: eLanguagesIds.sql, image: eLanguages.sql.image},
+        ],
+        associatedProjects : 
+        [
+            
         ]
     },
 ]

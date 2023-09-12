@@ -36,6 +36,7 @@
         {
             "type-courses" : "Course",
             "type-projects" : "Project"
-        }
+        },
+        "associatedWorks" : "Associated works"
     }
 }

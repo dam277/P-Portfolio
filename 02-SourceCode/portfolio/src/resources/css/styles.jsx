@@ -20,23 +20,6 @@ export const colorPalette =
     primary: {
         backGroundDefault: "#040611",
         colorDefault: "#FFFFFE",
-        button: {
-            color: [
-                "#31091f",
-                "#C7046A"
-            ],
-            border: [
-                "#31091f",
-                "#C7046A"
-            ],
-            hover: {
-                color: "#FFFFFF",
-                backGroundColor: [
-                    "#31091f",
-                    "#C7046A"
-                ]
-            }
-        },
         text: {
             paragraph: {
                 color: "#BBBBBB"
@@ -59,7 +42,7 @@ export const colorPalette =
             backGroundColor: "#000014",
             border: "#FFFFFF",
             hover: {
-                backGroundColor: "#002347"
+                backGroundColor: "#002347",
             },
             active: {
                 backGroundColor: "#002347"
@@ -84,7 +67,7 @@ export const colorPalette =
             card : 
             {
                 backGroundColor : "#1F1F1F",
-                borderColor : "#808080",
+                borderColor : "#949494",
                 borderColorChecked : "#C7046A",
                 radio : 
                 {
@@ -98,7 +81,7 @@ export const colorPalette =
             },
             radioButton : 
             {
-                borderColor: "#808080",
+                borderColor: "#949494",
                 backGroundColor: "transparent",
                 checked : 
                 [
@@ -109,7 +92,7 @@ export const colorPalette =
             languages : 
             {
                 backGroundColor : "#1F1F1F",
-                borderColor : "#808080",
+                borderColor : "#949494",
             }
         },
         project : 
@@ -117,18 +100,70 @@ export const colorPalette =
             notStarted : 
             {
                 backGroundColor : "#1F1F1F",
-                borderColor : "#808080",
+                borderColor : "#949494",
+                workCompletionColor: "#949494",
+                button: {
+                    color: [
+                        "#4c4c4c",
+                        "#949494"
+                    ],
+                    border: [
+                        "#4c4c4c",
+                        "#949494"
+                    ],
+                    hover: {
+                        backGroundColor: [
+                            "#4c4c4c",
+                            "#949494"
+                        ]
+                    }
+                },
             },
             inDevelopment : 
             {
                 backGroundColor : "#130207",
-                borderColor : "#C7046A"
+                borderColor : "#C7046A",
+                workCompletionColor: "#C7046A",
+                button: {
+                    color: [
+                        "#360a22",
+                        "#C7046A"
+                    ],
+                    border: [
+                        "#360a22",
+                        "#C7046A"
+                    ],
+                    hover: {
+                        backGroundColor: [
+                            "#360a22",
+                            "#C7046A"
+                        ]
+                    }
+                },
             },
             finished : 
             {
                 backGroundColor : "#021307",
-                borderColor : "#008000"
+                borderColor : "#018901",
+                workCompletionColor: "#018901",
+                button: {
+                    color: [
+                        "#073a16",
+                        "#018901"
+                    ],
+                    border: [
+                        "#073a16",
+                        "#018901"
+                    ],
+                    hover: {
+                        backGroundColor: [
+                            "#073a16",
+                            "#018901"
+                        ]
+                    }
+                },
             }
+            
         }
     },
     footer: {

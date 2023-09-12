@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 import { responsive, colorPalette } from "../styles";
+import GetColorFromCompletion from "../../../utils/globals/getColorFromCompletion";
 
 export const CompetencesContainer = styled.div`   
     margin-left: 10%;
@@ -16,7 +17,7 @@ export const CompetenceWrapper = styled.div`
     width: 300px;
     padding: 2px;
     margin: 10px;
-    background: linear-gradient(${colorPalette.primary.button.color[0]}, ${colorPalette.primary.button.color[1]});
+    background: linear-gradient(${GetColorFromCompletion().button.color[0]}, ${GetColorFromCompletion().button.color[1]});
 `
 
 export const Competence = styled.div`
