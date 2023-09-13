@@ -35,7 +35,6 @@ import Projects from "../../../resources/datas/projects";
 //#region - Import Styles
 import { WorkContainer, WorkImageWrapper, WorkImage, WorkContent, WorkTitleContainer, WorkTitle, WorkLanguagesImageContainer, WorkLanguagesImage, WorkDescription, WorkDescriptionTitle, WorkDescriptionParagraph, WorkDescriptionAssociatedWorksContainer, WorkCompletion } from "../../../resources/css/works/workStyle";
 import { Button } from "../../../resources/css/mainStyle";
-import { NavLink } from "react-router-dom";
 //#endregion
 
 //#region - Import Images
@@ -53,13 +52,21 @@ import { NavLink } from "react-router-dom";
  */
 function Work({ translations, keyValue, work})
 {
+    //#region Get translations
     const descriptionTranslations = GetTranslations(fr, en);
+    //#endregion
 
+    //#region Handle functions
+    /**
+     * Handle the click of a associated work button to automatically scroll to the one which has the specified ID
+     * @param {string} id => ID of the work
+     */
     function handleAssociatedProject(id)
     {
         const target = document.getElementById(id);
         target.scrollIntoView({ behavior: "smooth" })
     }
+    //#endregion
 
     // Return html elements
     return (
@@ -82,15 +89,51 @@ function Work({ translations, keyValue, work})
                 <WorkDescription>
                     {descriptionTranslations[work.id].map((description, index) => 
                     (
-                        <>
-                            <WorkDescriptionTitle key={`descriptionTitle-${index}`}>{description.title}</WorkDescriptionTitle>
-                            {description.text.map((paragraph, index) => 
-                            (
-                                <WorkDescriptionParagraph key={`descriptionParagraph-${index}`}>
-                                    - {paragraph} 
-                                </WorkDescriptionParagraph>
-                            ))}
-                        </>
+                        description.text.length > 0 && 
+                        (
+                            <>
+                                <WorkDescriptionTitle key={`descriptionTitle-${index}`}>{description.title}</WorkDescriptionTitle>
+                                {description.text.map((paragraph, index) => 
+                                (
+                                    typeof paragraph === "string" ? 
+                                    (
+                                        <WorkDescriptionParagraph key={`descriptionParagraph-${index}`}>
+                                            - {paragraph}.
+                                        </WorkDescriptionParagraph>
+                                    )
+                                    :
+                                    (
+                                        <table>
+                                            {paragraph.map((tElem, index) =>
+                                            (
+                                                index === 0 ? 
+                                                (
+                                                    <thead>
+                                                        <tr>
+                                                            {tElem.map((tHeadText, index) =>
+                                                            (
+                                                                <td>{tHeadText}</td>
+                                                            ))}
+                                                        </tr>
+                                                    </thead>
+                                                )
+                                                : 
+                                                (
+                                                    <tbody>
+                                                        <tr>
+                                                            {tElem.map((tHeadText, index) =>
+                                                            (
+                                                                <td>{tHeadText}</td>
+                                                            ))}
+                                                        </tr>
+                                                    </tbody>
+                                                )
+                                            ))}
+                                        </table>
+                                    )
+                                ))}
+                            </>
+                        )
                     ))}
                     {work.associatedProjects.length > 0 && (<WorkDescriptionTitle>{translations.works.associatedWorks}</WorkDescriptionTitle>)}
                     <WorkDescriptionAssociatedWorksContainer>

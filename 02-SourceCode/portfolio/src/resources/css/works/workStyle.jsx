@@ -102,6 +102,26 @@ export const WorkDescriptionParagraph = styled.p`
     padding: 0;
 `
 
+export const WorkDescriptionTable = styled.table`
+    
+`
+
+export const WorkDescriptionThead = styled.thead`
+    
+`
+
+export const WorkDescriptionTbody = styled.tbody`
+
+`
+
+export const WorkDescriptionTr = styled.tr`
+    
+`
+
+export const WorkDescriptionTd = styled.td`
+    
+`
+
 export const WorkDescriptionAssociatedWorksContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
