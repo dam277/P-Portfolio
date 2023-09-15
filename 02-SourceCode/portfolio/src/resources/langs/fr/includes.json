@@ -1,0 +1,28 @@
+{
+    "header" : 
+    {
+        "home" : "Accueil",
+        "about" : "A propos",
+        "works" : "Travaux",
+        "language" : "Langage",
+        "en" : "Anglais",
+        "fr" : "Français"
+    },
+    "footer" : 
+    {
+        "copyright" : "Copyright © 2023 - Damien Loup - Tous droits résérvés",
+        "creator" : "Créateur",
+        "logoFooterImageAlt" : "Logo du site web",
+        "aboutTitle" : "A propos du projet",
+        "programsTitle" : "Langages et librairies utilisées pour ce projet",
+        "languages" : "Langages",
+        "libraries" : "Librairies",
+        "projectDescription" : 
+        [
+            "Le projet consiste à créer mon propre portfolio de mon niveau de compétence et parler de moi.",
+            "Ce portfolio vous montrera les projets que j'ai réalisés et ce que j'ai appris.",
+            "Tous les projets ont un site internet qui présente de quoi il s'agit ainsi qu'une documentation. Ce portfolio aura des boutons de redirection vers ces autres sites.",
+            "Ce site à été fait entièrement par moi-même !"
+        ]
+    }
+}

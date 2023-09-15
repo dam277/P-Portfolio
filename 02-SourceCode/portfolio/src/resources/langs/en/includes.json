@@ -1,0 +1,28 @@
+{
+    "header" : 
+    {
+        "home" : "Home",
+        "about" : "About",
+        "works" : "Works",
+        "language" : "Language",
+        "en" : "English",
+        "fr" : "French"
+    },
+    "footer" : 
+    {
+        "copyright" : "Copyright © 2023 - Damien Loup - All rights reserved",
+        "creator" : "Creator",
+        "logoFooterImageAlt" : "Webiste logo",
+        "aboutTitle" : "About project",
+        "programsTitle" : "Languages and libraries used for this project",
+        "languages" : "Languages",
+        "libraries" : "Libraries",
+        "projectDescription" : 
+        [
+            "The project consists to create my own portfolio of my skill level and tell what about me.",
+            "This portfolio will show you what projects I did and what I learned.",
+            "Every projects have a website who present itself what about and the documentation. This portfolio will have redirection buttons to these other sites.",
+            "This site here has been made entirely by myself !"
+        ]
+    }
+}
