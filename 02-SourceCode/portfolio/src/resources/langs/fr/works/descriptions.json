@@ -1,166 +1,940 @@
 {
     "work-0" : 
     [
-
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer mon propre portfolio de mon niveau de compétence et à raconter ce qui me concerne",
+                "Ce portfolio vous montrera les projets que j'ai réalisés et ce que j'ai appris",
+                "Chaque projet a un site web qui présente son contenu et sa documentation. Ce portfolio aura des boutons de redirection vers ces autres sites"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Qu'en est-il de moi ?",
+                "Mes projets",
+                "Mes compétences / mon niveau de qualification",
+                "Redirection vers les autres projets"
+            ]
+        }
     ],
     "work-1" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un cadre web PHP complet"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Commandes automatiques pour générer des fichiers (comme : skillio create View -name Home)",
+                "Vérifications automatiques de base pour un formulaire envoyé avec options",
+                "Commande pour générer automatiquement la connexion et l'inscription back/front-end",
+                "Migrations (Génération d'une base de données complète)",
+                "Créer un formulaire complet avec un code php du noyau qui est automatiquement sécurisé",
+                "Simplifier la vérification de certains éléments (comme $errors->any)",
+                "Fichier de ressources avec des éléments pré-implémentés",
+                "Moteur de template pour ce framewok avec de nouvelles balises (for, foreach, forerror, if, while, debug)"
+            ]
+        }
     ],
     "work-2" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à recréer le jeux du space invader en console"
+
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Déplacer le vaisseau",
+                "Déplacement des ennemis",
+                "Tirer sur les ennemis",
+                "Tirs des ennemis",
+                "Gérer la vie du vaisseau",
+                "Gérer la vie des ennemis",
+                "Sauvegarder",
+                "Niveaux de difficulté"
+            ]
+        }
     ],
     "work-3" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer une application pour gérer les dépôts github",
+                "L'application scanne les fichiers et les dossiers sur un emplacement spécifique et les affiche",
+                "Avec cette application, nous pourrons créer, cloner, tirer, pousser des dépôts et plus encore"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Cloner un dépot",
+                "Créer un dépôt",
+                "Gérer un dépôt (y compris push, pull, commit, etc...)",
+                "Changer la branche d'un dépôt",
+                "Voir les fichiers et les dossiers d'un dépôt",
+                "Ouvrir n'importe quel IDE à partir de l'application",
+                "Utiliser un éditeur de texte dans l'application (IDE intégré)",
+                "Se connecter à github pour gérer des dépôts distants et voir plus d'informations les concernant"
+            ]
+        }
     ],
     "work-4" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre la bibliothèque LWJGL et à réaliser un projet LWJGL afin de réaliser plus facilement mes futurs projets avec cette bibliothèque"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-5" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre le langage python"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-6" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre comment faire un bot discord en javascript"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-7" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre laravel (chaque nouvelle version de laravel sera apprise dans un nouveau dossier du code source)"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-8" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un bot discord qui gère les canaux",
+                "L'utilité principale de ce bot est de créer des catégories privées pour quelqu'un qui peut y inviter ses amis",
+                "Il aura accès à un canal vocal et à un canal texte. Il pourra également fermer cette catégorie quand il le souhaite et automatiquement lorsqu'il quittera le canal vocal"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Créer automatiquement un canal vocal avec le nom que vous souhaitez",
+                "Lorsque l'utilisateur entre dans ce canal, le robot crée une catégorie avec le nom du créateur et sera automatiquement redirigé dans ce canal vocal",
+                "Se déplacer sur son propre canal vocal", 
+                "L'utilisateur peut utiliser des commandes sur son canal (commandes du robot)",
+                "Fermer/ouvrir le canal pour tout le monde/quelques personnes"
+            ]
+        }
     ],
     "work-9" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un lanceur de jeux avec mes propres jeux",
+                "Les jeux peuvent être installés/désinstallés et lancés à partir de l'application et vous pouvez avoir un compte pour sauvegarder des données et jouer en LAN (Réseau local) avec des amis (hamachi par exemple)"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Voir les jeux",
+                "Installer/désinstaller et lancer des jeux",
+                "Créer un compte",
+                "Avoir des amis",
+                "Jouer en réseau local avec d'autres joueurs"
+            ]
+        }
     ],
     "work-10" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à recréer le jeu classique de dino qui se lançait lorsque la connexion était perdue sur un navigateur internet dans la console",
+                "Les données sont sauvegardées en local et le jeu peut être téléchargé à partir du lanceur"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Sauvegarder des données dans une base de données",
+                "Sauter, s'accroupir",
+                "Voir son propre tableau d'affichage et celui des autres joueurs",
+                "Personnaliser les textures"
+            ]
+        }
     ],
     "work-11" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un jeu au tour par tour qui peut être joué en JCE (Joueur Contre Environnement) ou en JCJ (Joueur Contre Joueur)",
+                "Vous pouvez créer un compte pour sauvegarder votre progression (compte lanceur). Vous pourrez télécharger et lancer le jeu à partir du lanceur"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Créer un compte à partir du lanceur",
+                "Jouer contre des robots et des joueurs",
+                "Système de classement connecté",
+                "Avoir des amis",
+                "JCJ en 1vs1 et 2vs2",
+                "Améliorer les personnages",
+                "Ouvrir des coffres",
+                "Voir l'inventaire, l'historique du jeu, le classement,"
+            ]
+        }
     ],
     "work-12" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un jeu au tour par tour qui peut être joué en PVE ou PVP. Vous pouvez créer/connecter un compte pour sauvegarder votre progression (compte launcher). Vous pourrez télécharger et lancer le jeu à partir du launcher",
+                "Il y a des parties 1vs1 et 2vs2 qui sont basées sur une carte procédurale (Aléatoire) qui se crée pendant le début du match",
+                "Chaque joueur dispose de trois personnages principaux par partie, d'un QG (quartier général) et de quelques unités classiques",
+                "Le principe du jeu est de détruire le QG ennemi en utilisant les unités formées",
+                "Les personnages principaux sont les troupes de base du jeu (les plus forts du jeu) comme des sortes de héros que nous pouvons améliorer",
+                "Les unités classiques sont des personnages qui peuvent être créés en utilisant l'argent généré pendant le tour",
+                "Ils peuvent être créés à partir d'une base militaire (base de constructeurs, base navale, base aérienne et base terrestre). Au départ, seules la base terrestre et la base de constructeurs sont débloquées",
+                "Vous pouvez construire jusqu'à 3 bases terrestres, trouver au hasard les bases navales et prendre possession de l'unique base aérienne située au milieu de la carte",
+                "Chaque personnage a un nombre vie, des dégâts, une distance de tir, des pouvoirs et des mouvements",
+                "Les constructeurs (vous pouvez avoir un maximum de 3 constructeurs) peuvent réparer, améliorer ou prendre possession certaines bases, mais attention, ils peuvent être tués avant de prendre possession de la base. Un bâtisseur peut réparer une base en 4 tours contrairement à la prise de possession qui ne prend que 2 tours (peut être ajusté). Si un bâtisseur meurt, la seule possibilité d'en avoir un à nouveau est d'en former un nouveau à la base des constructeurs",
+                "D'autres unités peuvent être créées à partir des bases conquises"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Créer un compte pour sauvegarder la progression",
+                "Améliorer les unités",
+                "Ouvrir des coffres",
+                "Former des unités",
+                "Conquérir des bases",
+                "Avoir des amis",
+                "Déplacer des unités",
+                "Attaquer les unités et les bases ennemies",
+                "Jouer des parties classées",
+                "Avoir un rang",
+                "Déplacer la caméra sur une partie",
+                "Voir le classement"
+            ]
+        }
     ],
     "work-13" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre à faire un datapack minecraft"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-14" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre à faire un mod Minecraft"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-15" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre à créer un plugin pour Minecraft"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-16" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre à utiliser OpenGL en C++"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-17" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre le langage de programmation Rust"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-18" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un plugin minecraft pour le serveur afin de le gérer",
+                "Les utilisateurs du serveur qui ont la permission de gérer les plugins peuvent utiliser les commandes",
+                "Le plugin peut gérer de nombreuses choses comme :",
+                [
+                    ["Rôles", "Commandes publiques", "Éléments", "Interface"],
+                    ["Créer un rôle", "Créer une commande", "Créer un élément", "Créer une interface"],
+                    ["Supprimer le rôle", "Supprimer la commande", "Supprimer l'élément", "Supprimer l'interface"],
+                    ["Attribuer un rôle", "Sélectionner ce que fait la commande", "Attribuer une position d'inventaire", "Attribuer un nom"],
+                    ["Gérer les permissions du rôle", "", "Assigner une commande à un élément", "Assigner un élément dans l'interface"],
+                    ["Gérer la couleur du rôle", "", "Attribuer un nom à un élément", "Créer des pages"],
+                    ["", "", "Attribuer une interface", "Attribuer des boutons"]
+                ]
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Gérer les commandes",
+                "Gérer les rôles",
+                "Gérer les éléments",
+                "Gérer l'interface"
+            ]
+        }
     ],
     "work-19" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un datapack pour Minecraft",
+                "Le datapack changera la génération du monde pour le rendre plus différent"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Changer la génération du monde"
+            ]
+        }
     ],
     "work-20" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un mod pour Minecraft",
+                "Le mod ajoutera des minéraux : Cristal, Rubis, Saphir, Mercure, Minerais de cauchemard, Charbon cauchemardesque",
+                "Objet : Pile de papier, Carton, Lanterne du cauchemard, Essence chauchemardesque, Lingot sombre",
+                "Utilités : Forge, Grands fours, Nouveaux coffres",
+                "Armures et armes : Tous les minéraux + assemblage des minerais dans la forge",
+                "Dimensions : Nightmaria",
+                "Boss, Donjons, Monstres, Biomes"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Nouvelles armures",
+                "Nouvelles armes",
+                "Nouvelles dimensions (Nightmaria)",
+                "Nouveaux boss",
+                "Nouveaux donjons",
+                "Nouveaux monstres",
+                "Nouveaux biomes",
+                "Nouveaux objets"
+            ]
+        }
     ],
     "work-21" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un mod minecraft pour gérer des alliances, des villages et plus encore",
+                "Chaque joueur peut créer une nouvelle alliance et peut inviter ses amis",
+                "Il peut gérer les rôles dans l'alliance et les permissions",
+                "Après cela, il doit créer son premier village, tout d'abord, il doit placer un bloc contrôleur de village qui revendique des parcelles autour de lui",
+                "Dans ces parcelles revendiquées, le joueur peut créer sa base",
+                "Après cela, le joueur peut placer un bloc de mairie qui est le bâtiment principal du village",
+                "Le joueur peut également aller dans les villages pour recruter des villageois qui seront transformés en défenseurs, fermiers, attaquants, etc",
+                "Après qu'un villageois ait été recruté, il pourra être affecté à une tâche, mais avant, nous avons besoin d'un bâtiment qui puisse lui assigner cette tâche (maison du bâtisseur, ferme, mine)",
+                "Si le villageois est affecté à une tâche, il l'accomplira tant qu'il le peut (il doit manger et avoir des outils)",
+                "Imaginez que votre villageois soit un bâtisseur, vous pouvez l'assigner à la construction d'un schéma pré-créé dans le mod, ou le créer vous-même : créez un bâtiment quelque part et prenez ce que vous voulez dans le créateur de schémas intégré",
+                "Il y a aussi de nouveaux objets, des monstres, des systèmes électriques, etc",
+
+                "{title}EN SOLO",
+                "Parfois, il y a des attaques d'autres villages qui endommagent vos constructions et les détruisent",
+                "Vous pouvez les réparer en utilisant des bâtisseurs",
+
+                "{title}EN MULTIJOUEUR",
+                "Vous pouvez déclarer une guerre face à un autre village",
+                "Dans une guerre, vous pouvez l'attaquer et prendre ses ressources, mais il peut se défendre dans son propre village",
+                "Si vous n'êtes pas en guerre, personne ne peut détruire votre base",
+                "Vous pouvez aussi avoir des alliés, des neutres et des ennemis"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Créer une alliance",
+                "Inviter des amis",
+                "Gérer les rôles",
+                "Gérer les autorisations",
+                "Réclamer des parcelles",
+                "Recruter des villageois",
+                "Former des villageois",
+                "Attaquer d'autres villages",
+                "Obtenir une guerre contre un autre village",
+                "Détruire des structures",
+                "Les structures ont de la vie avant d'être détruites (100PV / 200PV)",
+                "Construire des bâtiments",
+                "Créer son propre schéma"
+            ]
+        }
     ],
     "work-22" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un supplément au mod Darkness",
+                "Ce mod ajoutera des améliorations pour de nombreuses armures, armes et autres",
+                "Le mod ajoutera des amulettes qui peuvent être combinées avec des armures et des armes pour les améliorer"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Ajouter des améliorations au mod de base Darkness"
+            ]
+        }
     ],
     "work-23" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un lanceur personnalisé pour jouer à minecraft avec mes mods et plugins",
+                "Vous pourrez choisir quels mods sont activés avant de lancer le jeu dans les paramètres"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Lancer minecraft avec les mods intégrés",
+                "Sélectionner les mods qui seront joués",
+                "Gérer les paramètres"
+            ]
+        }
     ],
     "work-24" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre à faire une application client qui communique avec un serveur avec une base de données"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-25" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre le langage de programmation Go"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-26" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre le langage de programmation Dart"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-27" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un jeu de donjon procédural (de type binding of isaac) dans lequel vous pourrez combattre des monstres, améliorer vos pouvoirs et combattre des boss",
+                "Avant de commencer, vous pouvez changer de personnage, commencer avec d'autres pouvoirs et inviter des amis sur votre serveur local ou en ligne (hamachi par exemple)",
+                "Chaque personnage a des statistiques différentes (plus de vie, moins de dégâts, ....). A chaque monstre que vous tuez, vous recevez de l'argent et du mana",
+                "L'argent et le mana peuvent être utilisés dans la boutique, mais certains pouvoirs spécifiques nécessitent X mana pour être lancés",
+                "Si vous ne prenez pas de dommages après une étape, une boutique apparaîtra à l'étape suivante. Chaque étape gagnée consécutivement améliorera la boutique, si vous subissez des dégâts, la boutique reviendra au niveau 0 et n'apparaîtra pas à l'étape suivante",
+                
+                "{title}COEURS",
+                "Dans le jeu, vous pourrez collecter des cœurs, il y a différentes couleurs pour différentes statistiques :",
+                "{color:red,id:0}ROUGE{/color} => Coeur classique",
+                "{color:#3939ff,id:0}BLEU{/color} => Coeur de régénération => tant que vous avez {color:#3939ff,id:0}1 coeur bleu{/color}, les autres perdus à ce stade se régénèrent quand vous ne vous battez pas",
+                "{color:green,id:0}VERT{/color} => Coeur temporaire => reste sur votre barre de vie X secondes et après cela, disparaît",
+                "{color:orange,id:0}ORANGE{/color} => Coeur de bouclier => Il y a une chance qu vous ne preniez pas de dégat",
+                "{color:violet,id:0}VIOLET{/color} => Coeur de dégats/donnation => Chaque {color:violet,id:0}cœur violet{/color} que vous possédez augmente vos dégâts, mais si vous jouez en multijoueur, vous pourrez donner ce cœur à quelqu'un d'autre, ce qui transformera ce cœur violet en cœur rouge",
+                "{color:black,id:0}NOIR{/color} => Coeur de réapparition => Ce coeur n'est pas sur votre barre de vie, mais lorsque vous mourrez, vous réapparaîtrez dans la première pièce avec {color:red,id:1}1 coeur rouge{/color}",
+                "{color:white,id:0}BLANC{/color} => Coeur piège => Tant que vous avez ce coeur, vous ne subissez pas les dégâts des pièges",
+                
+                "{title}ETAGES",
+                "Tous les 10 etages, vous aurez un combat de boss dans la salle du boss, vous pourrez également construire la clé du destin",
+                "Dans cet endroit vous pouvez trouver un nouveau donjon spécial (bonus), et il y a des coffres, des mini-boss, des monstres et une boutique du destin qui propose des armures du destin, des armes et des pouvoirs",
+                "Pour accéder à cette boutique, il vous faudra gagner 4 etages dans celle-ci (1, 2, 3, 4, boutique)"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Génèrer des donjons procéduraux",
+                "Implémenter des éléments de gameplay (armes, pouvoirs, armures)",
+                "Inviter des amis sur le serveur local ou jouer en ligne",
+                "Obtenir de l'argent et du mana",
+                "Attaquer, être attaqué, lancer des pouvoirs",
+                "Utiliser l'argent et le mana dans la boutique",
+                "Améliorer le niveau de la boutique lorsque personne ne prend de dommages",
+                "Récolter des cœurs",
+                "Combattre des monstres, des mini-boss, des boss et le boss final",
+                "Aller dans le donjon du destin"
+            ]
+        }
     ],
     "work-28" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un validateur de bout en bout pour mon framework",
+                "Ce validateur de bout en bout simulera un utilisateur pour tester votre application web"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Saisir du texte dans un champ",
+                "Utiliser des sélecteurs",
+                "Aller sur un site web",
+                "Envoyer des formulaires",
+                "Cliquer sur des boutons"
+            ]
+        }
     ],
     "work-29" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer un moteur de modèles en PHP pour créer mon propre 'langage'",
+                "Le moteur de modèles traduira le langage .skillio en php",
+                "Dans le framework, il y a des fichiers de vue qui représentent le front-end (design) du site web",
+                "Le rôle de la nouvelle extension .skillio est de faire en sorte que le moteur de modèles reconnaisse les fichiers et traduise certains éléments de la vue en php pour supprimer toutes les balises de la vue et laisser uniquement quelques balises de base [for] ... [/for]"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "for [for $i = 0; $i < count($array); $i++] {{ $array[$i] }} [/for] // ['foo', 'too', 'boo'] => foo too boo",
+                "if [if $i < 5] // TRUE [else if $i > 6] // FALSE TRUE [else] //FALSE FALSE [/if]",
+                "foreach [foreach $foo as $key => $value] ... [/foreach]",
+                "while [while $i < 5] ... [/while]",
+                "do while [do] ... [/while $i < 5]",
+                "debug [dump $var]"
+            ]
+        }
     ],
     "work-30" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer une extension visual studio code pour aider les développeurs à coder un site web avec mon framework",
+                "Il ajoutera des couleurs au 'nouveau' langage que je créerai avec l'extension de fichier '.skillio.php'"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Couleurs sur les nouvelles balises",
+                "Remplir automatiquement les lignes",
+                "Suggestions pour le code"
+            ]
+        }
     ],
     "work-31" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre la bibliothèque react à partir de Javascript"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-32" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre la bibliothèque angular"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-33" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre la bibliothèque meteor"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-34" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre la bibliothèque three"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-35" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre le langage typescript"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-36" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre la bibliothèque vue"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-37" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre la bibliothèque next"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-38" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre la bibliothèque electron"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
     ],
     "work-39" : 
     [
-        
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer une application qui liste toutes les applications, animes, vidéos yt, etc... que vous aimez, voulez voir, ...",
+                "Le principe est de voir les vidéos ou de lancer les applications à partir de l'application",
+                "Il serait aussi possible d'y ajoueter des musiques"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Créer un compte",
+                "Ajouter des amis",
+                "Créer des groupes",
+                "Lister tous les animes (+ ouverture/fin), les vidéos youtubesmd que nous voulons voir + partager avec des amis",
+                "Lister tous les jeux et autres applications que nous avons et les partager avec nos amis",
+                "Lister des recettes de cuisine, des activités sportives, des pays visités",
+                "Préparer un voyage à l'aide de google maps intégré en spécifiant les pays et les villes",
+                "Mettre X étoiles sur un animé, des vidéos yt, une application, ..",
+                "Par rapport aux étoiles, créer automatiquement un tableau d'affichage de tous les animés, .. + Moyenne pour le tableau d'affichage dans les groupes",
+                "Afficher sur le profil les heures passées pour tous les animes, ... vus",
+                "Récupérer les vidéos de l'anime et le voir avec un ami en même temps",
+                "Ecouter des musiques",
+                "Version téléphone"
+            ]
+        }
     ],
     "work-40" : 
     [
-        
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste en l'apprentissage de wpf"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+            ]
+        }
+    ],
+    "work-41" : 
+    [
+        {
+            "title" : "Le projet", 
+            "text" : 
+            [
+                "Le projet consiste à créer une application web, logicielle et mobile de chat direct",
+                "Cette application pourra être utilisée en réseau local ou sur un serveur",
+                "L'application web aura un front-end (react) et un back-end (java)",
+                "Je sais que java n'est pas le meilleur langage pour optimiser les applications web, mais je fais cela pour en apprendre plus sur le sujet"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Chat en temps réel",
+                "Gestion du profil utilisateur",
+                "Rechercher d'autres personnes",
+                "Notifications",
+                "Auto-modération",
+                "Statistiques",
+                "Fonctionnalités de sécurité comme 2FA",
+                "Personnalisations",
+                "traductions des messages",
+                "Chatbot",
+                "Ajouter des emojis",
+                "Faire des vocaux, des appels, envoyer des fichiers",
+                "Faire des commandes sur un canal pour le gérer"
+            ]
+        }
+    ],
+    "work-42" : 
+    [
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre la bibliothèque sfml en c++"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                
+            ]
+        }
+    ],
+    "work-43" : 
+    [
+        {
+            "title" : "Le cours", 
+            "text" : 
+            [
+                "Le cours consiste à apprendre docker"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                
+            ]
+        }
     ]
 }

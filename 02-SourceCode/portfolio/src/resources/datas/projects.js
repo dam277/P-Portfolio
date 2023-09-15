@@ -10,6 +10,7 @@ import eTypeIds from "./enums/works/eTypeIds";
 import ePlatformIds from "./enums/works/ePlatformIds";
 import eLanguagesIds from "./enums/works/eLanguagesIds";
 import eLanguages from "./enums/eLanguages";
+import ePlatforms from "./enums/works/ePlatform";
 
 // Import enums
 
@@ -21,9 +22,9 @@ const Projects =
         image: portfolio,
         completion: eCompletionIds.inDevelopment,   // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+           {id: ePlatformIds.web, image: ePlatforms.web},  
         ],  
         languages :                                 // Languages
         [
@@ -41,9 +42,9 @@ const Projects =
         image: skillioFramework,
         completion: eCompletionIds.inDevelopment,   // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],  
         languages :                                 // Languages
         [
@@ -65,9 +66,9 @@ const Projects =
         image: spaceInvader,
         completion: eCompletionIds.finished,        // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software}
         ],  
         languages :                                 // Languages
         [
@@ -83,9 +84,9 @@ const Projects =
         image: "githubManager",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -101,9 +102,9 @@ const Projects =
         image : "lwjgl",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -120,9 +121,9 @@ const Projects =
         image : "python",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -139,9 +140,9 @@ const Projects =
         image : "discordBot",
         completion: eCompletionIds.inDevelopment,   // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -158,9 +159,9 @@ const Projects =
         image : "laravel",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],  
         languages :                                 // Languages
         [
@@ -180,9 +181,9 @@ const Projects =
         image : "dcm",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -199,9 +200,9 @@ const Projects =
         image : "launcher",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -220,9 +221,9 @@ const Projects =
         image : "launcherDG",
         completion: eCompletionIds.inDevelopment,   // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -241,9 +242,9 @@ const Projects =
         image : "launcherHF",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -262,9 +263,9 @@ const Projects =
         image : "launcherUW",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -281,9 +282,9 @@ const Projects =
         image : "mcDatapack",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -300,9 +301,9 @@ const Projects =
         image : "mcMod",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -319,9 +320,9 @@ const Projects =
         image : "mcPlugin",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -338,9 +339,9 @@ const Projects =
         image : "opengl",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -357,9 +358,9 @@ const Projects =
         image : "rust",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -376,9 +377,9 @@ const Projects =
         image : "mcPluginServerManager",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -395,9 +396,9 @@ const Projects =
         image : "mcDatapackWorldChanges",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -414,9 +415,9 @@ const Projects =
         image : "mcModDarkness",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -433,9 +434,9 @@ const Projects =
         image : "mcModAlliances",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -452,9 +453,9 @@ const Projects =
         image : "mcModDarknessUpgrades",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -471,9 +472,9 @@ const Projects =
         image : "mcLauncher",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -493,9 +494,9 @@ const Projects =
         image : "serverConnection",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -513,9 +514,9 @@ const Projects =
         image : "go",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -532,9 +533,9 @@ const Projects =
         image : "dart",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -551,9 +552,9 @@ const Projects =
         image : "proceduralDungeon",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
+            {id: ePlatformIds.software, image: ePlatforms.software},
         ],  
         languages :                                 // Languages
         [
@@ -570,9 +571,9 @@ const Projects =
         image : "sfE2eValidator",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],             
         languages :                                 // Languages
         [
@@ -593,9 +594,9 @@ const Projects =
         image : "sfTemplateEngine",
         completion: eCompletionIds.inDevelopment,   // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],             
         languages :                                 // Languages
         [
@@ -616,9 +617,9 @@ const Projects =
         image : "sfVsCodeExtension",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software  
+            {id: ePlatformIds.software, image: ePlatforms.software}  
         ],             
         languages :                                 // Languages
         [
@@ -637,9 +638,9 @@ const Projects =
         image : "react",
         completion: eCompletionIds.finished,        // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],             
         languages :                                 // Languages
         [
@@ -656,9 +657,9 @@ const Projects =
         image : "angular",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],             
         languages :                                 // Languages
         [
@@ -675,9 +676,9 @@ const Projects =
         image : "meteor",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],             
         languages :                                 // Languages
         [
@@ -694,9 +695,9 @@ const Projects =
         image : "three",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],             
         languages :                                 // Languages
         [
@@ -713,9 +714,9 @@ const Projects =
         image : "typescript",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],             
         languages :                                 // Languages
         [
@@ -732,9 +733,9 @@ const Projects =
         image : "vue",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],             
         languages :                                 // Languages
         [
@@ -751,9 +752,9 @@ const Projects =
         image : "next",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.web  
+            {id: ePlatformIds.web, image: ePlatforms.web},   
         ],             
         languages :                                 // Languages
         [
@@ -770,9 +771,9 @@ const Projects =
         image : "electron",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software  
+            {id: ePlatformIds.software, image: ePlatforms.software}  
         ],             
         languages :                                 // Languages
         [
@@ -789,10 +790,10 @@ const Projects =
         image : "memo",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,
-            ePlatformIds.mobile  
+            {id: ePlatformIds.software, image: ePlatforms.software},
+            {id: ePlatformIds.mobile, image: ePlatforms.mobile}  
         ],             
         languages :                                 // Languages
         [
@@ -810,9 +811,9 @@ const Projects =
         image : "wpf",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
-        platform :                                  // Platform
+        platforms :                                  // Platform
         [
-            ePlatformIds.software,  
+            {id: ePlatformIds.software, image: ePlatforms.software},  
         ],             
         languages :                                 // Languages
         [
@@ -824,6 +825,70 @@ const Projects =
             
         ]
     },
+    {
+        id: "work-41",
+        name : "Converso",                          // Searchbar
+        image : "converso",
+        completion: eCompletionIds.notStarted,      // Completion
+        type : eTypeIds.projects,                   // Type of work
+        platforms :                                  // Platform
+        [
+            {id: ePlatformIds.software, image: ePlatforms.software},  
+            {id: ePlatformIds.web, image: ePlatforms.web},
+            {id: ePlatformIds.mobile, image: ePlatforms.mobile}  
+        ],             
+        languages :                                 // Languages
+        [
+            {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
+            {id: eLanguagesIds.java, image: eLanguages.java.image},
+            {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
+            {id: eLanguagesIds.html, image: eLanguages.html.image},
+            {id: eLanguagesIds.css, image: eLanguages.css.image},
+            {id: eLanguagesIds.sql, image: eLanguages.sql.image},
+        ],
+        associatedProjects : 
+        [
+            
+        ]
+    },
+    {
+        id: "work-42",
+        name : "Sfml",                              // Searchbar
+        image : "sfml",
+        completion: eCompletionIds.notStarted,      // Completion
+        type : eTypeIds.courses,                    // Type of work
+        platforms :                                  // Platform
+        [
+            {id: ePlatformIds.software, image: ePlatforms.software}
+        ],             
+        languages :                                 // Languages
+        [
+            {id: eLanguagesIds.cpp, image: eLanguages.cpp.image},
+        ],
+        associatedProjects : 
+        [
+            
+        ]
+    },
+    {
+        id: "work-43",
+        name : "Docker",                            // Searchbar
+        image : "docker",
+        completion: eCompletionIds.notStarted,      // Completion
+        type : eTypeIds.courses,                    // Type of work
+        platforms :                                  // Platform
+        [
+            {id: ePlatformIds.software, image: ePlatforms.software},
+            {id: ePlatformIds.web, image: ePlatforms.web}, 
+        ],             
+        languages :                                 // Languages
+        [
+        ],
+        associatedProjects : 
+        [
+            
+        ]
+    }
 ]
 
 export default Projects;

@@ -140,7 +140,7 @@
             "title" : "The course", 
             "text" : 
             [
-                "The course consists of learning laravel (every version of laravel will be learned in a new folder of the source code)"
+                "The course consists of learning laravel (every new version of laravel will be learned in a new folder of the source code)"
             ]
         },
         {
@@ -157,7 +157,8 @@
             "text" : 
             [
                 "The project consists of creating a discord bot which manage channels",
-                "The principal utility of this bot is to create private categories for someone hwo can invite his friends in. he will have acces to a voice channel and a text channel. He can also close this category when he wants and automatically when leaving the voice channel"
+                "The principal utility of this bot is to create private categories for someone hwo can invite his friends in.",
+                "he will have acces to a voice channel and a text channel. He can also close this category when he wants and automatically when leaving the voice channel"
             ]
         },
         {
@@ -165,7 +166,7 @@
             "text" : 
             [
                 "Auto-create a voice channel with the name you want",
-                "When user entered this channel, the bot will create a category with the name of the creator and will be automatically",
+                "When user entered this channel, the bot will create a category with the name of the creator and will be automatically redirected to the voice channel",
                 "move on his own voice channel",
                 "The user can use commands on his channel (commands of this bot)",
                 "Close/Open the channel for everyone/some people"
@@ -179,7 +180,7 @@
             "text" : 
             [
                 "The project consists to create a game launcher with my own games",
-                "Games can be installed/uninstalled, launched, from the application and you can have an account to save datas and play LAN with friend (hamachi for exemple)"
+                "Games can be installed/uninstalled, launched, from the application and you can have an account to save datas and play LAN (Local Area Network) with friend (hamachi for exemple)"
             ]
         },
         {
@@ -200,7 +201,7 @@
             "title" : "The project", 
             "text" : 
             [
-                "The project consists to re-create the classic dino game which launched when connection lost in console",
+                "The project consists to re-create the classic dino game which launched when connection lost on an internet navigator in console",
                 "The datas are saved in local and the game can be downloaded from the launcher"
             ]
         },
@@ -221,7 +222,7 @@
             "title" : "The project", 
             "text" : 
             [
-                "The project consists to create a turn by turn game that can be play in PVE or PVP",
+                "The project consists to create a turn by turn game that can be play in PVE (Player Versus Environment) or PVP (Player Versus Player)",
                 "You can create account to save your progression (launcher account). You will be able to dowload and launch the game from the launcher"
             ]
         },
@@ -250,7 +251,7 @@
                 "There are 1v1 and 2v2 games that are based on a procedural map wich create during the start of the match",
                 "Every player has three main characters per game, an HQ (Headquarter) and some classic units",
                 "The principle of the game is to destroy the ennemy HQ using the formed units",
-                "Main characters are the principal troops (the strongest of the game)",
+                "Main characters are the principal troops (the strongest of the game) like heroes that we can upgrade", 
                 "Classic units are character which can be created using the money generated during the round",
                 "they can be created with a military base (Builders base, Naval Base, Air Base and Land Base). At the start, only the land base and builders base are unlocked",
                 "You can build up to 3 land base, find randomly the naval bases and take possession of the only air base placed at the middle of the map",
@@ -382,6 +383,10 @@
             "title" : "Features",
             "text" : 
             [
+                "Manage commands",
+                "Manage Roles",
+                "Manage Items",
+                "Manage Interface"
             ]
         }
     ],
@@ -391,12 +396,15 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project consists to create a minecraft datapack",
+                "The datapack will change the generation of the world to make it more different"
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "Change the generation of the world"
             ]
         }
     ],
@@ -406,12 +414,27 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project consits to create a minecraft mod.",
+                "The mod will add minerals : Crystal, Ruby, Saphire, Mercure, Nightmarium, Nightmare coal",
+                "Items : Pile of paper, Cardboard, Nightmare lantern, Nightmare essence, Dark ingot",
+                "Utilities : Forge, Big furnaces, New chests",
+                "Armors and weapons : All minerals + assembly of ores in the forge",
+                "Dimensions : Nightmaria",
+                "Bosses, Dungeons, Mobs, Biomes"
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "New armors",
+                "New weapons",
+                "New dimensions (Nightmaria)",
+                "New bosses",
+                "New dungeons",
+                "New mobs",
+                "New biomes",
+                "New items"
             ]
         }
     ],
@@ -421,12 +444,46 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project consists to create a minecraft mod to manage alliances, villages and more",
+                "Every player who plays this mod can create a new alliance and can invite his friends",
+                "He can manage the roles into the alliance and the permissions",
+                "After this, he has to create his first village, first, he has to place a village controller block which claim chunks around it",
+                "In this claimed chunks, the player can create his base",
+                "After doing that, the player can place a town hall block which is the main building of the village",
+                "The player can also go into villages to recruit some villagers that will be reworked to be defenders, farmers, attackers, etc..",
+                "After a villager is recruited he will be able to be assigned to a task, but before, we need a building that can assign this task to him (Builder's house, Farm, Mine)",
+                "If the villager is assigned to it, he will do this task until he can (they need to eat and have tools)",
+                "Imagine that your villager is a builder, you can assign him to build a pre-created schematic in the mod, or create it yourself : Create a build somewhere and take what you want in the in-built schematic creator",
+                "There is also new items, utilities, mobs, electrical systems, etc..",
+
+                "{title}IN SOLO",
+                "Sometimes, there is some attacks from other villages that make damages to your constructions and destroy them",
+                "You can repair these using builders.",
+
+                "{title}IN MULTIPLAYER",
+                "You can declare a war face to an other vilage",
+                "In a war, you can attack him and take his ressources, but he can defend himself his own village",
+                "If you aren't in a war, no one can destroy your base",
+                "You can also have allies, neutrals and enemies"
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "Create an alliance",
+                "Invite friends",
+                "Manage roles",
+                "Manage permission",
+                "Claim chunks",
+                "Recruit villagers",
+                "Form villagers",
+                "Attack other villages",
+                "Get a war front another village",
+                "Destroy structures",
+                "Structures have life before destroying (100HP / 200HP)",
+                "Build buildings",
+                "Create his own schematic"
             ]
         }
     ],
@@ -436,12 +493,16 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project constists to create a mod addon to the Darkness mod.",
+                "This mod will add upgrades for many armors, weapons and more",
+                "Add amulets that can be combined with armor and weapons to upgrade them"
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "Add upgrades to Darkness base mod"
             ]
         }
     ],
@@ -451,21 +512,27 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project consists to create a minecraft customized launcher to play minecraft wiht my mods and plugins",
+                "You will be able to chose what are the activated mods before launch the game in settings"
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "Launch minecraft with integrated mods",
+                "Select mods that will be played",
+                "Manage settings"
             ]
         }
     ],
     "work-24" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning how to do a client application which communicate with a server one with a database"
             ]
         },
         {
@@ -478,9 +545,10 @@
     "work-25" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning Go programming language"
             ]
         },
         {
@@ -493,9 +561,10 @@
     "work-26" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning dart programming language"
             ]
         },
         {
@@ -511,12 +580,42 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project consists to create a procedural dungeon game (binding of isaac like) in which you will be able to fight mobs, upgrade your powers and fight bosses",
+                "Before the start, you can change character, start with other powers and invite friends in your local server (hamachi for exemple)",
+                "Every character have different stats (more life, less damages, ....) At every mob you kill, drops money and mana",
+                "The money and the mana can be used in shop, but some specific powers need X mana to be thrown",
+                "If you dont take damages after a stage, a basic shop will spawn at the next. Each stage you win consecutively will upgrade the shop, if you take damages, the shop returns to level 0 and not spawn at the next stage",
+                
+                "{title}Hearts",
+                "In the game you will be able to collect hearts, there is different colours for differents stats :",
+                "{color:red,id:0}RED{/color} => Classic heart",
+                "{color:#3939ff,id:0}BLUE{/color} => Regeneration heart => while you have {color:#3939ff,id:0}1 blue heart{/color}, the others lost at this stage will regenerate when not fighting",
+                "{color:green,id:0}GREEN{/color} => Temp heart => stay on your life bar X seconds and after that, disapear",
+                "{color:orange,id:0}ORANGE{/color} => Shield heart => There is a chance that the you will not take damage",
+                "{color:violet,id:0}VIOLET{/color} => Damages/Donnation heart => Each {color:violet,id:0}violet heart{/color} you have increase you damage boost, but if you play in multiplayer, you will be able to give this heart to someone else, which will transform this violet heart in red heart",
+                "{color:black,id:0}BLACK{/color} => Respawn heart => This heart is not on your lifebar, but when you die, you'll respawn at the first room with {color:red,id:0}1 Red heart{/color}",
+                "{color:white,id:0}WHITE{/color} => Trap heart => While you have this heart, you'll not take damages from the traps",
+                
+                "{title}Stages",
+                "At every 10 stages you will have a bossfight in the boss room, you can also be able to build the key of the destiny",
+                "In this place you can find a new special (bonus) dungeon, and there is chests, mini-bosses, mobs and a destiny shop which propose destiny armors, weapons and powers",
+                "To access this shop, you will need to win 4 stage in it (1, 2, 3, 4, shop)"
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "Generate procedural dungeons",
+                "Implements stuff (Weapons, powers, armors)",
+                "Invite friends to local server",
+                "Get money and mana",
+                "Attack, be attacked, thow powers",
+                "Use money and mana to the shop",
+                "Upgarde the shop when not taking damages",
+                "Collect hearts",
+                "Fight mobs, mini-bosses, bosses and big boss",
+                "Go into the destiny dungeon"
             ]
         }
     ],
@@ -526,12 +625,19 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project consists of creating an end to end validator for my framework",
+                "This end to end will simulate an user in front to test your web application."
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "Enter text in a field",
+                "Use selectors",
+                "call a website",
+                "Send forms",
+                "Click on buttons"
             ]
         }
     ],
@@ -541,12 +647,22 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project consists of creating a template engine in PHP to create my own 'language'",
+                "The template engine will translate .skillio language into php",
+                "On the skillio framework, there is some VIEWS which are the front-end of the website",
+                "The role of the new extension .skillio is to make the template engine recognize the files and translate some elements from the view into php to delete all the tags on the view and let uniquely some basic tags [for] ... [/for]"
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "for [for $i = 0; $i < count($array); $i++] {{ $array[$i] }} [/for] // ['foo', 'too', 'boo'] => foo too boo",
+                "if [if $i < 5] // TRUE [else if $i > 6] // FALSE TRUE [else] //FALSE FALSE [/if]",
+                "foreach [foreach $foo as $key => $value] ... [/foreach]",
+                "while [while $i < 5] ... [/while]",
+                "do while [do] ... [/while $i < 5]",
+                "debug [dump $var]"
             ]
         }
     ],
@@ -556,21 +672,27 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project consists of creating a visual studio code extension to help developer to code a website with my framework",
+                "It will add colors to the 'new' language that i will create with the file extension '.skillio.php'"
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "Colors on the new tags",
+                "Auto fill the line",
+                "Suggestions to code"
             ]
         }
     ],
     "work-31" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning react library from Javascript"
             ]
         },
         {
@@ -583,9 +705,10 @@
     "work-32" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning angular library"
             ]
         },
         {
@@ -598,9 +721,10 @@
     "work-33" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning meteor library"
             ]
         },
         {
@@ -613,9 +737,10 @@
     "work-34" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning three library"
             ]
         },
         {
@@ -628,9 +753,10 @@
     "work-35" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning typescript language"
             ]
         },
         {
@@ -643,9 +769,10 @@
     "work-36" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning vue library"
             ]
         },
         {
@@ -658,9 +785,10 @@
     "work-37" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning next library"
             ]
         },
         {
@@ -673,9 +801,10 @@
     "work-38" : 
     [
         {
-            "title" : "The project", 
+            "title" : "The course", 
             "text" : 
             [
+                "The course consists of learning electron library"
             ]
         },
         {
@@ -691,6 +820,38 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project consists of creating an application which list all the application, animes, yt videos, etc... you like, want to see, ..",
+                "The principle is to see the videos or launch the applications from the application",
+                "There is also possible to add some musics"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                "Create account",
+                "Add friends",
+                "Create groups",
+                "List all the animes (+ opening/endings), youtube videos we want to see + share with friends",
+                "List all the games and other applications we have + share with friends",
+                "List cooking receipes, sport routine, visited country",
+                "Prepare a travel using integrated google maps with specifying countries and city",
+                "Set X stars on an anime, yt videos, app, ..",
+                "Compared with the stars, automatically create a scoreboard of all the animes, ... + Average for the scoreboard in groups",
+                "Show on profile the hours spent for all animes seen",
+                "Grab the videos of the anime and see it with friend in same time",
+                "Listen some musics",
+                "Phone version"
+            ]
+        }
+    ],
+    "work-40" : 
+    [
+        {
+            "title" : "The course", 
+            "text" : 
+            [
+                "The course consists of learning wpf"
             ]
         },
         {
@@ -700,18 +861,69 @@
             ]
         }
     ],
-    "work-40" : 
+    "work-41" : 
     [
         {
             "title" : "The project", 
             "text" : 
             [
+                "The project consists of creating a web, software and mobile application of direct chatting",
+                "This application can be used in local network or on a server",
+                "The web application will have a front-end (react) and a backend (java)",
+                "I know that java is not the best language to optimize web applications, but I do this to learn more about this"
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "In real time chat",
+                "User profile managing",
+                "Search other peoples",
+                "Notifications",
+                "Auto-moderation",
+                "Statistics",
+                "Security functionalities like 2FA",
+                "Customizations",
+                "Messages traductions",
+                "Chatbot",
+                "Adding emojis",
+                "Make vocals, calls, send files",
+                "Make commands on a channel to manage it"
+            ]
+        }
+    ],
+    "work-42" : 
+    [
+        {
+            "title" : "The course", 
+            "text" : 
+            [
+                "The course consists of learning sfml library from c++"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                
+            ]
+        }
+    ],
+    "work-43" : 
+    [
+        {
+            "title" : "The course", 
+            "text" : 
+            [
+                "The course consists of learning docker"
+            ]
+        },
+        {
+            "title" : "Features",
+            "text" : 
+            [
+                
             ]
         }
     ]

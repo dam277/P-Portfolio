@@ -15,12 +15,14 @@ import GetTranslations from "../../../utils/globals/getTranslations";
 //#endregion
 
 //#region - Import Enums 
+import eKeyWords from "../../../resources/datas/enums/eKeyWords";
 //#endregion
 
 //#region - Import Contexts
 //#endregion
 
 //#region - Import Components
+import ColoredText from "../smallElements/ColoredText";
 //#endregion
 
 //#region - Import Translations
@@ -33,7 +35,7 @@ import Projects from "../../../resources/datas/projects";
 //#endregion
 
 //#region - Import Styles
-import { WorkContainer, WorkImageWrapper, WorkImage, WorkContent, WorkTitleContainer, WorkTitle, WorkLanguagesImageContainer, WorkLanguagesImage, WorkDescription, WorkDescriptionTitle, WorkDescriptionParagraph, WorkDescriptionAssociatedWorksContainer, WorkCompletion } from "../../../resources/css/works/workStyle";
+import { WorkContainer, WorkImageWrapper, WorkImage, WorkContent, WorkTitleContainer, WorkTitle, WorkDistinctionImagesContainer, WorkDistinctionImage, WorkDescription, WorkDescriptionTitle, WorkDescriptionSubtitle, WorkDescriptionParagraph, WorkDescriptionTable, WorkDescriptionThead, WorkDescriptionTbody, WorkDescriptionTr, WorkDescriptionTd, WorkDescriptionAssociatedWorksContainer, WorkCompletion } from "../../../resources/css/works/workStyle";
 import { Button } from "../../../resources/css/mainStyle";
 //#endregion
 
@@ -44,10 +46,7 @@ import { Button } from "../../../resources/css/mainStyle";
  * Display a work card in the works page
  * @param {object} translations => Translation of the page
  * @param {string} keyValue => Value of the key of the container
- * @param {image} image => Image of the work
- * @param {string} title =>  Title of the work
- * @param {string} completion => Completion of the work
- * @param {string} type => Type of the work
+ * @param {string} work => Actual work 
  * @returns {HTMLElement} Work html elements
  */
 function Work({ translations, keyValue, work})
@@ -79,12 +78,17 @@ function Work({ translations, keyValue, work})
             <WorkContent>
                 <WorkTitleContainer>
                     <WorkTitle>{work.name} - {translations.works.type[work.type]}</WorkTitle>
-                    <WorkLanguagesImageContainer>
+                    <WorkDistinctionImagesContainer>
                         {work.languages.map((language, index) => 
                         (
-                            <WorkLanguagesImage key={`${language.id}-${index}`} src={language.image} alt="language"/>
+                            <WorkDistinctionImage key={`${index}-${keyValue}`} src={language.image} alt={language.name}/>
                         ))}
-                    </WorkLanguagesImageContainer>
+                        {work.platforms.map((platform, index) =>
+                        (
+                            <WorkDistinctionImage key={`${index}-${keyValue}`} src={platform.image} alt={platform.name}/>
+                        ))}
+                    </WorkDistinctionImagesContainer>
+                    
                 </WorkTitleContainer>
                 <WorkDescription>
                     {descriptionTranslations[work.id].map((description, index) => 
@@ -97,39 +101,56 @@ function Work({ translations, keyValue, work})
                                 (
                                     typeof paragraph === "string" ? 
                                     (
-                                        <WorkDescriptionParagraph key={`descriptionParagraph-${index}`}>
-                                            - {paragraph}.
-                                        </WorkDescriptionParagraph>
+                                        paragraph.includes(eKeyWords.title) ? 
+                                        ( 
+                                            <WorkDescriptionSubtitle key={`descriptionSubtitle-${index}`}>
+                                                {paragraph.replace(eKeyWords.title, "")}
+                                            </WorkDescriptionSubtitle>
+                                        )
+                                        : 
+                                        (
+                                            <WorkDescriptionParagraph key={`descriptionParagraph-${index}`}>
+                                                -&nbsp;
+                                                {paragraph.includes(eKeyWords.color[1]) ?
+                                                (
+                                                    <ColoredText text={paragraph} color={eKeyWords.color} />
+                                                )
+                                                :
+                                                (
+                                                    <>
+                                                        {paragraph}{paragraph.charAt(paragraph.length - 1) !== ":" && "."}
+                                                    </>
+                                                )}
+                                                
+                                            </WorkDescriptionParagraph>
+                                        )
                                     )
                                     :
                                     (
-                                        <table>
-                                            {paragraph.map((tElem, index) =>
-                                            (
-                                                index === 0 ? 
+                                        <WorkDescriptionTable>
+                                            <WorkDescriptionThead key={`descriptionThead-${index}`} completion={work.completion}>
+                                                <WorkDescriptionTr>
+                                                    {paragraph[0].map((tHeadText, index) =>
+                                                    (
+                                                        <WorkDescriptionTd key={`descriptionTheadTd-${index}`}>{tHeadText}</WorkDescriptionTd>
+                                                    ))}
+                                                </WorkDescriptionTr>
+                                            </WorkDescriptionThead>
+                                            <WorkDescriptionTbody key={`descriptionBody-${index}`}>
+                                                {paragraph.map((tElem, index) =>
                                                 (
-                                                    <thead>
-                                                        <tr>
+                                                    index !== 0 &&
+                                                    (
+                                                        <WorkDescriptionTr key={`descriptionTbodyTr-${index}`} completion={work.completion} index={index}>
                                                             {tElem.map((tHeadText, index) =>
                                                             (
-                                                                <td>{tHeadText}</td>
+                                                                <WorkDescriptionTd key={`descriptionTbodyTd-${index}`}>{tHeadText}</WorkDescriptionTd>
                                                             ))}
-                                                        </tr>
-                                                    </thead>
-                                                )
-                                                : 
-                                                (
-                                                    <tbody>
-                                                        <tr>
-                                                            {tElem.map((tHeadText, index) =>
-                                                            (
-                                                                <td>{tHeadText}</td>
-                                                            ))}
-                                                        </tr>
-                                                    </tbody>
-                                                )
-                                            ))}
-                                        </table>
+                                                        </WorkDescriptionTr>
+                                                    )
+                                                ))}
+                                            </WorkDescriptionTbody>
+                                        </WorkDescriptionTable>
                                     )
                                 ))}
                             </>
@@ -139,7 +160,7 @@ function Work({ translations, keyValue, work})
                     <WorkDescriptionAssociatedWorksContainer>
                         {work.associatedProjects.map((projectId, index) => 
                         (
-                            <Button completion={work.completion} width={"300px"} setResponsiveMobileSmall={true} mobileSmallSize={17} margin={"2px"} size={15} onClick={() => handleAssociatedProject(projectId)}>{Projects.find((project) => project.id === projectId).name}</Button>
+                            <Button key={`assiocatedButton-${index}`} completion={work.completion} width={"300px"} setResponsiveMobileSmall={true} mobileSmallSize={17} margin={"2px"} size={15} onClick={() => handleAssociatedProject(projectId)}>{Projects.find((project) => project.id === projectId).name}</Button>
                         ))}
                     </WorkDescriptionAssociatedWorksContainer>
                 </WorkDescription>

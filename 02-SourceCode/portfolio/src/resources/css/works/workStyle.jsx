@@ -5,6 +5,7 @@ import { styled } from 'styled-components'
 import { responsive, colorPalette } from '../styles'
 import eCompletionIds from '../../datas/enums/works/eCompletionIds'
 import GetColorFromCompletion from '../../../utils/globals/getColorFromCompletion'
+import GetNumberFromEvenOrOdd from '../../../utils/globals/getNumberFromEvenOrOdd'
 
 export const WorkContainer = styled.div`
     margin-top: 20px;
@@ -46,13 +47,14 @@ export const WorkContent = styled.div`
 
 export const WorkTitleContainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 `
 
 export const WorkTitle = styled.h2`
     margin-left: 10px;
     margin-bottom: 0;
-    flex: 1.18;
+    flex: 1;
     font-size: 17px;
 
     @media (min-width: ${responsive.mobile}) 
@@ -61,7 +63,7 @@ export const WorkTitle = styled.h2`
     }
 `
 
-export const WorkLanguagesImageContainer = styled.div`
+export const WorkDistinctionImagesContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -70,13 +72,13 @@ export const WorkLanguagesImageContainer = styled.div`
     flex: 1;
 `
 
-export const WorkLanguagesImage = styled.img`
-    height: 30px;
+export const WorkDistinctionImage = styled.img`
+    height: 35px;
     margin-right: 10px;
 
     @media (min-width: ${responsive.mobile}) 
     {
-        height: 42px;
+        height: 47px;
     }
 `
 
@@ -96,6 +98,10 @@ export const WorkDescriptionTitle = styled.h3`
     margin-bottom: 5px;
 `
 
+export const WorkDescriptionSubtitle = styled.h4`
+    font-size: 14px;
+`
+
 export const WorkDescriptionParagraph = styled.p`
     margin: 5px 10px;
     font-size: 16px;
@@ -103,11 +109,19 @@ export const WorkDescriptionParagraph = styled.p`
 `
 
 export const WorkDescriptionTable = styled.table`
-    
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 12px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        font-size: 16px;
+    }
 `
 
 export const WorkDescriptionThead = styled.thead`
-    
+    background-color: ${(props) => GetColorFromCompletion(props.completion).table.thead};
+    text-transform: uppercase;
 `
 
 export const WorkDescriptionTbody = styled.tbody`
@@ -115,11 +129,12 @@ export const WorkDescriptionTbody = styled.tbody`
 `
 
 export const WorkDescriptionTr = styled.tr`
-    
+    background-color : ${(props) => props.index && GetColorFromCompletion(props.completion).table.tbody[GetNumberFromEvenOrOdd(props.index)]};
 `
 
 export const WorkDescriptionTd = styled.td`
-    
+    border: 1px solid white;
+    padding: 4px;
 `
 
 export const WorkDescriptionAssociatedWorksContainer = styled.div`

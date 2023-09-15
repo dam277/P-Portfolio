@@ -3,6 +3,8 @@
  * @description : Replace specific strings from received values
  */
 
+import eKeyWords from "../../resources/datas/enums/eKeyWords";
+
 // Functions which generate a value to replace some text
 const replaceFunctions =
 {
@@ -20,7 +22,7 @@ const replaceFunctions =
 // Element in text which can be replaced
 const elementsToReplace = 
 [
-    { function : replaceFunctions.today, string : "{today}" }
+    { function : replaceFunctions.today, string : eKeyWords.today }
 ];
 
 /**

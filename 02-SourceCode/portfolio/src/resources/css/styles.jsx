@@ -102,7 +102,8 @@ export const colorPalette =
                 backGroundColor : "#1F1F1F",
                 borderColor : "#949494",
                 workCompletionColor: "#949494",
-                button: {
+                button: 
+                {
                     color: [
                         "#4c4c4c",
                         "#949494"
@@ -118,16 +119,26 @@ export const colorPalette =
                         ]
                     }
                 },
+                table: 
+                {
+                    thead : "#070707",
+                    tbody : 
+                    [
+                        "#1b1b1b",
+                        "#292929"
+                    ]
+                }
             },
             inDevelopment : 
             {
                 backGroundColor : "#130207",
                 borderColor : "#C7046A",
                 workCompletionColor: "#C7046A",
-                button: {
+                button: 
+                {
                     color: [
                         "#360a22",
-                        "#C7046A"
+                        "#c7046a"
                     ],
                     border: [
                         "#360a22",
@@ -140,13 +151,23 @@ export const colorPalette =
                         ]
                     }
                 },
+                table: 
+                {
+                    thead : "#0b0000",
+                    tbody : 
+                    [
+                        "#230012",
+                        "#39001e"
+                    ]
+                }
             },
             finished : 
             {
                 backGroundColor : "#021307",
                 borderColor : "#018901",
                 workCompletionColor: "#018901",
-                button: {
+                button: 
+                {
                     color: [
                         "#073a16",
                         "#018901"
@@ -162,6 +183,15 @@ export const colorPalette =
                         ]
                     }
                 },
+                table: 
+                {
+                    thead : "#010c04",
+                    tbody : 
+                    [
+                        "#00280b",
+                        "#001504"
+                    ]
+                }
             }
             
         }
