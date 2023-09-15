@@ -1,43 +1,68 @@
-// Import styles
-import { FooterContainer, AboutProject, Copyright, A,ProfileText, Hr, FooterArticle, FooterSection, ProfileContainer, ProfileLinkImage, LogoFooter, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4 } from "../../resources/css/footerStyle";
-import { Text } from "../../resources/css/mainStyle";
+/**
+ * @author : Damien Loup
+ * @component : Footer
+ * @description : This component is responsible for displaying the footer of the website
+ */
 
-// Import images
-import github from "../../resources/images/socialNetworks/github.png";
-import gmail from "../../resources/images/socialNetworks/gmail.png";
+//#region - Import Hooks
+//#endregion
 
-// Import hooks
-import { useContext } from "react";
+//#region - Import Globals
+import GetTranslations from "../../utils/globals/getTranslations";
+//#endregion
 
-// Import contexts
-import { LangContext } from "../../utils/contexts/LangContext";
+//#region - Import Enums 
+//#endregion
 
-// Import globals
-import getTranslations from "../../utils/globals/getTranslations";
+//#region - Import Contexts
+//#endregion
 
-// Import datas
-import { Creator } from "../../resources/datas/footer/creator";
-import { Languages, Libraries } from "../../resources/datas/footer/programs";
+//#region - Import Components
+//#endregion
 
-// Import translations
+//#region - Import Translations
 import fr from "../../resources/langs/fr/includes.json"
 import en from "../../resources/langs/en/includes.json"
-import { Button } from "../../resources/css/mainStyle";
+//#endregion
 
+//#region - Import Datas
+import { Creator } from "../../resources/datas/footer/creator";
+import Programs from "../../resources/datas/footer/programs";
+//#endregion
+
+//#region - Import Styles
+import { FooterContainer, AboutProject, Copyright, A, ProfileText, Hr, FooterArticle, FooterSection, ProfileContainer, ProfileLinkImage, LogoFooter, ImgProgram, ProgramsContainer, ProgramTypeContainer, H2, H3, H4 } from "../../resources/css/footerStyle";
+import { Text } from "../../resources/css/mainStyle";
+//#endregion
+
+//#region - Import Images
+import github from "../../resources/images/socialNetworks/github.png";
+import gmail from "../../resources/images/socialNetworks/gmail.png";
+//#endregion
+
+/**
+ * Display the footer of the website
+ * @returns {HTMLElement} Footer html elements
+ */
 function Footer()
 {
-    const { language } = useContext(LangContext);
-    const translations = getTranslations(language, fr, en);
+    //#region - Set the translations
+    const translations = GetTranslations(fr, en);
+    //#endregion    
 
+    // Return html elements
     return(
         <FooterContainer>
             <FooterArticle>
+                {/* Big logo */}
                 <FooterSection flex={3}>
                     <LogoFooter src={Creator.logoFooter} alt={translations.footer.logoFooterImageAlt} />
                 </FooterSection>
                 <Hr doNotDisplay={true}/>
+                {/* About project section */}
                 <FooterSection flex={4}>
                     <AboutProject>
+                        {/* Title and description */}
                         <div>
                             <H2>{translations.footer.aboutTitle}</H2>
                             {translations.footer.projectDescription.map((line, index) => 
@@ -47,6 +72,7 @@ function Footer()
                                 </p>
                             ))}
                         </div>
+                        {/* Github and Gmail links */}
                         <ProfileContainer>
                             <A href={Creator.githubLink}>
                                 <ProfileLinkImage src={github} alt="Github logo" />
@@ -59,27 +85,29 @@ function Footer()
                         </ProfileContainer>
                     </AboutProject>
                 </FooterSection>
+                {/* Languages and libraries used for project */}
                 <FooterSection flex={3}>
                     <H3>{translations.footer.programsTitle}</H3>
                     <ProgramsContainer>
                         <ProgramTypeContainer>
                             <H4>{translations.footer.languages}</H4>
-                            {Languages.map((language, index) => 
+                            {Programs.languages.map((language, index) => 
                             (
                                 <ImgProgram key={`${language}-${index}`} src={language} />
                             ))}
                         </ProgramTypeContainer>
                         <ProgramTypeContainer>
                             <H4>{translations.footer.libraries}</H4>
-                            {Libraries.map((library, index) => 
+                            {Programs.frameworks.map((framework, index) => 
                             (
-                                <ImgProgram key={`${library}-${index}`} src={library} />
+                                <ImgProgram key={`${framework}-${index}`} src={framework} />
                             ))}
                         </ProgramTypeContainer>
                     </ProgramsContainer>
                 </FooterSection>
             </FooterArticle>
             <Hr />
+            {/* Copyright */}
             <Copyright>{translations.footer.copyright}</Copyright>
         </FooterContainer>
     )

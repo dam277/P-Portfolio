@@ -1,36 +1,62 @@
-// Import libraries
-import { useContext } from "react";
+/**
+ * @author : Damien Loup
+ * @component : About
+ * @description : Display the about page of the website
+ */
+
+//#region - Import Libraries
 import { Outlet, NavLink } from "react-router-dom";
+//#endregion
 
-// Import contexts
-import { LangContext } from "../../../utils/contexts/LangContext";
+//#region - Import Hooks
+//#endregion
 
-// Import styles
-import { MainContainer, MainImg, Supplements, Presentation, MainImgContainer, SocialNetworksContainer, PresentationText, SocialNetwork, Introduction, IntroductionTitle, Links } from "../../../resources/css/aboutStyle";
-import { Text, Button } from "../../../resources/css/mainStyle";
-
-// Import images
-import smallPortrait from "../../../resources/images/about/smallPortait.png"
-
-// Import globals
+//#region - Import Globals
 import getTranslations from "../../../utils/globals/getTranslations";
+//#endregion
 
-// Import translations
+//#region - Import Enums 
+//#endregion
+
+//#region - Import Contexts
+//#endregion
+
+//#region - Import Components
+//#endregion
+
+//#region - Import Translations
 import fr from "../../../resources/langs/fr/about.json";
 import en from "../../../resources/langs/en/about.json";
+//#endregion
 
-// Import datas
-import { socialNetworks } from "../../../resources/datas/socialNetworks";
+//#region - Import Datas
+import SocialNetworks from "../../../resources/datas/socialNetworks";
 import { colorPalette } from "../../../resources/css/styles";
+//#endregion
 
+//#region - Import Styles
+import { MainContainer, MainImg, Supplements, Presentation, MainImgContainer, SocialNetworksContainer, PresentationText, SocialNetwork, Introduction, IntroductionTitle, Links } from "../../../resources/css/aboutStyle";
+import { Text, Button } from "../../../resources/css/mainStyle";
+//#endregion
+
+//#region - Import Images
+import smallPortrait from "../../../resources/images/about/smallPortait.png"
+//#endregion
+
+/**
+ * Display the about page
+ * @returns {HTMLElement} About html elements
+ */
 function About()
 {
-    // Get the translations
-    const { language, setLanguage } = useContext(LangContext);
-    const translations = getTranslations(language, fr, en);
+    //#region - Set the translations
+    const translations = getTranslations(fr, en);
+    //#endregion
 
+    // Return html elements
     return(
         <MainContainer>
+            {/* Presentation of me */}
             <Presentation>
                 <MainImgContainer>
                     <MainImg src={smallPortrait} />
@@ -38,7 +64,7 @@ function About()
                 <PresentationText>
                     {translations.presentation.map((content, index) => 
                     (
-                        <p key={index}>
+                        <p key={`presentation-${index}`}>
                             <Text setResponsive={true} size="18" color={content.color}>
                                 {content.text}
                             </Text>
@@ -46,25 +72,28 @@ function About()
                     ))}
                 </PresentationText>
             </Presentation>
+            {/* Social Networks */}
             <SocialNetworksContainer>
-                {socialNetworks.map((network, index) => 
+                {SocialNetworks.map((network, index) => 
                 (
-                    <a key={index} href={network.url}>
+                    <a key={`${index}-${network.name}`} href={network.url}>
                         <SocialNetwork src={network.image} />
                     </a>
                 ))}
             </SocialNetworksContainer>
+            {/* Introduction about myself */}
             <Introduction>
                 <IntroductionTitle>{translations.introduction.title}</IntroductionTitle>
                 {translations.introduction.texts.map((content, index) => 
                 (
-                    <p key={index}>
+                    <p key={`introduction-${index}`}>
                         <Text color={colorPalette.primary.text.paragraph.color} margin="10px">
                             {content.text}
                         </Text>
                     </p>
                 ))}
             </Introduction>
+            {/* Subpages buttons + outlet */}
             <Supplements>
                 <Links>
                     <NavLink to="studyPath">

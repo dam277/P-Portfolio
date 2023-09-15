@@ -1,56 +1,69 @@
 import { styled, keyframes } from "styled-components";
 
 import { responsive, colorPalette } from "./styles";
+import GetColorFromCompletion from "../../utils/globals/getColorFromCompletion";
 
 export const Button = styled.button`
-    background: linear-gradient(${colorPalette.primary.button.color[0]}, ${colorPalette.primary.button.color[1]});
-    -webkit-background-clip: text;
-
-    color: transparent;
-    font-size: ${(props) => props.size ? props.size : `22`}px;
-
+    //#region Can be overridden
+    // Bases
     border: ${(props) => props.border ? props.border : `1`}px solid;
-    border-image: linear-gradient(${colorPalette.primary.button.border[0]}, ${colorPalette.primary.button.border[1]}) 1;
-    transition: .5s ease-in-out;
-
+    border-image: ${(props) => `linear-gradient(${GetColorFromCompletion(props.completion).button.border[0]}, ${GetColorFromCompletion(props.completion).button.border[1]}) 1`};
+    background: ${(props) => `linear-gradient(${GetColorFromCompletion(props.completion).button.color[0]}, ${GetColorFromCompletion(props.completion).button.color[1]})`};
+    
+    // Dimensions
     margin: ${(props) => props.margin && props.margin};
     padding: ${(props) => props.padding && props.padding};
+    width: ${(props) => props.width && props.width};
+    height: ${(props) => props.height && props.height};
 
+    // Text
+    color: transparent;
+    font-size: ${(props) => props.size ? props.size : `18`}px;
+    //#endregion
+    
+    // Cursor
     cursor: pointer;
 
-    ${(props) => 
-        props.width &&
-        {
-            "width": `${props.width}`,
-        }
-    }
+    // Transitions
+    transition: .5s ease-in-out;
 
-    ${(props) => 
-        props.height &&
-        {
-            "height": `${props.height}`,
-        }
-    }
+    // Addons
+    -webkit-background-clip: text;
 
+    //#region Button active
     ${(props) => 
         props.isActive &&
         {
-            "color": `${colorPalette.primary.button.hover.color}`,
-            "background": `linear-gradient(${colorPalette.primary.button.color[0]}, ${colorPalette.primary.button.color[1]})`,
+            "color": `${colorPalette.primary.colorDefault}`,
+            "background": `linear-gradient(${GetColorFromCompletion(props.completion).button.color[0]}, ${GetColorFromCompletion(props.completion).button.color[1]})`,
             "border": `${props.border ? props.border : `1`}px solid white`
         }
     }
+    //#endregion
 
+    //#region Button hover
     &:hover {
-        color: ${colorPalette.primary.button.hover.color};
-        background: linear-gradient(${colorPalette.primary.button.color[0]}, ${colorPalette.primary.button.color[1]});
+        color: ${colorPalette.primary.colorDefault};
+        background: ${(props) => `linear-gradient(${GetColorFromCompletion(props.completion).button.color[0]}, ${GetColorFromCompletion(props.completion).button.color[1]})`};
         border: ${(props) => props.border ? props.border : `1`}px solid white;
+    }
+    //#endregion
+
+    @media (min-width: ${responsive.mobile_small}) 
+    {
+        ${(props) => props.setResponsiveMobileSmall && 
+        {
+            "font-size": `${props.mobileSmallSize ? props.mobileSmallSize : "22"}px`,
+            "margin": `${props.mobileSmallMargin && props.mobileSmallMargin}`,
+            "padding": `${props.mobileSmallPadding && props.mobileSmallPadding}`,
+            "visibility": `${props.mobileSmallVisibility && props.mobileSmallVisibility}`
+        }}
     }
 `
 
 export const Text = styled.span`
     color: ${(props) => props.color ? props.color : colorPalette.primary.colorDefault};
-    font-size : ${(props) => props.size ? props.size : "18"};
+    font-size : ${(props) => props.size ? props.size : "18"}px;
     margin: ${(props) => props.margin && props.margin};
     padding: ${(props) => props.padding && props.padding};
     text-align: ${(props) => props.align && props.align};

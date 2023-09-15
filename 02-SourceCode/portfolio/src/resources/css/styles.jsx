@@ -3,12 +3,13 @@
  */
 export const responsive = 
 {
+    desktop_big: "1604px",
     desktop: "1440px",
+    laptop_big: "1110px",
     laptop: "1024px",
+    laptop_small: "899px",
     mobile: "650px",
     mobile_small: "400px",
-    laptop_height: "1210px",
-    mobile_height: "500px"
 }
 
 /**
@@ -19,23 +20,6 @@ export const colorPalette =
     primary: {
         backGroundDefault: "#040611",
         colorDefault: "#FFFFFE",
-        button: {
-            color: [
-                "#31091f",
-                "#C7046A"
-            ],
-            border: [
-                "#31091f",
-                "#C7046A"
-            ],
-            hover: {
-                color: "#FFFFFF",
-                backGroundColor: [
-                    "#31091f",
-                    "#C7046A"
-                ]
-            }
-        },
         text: {
             paragraph: {
                 color: "#BBBBBB"
@@ -58,7 +42,7 @@ export const colorPalette =
             backGroundColor: "#000014",
             border: "#FFFFFF",
             hover: {
-                backGroundColor: "#002347"
+                backGroundColor: "#002347",
             },
             active: {
                 backGroundColor: "#002347"
@@ -77,6 +61,139 @@ export const colorPalette =
                 "#31091f",
                 "#C7046A"
             ],
+        },
+        filters: 
+        {
+            card : 
+            {
+                backGroundColor : "#1F1F1F",
+                borderColor : "#949494",
+                borderColorChecked : "#C7046A",
+                radio : 
+                {
+                    borderColor: "#8300446c",
+                    backGroundColor: "#C7046A"
+                }
+            },
+            searchBar : 
+            {
+                borderColor: "#C7046A"
+            },
+            radioButton : 
+            {
+                borderColor: "#949494",
+                backGroundColor: "transparent",
+                checked : 
+                [
+                    "#C7046A",
+                    "#31091f"
+                ]
+            },
+            languages : 
+            {
+                backGroundColor : "#1F1F1F",
+                borderColor : "#949494",
+            }
+        },
+        project : 
+        {
+            notStarted : 
+            {
+                backGroundColor : "#1F1F1F",
+                borderColor : "#949494",
+                workCompletionColor: "#949494",
+                button: 
+                {
+                    color: [
+                        "#4c4c4c",
+                        "#949494"
+                    ],
+                    border: [
+                        "#4c4c4c",
+                        "#949494"
+                    ],
+                    hover: {
+                        backGroundColor: [
+                            "#4c4c4c",
+                            "#949494"
+                        ]
+                    }
+                },
+                table: 
+                {
+                    thead : "#070707",
+                    tbody : 
+                    [
+                        "#1b1b1b",
+                        "#292929"
+                    ]
+                }
+            },
+            inDevelopment : 
+            {
+                backGroundColor : "#130207",
+                borderColor : "#C7046A",
+                workCompletionColor: "#C7046A",
+                button: 
+                {
+                    color: [
+                        "#360a22",
+                        "#c7046a"
+                    ],
+                    border: [
+                        "#360a22",
+                        "#C7046A"
+                    ],
+                    hover: {
+                        backGroundColor: [
+                            "#360a22",
+                            "#C7046A"
+                        ]
+                    }
+                },
+                table: 
+                {
+                    thead : "#0b0000",
+                    tbody : 
+                    [
+                        "#230012",
+                        "#39001e"
+                    ]
+                }
+            },
+            finished : 
+            {
+                backGroundColor : "#021307",
+                borderColor : "#018901",
+                workCompletionColor: "#018901",
+                button: 
+                {
+                    color: [
+                        "#073a16",
+                        "#018901"
+                    ],
+                    border: [
+                        "#073a16",
+                        "#018901"
+                    ],
+                    hover: {
+                        backGroundColor: [
+                            "#073a16",
+                            "#018901"
+                        ]
+                    }
+                },
+                table: 
+                {
+                    thead : "#010c04",
+                    tbody : 
+                    [
+                        "#00280b",
+                        "#001504"
+                    ]
+                }
+            }
+            
         }
     },
     footer: {

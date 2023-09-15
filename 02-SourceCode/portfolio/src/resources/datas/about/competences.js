@@ -1,46 +1,8 @@
-// Import images
-// Import languagess
-import blade from "../../images/languages/Blade.png";
-import c from "../../images/languages/C.png";
-import cpp from "../../images/languages/Cpp.png";
-import csharp from "../../images/languages/Csharp.png";
-import css from "../../images/languages/Css.png";
-import dart from "../../images/languages/Dart.png";
-import go from "../../images/languages/Go.png";
-import html from "../../images/languages/Html.png";
-import java from "../../images/languages/Java.png";
-import javascript from "../../images/languages/Javascript.png";
-import php from "../../images/languages/Php.png";
-import powershell from "../../images/languages/Powershell.png";
-import python from "../../images/languages/Python.png";
-import sql from "../../images/languages/Sql.png";
-import sqlite from "../../images/languages/Sqlite.png";
-import swift from "../../images/languages/Swift.png";
-import typescript from "../../images/languages/Typescript.png";
-import rust from "../../images/languages/Rust.png";
-// Import Frameworks
-import angular from "../../images/frameworks/Angular.png";
-import electron from "../../images/frameworks/Electron.png";
-import laravel from "../../images/frameworks/Laravel.png";
-import meteor from "../../images/frameworks/Meteor.png";
-import next from "../../images/frameworks/Next.png";
-import react from "../../images/frameworks/React.png";
-import three from "../../images/frameworks/Three.png";
-import vue from "../../images/frameworks/Vue.png";
-import symfony from "../../images/frameworks/Symfony.png";
-import mvc from "../../images/frameworks/Mvc.png";
-import tailwind from "../../images/frameworks/Tailwind.png";
-import xamarin from "../../images/frameworks/Xamarin.png";
-import mysql from "../../images/frameworks/Mysql.png";
-// Import engines
-import unity from "../../images/engines/Unity.png";
-import unrealEngine from "../../images/engines/UnrealEngine.png";
-// Import libraries
-import sfml from "../../images/libraries/Sfml.png";
-import lwjgl from "../../images/libraries/Lwjgl.png";
-import opengl from "../../images/libraries/OpenGl.png";
-import jquery from "../../images/libraries/Jquery.png";
-import styledComponents from "../../images/libraries/StyledComponents.png";
+// Import enums
+import eLanguages from "../enums/eLanguages";
+import eFrameworks from "../enums/eFrameworks";
+import eLibraries from "../enums/eLibraries";
+import eEngines from "../enums/eEngines";
 
 export const LanguageCompetences = 
 [
@@ -48,50 +10,50 @@ export const LanguageCompetences =
         learned : true,
         languages : 
         [
-            { name : "Javascript", image : javascript, learned : true },
-            { name : "Typescript", image : typescript, learned : true }
+            { name : eLanguages.javascript.name, image : eLanguages.javascript.image, learned : true },
+            { name : eLanguages.typescript.name, image : eLanguages.typescript.image, learned : true }
         ],
         frameworks : 
         [
-            { name : "React", image : react, learned : true },
-            { name : "React", image : angular, learned : false },
-            { name : "React", image : electron, learned : false },
-            { name : "React", image : meteor, learned : false },
-            { name : "React", image : next, learned : false },
-            { name : "React", image : three, learned : false },
-            { name : "React", image : vue, learned : false },
+            { name : eFrameworks.react.name, image : eFrameworks.react.image, learned : true },
+            { name : eFrameworks.angular.name, image : eFrameworks.angular.image, learned : false },
+            { name : eFrameworks.electron.name, image : eFrameworks.electron.image, learned : false },
+            { name : eFrameworks.meteor.name, image : eFrameworks.meteor.image, learned : false },
+            { name : eFrameworks.next.name, image : eFrameworks.next.image, learned : false },
+            { name : eFrameworks.three.name, image : eFrameworks.three.image, learned : false },
+            { name : eFrameworks.vue.name, image : eFrameworks.vue.image, learned : false },
         ],
         libraries : 
         [
-            { name : "Styled components", image : styledComponents, learned : true },
-            { name : "Jquery", image : jquery, learned : false },
+            { name : eLibraries.styledComponents.name, image : eLibraries.styledComponents.image, learned : true },
+            { name : eLibraries.jquery.name, image : eLibraries.jquery.image, learned : false },
         ]
     },
     {
         learned : true,
         languages : 
         [
-            { name : "Java", image : java, learned : true },
+            { name : eLanguages.java.name, image : eLanguages.java.image, learned : true },
         ],
         frameworks : 
         [],
         libraries : 
         [
-            { name : "Lwjgl", image : lwjgl, learned : false },
+            { name : eLibraries.lwjgl.name, image : eLibraries.lwjgl.image, learned : false },
         ]
     },
     {
         learned : true,
         languages : 
         [
-            { name : "Php", image : php, learned : true },
-            { name : "Blade", image : blade, learned : true }
+            { name : eLanguages.php.name, image : eLanguages.php.image, learned : true },
+            { name : eLanguages.blade.name, image : eLanguages.blade.image, learned : true }
         ],
         frameworks : 
         [
-            { name : "Laravel", image : laravel, learned : true },
-            { name : "Mvc", image : mvc, learned : true },
-            { name : "Symfony", image : symfony, learned : false },
+            { name : eFrameworks.laravel.name, image : eFrameworks.laravel.image, learned : true },
+            { name : eFrameworks.mvc.name, image : eFrameworks.mvc.image, learned : true },
+            { name : eFrameworks.symfony.name, image : eFrameworks.symfony.image, learned : false },
         ],
         libraries : 
         []
@@ -100,7 +62,7 @@ export const LanguageCompetences =
         learned : true,
         languages : 
         [
-            { name : "Html", image : html, learned : true },
+            { name : eLanguages.html.name, image : eLanguages.html.image, learned : true },
         ],
         frameworks : 
         [],
@@ -111,11 +73,11 @@ export const LanguageCompetences =
         learned : true,
         languages : 
         [
-            { name : "Css", image : css, learned : true },
+            { name : eLanguages.css.name, image : eLanguages.css.image, learned : true },
         ],
         frameworks : 
         [
-            { name : "Tailwind", image : tailwind, learned : true },
+            { name : eFrameworks.tailwind.name, image : eFrameworks.tailwind.image, learned : true },
         ],
         libraries : 
         []
@@ -124,7 +86,7 @@ export const LanguageCompetences =
         learned : false,
         languages : 
         [
-            { name : "C", image : c, learned : false },
+            { name : eLanguages.c.name, image : eLanguages.c.image, learned : false },
         ],
         frameworks : 
         [],
@@ -135,38 +97,40 @@ export const LanguageCompetences =
         learned : true,
         languages : 
         [
-            { name : "C++", image : cpp, learned : true },
+            { name :  eLanguages.cpp.name, image : eLanguages.cpp.image, learned : true },
         ],
         frameworks : 
         [],
         libraries : 
         [
-            { name : "OpenGL", image : opengl, learned : false },
-            { name : "Sfml", image : sfml, learned : false },
+            { name : eLibraries.opengl.name, image : eLibraries.opengl.image, learned : false },
+            { name : eLibraries.sfml.name, image : eLibraries.sfml.image, learned : false },
         ]
     },
     {
         learned : true,
         languages : 
         [
-            { name : "C#", image : csharp, learned : true },
+            { name : eLanguages.csharp.name, image : eLanguages.csharp.image, learned : true },
         ],
         frameworks : 
-        [],
+        [
+            { name : eFrameworks.xamarin.name, image : eFrameworks.xamarin.image, learned : true },
+        ],
         libraries : 
         [
-            { name : "Xamarin", image : xamarin, learned : true },
+            
         ]
     },
     {
         learned : true,
         languages : 
         [
-            { name : "Sql", image : sql, learned : true },
+            { name : eLanguages.sql.name, image : eLanguages.sql.image, learned : true },
         ],
         frameworks : 
         [
-            { name : "MySql", image : mysql, learned : true },
+            { name : eFrameworks.mysql.name, image : eFrameworks.mysql.image, learned : true },
         ],
         libraries : 
         []
@@ -175,18 +139,7 @@ export const LanguageCompetences =
         learned : true,
         languages : 
         [
-            { name : "Sqlite", image : sqlite, learned : true },
-        ],
-        frameworks : 
-        [],
-        libraries : 
-        []
-    },
-    {
-        learned : true,
-        languages : 
-        [
-            { name : "Powershell", image : powershell, learned : true },
+            { name : eLanguages.sqlite.name, image : eLanguages.sqlite.image, learned : true },
         ],
         frameworks : 
         [],
@@ -197,7 +150,18 @@ export const LanguageCompetences =
         learned : true,
         languages : 
         [
-            { name : "Swift", image : swift, learned : true },
+            { name : eLanguages.powershell.name, image : eLanguages.powershell.image, learned : true },
+        ],
+        frameworks : 
+        [],
+        libraries : 
+        []
+    },
+    {
+        learned : true,
+        languages : 
+        [
+            { name : eLanguages.swift.name, image : eLanguages.swift.image, learned : true },
         ],
         frameworks : 
         [],
@@ -208,7 +172,7 @@ export const LanguageCompetences =
         learned : false,
         languages : 
         [
-            { name : "Python", image : python, learned : false },
+            { name : eLanguages.python.name, image : eLanguages.python.image, learned : false },
         ],
         frameworks : 
         [],
@@ -219,7 +183,7 @@ export const LanguageCompetences =
         learned : false,
         languages : 
         [
-            { name : "Go", image : go, learned : false },
+            { name : eLanguages.go.name, image : eLanguages.go.image, learned : false },
         ],
         frameworks : 
         [],
@@ -230,7 +194,7 @@ export const LanguageCompetences =
         learned : false,
         languages : 
         [
-            { name : "Dart", image : dart, learned : false },
+            { name : eLanguages.dart.name, image : eLanguages.dart.image, learned : false },
         ],
         frameworks : 
         [],
@@ -241,7 +205,7 @@ export const LanguageCompetences =
         learned : false,
         languages : 
         [
-            { name : "Rust", image : rust, learned : false },
+            { name : eLanguages.rust.name, image : eLanguages.rust.image, learned : false },
         ],
         frameworks : 
         [],
@@ -253,21 +217,21 @@ export const LanguageCompetences =
 export const EngineCompetences = 
 [
     {
-        engine : 
-        [
-            { name : "Unreal Engine", image : unrealEngine, learned : false },
-        ],
-        frameworks : 
+        learned : false,
+        engines : 
+        [],
+        languages : 
         [],
         libraries : 
         []
     },
     {
-        engine : 
+        learned : false,
+        engines : 
         [
-            { name : "Unity", image : unity, learned : false },
+            { name : eEngines.unity.name, image : eEngines.unity.image, learned : false },
         ],
-        frameworks : 
+        languages : 
         [],
         libraries : 
         []
