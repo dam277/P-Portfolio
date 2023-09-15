@@ -17,7 +17,7 @@ import ePlatforms from "./enums/works/ePlatform";
 const Projects = 
 [
     {
-        id: "work-0",                               
+        id: "w0",                               
         name: "Portfolio",                          // Searchbar
         image: portfolio,
         completion: eCompletionIds.inDevelopment,   // Completion
@@ -37,7 +37,7 @@ const Projects =
         ]
     },
     {
-        id: "work-1",
+        id: "w1",
         name: "Skllio Framework",                   // Searchbar
         image: skillioFramework,
         completion: eCompletionIds.inDevelopment,   // Completion
@@ -55,13 +55,13 @@ const Projects =
         ],
         associatedProjects : 
         [
-            "work-28",
-            "work-29",
-            "work-30"
+            "w28",
+            "w29",
+            "w30"
         ]
     },
     {
-        id: "work-2",
+        id: "w2",
         name: "Space Invader",                      // Searchbar
         image: spaceInvader,
         completion: eCompletionIds.finished,        // Completion
@@ -79,7 +79,7 @@ const Projects =
         ]
     },
     {
-        id: "work-3",
+        id: "w3",
         name: "Github manager",                     // Searchbar
         image: "githubManager",
         completion: eCompletionIds.notStarted,      // Completion
@@ -97,7 +97,7 @@ const Projects =
         ]
     },
     {
-        id: "work-4",
+        id: "w4",
         name : "Lwjgl",                             // Searchbar
         image : "lwjgl",
         completion: eCompletionIds.notStarted,      // Completion
@@ -116,7 +116,7 @@ const Projects =
         ]
     },
     {
-        id: "work-5",
+        id: "w5",
         name : "Python",                            // Searchbar
         image : "python",
         completion: eCompletionIds.notStarted,      // Completion
@@ -135,7 +135,7 @@ const Projects =
         ]
     },
     {
-        id: "work-6",
+        id: "w6",
         name : "Discord bot",                       // Searchbar
         image : "discordBot",
         completion: eCompletionIds.inDevelopment,   // Completion
@@ -154,7 +154,7 @@ const Projects =
         ]
     },
     {
-        id: "work-7",
+        id: "w7",
         name : "Laravel",                           // Searchbar
         image : "laravel",
         completion: eCompletionIds.notStarted,      // Completion
@@ -176,7 +176,7 @@ const Projects =
         ]
     },
     {
-        id: "work-8",
+        id: "w8",
         name : "Discord channel manager",           // Searchbar
         image : "dcm",
         completion: eCompletionIds.notStarted,      // Completion
@@ -195,7 +195,7 @@ const Projects =
         ]
     },
     {
-        id: "work-9",
+        id: "w9",
         name : "Launcher",                          // Searchbar
         image : "launcher",
         completion: eCompletionIds.notStarted,      // Completion
@@ -210,13 +210,13 @@ const Projects =
         ],
         associatedProjects : 
         [
-            "work-10",
-            "work-11",
-            "work-12",
+            "w10",
+            "w11",
+            "w12",
         ]
     },
     {
-        id: "work-10",
+        id: "w10",
         name : "Launcher (Dino game)",              // Searchbar
         image : "launcherDG",
         completion: eCompletionIds.inDevelopment,   // Completion
@@ -231,13 +231,13 @@ const Projects =
         ],
         associatedProjects : 
         [
-            "work-9",
-            "work-11",
-            "work-12",
+            "w9",
+            "w11",
+            "w12",
         ]
     },
     {
-        id: "work-11",
+        id: "w11",
         name : "Launcher (Heroes fight)",           // Searchbar
         image : "launcherHF",
         completion: eCompletionIds.notStarted,      // Completion
@@ -252,13 +252,13 @@ const Projects =
         ],
         associatedProjects : 
         [
-            "work-9",
-            "work-10",
-            "work-11",
+            "w9",
+            "w10",
+            "w11",
         ]
     },
     {
-        id: "work-12",
+        id: "w12",
         name : "Launcher (Ultimate warfight)",      // Searchbar
         image : "launcherUW",
         completion: eCompletionIds.notStarted,      // Completion
@@ -277,7 +277,7 @@ const Projects =
         ]
     },
     {
-        id: "work-13",
+        id: "w13",
         name : "Minecraft datapack",                // Searchbar
         image : "mcDatapack",
         completion: eCompletionIds.notStarted,      // Completion
@@ -296,7 +296,7 @@ const Projects =
         ]
     },
     {
-        id: "work-14",
+        id: "w14",
         name : "Minecraft mod",                     // Searchbar
         image : "mcMod",
         completion: eCompletionIds.notStarted,      // Completion
@@ -315,7 +315,7 @@ const Projects =
         ]
     },
     {
-        id: "work-15",
+        id: "w15",
         name : "Minecraft plugin",      // Searchbar
         image : "mcPlugin",
         completion: eCompletionIds.notStarted,      // Completion
@@ -334,7 +334,7 @@ const Projects =
         ]
     },
     {
-        id: "work-16",
+        id: "w16",
         name : "OpenGL",                            // Searchbar
         image : "opengl",
         completion: eCompletionIds.notStarted,      // Completion
@@ -353,7 +353,7 @@ const Projects =
         ]
     },
     {
-        id: "work-17",
+        id: "w17",
         name : "Rust",                            // Searchbar
         image : "rust",
         completion: eCompletionIds.notStarted,      // Completion
@@ -372,7 +372,7 @@ const Projects =
         ]
     },
     {
-        id: "work-18",
+        id: "w18",
         name : "Minecraft plugin (Server manager)", // Searchbar
         image : "mcPluginServerManager",
         completion: eCompletionIds.notStarted,      // Completion
@@ -391,7 +391,7 @@ const Projects =
         ]
     },
     {
-        id: "work-19",
+        id: "w19",
         name : "Minecraft datapack (World changes)",// Searchbar
         image : "mcDatapackWorldChanges",
         completion: eCompletionIds.notStarted,      // Completion
@@ -410,7 +410,7 @@ const Projects =
         ]
     },
     {
-        id: "work-20",
+        id: "w20",
         name : "Minecraft mod (Darkness)",          // Searchbar
         image : "mcModDarkness",
         completion: eCompletionIds.notStarted,      // Completion
@@ -425,11 +425,11 @@ const Projects =
         ],
         associatedProjects : 
         [
-            "work-22"
+            "w22"
         ]
     },
     {
-        id: "work-21",
+        id: "w21",
         name : "Minecraft mod (Alliances)",         // Searchbar
         image : "mcModAlliances",
         completion: eCompletionIds.notStarted,      // Completion
@@ -448,7 +448,7 @@ const Projects =
         ]
     },
     {
-        id: "work-22",
+        id: "w22",
         name : "Minecraft mod (Darkness upgrades)", // Searchbar
         image : "mcModDarknessUpgrades",
         completion: eCompletionIds.notStarted,      // Completion
@@ -463,11 +463,11 @@ const Projects =
         ],
         associatedProjects : 
         [
-            "work-20"
+            "w20"
         ]
     },
     {
-        id: "work-23",
+        id: "w23",
         name : "Minecraft launcher",                // Searchbar
         image : "mcLauncher",
         completion: eCompletionIds.notStarted,      // Completion
@@ -482,14 +482,14 @@ const Projects =
         ],
         associatedProjects : 
         [
-            "work-18",
-            "work-20",
-            "work-21",
-            "work-22"
+            "w18",
+            "w20",
+            "w21",
+            "w22"
         ]
     },
     {
-        id: "work-24",
+        id: "w24",
         name : "Server connection",                 // Searchbar
         image : "serverConnection",
         completion: eCompletionIds.notStarted,      // Completion
@@ -509,7 +509,7 @@ const Projects =
         ]
     },
     {
-        id: "work-25",
+        id: "w25",
         name : "Go",                                // Searchbar
         image : "go",
         completion: eCompletionIds.notStarted,      // Completion
@@ -528,7 +528,7 @@ const Projects =
         ]
     },
     {
-        id: "work-26",
+        id: "w26",
         name : "Dart",                              // Searchbar
         image : "dart",
         completion: eCompletionIds.notStarted,      // Completion
@@ -547,7 +547,7 @@ const Projects =
         ]
     },
     {
-        id: "work-27",
+        id: "w27",
         name : "Procedural dungeon",                // Searchbar
         image : "proceduralDungeon",
         completion: eCompletionIds.notStarted,      // Completion
@@ -566,7 +566,7 @@ const Projects =
         ]
     },
     {
-        id: "work-28",
+        id: "w28",
         name : "Skillio framework (e2e Validator)", // Searchbar
         image : "sfE2eValidator",
         completion: eCompletionIds.notStarted,      // Completion
@@ -583,13 +583,13 @@ const Projects =
         ],
         associatedProjects : 
         [
-            "work-1",
-            "work-29",
-            "work-30"
+            "w1",
+            "w29",
+            "w30"
         ]
     },
     {
-        id: "work-29",
+        id: "w29",
         name : "Skillio framework (Template engine)",// Searchbar
         image : "sfTemplateEngine",
         completion: eCompletionIds.inDevelopment,   // Completion
@@ -606,13 +606,13 @@ const Projects =
         ],
         associatedProjects : 
         [
-            "work-1",
-            "work-28",
-            "work-30"
+            "w1",
+            "w28",
+            "w30"
         ]
     },
     {
-        id: "work-30",
+        id: "w30",
         name : "Skillio framework (VsCode extension)",// Searchbar
         image : "sfVsCodeExtension",
         completion: eCompletionIds.notStarted,      // Completion
@@ -627,13 +627,13 @@ const Projects =
         ],
         associatedProjects : 
         [
-            "work-1",
-            "work-28",
-            "work-29"
+            "w1",
+            "w28",
+            "w29"
         ]
     },
     {
-        id: "work-31",
+        id: "w31",
         name : "React",                             // Searchbar
         image : "react",
         completion: eCompletionIds.finished,        // Completion
@@ -652,7 +652,7 @@ const Projects =
         ]
     },
     {
-        id: "work-32",
+        id: "w32",
         name : "Angular",                           // Searchbar
         image : "angular",
         completion: eCompletionIds.notStarted,      // Completion
@@ -671,7 +671,7 @@ const Projects =
         ]
     },
     {
-        id: "work-33",
+        id: "w33",
         name : "Meteor",                             // Searchbar
         image : "meteor",
         completion: eCompletionIds.notStarted,      // Completion
@@ -690,7 +690,7 @@ const Projects =
         ]
     },
     {
-        id: "work-34",
+        id: "w34",
         name : "Three",                             // Searchbar
         image : "three",
         completion: eCompletionIds.notStarted,      // Completion
@@ -709,7 +709,7 @@ const Projects =
         ]
     },
     {
-        id: "work-35",
+        id: "w35",
         name : "Typescript",                        // Searchbar
         image : "typescript",
         completion: eCompletionIds.notStarted,      // Completion
@@ -728,7 +728,7 @@ const Projects =
         ]
     },
     {
-        id: "work-36",
+        id: "w36",
         name : "Vue",                               // Searchbar
         image : "vue",
         completion: eCompletionIds.notStarted,      // Completion
@@ -747,7 +747,7 @@ const Projects =
         ]
     },
     {
-        id: "work-37",
+        id: "w37",
         name : "Next",                              // Searchbar
         image : "next",
         completion: eCompletionIds.notStarted,      // Completion
@@ -766,7 +766,7 @@ const Projects =
         ]
     },
     {
-        id: "work-38",
+        id: "w38",
         name : "Electron",                          // Searchbar
         image : "electron",
         completion: eCompletionIds.notStarted,      // Completion
@@ -785,7 +785,7 @@ const Projects =
         ]
     },
     {
-        id: "work-39",
+        id: "w39",
         name : "Memo",                              // Searchbar
         image : "memo",
         completion: eCompletionIds.notStarted,      // Completion
@@ -806,7 +806,7 @@ const Projects =
         ]
     },
     {
-        id: "work-40",
+        id: "w40",
         name : "Wpf",                               // Searchbar
         image : "wpf",
         completion: eCompletionIds.notStarted,      // Completion
@@ -826,7 +826,7 @@ const Projects =
         ]
     },
     {
-        id: "work-41",
+        id: "w41",
         name : "Converso",                          // Searchbar
         image : "converso",
         completion: eCompletionIds.notStarted,      // Completion
@@ -852,7 +852,7 @@ const Projects =
         ]
     },
     {
-        id: "work-42",
+        id: "w42",
         name : "Sfml",                              // Searchbar
         image : "sfml",
         completion: eCompletionIds.notStarted,      // Completion
@@ -871,7 +871,7 @@ const Projects =
         ]
     },
     {
-        id: "work-43",
+        id: "w43",
         name : "Docker",                            // Searchbar
         image : "docker",
         completion: eCompletionIds.notStarted,      // Completion

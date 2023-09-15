@@ -1,5 +1,5 @@
 {
-    "work-0" : 
+    "w0" : 
     [
         {
             "title" : "Le projet", 
@@ -21,7 +21,7 @@
             ]
         }
     ],
-    "work-1" : 
+    "w1" : 
     [
         {
             "title" : "Le projet", 
@@ -45,7 +45,7 @@
             ]
         }
     ],
-    "work-2" : 
+    "w2" : 
     [
         {
             "title" : "Le projet", 
@@ -69,7 +69,7 @@
             ]
         }
     ],
-    "work-3" : 
+    "w3" : 
     [
         {
             "title" : "Le projet", 
@@ -95,7 +95,7 @@
             ]
         }
     ],
-    "work-4" : 
+    "w4" : 
     [
         {
             "title" : "Le cours", 
@@ -111,7 +111,7 @@
             ]
         }
     ],
-    "work-5" : 
+    "w5" : 
     [
         {
             "title" : "Le cours", 
@@ -127,7 +127,7 @@
             ]
         }
     ],
-    "work-6" : 
+    "w6" : 
     [
         {
             "title" : "Le cours", 
@@ -143,7 +143,7 @@
             ]
         }
     ],
-    "work-7" : 
+    "w7" : 
     [
         {
             "title" : "Le cours", 
@@ -159,7 +159,7 @@
             ]
         }
     ],
-    "work-8" : 
+    "w8" : 
     [
         {
             "title" : "Le projet", 
@@ -182,7 +182,7 @@
             ]
         }
     ],
-    "work-9" : 
+    "w9" : 
     [
         {
             "title" : "Le projet", 
@@ -204,7 +204,7 @@
             ]
         }
     ],
-    "work-10" : 
+    "w10" : 
     [
         {
             "title" : "Le projet", 
@@ -225,7 +225,7 @@
             ]
         }
     ],
-    "work-11" : 
+    "w11" : 
     [
         {
             "title" : "Le projet", 
@@ -250,7 +250,7 @@
             ]
         }
     ],
-    "work-12" : 
+    "w12" : 
     [
         {
             "title" : "Le projet", 
@@ -288,7 +288,7 @@
             ]
         }
     ],
-    "work-13" : 
+    "w13" : 
     [
         {
             "title" : "Le cours", 
@@ -304,7 +304,7 @@
             ]
         }
     ],
-    "work-14" : 
+    "w14" : 
     [
         {
             "title" : "Le cours", 
@@ -320,7 +320,7 @@
             ]
         }
     ],
-    "work-15" : 
+    "w15" : 
     [
         {
             "title" : "Le cours", 
@@ -336,7 +336,7 @@
             ]
         }
     ],
-    "work-16" : 
+    "w16" : 
     [
         {
             "title" : "Le cours", 
@@ -352,7 +352,7 @@
             ]
         }
     ],
-    "work-17" : 
+    "w17" : 
     [
         {
             "title" : "Le cours", 
@@ -368,7 +368,7 @@
             ]
         }
     ],
-    "work-18" : 
+    "w18" : 
     [
         {
             "title" : "Le projet", 
@@ -399,7 +399,7 @@
             ]
         }
     ],
-    "work-19" : 
+    "w19" : 
     [
         {
             "title" : "Le projet", 
@@ -417,7 +417,7 @@
             ]
         }
     ],
-    "work-20" : 
+    "w20" : 
     [
         {
             "title" : "Le projet", 
@@ -447,7 +447,7 @@
             ]
         }
     ],
-    "work-21" : 
+    "w21" : 
     [
         {
             "title" : "Le projet", 
@@ -496,7 +496,7 @@
             ]
         }
     ],
-    "work-22" : 
+    "w22" : 
     [
         {
             "title" : "Le projet", 
@@ -515,7 +515,7 @@
             ]
         }
     ],
-    "work-23" : 
+    "w23" : 
     [
         {
             "title" : "Le projet", 
@@ -535,7 +535,7 @@
             ]
         }
     ],
-    "work-24" : 
+    "w24" : 
     [
         {
             "title" : "Le cours", 
@@ -551,7 +551,7 @@
             ]
         }
     ],
-    "work-25" : 
+    "w25" : 
     [
         {
             "title" : "Le cours", 
@@ -567,7 +567,7 @@
             ]
         }
     ],
-    "work-26" : 
+    "w26" : 
     [
         {
             "title" : "Le cours", 
@@ -583,7 +583,7 @@
             ]
         }
     ],
-    "work-27" : 
+    "w27" : 
     [
         {
             "title" : "Le projet", 
@@ -628,7 +628,7 @@
             ]
         }
     ],
-    "work-28" : 
+    "w28" : 
     [
         {
             "title" : "Le projet", 
@@ -650,7 +650,7 @@
             ]
         }
     ],
-    "work-29" : 
+    "w29" : 
     [
         {
             "title" : "Le projet", 
@@ -675,7 +675,7 @@
             ]
         }
     ],
-    "work-30" : 
+    "w30" : 
     [
         {
             "title" : "Le projet", 
@@ -695,7 +695,7 @@
             ]
         }
     ],
-    "work-31" : 
+    "w31" : 
     [
         {
             "title" : "Le cours", 
@@ -711,7 +711,7 @@
             ]
         }
     ],
-    "work-32" : 
+    "w32" : 
     [
         {
             "title" : "Le cours", 
@@ -727,7 +727,7 @@
             ]
         }
     ],
-    "work-33" : 
+    "w33" : 
     [
         {
             "title" : "Le cours", 
@@ -743,7 +743,7 @@
             ]
         }
     ],
-    "work-34" : 
+    "w34" : 
     [
         {
             "title" : "Le cours", 
@@ -759,7 +759,7 @@
             ]
         }
     ],
-    "work-35" : 
+    "w35" : 
     [
         {
             "title" : "Le cours", 
@@ -775,7 +775,7 @@
             ]
         }
     ],
-    "work-36" : 
+    "w36" : 
     [
         {
             "title" : "Le cours", 
@@ -791,7 +791,7 @@
             ]
         }
     ],
-    "work-37" : 
+    "w37" : 
     [
         {
             "title" : "Le cours", 
@@ -807,7 +807,7 @@
             ]
         }
     ],
-    "work-38" : 
+    "w38" : 
     [
         {
             "title" : "Le cours", 
@@ -823,7 +823,7 @@
             ]
         }
     ],
-    "work-39" : 
+    "w39" : 
     [
         {
             "title" : "Le projet", 
@@ -854,7 +854,7 @@
             ]
         }
     ],
-    "work-40" : 
+    "w40" : 
     [
         {
             "title" : "Le cours", 
@@ -870,7 +870,7 @@
             ]
         }
     ],
-    "work-41" : 
+    "w41" : 
     [
         {
             "title" : "Le projet", 
@@ -902,7 +902,7 @@
             ]
         }
     ],
-    "work-42" : 
+    "w42" : 
     [
         {
             "title" : "Le cours", 
@@ -919,7 +919,7 @@
             ]
         }
     ],
-    "work-43" : 
+    "w43" : 
     [
         {
             "title" : "Le cours", 

@@ -1,5 +1,5 @@
 {
-    "work-0" : 
+    "w0" : 
     [
         {
             "title" : "The project", 
@@ -21,7 +21,7 @@
             ]
         }
     ],
-    "work-1" : 
+    "w1" : 
     [
         {
             "title" : "The project", 
@@ -45,7 +45,7 @@
             ]
         }
     ],
-    "work-2" : 
+    "w2" : 
     [
         {
             "title" : "The project", 
@@ -69,7 +69,7 @@
             ]
         }
     ],
-    "work-3" : 
+    "w3" : 
     [
         {
             "title" : "The project", 
@@ -95,7 +95,7 @@
             ]
         }
     ],
-    "work-4" : 
+    "w4" : 
     [
         {
             "title" : "The course", 
@@ -111,7 +111,7 @@
             ]
         }
     ],
-    "work-5" : 
+    "w5" : 
     [
         {
             "title" : "The course", 
@@ -127,7 +127,7 @@
             ]
         }
     ],
-    "work-6" : 
+    "w6" : 
     [
         {
             "title" : "The course", 
@@ -143,7 +143,7 @@
             ]
         }
     ],
-    "work-7" : 
+    "w7" : 
     [
         {
             "title" : "The course", 
@@ -159,7 +159,7 @@
             ]
         }
     ],
-    "work-8" : 
+    "w8" : 
     [
         {
             "title" : "The project", 
@@ -182,7 +182,7 @@
             ]
         }
     ],
-    "work-9" : 
+    "w9" : 
     [
         {
             "title" : "The project", 
@@ -204,7 +204,7 @@
             ]
         }
     ],
-    "work-10" : 
+    "w10" : 
     [
         {
             "title" : "The project", 
@@ -225,7 +225,7 @@
             ]
         }
     ],
-    "work-11" : 
+    "w11" : 
     [
         {
             "title" : "The project", 
@@ -250,7 +250,7 @@
             ]
         }
     ],
-    "work-12" : 
+    "w12" : 
     [
         {
             "title" : "The project", 
@@ -288,7 +288,7 @@
             ]
         }
     ],
-    "work-13" : 
+    "w13" : 
     [
         {
             "title" : "The course", 
@@ -304,7 +304,7 @@
             ]
         }
     ],
-    "work-14" : 
+    "w14" : 
     [
         {
             "title" : "The course", 
@@ -320,7 +320,7 @@
             ]
         }
     ],
-    "work-15" : 
+    "w15" : 
     [
         {
             "title" : "The course", 
@@ -336,7 +336,7 @@
             ]
         }
     ],
-    "work-16" : 
+    "w16" : 
     [
         {
             "title" : "The course", 
@@ -352,7 +352,7 @@
             ]
         }
     ],
-    "work-17" : 
+    "w17" : 
     [
         {
             "title" : "The course", 
@@ -368,7 +368,7 @@
             ]
         }
     ],
-    "work-18" : 
+    "w18" : 
     [
         {
             "title" : "The project", 
@@ -399,7 +399,7 @@
             ]
         }
     ],
-    "work-19" : 
+    "w19" : 
     [
         {
             "title" : "The project", 
@@ -417,7 +417,7 @@
             ]
         }
     ],
-    "work-20" : 
+    "w20" : 
     [
         {
             "title" : "The project", 
@@ -447,7 +447,7 @@
             ]
         }
     ],
-    "work-21" : 
+    "w21" : 
     [
         {
             "title" : "The project", 
@@ -496,7 +496,7 @@
             ]
         }
     ],
-    "work-22" : 
+    "w22" : 
     [
         {
             "title" : "The project", 
@@ -515,7 +515,7 @@
             ]
         }
     ],
-    "work-23" : 
+    "w23" : 
     [
         {
             "title" : "The project", 
@@ -535,7 +535,7 @@
             ]
         }
     ],
-    "work-24" : 
+    "w24" : 
     [
         {
             "title" : "The course", 
@@ -551,7 +551,7 @@
             ]
         }
     ],
-    "work-25" : 
+    "w25" : 
     [
         {
             "title" : "The course", 
@@ -567,7 +567,7 @@
             ]
         }
     ],
-    "work-26" : 
+    "w26" : 
     [
         {
             "title" : "The course", 
@@ -583,7 +583,7 @@
             ]
         }
     ],
-    "work-27" : 
+    "w27" : 
     [
         {
             "title" : "The project", 
@@ -628,7 +628,7 @@
             ]
         }
     ],
-    "work-28" : 
+    "w28" : 
     [
         {
             "title" : "The project", 
@@ -650,7 +650,7 @@
             ]
         }
     ],
-    "work-29" : 
+    "w29" : 
     [
         {
             "title" : "The project", 
@@ -675,7 +675,7 @@
             ]
         }
     ],
-    "work-30" : 
+    "w30" : 
     [
         {
             "title" : "The project", 
@@ -695,7 +695,7 @@
             ]
         }
     ],
-    "work-31" : 
+    "w31" : 
     [
         {
             "title" : "The course", 
@@ -711,7 +711,7 @@
             ]
         }
     ],
-    "work-32" : 
+    "w32" : 
     [
         {
             "title" : "The course", 
@@ -727,7 +727,7 @@
             ]
         }
     ],
-    "work-33" : 
+    "w33" : 
     [
         {
             "title" : "The course", 
@@ -743,7 +743,7 @@
             ]
         }
     ],
-    "work-34" : 
+    "w34" : 
     [
         {
             "title" : "The course", 
@@ -759,7 +759,7 @@
             ]
         }
     ],
-    "work-35" : 
+    "w35" : 
     [
         {
             "title" : "The course", 
@@ -775,7 +775,7 @@
             ]
         }
     ],
-    "work-36" : 
+    "w36" : 
     [
         {
             "title" : "The course", 
@@ -791,7 +791,7 @@
             ]
         }
     ],
-    "work-37" : 
+    "w37" : 
     [
         {
             "title" : "The course", 
@@ -807,7 +807,7 @@
             ]
         }
     ],
-    "work-38" : 
+    "w38" : 
     [
         {
             "title" : "The course", 
@@ -823,7 +823,7 @@
             ]
         }
     ],
-    "work-39" : 
+    "w39" : 
     [
         {
             "title" : "The project", 
@@ -854,7 +854,7 @@
             ]
         }
     ],
-    "work-40" : 
+    "w40" : 
     [
         {
             "title" : "The course", 
@@ -870,7 +870,7 @@
             ]
         }
     ],
-    "work-41" : 
+    "w41" : 
     [
         {
             "title" : "The project", 
@@ -902,7 +902,7 @@
             ]
         }
     ],
-    "work-42" : 
+    "w42" : 
     [
         {
             "title" : "The course", 
@@ -919,7 +919,7 @@
             ]
         }
     ],
-    "work-43" : 
+    "w43" : 
     [
         {
             "title" : "The course", 
