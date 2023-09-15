@@ -51,12 +51,21 @@
             "title" : "The project", 
             "text" : 
             [
+                "The project consists in recreating the space invader game on a console"
             ]
         },
         {
             "title" : "Features",
             "text" : 
             [
+                "Move ship",
+                "Move enemies",
+                "Shoot enemies",
+                "Firing at enemies",
+                "Manage ship life",
+                "Manage enemy life",
+                "Save",
+                "Difficulty levels"
             ]
         }
     ],
