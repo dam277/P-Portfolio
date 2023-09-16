@@ -1,0 +1,8 @@
+{
+    "e404" : 
+    {
+        "title" : "Erreur",
+        "subtitle" : "404 Page non trouvée",
+        "description" : "Cette page n'existe pas sur le serveur"
+    }
+}

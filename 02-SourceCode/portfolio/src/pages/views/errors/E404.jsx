@@ -11,6 +11,7 @@
 //#endregion
 
 //#region - Import Globals
+import GetTranslations from "../../../utils/globals/getTranslations";
 //#endregion
 
 //#region - Import Enums 
@@ -20,18 +21,23 @@
 //#endregion
 
 //#region - Import Components
+import Errors from "../../components/errors";
 //#endregion
 
 //#region - Import Translations
+import fr from "../../../resources/langs/fr/errors.json";
+import en from "../../../resources/langs/en/errors.json"
 //#endregion
 
 //#region - Import Datas
 //#endregion
 
 //#region - Import Styles
+import { ErrorImage, ErrorTitle, ErrorSubtitle, ErrorDescription } from "../../../resources/css/errorsStyle";
 //#endregion
 
 //#region - Import Images
+import error404 from "../../../resources/images/errors/404.png";
 //#endregion
 
 /**
@@ -56,6 +62,7 @@ function E404()
     //#endregion
     
     //#region - Set the translations
+    const translations = GetTranslations(fr, en);
     //#endregion
 
     //#region - Events
@@ -63,9 +70,12 @@ function E404()
 
     // Return html elements
     return(
-        <main>
-            E404
-        </main>
+        <Errors>
+            <ErrorTitle>{translations.e404.title}</ErrorTitle>
+            <ErrorImage src={error404} />
+            <ErrorSubtitle>{translations.e404.subtitle}</ErrorSubtitle>
+            <ErrorDescription>{translations.e404.description}</ErrorDescription>
+        </Errors>
     )
 }
 
