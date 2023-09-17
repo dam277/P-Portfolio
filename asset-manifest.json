@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/P-Portfolio/static/css/main.570fef9b.css",
-    "main.js": "/P-Portfolio/static/js/main.6776be94.js",
+    "main.js": "/P-Portfolio/static/js/main.fb8528d1.js",
     "static/media/portfolio.png": "/P-Portfolio/static/media/portfolio.2bf2c54b28c90ec5818e.png",
     "static/media/StyledComponents.png": "/P-Portfolio/static/media/StyledComponents.13efd064d512cbfccf65.png",
     "static/media/UnrealEngine.png": "/P-Portfolio/static/media/UnrealEngine.ad280a2fe859cc81c507.png",
@@ -18,10 +18,10 @@
     "static/media/SpaceInvader.png": "/P-Portfolio/static/media/SpaceInvader.100417edec3c2b576313.png",
     "index.html": "/P-Portfolio/index.html",
     "main.570fef9b.css.map": "/P-Portfolio/static/css/main.570fef9b.css.map",
-    "main.6776be94.js.map": "/P-Portfolio/static/js/main.6776be94.js.map"
+    "main.fb8528d1.js.map": "/P-Portfolio/static/js/main.fb8528d1.js.map"
   },
   "entrypoints": [
     "static/css/main.570fef9b.css",
-    "static/js/main.6776be94.js"
+    "static/js/main.fb8528d1.js"
   ]
 }
