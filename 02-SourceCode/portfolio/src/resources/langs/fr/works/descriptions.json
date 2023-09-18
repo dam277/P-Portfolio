@@ -602,7 +602,7 @@
                 "{color:green,id:0}VERT{/color} => Coeur temporaire => reste sur votre barre de vie X secondes et après cela, disparaît",
                 "{color:orange,id:0}ORANGE{/color} => Coeur de bouclier => Il y a une chance qu vous ne preniez pas de dégat",
                 "{color:violet,id:0}VIOLET{/color} => Coeur de dégats/donnation => Chaque {color:violet,id:0}cœur violet{/color} que vous possédez augmente vos dégâts, mais si vous jouez en multijoueur, vous pourrez donner ce cœur à quelqu'un d'autre, ce qui transformera ce cœur violet en cœur rouge",
-                "{color:black,id:0}NOIR{/color} => Coeur de réapparition => Ce coeur n'est pas sur votre barre de vie, mais lorsque vous mourrez, vous réapparaîtrez dans la première pièce avec {color:red,id:1}1 coeur rouge{/color}",
+                "{color:#2c2c2c,id:0}NOIR{/color} => Coeur de réapparition => Ce coeur n'est pas sur votre barre de vie, mais lorsque vous mourrez, vous réapparaîtrez dans la première pièce avec {color:red,id:1}1 coeur rouge{/color}",
                 "{color:white,id:0}BLANC{/color} => Coeur piège => Tant que vous avez ce coeur, vous ne subissez pas les dégâts des pièges",
                 
                 "{title}ETAGES",

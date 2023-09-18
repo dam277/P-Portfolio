@@ -3,17 +3,23 @@ import { styled, keyframes } from "styled-components";
 import { responsive, colorPalette } from "./styles";
 import GetColorFromCompletion from "../../utils/globals/getColorFromCompletion";
 
+import image from "../images/engines/Unity.png";
+
 export const Button = styled.button`
     //#region Can be overridden
     // Bases
     border: ${(props) => props.border ? props.border : `1`}px solid;
     border-image: ${(props) => `linear-gradient(${GetColorFromCompletion(props.completion).button.border[0]}, ${GetColorFromCompletion(props.completion).button.border[1]}) 1`};
     background: ${(props) => `linear-gradient(${GetColorFromCompletion(props.completion).button.color[0]}, ${GetColorFromCompletion(props.completion).button.color[1]})`};
-    
+
     // Dimensions
     margin: ${(props) => props.margin && props.margin};
     padding: ${(props) => props.padding && props.padding};
+    max-width: ${(props) => props.width && props.maxwidth};
+    min-width: ${(props) => props.width && props.minwidth};
     width: ${(props) => props.width && props.width};
+    max-height: ${(props) => props.height && props.maxheight};
+    min-height: ${(props) => props.height && props.minheight};
     height: ${(props) => props.height && props.height};
 
     // Text
@@ -53,10 +59,21 @@ export const Button = styled.button`
     {
         ${(props) => props.setResponsiveMobileSmall && 
         {
-            "font-size": `${props.mobileSmallSize ? props.mobileSmallSize : "22"}px`,
+            "font-size": `${props.mobileSmallSize ? props.mobileSmallSize : "20"}px`,
             "margin": `${props.mobileSmallMargin && props.mobileSmallMargin}`,
             "padding": `${props.mobileSmallPadding && props.mobileSmallPadding}`,
             "visibility": `${props.mobileSmallVisibility && props.mobileSmallVisibility}`
+        }}
+    }
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        ${(props) => props.setResponsiveMobile && 
+        {
+            "font-size": `${props.mobileSize ? props.mobileSize : "22"}px`,
+            "margin": `${props.mobileMargin && props.mobileMargin}`,
+            "padding": `${props.mobilePadding && props.mobilePadding}`,
+            "visibility": `${props.mobileVisibility && props.mobileVisibility}`
         }}
     }
 `

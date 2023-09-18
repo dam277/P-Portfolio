@@ -22,7 +22,7 @@ export const colorPalette =
         colorDefault: "#FFFFFE",
         text: {
             paragraph: {
-                color: "#BBBBBB"
+                color: "#898989"
             },
             color: "#C7046A",
             border: "#C7046A"
@@ -52,6 +52,7 @@ export const colorPalette =
     main: {
         backGroundDefault: "#0c0c0c",
         cardBackgroundColor: "#130207",
+        detailsCardBackgroundColor: "#060606",
         cardBorderColor: [
             "#31091f",
             "#C7046A"
