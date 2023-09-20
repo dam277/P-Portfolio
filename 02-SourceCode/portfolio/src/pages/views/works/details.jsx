@@ -8,7 +8,7 @@
 //#endregion
 
 //#region - Import Hooks
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 //#endregion
 
 //#region - Import Globals
@@ -52,10 +52,15 @@ import ColoredText from "../../components/smallElements/ColoredText";
  */
 function Details()
 {
+    
     //#region - Important elements
     const { id } = useParams();
     const actualWork = Projects.find((work) => work.id === id);
     //#endregion
+
+    // Check if the work exists and redirect to the works page
+    if (!actualWork)
+        return <Navigate to={"/works"} />;
     
     //#region - Set States
     //#endregion
@@ -117,7 +122,7 @@ function Details()
                                         :
                                         (
                                             <>
-                                                {paragraph}{paragraph.charAt(paragraph.length - 1) !== ":" && "."}
+                                                {paragraph}{paragraph.charAt(paragraph.length - 1) !== ":" && paragraph.charAt(paragraph.length - 1) !== "?" && "."}
                                             </>
                                         )}
                                     </Description>

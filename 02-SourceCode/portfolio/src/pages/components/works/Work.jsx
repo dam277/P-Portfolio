@@ -118,7 +118,7 @@ function Work({ translations, keyValue, work})
                                                 :
                                                 (
                                                     <>
-                                                        {paragraph}{paragraph.charAt(paragraph.length - 1) !== ":" && "."}
+                                                        {paragraph}{paragraph.charAt(paragraph.length - 1) !== ":" && paragraph.charAt(paragraph.length - 1) !== "?" && "."}
                                                     </>
                                                 )}
                                                 
