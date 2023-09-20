@@ -602,7 +602,7 @@
                 "{color:green,id:0}GREEN{/color} => Temp heart => stay on your life bar X seconds and after that, disapear",
                 "{color:orange,id:0}ORANGE{/color} => Shield heart => There is a chance that the you will not take damage",
                 "{color:violet,id:0}VIOLET{/color} => Damages/Donnation heart => Each {color:violet,id:0}violet heart{/color} you have increase you damage boost, but if you play in multiplayer, you will be able to give this heart to someone else, which will transform this violet heart in red heart",
-                "{color:black,id:0}BLACK{/color} => Respawn heart => This heart is not on your lifebar, but when you die, you'll respawn at the first room with {color:red,id:0}1 Red heart{/color}",
+                "{color:#2c2c2c,id:0}BLACK{/color} => Respawn heart => This heart is not on your lifebar, but when you die, you'll respawn at the first room with {color:red,id:0}1 Red heart{/color}",
                 "{color:white,id:0}WHITE{/color} => Trap heart => While you have this heart, you'll not take damages from the traps",
                 
                 "{title}Stages",

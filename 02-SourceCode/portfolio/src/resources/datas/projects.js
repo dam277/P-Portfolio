@@ -20,9 +20,21 @@ const Projects =
         id: "w0",                               
         name: "Portfolio",                          // Searchbar
         image: portfolio,
+        github: 
+        {
+            name : "P-Portfolio",
+            link : "https://github.com/dam277/P-Portfolio/tree/master",
+        },
+        website: 
+        {
+            name : "Portfolio",
+            link : "https://dam277.github.io/dam277/",
+        },
+        download : "",
+        version: "0.9",
         completion: eCompletionIds.inDevelopment,   // Completion
         type : eTypeIds.projects,                   // Type of work
-        platforms :                                  // Platform
+        platforms :                                 // Platform
         [
            {id: ePlatformIds.web, image: ePlatforms.web},  
         ],  
@@ -40,9 +52,21 @@ const Projects =
         id: "w1",
         name: "Skllio Framework",                   // Searchbar
         image: skillioFramework,
+        github: 
+        {
+            name : "P-SkillioFramework",
+            link : "https://github.com/SiktiesSoftware/P-SkillioFramework",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "https://github.com/SiktiesSoftware/P-SkilioFramework/releases/download/V1.1.0/EmptyFramework.zip",
+        version: "1.1.0",
         completion: eCompletionIds.inDevelopment,   // Completion
         type : eTypeIds.projects,                   // Type of work
-        platforms :                                  // Platform
+        platforms :                                 // Platform
         [
             {id: ePlatformIds.web, image: ePlatforms.web},   
         ],  
@@ -64,8 +88,20 @@ const Projects =
         id: "w2",
         name: "Space Invader",                      // Searchbar
         image: spaceInvader,
-        completion: eCompletionIds.finished,        // Completion
-        type : eTypeIds.projects,                   // Type of work
+        github: 
+        {
+            name : "P-SpaceInvader",
+            link : "https://github.com/dam277/P-SpaceInvader",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
+        completion: eCompletionIds.inDevelopment,    // Completion
+        type : eTypeIds.projects,                    // Type of work
         platforms :                                  // Platform
         [
             {id: ePlatformIds.software, image: ePlatforms.software}
@@ -82,6 +118,18 @@ const Projects =
         id: "w3",
         name: "Github manager",                     // Searchbar
         image: "githubManager",
+        github: 
+        {
+            name : "P-GithubManager",
+            link : "https://github.com/dam277/P-GithubManager",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -100,6 +148,18 @@ const Projects =
         id: "w4",
         name : "Lwjgl",                             // Searchbar
         image : "lwjgl",
+        github: 
+        {
+            name : "C-lwjgl",
+            link : "https://github.com/dam277/C-Lwjgl",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -119,6 +179,18 @@ const Projects =
         id: "w5",
         name : "Python",                            // Searchbar
         image : "python",
+        github: 
+        {
+            name : "C-Python",
+            link : "https://github.com/dam277/C-Python",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -138,6 +210,18 @@ const Projects =
         id: "w6",
         name : "Discord bot",                       // Searchbar
         image : "discordBot",
+        github: 
+        {
+            name : "C-DiscordBot",
+            link : "https://github.com/dam277/C-DiscordBot",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.inDevelopment,   // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -157,6 +241,18 @@ const Projects =
         id: "w7",
         name : "Laravel",                           // Searchbar
         image : "laravel",
+        github: 
+        {
+            name : "C-Laravel",
+            link : "https://github.com/dam277/C-Laravel",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -179,6 +275,18 @@ const Projects =
         id: "w8",
         name : "Discord channel manager",           // Searchbar
         image : "dcm",
+        github: 
+        {
+            name : "P-DiscordChannelManager",
+            link : "https://github.com/dam277/P-DiscordChannelManager",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -198,6 +306,18 @@ const Projects =
         id: "w9",
         name : "Launcher",                          // Searchbar
         image : "launcher",
+        github: 
+        {
+            name : "P-Launcher",
+            link : "https://github.com/dam277/P-Launcher",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -219,6 +339,18 @@ const Projects =
         id: "w10",
         name : "Launcher (Dino game)",              // Searchbar
         image : "launcherDG",
+        github: 
+        {
+            name : "P-Launcher-DinoGame",
+            link : "https://github.com/dam277/P-Launcher-DinoGame",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.inDevelopment,   // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -240,6 +372,18 @@ const Projects =
         id: "w11",
         name : "Launcher (Heroes fight)",           // Searchbar
         image : "launcherHF",
+        github: 
+        {
+            name : "P-Launcher-HeroesFight",
+            link : "https://github.com/dam277/P-Launcher-HeroesFight",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -261,6 +405,18 @@ const Projects =
         id: "w12",
         name : "Launcher (Ultimate warfight)",      // Searchbar
         image : "launcherUW",
+        github: 
+        {
+            name : "P-Launcher-UltimateWarfight",
+            link : "https://github.com/dam277/P-Launcher-UltimateWarfight",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -280,6 +436,18 @@ const Projects =
         id: "w13",
         name : "Minecraft datapack",                // Searchbar
         image : "mcDatapack",
+        github: 
+        {
+            name : "C-MinecraftDatapack",
+            link : "https://github.com/dam277/C-MinecraftDatapack",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -299,6 +467,18 @@ const Projects =
         id: "w14",
         name : "Minecraft mod",                     // Searchbar
         image : "mcMod",
+        github: 
+        {
+            name : "C-MinecraftMod",
+            link : "https://github.com/dam277/C-MinecraftMod",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -318,6 +498,18 @@ const Projects =
         id: "w15",
         name : "Minecraft plugin",      // Searchbar
         image : "mcPlugin",
+        github: 
+        {
+            name : "C-MinecraftPlugin",
+            link : "https://github.com/dam277/C-MinecraftPlugin",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -337,6 +529,18 @@ const Projects =
         id: "w16",
         name : "OpenGL",                            // Searchbar
         image : "opengl",
+        github: 
+        {
+            name : "C-OpenGL",
+            link : "https://github.com/dam277/C-OpenGL",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -356,6 +560,18 @@ const Projects =
         id: "w17",
         name : "Rust",                            // Searchbar
         image : "rust",
+        github: 
+        {
+            name : "C-Rust",
+            link : "https://github.com/dam277/C-Rust",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -375,6 +591,18 @@ const Projects =
         id: "w18",
         name : "Minecraft plugin (Server manager)", // Searchbar
         image : "mcPluginServerManager",
+        github: 
+        {
+            name : "P-MinecraftPlugin-ServerManager",
+            link : "https://github.com/dam277/P-MinecraftPlugin-ServerManager",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -394,6 +622,18 @@ const Projects =
         id: "w19",
         name : "Minecraft datapack (World changes)",// Searchbar
         image : "mcDatapackWorldChanges",
+        github: 
+        {
+            name : "P-MinecraftDatapack-WorldChanges",
+            link : "https://github.com/dam277/P-MinecraftDatapack-WorldChanges",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -413,6 +653,18 @@ const Projects =
         id: "w20",
         name : "Minecraft mod (Darkness)",          // Searchbar
         image : "mcModDarkness",
+        github: 
+        {
+            name : "P-MinecraftMod-Darkness",
+            link : "https://github.com/dam277/P-MinecraftMod-Darkness",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -432,6 +684,18 @@ const Projects =
         id: "w21",
         name : "Minecraft mod (Alliances)",         // Searchbar
         image : "mcModAlliances",
+        github: 
+        {
+            name : "P-MinecraftMod-Alliances",
+            link : "https://github.com/dam277/P-MinecraftMod-Alliances",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -451,6 +715,18 @@ const Projects =
         id: "w22",
         name : "Minecraft mod (Darkness upgrades)", // Searchbar
         image : "mcModDarknessUpgrades",
+        github: 
+        {
+            name : "P-MinecraftMod-DarknessUpgrades",
+            link : "https://github.com/dam277/P-MinecraftMod-DarknessUpgrades",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -470,6 +746,18 @@ const Projects =
         id: "w23",
         name : "Minecraft launcher",                // Searchbar
         image : "mcLauncher",
+        github: 
+        {
+            name : "P-MinecraftLauncher",
+            link : "https://github.com/dam277/P-MinecraftLauncher",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -492,6 +780,18 @@ const Projects =
         id: "w24",
         name : "Server connection",                 // Searchbar
         image : "serverConnection",
+        github: 
+        {
+            name : "C-ServerConnection",
+            link : "https://github.com/dam277/C-ServerConnection",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -512,6 +812,18 @@ const Projects =
         id: "w25",
         name : "Go",                                // Searchbar
         image : "go",
+        github: 
+        {
+            name : "C-Go",
+            link : "https://github.com/dam277/C-Go",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -531,6 +843,18 @@ const Projects =
         id: "w26",
         name : "Dart",                              // Searchbar
         image : "dart",
+        github: 
+        {
+            name : "C-Dart",
+            link : "https://github.com/dam277/C-Dart",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -550,6 +874,18 @@ const Projects =
         id: "w27",
         name : "Procedural dungeon",                // Searchbar
         image : "proceduralDungeon",
+        github: 
+        {
+            name : "P-ProceduralDungeon",
+            link : "https://github.com/dam277/P-ProceduralDungeon",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -569,6 +905,18 @@ const Projects =
         id: "w28",
         name : "Skillio framework (e2e Validator)", // Searchbar
         image : "sfE2eValidator",
+        github: 
+        {
+            name : "P-SkillioFramework-e2eValidator",
+            link : "https://github.com/SiktiesSoftware/P-SkillioFramework-e2eValidator",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -592,6 +940,18 @@ const Projects =
         id: "w29",
         name : "Skillio framework (Template engine)",// Searchbar
         image : "sfTemplateEngine",
+        github: 
+        {
+            name : "P-SkillioFramework-TemplateEngine",
+            link : "https://github.com/SiktiesSoftware/P-SkillioFramework-templateEngine",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.inDevelopment,   // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -615,6 +975,18 @@ const Projects =
         id: "w30",
         name : "Skillio framework (VsCode extension)",// Searchbar
         image : "sfVsCodeExtension",
+        github: 
+        {
+            name : "P-SkillioFramework-VsCodeExtension",
+            link : "https://github.com/SiktiesSoftware/P-SkillioFramework-VsCodeExtension",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -636,6 +1008,18 @@ const Projects =
         id: "w31",
         name : "React",                             // Searchbar
         image : "react",
+        github: 
+        {
+            name : "C-ReactJs",
+            link : "https://github.com/dam277/C-ReactJs",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.finished,        // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -655,6 +1039,18 @@ const Projects =
         id: "w32",
         name : "Angular",                           // Searchbar
         image : "angular",
+        github: 
+        {
+            name : "C-Angular",
+            link : "https://github.com/dam277/C-Angular",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -674,6 +1070,18 @@ const Projects =
         id: "w33",
         name : "Meteor",                             // Searchbar
         image : "meteor",
+        github: 
+        {
+            name : "C-MeteorJs",
+            link : "https://github.com/dam277/C-MeteorJs",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -693,6 +1101,18 @@ const Projects =
         id: "w34",
         name : "Three",                             // Searchbar
         image : "three",
+        github: 
+        {
+            name : "C-ThreeJs",
+            link : "https://github.com/dam277/C-ThreeJs",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -712,6 +1132,18 @@ const Projects =
         id: "w35",
         name : "Typescript",                        // Searchbar
         image : "typescript",
+        github: 
+        {
+            name : "C-Typescript",
+            link : "https://github.com/dam277/C-Typescript",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -731,6 +1163,18 @@ const Projects =
         id: "w36",
         name : "Vue",                               // Searchbar
         image : "vue",
+        github: 
+        {
+            name : "C-VueJs",
+            link : "https://github.com/dam277/C-VueJs",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -750,6 +1194,18 @@ const Projects =
         id: "w37",
         name : "Next",                              // Searchbar
         image : "next",
+        github: 
+        {
+            name : "C-NextJs",
+            link : "https://github.com/dam277/C-NextJs",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -769,6 +1225,18 @@ const Projects =
         id: "w38",
         name : "Electron",                          // Searchbar
         image : "electron",
+        github: 
+        {
+            name : "C-Electron",
+            link : "https://github.com/dam277/C-Electron",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -788,6 +1256,18 @@ const Projects =
         id: "w39",
         name : "Memo",                              // Searchbar
         image : "memo",
+        github: 
+        {
+            name : "P-Memo",
+            link : "https://github.com/dam277/P-Memo",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -809,6 +1289,18 @@ const Projects =
         id: "w40",
         name : "Wpf",                               // Searchbar
         image : "wpf",
+        github: 
+        {
+            name : "C-Wpf",
+            link : "https://github.com/dam277/C-Wpf",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -829,6 +1321,18 @@ const Projects =
         id: "w41",
         name : "Converso",                          // Searchbar
         image : "converso",
+        github: 
+        {
+            name : "P-Converso",
+            link : "https://github.com/dam277/P-Converso",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                  // Platform
@@ -855,6 +1359,18 @@ const Projects =
         id: "w42",
         name : "Sfml",                              // Searchbar
         image : "sfml",
+        github: 
+        {
+            name : "C-Sfml",
+            link : "https://github.com/dam277/C-Sfml",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
@@ -874,6 +1390,18 @@ const Projects =
         id: "w43",
         name : "Docker",                            // Searchbar
         image : "docker",
+        github: 
+        {
+            name : "C-Docker",
+            link : "https://github.com/dam277/C-Docker",
+        },
+        website: 
+        {
+            name : "",
+            link : "",
+        },
+        download : "",
+        version: "",
         completion: eCompletionIds.notStarted,      // Completion
         type : eTypeIds.courses,                    // Type of work
         platforms :                                  // Platform
