@@ -33,7 +33,7 @@ import descriptionsEn from "../../../resources/langs/en/works/descriptions.json"
 //#endregion
 
 //#region - Import Datas
-import Projects from "../../../resources/datas/projects";
+import GithubWorks from "../../../resources/datas/githubWorks";
 import eDirections from "../../../resources/datas/enums/details/eDirection";
 //#endregion
 
@@ -55,7 +55,7 @@ function Details()
     
     //#region - Important elements
     const { id } = useParams();
-    const actualWork = Projects.find((work) => work.id === id);
+    const actualWork = GithubWorks.find((work) => work.id === id);
     //#endregion
 
     // Check if the work exists and redirect to the works page
@@ -76,17 +76,17 @@ function Details()
     {
         if (direction === eDirections.previous) 
         {
-            if(actualWork.id === Projects[0].id)
-                return Projects[Projects.length - 1].id;
-            return Projects[index(actualWork.id) - 1].id;
+            if(actualWork.id === GithubWorks[0].id)
+                return GithubWorks[GithubWorks.length - 1].id;
+            return GithubWorks[index(actualWork.id) - 1].id;
         }
         else
-            if(actualWork.id === Projects[Projects.length - 1].id)
-                return Projects[0].id;
-            return Projects[index(actualWork.id) + 1].id;
+            if(actualWork.id === GithubWorks[GithubWorks.length - 1].id)
+                return GithubWorks[0].id;
+            return GithubWorks[index(actualWork.id) + 1].id;
     }
 
-    const index = (id) => Projects.findIndex(project => project.id === id);
+    const index = (id) => GithubWorks.findIndex(project => project.id === id);
     //#endregion
     
     //#region - Set the translations
@@ -165,16 +165,16 @@ function Details()
                 <AssociatedWorks>
                     <AssociatedWorksTitle>{translations.associatedWork.title}</AssociatedWorksTitle>
                     <AssociatedWorksContainer>
-                        {actualWork.associatedProjects.length > 0 ?
+                        {actualWork.associatedWorks.length > 0 ?
                         (
-                            actualWork.associatedProjects.map((workId) => 
+                            actualWork.associatedWorks.map((workId) => 
                             (
                                 <AssociatedWork>
                                     <AssociatedWorkLink to={`/works/${workId}`}>
                                         <Button size="16" setResponsiveMobile={true} mobileSize="19">{translations.associatedWork.detail}</Button>
                                     </AssociatedWorkLink>
                                     &nbsp;
-                                    {Projects.find((work) => work.id === workId).name}
+                                    {GithubWorks.find((work) => work.id === workId).name}
                                 </AssociatedWork>
                             ))
                         )

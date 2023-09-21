@@ -8,7 +8,7 @@
 //#endregion
 
 //#region - Import Hooks
-import { useState } from "react";
+import { useEffect, useState } from "react";
 //#endregion
 
 //#region - Import Globals
@@ -32,11 +32,11 @@ import en from "../../../resources/langs/en/works.json"
 //#endregion
 
 //#region - Import Datas
-import ProjectTypes from "../../../resources/datas/works/projectTypes";
+import WorkPlatforms from "../../../resources/datas/works/workPlatforms";
 import TypeRadioButtons from "../../../resources/datas/works/typeRadioButtons";
 import CompletionRadioButtons from "../../../resources/datas/works/completionRadioButtons.js";
 import LanguagesButtons from "../../../resources/datas/works/languagesButtons";
-import Projects from "../../../resources/datas/projects";
+import GithubWorks from "../../../resources/datas/githubWorks";
 //#endregion
 
 //#region - Import Styles
@@ -54,11 +54,38 @@ function Works()
 {
     //#region - Set States
     const [searchbar, setSearchbar] = useState("");
-    const [platform, setPlatform] = useState(ProjectTypes.map((platform) => ({id: platform.id, checked: platform.defaultCheck}))); 
+    const [platforms, setPlatforms] = useState(WorkPlatforms.map((platform) => ({id: platform.id, checked: platform.defaultCheck}))); 
     const [typeRadio, setTypeRadio] = useState("type-all");
     const [completionRadio, setCompletionRadio] = useState("completion-all");
     const [languages, setLanguages] = useState(LanguagesButtons.map((language) => ({id: language.id, checked: language.defaultCheck})));
     //#endregion
+
+    let filteredWorks = GithubWorks;
+
+    //#region - Filter works
+    filteredWorks = FilterWithSearchBar();
+    filteredWorks = FilterWithPlatform();
+    //#endregion
+
+    //#region Functions
+    function FilterWithSearchBar()
+    {
+        if(searchbar.length < 0)
+            return filteredWorks;
+
+        return filteredWorks.filter((work) => work.name.toLowerCase().includes(searchbar));
+    }
+
+    function FilterWithPlatform()
+    {
+        const checkedPlatforms = platforms.filter((actualPlatform) => actualPlatform.checked);
+        if(checkedPlatforms.length === WorkPlatforms.length)
+            return filteredWorks;
+
+        return filteredWorks.filter((work) => work.platforms.some((platform) => checkedPlatforms.some(targetId => targetId.id === platform.id)))
+    }
+    //#endregion
+
 
     //#region - Set the translations
     const translations = GetTranslations(fr, en);
@@ -73,12 +100,16 @@ function Works()
                 <Subtitle>{translations.subtitle}</Subtitle>
             </TitleSection>
             {/* Filters */}
-            <Filters translations={translations} searchbar={searchbar} setSearchbar={setSearchbar} platforms={platform} setPlatform={setPlatform} typeRadio={typeRadio} setTypeRadio={setTypeRadio} completionRadio={completionRadio} setCompletionRadio={setCompletionRadio} languages={languages} setLanguages={setLanguages} projectTypes={ProjectTypes} typeRadioButtons={TypeRadioButtons} completionRadioButtons={CompletionRadioButtons} languagesButtons={LanguagesButtons}/>
+            <Filters translations={translations} searchbar={searchbar} setSearchbar={setSearchbar} platforms={platforms} setPlatforms={setPlatforms} typeRadio={typeRadio} setTypeRadio={setTypeRadio} completionRadio={completionRadio} setCompletionRadio={setCompletionRadio} languages={languages} setLanguages={setLanguages} workPlatforms={WorkPlatforms} typeRadioButtons={TypeRadioButtons} completionRadioButtons={CompletionRadioButtons} languagesButtons={LanguagesButtons}/>
             {/* All the works */}
             <WorksSection>
-                {Projects.map((project) => 
+                {/* {GithubWorks.map((githubWork) => 
                 (
-                    <Work key={`${project.name}-${project.id}`} translations={translations} keyValue={`${project.name}-${project.id}`} work={project}/>
+                    <Work key={`${githubWork.name}-${githubWork.id}`} translations={translations} keyValue={`${githubWork.name}-${githubWork.id}`} work={githubWork}/>
+                ))} */}
+                {filteredWorks.map((filteredWork) => 
+                (
+                    <Work key={`${filteredWork.name}-${filteredWork.id}`} translations={translations} keyValue={`${filteredWork.name}-${filteredWork.id}`} work={filteredWork}/>
                 ))}
             </WorksSection>
         </MainContainer>

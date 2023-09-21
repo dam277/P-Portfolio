@@ -9,7 +9,6 @@ function ColoredText({ text })
 {
     // Use a regex to get the tags with the colors
     const colorMatches = [...text.matchAll(/\{color:(.*?),id:(.*?)?\}(.*?)\{\/color\}/g)];
-    console.log(colorMatches);
 
     // Get an array of object of contents that will be write to the output
     const textDatas = colorMatches.map((match, index) => 

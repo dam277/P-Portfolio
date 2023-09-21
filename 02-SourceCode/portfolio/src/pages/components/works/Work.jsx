@@ -31,7 +31,7 @@ import en from "../../../resources/langs/en/works/descriptions.json"
 //#endregion
 
 //#region - Import Datas
-import Projects from "../../../resources/datas/projects";
+import Projects from "../../../resources/datas/githubWorks";
 //#endregion
 
 //#region - Import Styles
@@ -156,9 +156,9 @@ function Work({ translations, keyValue, work})
                             </>
                         )
                     ))}
-                    {work.associatedProjects.length > 0 && (<WorkDescriptionTitle>{translations.works.associatedWorks}</WorkDescriptionTitle>)}
+                    {work.associatedWorks.length > 0 && (<WorkDescriptionTitle>{translations.works.associatedWorks}</WorkDescriptionTitle>)}
                     <WorkDescriptionAssociatedWorksContainer>
-                        {work.associatedProjects.map((projectId, index) => 
+                        {work.associatedWorks.map((projectId, index) => 
                         (
                             <Button key={`assiocatedButton-${index}`} completion={work.completion} width={"300px"} setResponsiveMobileSmall={true} mobileSmallSize={17} margin={"2px"} size={15} onClick={() => handleAssociatedProject(projectId)}>{Projects.find((project) => project.id === projectId).name}</Button>
                         ))}

@@ -3,8 +3,6 @@ import { styled, keyframes } from "styled-components";
 import { responsive, colorPalette } from "./styles";
 import GetColorFromCompletion from "../../utils/globals/getColorFromCompletion";
 
-import image from "../images/engines/Unity.png";
-
 export const Button = styled.button`
     //#region Can be overridden
     // Bases

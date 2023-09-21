@@ -3,7 +3,6 @@ import { styled } from 'styled-components'
 
 /** Import styles */
 import { responsive, colorPalette } from '../styles'
-import eCompletionIds from '../../datas/enums/works/eCompletionIds'
 import GetColorFromCompletion from '../../../utils/globals/getColorFromCompletion'
 import GetNumberFromEvenOrOdd from '../../../utils/globals/getNumberFromEvenOrOdd'
 
