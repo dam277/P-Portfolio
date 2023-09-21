@@ -31,7 +31,7 @@ import GithubWorks from "../../../resources/datas/githubWorks";
 //#endregion
 
 //#region - Import Styles
-import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, SearchBarSuggestions, SearchBarSuggestion, ProjectRadiosContainer, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
+import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, SearchBarSuggestionsContainer, SearchBarSuggestions, SearchBarSuggestion, ProjectRadiosContainer, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
 import { Text } from "../../../resources/css/mainStyle";
 //#endregion
 
@@ -154,15 +154,17 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms
                     <RowWrapper>
                         {/* Search bar */}
                         <SearchBar ref={inputRef} type="text" placeholder={translations.filters.searchBar} onChange={(e) => setSearchbar(e.target.value)} onBlur={() => setIsearchBarFocused(false)} onFocus={() => setIsearchBarFocused(true)} />
-                        {isSearchBarFocused && searchbar.length > 0 &&
-                        (
-                            <SearchBarSuggestions>
-                                {suggestionList.map((suggestion, index) => 
-                                (
-                                    <SearchBarSuggestion key={`${suggestion.id}-${index}`} id={suggestion.id} onMouseDown={(e) => handleSuggestion(e.target.id)}>{suggestion.name}</SearchBarSuggestion>
-                                ))}
-                            </SearchBarSuggestions>
-                        )}
+                            {isSearchBarFocused && searchbar.length > 0 &&
+                            (
+                                <SearchBarSuggestionsContainer>
+                                    <SearchBarSuggestions>
+                                        {suggestionList.map((suggestion, index) => 
+                                        (
+                                            <SearchBarSuggestion key={`${suggestion.id}-${index}`} id={suggestion.id} onMouseDown={(e) => handleSuggestion(e.target.id)}>{suggestion.name}</SearchBarSuggestion>
+                                        ))}
+                                    </SearchBarSuggestions>
+                                </SearchBarSuggestionsContainer>
+                            )}
                         {/* Radio buttons under search bar */}
                         <ProjectRadiosContainer>
                             <RadioSection>

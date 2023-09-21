@@ -71,13 +71,24 @@ export const SearchBar = styled.input`
     }
 `
 
+export const SearchBarSuggestionsContainer = styled.div`
+    position: relative;
+    width: 80%;
+    font-size: 15px;
+
+    @media (min-width: ${responsive.laptop_small}) 
+    {
+        width: 100%;
+        font-size: 16px;
+    }
+`
+
 export const SearchBarSuggestions = styled.ul`
     position: absolute;
     border-collapse: separate;
     z-index: 10;
     left: 0;
     padding: 5px;
-    top: 25px;
     list-style: none;
     text-align: left;
 `
