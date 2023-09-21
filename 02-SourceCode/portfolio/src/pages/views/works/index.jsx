@@ -16,6 +16,9 @@ import GetTranslations from "../../../utils/globals/getTranslations";
 //#endregion
 
 //#region - Import Enums 
+import eCompletionIds from "../../../resources/datas/enums/works/eCompletionIds";
+import eTypeIds from "../../../resources/datas/enums/works/eTypeIds";
+import eLanguagesIds from "../../../resources/datas/enums/works/eLanguagesIds";
 //#endregion
 
 //#region - Import Contexts
@@ -55,8 +58,8 @@ function Works()
     //#region - Set States
     const [searchbar, setSearchbar] = useState("");
     const [platforms, setPlatforms] = useState(WorkPlatforms.map((platform) => ({id: platform.id, checked: platform.defaultCheck}))); 
-    const [typeRadio, setTypeRadio] = useState("type-all");
-    const [completionRadio, setCompletionRadio] = useState("completion-all");
+    const [typeRadio, setTypeRadio] = useState(eTypeIds.all);
+    const [completionRadio, setCompletionRadio] = useState(eCompletionIds.all);
     const [languages, setLanguages] = useState(LanguagesButtons.map((language) => ({id: language.id, checked: language.defaultCheck})));
     //#endregion
 
@@ -65,27 +68,75 @@ function Works()
     //#region - Filter works
     filteredWorks = FilterWithSearchBar();
     filteredWorks = FilterWithPlatform();
+    filteredWorks = FilterWithType();
+    filteredWorks = FilterWithCompletion();
+    filteredWorks = FilterWithLanguages();
     //#endregion
-
+    
     //#region Functions
+    /**
+     * Filter the works with the given search bar content
+     * @returns array of works
+     */
     function FilterWithSearchBar()
     {
         if(searchbar.length < 0)
             return filteredWorks;
 
-        return filteredWorks.filter((work) => work.name.toLowerCase().includes(searchbar));
+        return filteredWorks.filter((work) => work.name.toLowerCase().includes(searchbar.toLowerCase()));
     }
 
+    /**
+     * Filter the works with the given platform checkboxes
+     * @returns array of works
+     */
     function FilterWithPlatform()
     {
         const checkedPlatforms = platforms.filter((actualPlatform) => actualPlatform.checked);
         if(checkedPlatforms.length === WorkPlatforms.length)
             return filteredWorks;
 
-        return filteredWorks.filter((work) => work.platforms.some((platform) => checkedPlatforms.some(targetId => targetId.id === platform.id)))
+        return filteredWorks.filter((work) => work.platforms.some((platform) => checkedPlatforms.some(checkedPlatform => checkedPlatform.id === platform.id)))
+    }
+
+    /**
+     * Filter the works with the given type radio button
+     * @returns array of works
+     */
+    function FilterWithType()
+    {
+        if(typeRadio === eTypeIds.all)
+            return filteredWorks;
+
+        return filteredWorks.filter((work) => work.type === typeRadio);
+    }
+
+    /**
+     * Filter the works with the given completion radio button
+     * @returns array of works
+     */
+    function FilterWithCompletion()
+    {
+        if(completionRadio === eCompletionIds.all)
+            return filteredWorks;
+
+        return filteredWorks.filter((work) => work.completion === completionRadio);
+    }
+
+    /**
+     * Filter the works with the given language checkboxes
+     * @returns array of works
+     */
+    function FilterWithLanguages()
+    {
+        const checkedLanguages = languages.filter((language) => language.checked);
+
+        if(checkedLanguages.length === 1 && checkedLanguages[0].id === eLanguagesIds.all)
+            return filteredWorks;
+
+        return filteredWorks.filter((work) => work.languages.some((language) => checkedLanguages.some(checkedLanguage => checkedLanguage.id === language.id)));
     }
     //#endregion
-
 
     //#region - Set the translations
     const translations = GetTranslations(fr, en);
@@ -103,10 +154,6 @@ function Works()
             <Filters translations={translations} searchbar={searchbar} setSearchbar={setSearchbar} platforms={platforms} setPlatforms={setPlatforms} typeRadio={typeRadio} setTypeRadio={setTypeRadio} completionRadio={completionRadio} setCompletionRadio={setCompletionRadio} languages={languages} setLanguages={setLanguages} workPlatforms={WorkPlatforms} typeRadioButtons={TypeRadioButtons} completionRadioButtons={CompletionRadioButtons} languagesButtons={LanguagesButtons}/>
             {/* All the works */}
             <WorksSection>
-                {/* {GithubWorks.map((githubWork) => 
-                (
-                    <Work key={`${githubWork.name}-${githubWork.id}`} translations={translations} keyValue={`${githubWork.name}-${githubWork.id}`} work={githubWork}/>
-                ))} */}
                 {filteredWorks.map((filteredWork) => 
                 (
                     <Work key={`${filteredWork.name}-${filteredWork.id}`} translations={translations} keyValue={`${filteredWork.name}-${filteredWork.id}`} work={filteredWork}/>

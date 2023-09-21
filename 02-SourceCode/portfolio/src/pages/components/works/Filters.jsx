@@ -8,6 +8,7 @@
 //#endregion
 
 //#region - Import Hooks
+import { useRef, useState } from "react";
 //#endregion
 
 //#region - Import Globals
@@ -26,10 +27,11 @@
 //#endregion
 
 //#region - Import Datas
+import GithubWorks from "../../../resources/datas/githubWorks";
 //#endregion
 
 //#region - Import Styles
-import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, ProjectRadiosContainer, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
+import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, SearchBarSuggestions, SearchBarSuggestion, ProjectRadiosContainer, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
 import { Text } from "../../../resources/css/mainStyle";
 //#endregion
 
@@ -57,6 +59,15 @@ import { Text } from "../../../resources/css/mainStyle";
  */
 function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms, typeRadio, setTypeRadio, completionRadio, setCompletionRadio, languages, setLanguages, workPlatforms, typeRadioButtons, completionRadioButtons, languagesButtons})
 {
+    //#region Set states
+    const [isSearchBarFocused, setIsearchBarFocused] = useState(false);
+    console.log(isSearchBarFocused);
+    //#endregion
+
+    //#region Set refs
+    const inputRef = useRef(null);
+    //#endregion
+
     //#region - Handle functions
     /**
      * Handle a card change to modify its state
@@ -119,7 +130,19 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms
         else if(name === "completion")
             setCompletionRadio(id);
     }
+
+    function handleSuggestion(id) 
+    {
+        const work = GithubWorks.filter((work) => work.id === id)[0];
+        console.log(work);
+
+        inputRef.current.value = work.name;
+        setSearchbar(work.name);
+    }
     //#endregion
+
+    // Set the suggestionList for the searchbar
+    const suggestionList = GithubWorks.filter((work) => work.name.toLowerCase().includes(searchbar.toLowerCase()));
     
     // Return html elements
     return (
@@ -130,7 +153,16 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms
                 <FiltersRowSection>
                     <RowWrapper>
                         {/* Search bar */}
-                        <SearchBar type="text" placeholder={translations.filters.searchBar} onChange={(e) => setSearchbar(e.target.value)} />
+                        <SearchBar ref={inputRef} type="text" placeholder={translations.filters.searchBar} onChange={(e) => setSearchbar(e.target.value)} onBlur={() => setIsearchBarFocused(false)} onFocus={() => setIsearchBarFocused(true)} />
+                        {isSearchBarFocused && searchbar.length > 0 &&
+                        (
+                            <SearchBarSuggestions>
+                                {suggestionList.map((suggestion, index) => 
+                                (
+                                    <SearchBarSuggestion key={`${suggestion.id}-${index}`} id={suggestion.id} onMouseDown={(e) => handleSuggestion(e.target.id)}>{suggestion.name}</SearchBarSuggestion>
+                                ))}
+                            </SearchBarSuggestions>
+                        )}
                         {/* Radio buttons under search bar */}
                         <ProjectRadiosContainer>
                             <RadioSection>
