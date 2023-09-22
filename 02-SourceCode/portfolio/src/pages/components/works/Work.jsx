@@ -52,9 +52,6 @@ import { Button } from "../../../resources/css/mainStyle";
  */
 function Work({ translations, keyValue, work})
 {
-    //#region Set states
-    //#endregion
-
     //#region Get translations
     const descriptionTranslations = GetTranslations(fr, en);
     //#endregion
@@ -64,7 +61,7 @@ function Work({ translations, keyValue, work})
      * Handle the click of a associated work button to automatically scroll to the one which has the specified ID
      * @param {string} id => ID of the work
      */
-    function handleAssociatedProject(id, event)
+    function handleAssociatedProject(id)
     {   
         const target = document.getElementById(id);
         target.scrollIntoView({ behavior: "smooth" })
