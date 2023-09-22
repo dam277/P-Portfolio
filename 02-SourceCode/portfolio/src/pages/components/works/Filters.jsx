@@ -131,11 +131,16 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms
             setCompletionRadio(id);
     }
 
+    /**
+     * Handle the suggestion with searchbar comparared the name of the work
+     * @param {string} id => work id
+     */
     function handleSuggestion(id) 
     {
+        // Get work from the id
         const work = GithubWorks.filter((work) => work.id === id)[0];
-        console.log(work);
 
+        // Modify the value of the state and seatchbar
         inputRef.current.value = work.name;
         setSearchbar(work.name);
     }
