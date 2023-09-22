@@ -40,6 +40,7 @@ export const RowWrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
 
     @media (min-width: ${responsive.laptop_small}) 
     {
@@ -67,6 +68,40 @@ export const SearchBar = styled.input`
     {
         width: 100%;
         font-size: 17px;
+    }
+`
+
+export const SearchBarSuggestionsContainer = styled.div`
+    position: relative;
+    width: 80%;
+    font-size: 15px;
+
+    @media (min-width: ${responsive.laptop_small}) 
+    {
+        width: 100%;
+        font-size: 16px;
+    }
+`
+
+export const SearchBarSuggestions = styled.ul`
+    position: absolute;
+    border-collapse: separate;
+    z-index: 10;
+    left: 0;
+    padding: 5px;
+    list-style: none;
+    text-align: left;
+`
+
+export const SearchBarSuggestion = styled.li`
+    background-color: ${colorPalette.main.filters.searchBar.suggestions.backGroundColor};
+    border: 1px solid ${colorPalette.main.filters.searchBar.suggestions.borderColor};
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover
+    {
+        background-color: ${colorPalette.main.filters.searchBar.suggestions.hover.backGroundColor};
     }
 `
 
@@ -296,4 +331,9 @@ export const LanguageImage = styled.img`
     height: 40px;
     transition: .3s ease-in-out;
     ${(props) => !props.checked && "filter: grayscale(100%)"};
+
+    &:hover
+    {
+        filter: grayscale(0);
+    }
 `

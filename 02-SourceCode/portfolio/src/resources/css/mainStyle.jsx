@@ -3,8 +3,6 @@ import { styled, keyframes } from "styled-components";
 import { responsive, colorPalette } from "./styles";
 import GetColorFromCompletion from "../../utils/globals/getColorFromCompletion";
 
-import image from "../images/engines/Unity.png";
-
 export const Button = styled.button`
     //#region Can be overridden
     // Bases
@@ -21,7 +19,7 @@ export const Button = styled.button`
     max-height: ${(props) => props.height && props.maxheight};
     min-height: ${(props) => props.height && props.minheight};
     height: ${(props) => props.height && props.height};
-
+    
     // Text
     color: transparent;
     font-size: ${(props) => props.size ? props.size : `18`}px;
@@ -29,10 +27,13 @@ export const Button = styled.button`
     
     // Cursor
     cursor: pointer;
-
+    
     // Transitions
     transition: .5s ease-in-out;
 
+    // Positions
+    z-index: 10;
+    
     // Addons
     -webkit-background-clip: text;
 

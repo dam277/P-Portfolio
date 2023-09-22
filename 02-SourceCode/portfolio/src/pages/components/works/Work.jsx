@@ -5,6 +5,7 @@
  */
 
 //#region - Import Libraries
+import { NavLink } from "react-router-dom";
 //#endregion
 
 //#region - Import Hooks
@@ -31,11 +32,11 @@ import en from "../../../resources/langs/en/works/descriptions.json"
 //#endregion
 
 //#region - Import Datas
-import Projects from "../../../resources/datas/projects";
+import Projects from "../../../resources/datas/githubWorks";
 //#endregion
 
 //#region - Import Styles
-import { WorkContainer, WorkImageWrapper, WorkImage, WorkContent, WorkTitleContainer, WorkTitle, WorkDistinctionImagesContainer, WorkDistinctionImage, WorkDescription, WorkDescriptionTitle, WorkDescriptionSubtitle, WorkDescriptionParagraph, WorkDescriptionTable, WorkDescriptionThead, WorkDescriptionTbody, WorkDescriptionTr, WorkDescriptionTd, WorkDescriptionAssociatedWorksContainer, WorkCompletion } from "../../../resources/css/works/workStyle";
+import { WorkContainer, WorkImageWrapper, WorkImage, WorkContent, WorkTitleContainer, WorkTitle, WorkDistinctionImagesContainer, WorkDistinctionImage, WorkDescription, WorkDescriptionTitle, WorkDescriptionSubtitle, WorkDescriptionParagraph, WorkDescriptionTable, WorkDescriptionThead, WorkDescriptionTbody, WorkDescriptionTr, WorkDescriptionTd, WorkDescriptionAssociatedWorksContainer, WorkCompletion, WorkFooter, DetailsWrapper } from "../../../resources/css/works/workStyle";
 import { Button } from "../../../resources/css/mainStyle";
 //#endregion
 
@@ -61,7 +62,7 @@ function Work({ translations, keyValue, work})
      * @param {string} id => ID of the work
      */
     function handleAssociatedProject(id)
-    {
+    {   
         const target = document.getElementById(id);
         target.scrollIntoView({ behavior: "smooth" })
     }
@@ -69,7 +70,7 @@ function Work({ translations, keyValue, work})
 
     // Return html elements
     return (
-        <WorkContainer id={work.id} key={keyValue} completion={work.completion}>
+        <WorkContainer id={work.id} key={keyValue} completion={work.completion} to={`/works/${work.id}`}>
             {/* Image of work */}
             <WorkImageWrapper>
                 <WorkImage src={work.image}/>
@@ -156,15 +157,22 @@ function Work({ translations, keyValue, work})
                             </>
                         )
                     ))}
-                    {work.associatedProjects.length > 0 && (<WorkDescriptionTitle>{translations.works.associatedWorks}</WorkDescriptionTitle>)}
+                    {work.associatedWorks.length > 0 && (<WorkDescriptionTitle>{translations.works.associatedWorks}</WorkDescriptionTitle>)}
                     <WorkDescriptionAssociatedWorksContainer>
-                        {work.associatedProjects.map((projectId, index) => 
+                        {work.associatedWorks.map((projectId, index) => 
                         (
-                            <Button key={`assiocatedButton-${index}`} completion={work.completion} width={"300px"} setResponsiveMobileSmall={true} mobileSmallSize={17} margin={"2px"} size={15} onClick={() => handleAssociatedProject(projectId)}>{Projects.find((project) => project.id === projectId).name}</Button>
+                            <Button key={`assiocatedButton-${index}`} completion={work.completion} width={"300px"} setResponsiveMobileSmall={true} mobileSmallSize={17} margin={"2px"} size={15} onClick={(e) => handleAssociatedProject(projectId, e)}>{Projects.find((project) => project.id === projectId).name}</Button>
                         ))}
                     </WorkDescriptionAssociatedWorksContainer>
                 </WorkDescription>
-                <WorkCompletion completion={work.completion}>{translations.works.completion[work.completion]}</WorkCompletion>
+                <WorkFooter>
+                    <WorkCompletion completion={work.completion}>{translations.works.completion[work.completion]}</WorkCompletion>
+                    <DetailsWrapper>
+                        <NavLink to={`/works/${work.id}`}>
+                            <Button completion={work.completion} setResponsiveMobileSmall={true} mobileSmallSize={15} size={13} setResponsiveMobile={true} mobileSize={18}>{translations.details}</Button>
+                        </NavLink>
+                    </DetailsWrapper>
+                </WorkFooter>
             </WorkContent>
         </WorkContainer>
     )

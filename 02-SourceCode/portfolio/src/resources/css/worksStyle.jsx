@@ -27,6 +27,7 @@ export const Subtitle = styled.h2`
 
 export const WorksSection = styled.section`
     margin-top: 20px;
+    width: 100%;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;

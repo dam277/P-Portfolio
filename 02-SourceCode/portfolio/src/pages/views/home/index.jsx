@@ -31,7 +31,7 @@ import en from "../../../resources/langs/en/home.json"
 //#endregion
 
 //#region - Import Datas
-import Projects  from "../../../resources/datas/projects";
+import GithubWorks from "../../../resources/datas/githubWorks";
 //#endregion
 
 //#region - Import Styles
@@ -48,8 +48,8 @@ import { MainContainer, Messages, Presentation, Paragraph, Text, Works, LastProj
 function Home()
 {
     //#region - Important elements
-    const projectsFinished = Projects.filter(project => project.completion === eCompletionIds.finished);            // Project finished successfully
-    const projectsWorkingOn = Projects.filter(project => project.completion === eCompletionIds.inDevelopment);      // Project in development
+    const projectsFinished = GithubWorks.filter(project => project.completion === eCompletionIds.finished);            // Project finished successfully
+    const projectsWorkingOn = GithubWorks.filter(project => project.completion === eCompletionIds.inDevelopment);      // Project in development
     //#endregion
     
     //#region - Set States

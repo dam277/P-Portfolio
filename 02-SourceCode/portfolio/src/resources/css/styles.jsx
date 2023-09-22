@@ -78,7 +78,16 @@ export const colorPalette =
             },
             searchBar : 
             {
-                borderColor: "#C7046A"
+                borderColor: "#C7046A",
+                suggestions:
+                {
+                    backGroundColor : "#1F1F1F",
+                    borderColor : "#949494",
+                    hover : 
+                    {
+                        backGroundColor : "#0e0e0e"
+                    }
+                }
             },
             radioButton : 
             {
@@ -102,6 +111,7 @@ export const colorPalette =
             {
                 backGroundColor : "#1F1F1F",
                 borderColor : "#949494",
+                details : "#292929",
                 workCompletionColor: "#949494",
                 button: 
                 {

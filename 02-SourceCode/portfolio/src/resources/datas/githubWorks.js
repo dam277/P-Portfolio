@@ -14,7 +14,7 @@ import ePlatforms from "./enums/works/ePlatform";
 
 // Import enums
 
-const Projects = 
+const GithubWorks = 
 [
     {
         id: "w0",                               
@@ -44,13 +44,13 @@ const Projects =
             {id: eLanguagesIds.html, image: eLanguages.html.image},
             {id: eLanguagesIds.css, image: eLanguages.css.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
         ]
     },
     {
         id: "w1",
-        name: "Skllio Framework",                   // Searchbar
+        name: "Skillio Framework",                   // Searchbar
         image: skillioFramework,
         github: 
         {
@@ -77,7 +77,7 @@ const Projects =
             {id: eLanguagesIds.html, image: eLanguages.html.image},
             {id: eLanguagesIds.css, image: eLanguages.css.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             "w28",
             "w29",
@@ -110,7 +110,7 @@ const Projects =
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
         ]
     },
@@ -140,7 +140,7 @@ const Projects =
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
         ]
     },
@@ -170,7 +170,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -201,7 +201,7 @@ const Projects =
         [
             {id: eLanguagesIds.python, image: eLanguages.python.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -232,7 +232,7 @@ const Projects =
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -266,7 +266,7 @@ const Projects =
             {id: eLanguagesIds.html, image: eLanguages.html.image},
             {id: eLanguagesIds.css, image: eLanguages.css.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -297,7 +297,7 @@ const Projects =
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -328,7 +328,7 @@ const Projects =
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             "w10",
             "w11",
@@ -361,7 +361,7 @@ const Projects =
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image}
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             "w9",
             "w11",
@@ -394,7 +394,7 @@ const Projects =
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image}
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             "w9",
             "w10",
@@ -427,7 +427,7 @@ const Projects =
         [
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image}
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -458,7 +458,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -489,7 +489,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -520,7 +520,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -551,7 +551,7 @@ const Projects =
         [
             {id: eLanguagesIds.cpp, image: eLanguages.cpp.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -582,7 +582,7 @@ const Projects =
         [
             {id: eLanguagesIds.rust, image: eLanguages.rust.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -613,7 +613,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -644,7 +644,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -675,7 +675,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             "w22"
         ]
@@ -706,7 +706,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -737,7 +737,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             "w20"
         ]
@@ -768,7 +768,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             "w18",
             "w20",
@@ -803,7 +803,7 @@ const Projects =
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
             eLanguagesIds.sql
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -834,7 +834,7 @@ const Projects =
         [
             {id: eLanguagesIds.go, image: eLanguages.go.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -865,7 +865,7 @@ const Projects =
         [
             {id: eLanguagesIds.dart, image: eLanguages.dart.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -896,7 +896,7 @@ const Projects =
         [
             {id: eLanguagesIds.java, image: eLanguages.java.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -929,7 +929,7 @@ const Projects =
             {id: eLanguagesIds.css, image: eLanguages.css.image},
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             "w1",
             "w29",
@@ -964,7 +964,7 @@ const Projects =
             {id: eLanguagesIds.html, image: eLanguages.html.image},
             {id: eLanguagesIds.css, image: eLanguages.css.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             "w1",
             "w28",
@@ -997,7 +997,7 @@ const Projects =
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             "w1",
             "w28",
@@ -1030,7 +1030,7 @@ const Projects =
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1061,7 +1061,7 @@ const Projects =
         [
             {id: eLanguagesIds.typescript, image: eLanguages.typescript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1092,7 +1092,7 @@ const Projects =
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1123,7 +1123,7 @@ const Projects =
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1154,7 +1154,7 @@ const Projects =
         [
             {id: eLanguagesIds.typescript, image: eLanguages.typescript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1185,7 +1185,7 @@ const Projects =
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1216,7 +1216,7 @@ const Projects =
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1247,7 +1247,7 @@ const Projects =
         [
             {id: eLanguagesIds.javascript, image: eLanguages.javascript.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1280,7 +1280,7 @@ const Projects =
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
             {id: eLanguagesIds.sql, image: eLanguages.sql.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1312,7 +1312,7 @@ const Projects =
             {id: eLanguagesIds.csharp, image: eLanguages.csharp.image},
             {id: eLanguagesIds.sql, image: eLanguages.sql.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1350,7 +1350,7 @@ const Projects =
             {id: eLanguagesIds.css, image: eLanguages.css.image},
             {id: eLanguagesIds.sql, image: eLanguages.sql.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1381,7 +1381,7 @@ const Projects =
         [
             {id: eLanguagesIds.cpp, image: eLanguages.cpp.image},
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
@@ -1412,11 +1412,11 @@ const Projects =
         languages :                                 // Languages
         [
         ],
-        associatedProjects : 
+        associatedWorks : 
         [
             
         ]
     }
 ]
 
-export default Projects;
+export default GithubWorks;
