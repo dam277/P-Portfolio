@@ -31,8 +31,8 @@ import GithubWorks from "../../../resources/datas/githubWorks";
 //#endregion
 
 //#region - Import Styles
-import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, SearchBarSuggestionsContainer, SearchBarSuggestions, SearchBarSuggestion, ProjectRadiosContainer, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
-import { Text } from "../../../resources/css/mainStyle";
+import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, SearchBarSuggestionsContainer, SearchBarSuggestions, SearchBarSuggestion, ProjectRadiosContainer, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
+import { Text, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign } from "../../../resources/css/mainStyle";
 //#endregion
 
 //#region - Import Images
