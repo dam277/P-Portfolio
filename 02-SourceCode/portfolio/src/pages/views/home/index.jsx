@@ -36,8 +36,9 @@ import GithubWorks from "../../../resources/datas/githubWorks";
 
 //#region - Import Styles
 import { RadioWrapper, RadioSection, RadioLabelWithoutText, RadioLabel, RadioButton, RadioDesign, Text } from "../../../resources/css/mainStyle";
-import { MainContainer, Messages, Presentation, Paragraph, Works, LastProject, Carousel, PageButtonsContainer, PointButton, ActualProject, WorkTitle, ProjectImage } from "../../../resources/css/homeStyle";
+import { MainContainer, Messages, Presentation, Paragraph, Works, Carousel, PageButtonsContainer, PointButton, WorkBox, WorkTitle, ProjectImageNavlink, ProjectImage } from "../../../resources/css/homeStyle";
 import { colorPalette } from "../../../resources/css/styles";
+import ReplaceSpecificString from "../../../utils/globals/replaceSpecificString";
 //#endregion
 
 //#region - Import Images
@@ -81,20 +82,20 @@ function Home()
                 <Paragraph>
                     {translations.welcomeMessage.map((message, index) =>
                     (
-                        <Text key={`welcome-${index}`} size={30} color={isPair(index) && colorPalette.primary.text.color}>{message}</Text>
+                        <Text key={`welcome-${index}`}  color={isPair(index) && colorPalette.primary.text.color}>{ReplaceSpecificString(message)}</Text>
                     ))}
                 </Paragraph>
                 <Presentation>
                     <Paragraph>
                         {translations.presentation.aboutMe.map((message, index) =>
                         (
-                            <Text key={`aboutme-${index}`} size={30} color={!isPair(index) && colorPalette.primary.text.color}>{message}</Text>
+                            <Text key={`aboutme-${index}`} size={30} color={!isPair(index) && colorPalette.primary.text.color}>{ReplaceSpecificString(message)}</Text>
                         ))}
                     </Paragraph>
                     <Paragraph>
                         {translations.presentation.work.map((message, index) =>
                         (
-                            <Text key={`work-${index}`} size={30} color={!isPair(index) && colorPalette.primary.text.color}>{message}</Text>
+                            <Text key={`work-${index}`} size={30} color={!isPair(index) && colorPalette.primary.text.color}>{ReplaceSpecificString(message)}</Text>
                         ))}
                     </Paragraph>
                 </Presentation>
@@ -102,10 +103,12 @@ function Home()
             {/* Carousels of last and current works */}
             <Works>
                 {/* Last work carousel */}
-                <LastProject>
+                <WorkBox>
                     <WorkTitle>{translations.works.last}</WorkTitle>
                     <Carousel position="left">
-                        <ProjectImage src={pageLast && worksFinished.find((work) => work.id === pageLast).image} />
+                        <ProjectImageNavlink  to={`/works/${pageLast}`}>
+                            <ProjectImage src={pageLast && worksFinished.find((work) => work.id === pageLast).image} />
+                        </ProjectImageNavlink>
                         <PageButtonsContainer>
                             <RadioSection>
                                 {worksFinished.map((work, index) =>
@@ -118,12 +121,14 @@ function Home()
                             </RadioSection>
                         </PageButtonsContainer>
                     </Carousel>
-                </LastProject>
+                </WorkBox>
                 {/* Actual work carousel */}
-                <ActualProject>
+                <WorkBox>
                     <WorkTitle>{translations.works.actual}</WorkTitle>
                     <Carousel position="right">
-                        <ProjectImage src={pageActual && worksWorkingOn.find((work) => work.id === pageActual).image} />
+                        <ProjectImageNavlink to={`/works/${pageActual}`}>
+                            <ProjectImage src={pageActual && worksWorkingOn.find((work) => work.id === pageActual).image} />
+                        </ProjectImageNavlink>
                         <PageButtonsContainer>
                             <RadioSection>
                                 {worksWorkingOn.map((work, index) =>
@@ -136,7 +141,7 @@ function Home()
                             </RadioSection>
                         </PageButtonsContainer>
                     </Carousel>
-                </ActualProject>
+                </WorkBox>
             </Works>
         </MainContainer>
     )

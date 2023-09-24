@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 // Import styles
 import { responsive, colorPalette } from "./styles";
 import { calculateNewValue } from "@testing-library/user-event/dist/utils";
+import { NavLink } from "react-router-dom";
 
 export const MainContainer = styled.main`
     background: linear-gradient(115.75deg, #700C0C -16.42%, #2E1F4D 49.58%, #1E0C61 77.68%, #000000 109.13%);
@@ -47,9 +48,9 @@ export const Works = styled.section`
     flex-wrap: wrap;
     margin-bottom: 50px;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     font-size: 10px;
-
+    text-align: center;
     margin-top: 50px;
 
     @media (min-width: ${responsive.mobile}) 
@@ -72,11 +73,27 @@ export const WorkTitle = styled.h2`
     text-decoration: underline;
 `
 
-export const LastProject = styled.div`
+export const WorkBox = styled.div`
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 20px;
+    margin-top: 100px;
     flex: 1;
+    min-width: 300px;
+    max-width: 1100px;
+
+    @media (min-width: ${responsive.mobile}) 
+    {
+        min-width: 400px;
+        max-width: 1300px;
+        margin-top: 0;
+    }
+
+    @media (min-width: ${responsive.laptop_small}) 
+    {
+        min-width: 612.5px;
+        max-width: 1300px;
+    }
 `
 
 export const Carousel = styled.div`
@@ -84,11 +101,16 @@ export const Carousel = styled.div`
     align-items: center;
     position: relative;
     flex-direction: column;
-    box-shadow: ${(props) => 
-    props.position === "left" ? 
-    `rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px`
-    : 
-    `rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px`};
+    @media (min-width: ${responsive.desktop}) 
+    {
+        box-shadow: ${(props) => 
+        props.position === "left" ? 
+        `rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px`
+        : 
+        `rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px`};
+    }
+
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px
 `
 
 export const PageButtonsContainer = styled.div`
@@ -107,17 +129,18 @@ export const PointButton = styled.input`
     }
 `
 
-export const ProjectImage = styled.img`
+export const ProjectImageNavlink = styled(NavLink)`
     width: 100%;
     height: 100%;
-
     min-height: 50px;
+
+    margin-bottom: -5px;
     cursor: pointer;
 `
 
-export const ActualProject = styled.div`
-    flex: 1;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 20px;
+export const ProjectImage = styled.img`
+    width: 100%;
+    height: 100%;
+    
+    max-height: 492px;
 `
