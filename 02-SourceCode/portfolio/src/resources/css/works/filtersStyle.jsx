@@ -40,6 +40,7 @@ export const RowWrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
 
     @media (min-width: ${responsive.laptop_small}) 
     {
@@ -70,6 +71,40 @@ export const SearchBar = styled.input`
     }
 `
 
+export const SearchBarSuggestionsContainer = styled.div`
+    position: relative;
+    width: 80%;
+    font-size: 15px;
+
+    @media (min-width: ${responsive.laptop_small}) 
+    {
+        width: 100%;
+        font-size: 16px;
+    }
+`
+
+export const SearchBarSuggestions = styled.ul`
+    position: absolute;
+    border-collapse: separate;
+    z-index: 10;
+    left: 0;
+    padding: 5px;
+    list-style: none;
+    text-align: left;
+`
+
+export const SearchBarSuggestion = styled.li`
+    background-color: ${colorPalette.main.filters.searchBar.suggestions.backGroundColor};
+    border: 1px solid ${colorPalette.main.filters.searchBar.suggestions.borderColor};
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover
+    {
+        background-color: ${colorPalette.main.filters.searchBar.suggestions.hover.backGroundColor};
+    }
+`
+
 // Radio container
 export const ProjectRadiosContainer = styled.div`
     display: flex;
@@ -83,81 +118,6 @@ export const ProjectRadiosContainer = styled.div`
         justify-content: space-between; 
     }
 `
-
-export const RadioSection = styled.section`
-   	display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 10px 20px;
-
-    @media (min-width: ${responsive.mobile}) 
-    {
-        margin-top: 10px;
-    }
-`
-
-export const RadioWrapper = styled.div`
-    position: relative;
-    display: flex;
-    margin: 0 3px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    transition: .5s ease-in-out;
-    ${(props) => props.checked && `background: linear-gradient(to right bottom, ${colorPalette.main.filters.radioButton.checked[0]}, ${colorPalette.main.filters.radioButton.checked[1]})`}; 
-
-    &:hover{
-        background: linear-gradient(to right bottom, ${colorPalette.main.filters.radioButton.checked[0]}, ${colorPalette.main.filters.radioButton.checked[1]});
-    }
-`
-
-export const RadioLabel = styled.label`
-    display: flex;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 13px;
-    background: ${colorPalette.main.backGroundDefault};
-
-    padding: 2px 6px 2px 0;
-    margin: 2px;
-    border-radius: 100px;
-
-    cursor: pointer;
-    transition: .5s ease-in-out;
-`
-
-export const RadioButton = styled.input`
-   appearance: none;
-`
-
-export const RadioDesign = styled.div`
-    width: ${(props) => props.checked ? "15px" : "13px"};
-    height: ${(props) => props.checked ? "15px" : "13px"};
-    border-radius: 100%;
-    border: ${(props) => !props.checked && `1px solid ${colorPalette.main.filters.radioButton.borderColor}`};
-    background: linear-gradient(to right bottom, ${colorPalette.main.filters.radioButton.checked[0]}, ${colorPalette.main.filters.radioButton.checked[1]});
-    position: relative;
-    margin-right: 4px;
-
-    &::before
-    {
-        content: '';
-        display: inline-block;
-        width: inherit;
-        height: inherit;
-        border-radius: inherit;
-
-        background: ${colorPalette.main.backGroundDefault};
-        transform: scale(1);
-        margin-bottom: 100%;
-        transition: .3s;
-
-        transform:  ${(props) => props.checked && "scale(0)"};
-    }
-`
-
 
 export const ProjectTypeCards = styled.div`
 	display: flex;
@@ -296,4 +256,9 @@ export const LanguageImage = styled.img`
     height: 40px;
     transition: .3s ease-in-out;
     ${(props) => !props.checked && "filter: grayscale(100%)"};
+
+    &:hover
+    {
+        filter: grayscale(0);
+    }
 `

@@ -1,6 +1,7 @@
 {
     "title" : "Travaux de Damien Loup",
     "subtitle" : "Development Web & d'applications",
+    "details" : "Details",
     "filters" : 
     {
         "searchBar" : "Rechercher...",
@@ -37,6 +38,6 @@
             "type-courses" : "Cours",
             "type-projects" : "Projet"
         },
-        "associatedWorks" : "Travaux associé"
+        "associatedWorks" : "Travaux associés"
     }
 }

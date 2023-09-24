@@ -1,0 +1,22 @@
+{
+    "associatedWork" : 
+    {
+        "title" : "Travaux associés",
+        "detail" : "Details"
+    },
+    "completion" : 
+    {
+        "title" : "Taux d'achèvement",
+        "completion-finished" : "Finis",
+        "completion-inDevelopment" : "En cours de developpement",
+        "completion-notStarted" : "Pas commencé"
+    },
+    "languages" : "Langages",
+    "website" : "Site web",
+    "github" : "Dépôt github",
+    "download" : "Téléchargement",
+    "version" : "Version",
+    "details" : "Details",
+    "previous" : "Précédent",
+    "next" : "Suivant"
+}

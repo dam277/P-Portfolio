@@ -1,0 +1,22 @@
+{
+    "associatedWork" : 
+    {
+        "title" : "Associated works",
+        "detail" : "Details"
+    },
+    "completion" : 
+    {
+        "title" : "Completion",
+        "completion-finished" : "Finished",
+        "completion-inDevelopment" : "In development",
+        "completion-notStarted" : "Not started"
+    },
+    "languages" : "Languages",
+    "website" : "Website",
+    "github" : "Github repository",
+    "download" : "Download",
+    "version" : "Version",
+    "details" : "Details",
+    "previous" : "Previous",
+    "next" : "Next"
+}

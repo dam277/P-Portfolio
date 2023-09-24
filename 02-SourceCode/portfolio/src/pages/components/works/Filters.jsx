@@ -8,6 +8,7 @@
 //#endregion
 
 //#region - Import Hooks
+import { useRef, useState } from "react";
 //#endregion
 
 //#region - Import Globals
@@ -26,11 +27,12 @@
 //#endregion
 
 //#region - Import Datas
+import GithubWorks from "../../../resources/datas/githubWorks";
 //#endregion
 
 //#region - Import Styles
-import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, ProjectRadiosContainer, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
-import { Text } from "../../../resources/css/mainStyle";
+import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, SearchBarSuggestionsContainer, SearchBarSuggestions, SearchBarSuggestion, ProjectRadiosContainer, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
+import { Text, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign } from "../../../resources/css/mainStyle";
 //#endregion
 
 //#region - Import Images
@@ -42,21 +44,30 @@ import { Text } from "../../../resources/css/mainStyle";
  * @param {state(string)} searchbar => Searchbar value
  * @param {state(function)} setSearchbar =>  Searchbar value setter
  * @param {state(array)} platform => Platform value
- * @param {state(function)} setPlatform => Platform value setter
+ * @param {state(function)} setPlatforms => Platform value setter
  * @param {state(string)} typeRadio => Type radio value
  * @param {state(function)} setTypeRadio => Type radio value setter
  * @param {state(string)} completionRadio => Completion radio value
  * @param {state(function)} setCompletionRadio => Completion radio value setter
  * @param {state(array)} languages => Languages value
  * @param {state(function)} setLanguages => Languages value setter 
- * @param {object} projectTypes => Project types filters
+ * @param {object} workPlatforms => Project types filters
  * @param {object} typeRadioButtons => Type radio buttons filters
  * @param {object} completionRadioButtons =>  Completion radio buttons filters
  * @param {object} languagesButtons => Language buttons filters
  * @returns {HTMLElement} Filters html elements
  */
-function Filters({translations, searchbar, setSearchbar, platforms, setPlatform, typeRadio, setTypeRadio, completionRadio, setCompletionRadio, languages, setLanguages, projectTypes, typeRadioButtons, completionRadioButtons, languagesButtons})
+function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms, typeRadio, setTypeRadio, completionRadio, setCompletionRadio, languages, setLanguages, workPlatforms, typeRadioButtons, completionRadioButtons, languagesButtons})
 {
+    //#region Set states
+    const [isSearchBarFocused, setIsearchBarFocused] = useState(false);
+    console.log(isSearchBarFocused);
+    //#endregion
+
+    //#region Set refs
+    const inputRef = useRef(null);
+    //#endregion
+
     //#region - Handle functions
     /**
      * Handle a card change to modify its state
@@ -73,12 +84,12 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatform,
         {
             // Get all the inputs without the current to update the state
             const platformsWithoutCurrentPlatform = platforms.filter((platform) => platform.id !== id);
-            setPlatform([...platformsWithoutCurrentPlatform, { id: id, checked: value }]);
+            setPlatforms([...platformsWithoutCurrentPlatform, { id: id, checked: value }]);
         }
         else
         {
             // Set the new input with all the state
-            setPlatform([...platforms, { id: id, checked: value }]);
+            setPlatforms([...platforms, { id: id, checked: value }]);
         }
     }
 
@@ -119,7 +130,24 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatform,
         else if(name === "completion")
             setCompletionRadio(id);
     }
+
+    /**
+     * Handle the suggestion with searchbar comparared the name of the work
+     * @param {string} id => work id
+     */
+    function handleSuggestion(id) 
+    {
+        // Get work from the id
+        const work = GithubWorks.filter((work) => work.id === id)[0];
+
+        // Modify the value of the state and seatchbar
+        inputRef.current.value = work.name;
+        setSearchbar(work.name);
+    }
     //#endregion
+
+    // Set the suggestionList for the searchbar
+    const suggestionList = GithubWorks.filter((work) => work.name.toLowerCase().includes(searchbar.toLowerCase()));
     
     // Return html elements
     return (
@@ -130,7 +158,18 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatform,
                 <FiltersRowSection>
                     <RowWrapper>
                         {/* Search bar */}
-                        <SearchBar type="text" placeholder={translations.filters.searchBar} onChange={(e) => setSearchbar(e.target.value)} />
+                        <SearchBar ref={inputRef} type="text" placeholder={translations.filters.searchBar} onChange={(e) => setSearchbar(e.target.value)} onBlur={() => setIsearchBarFocused(false)} onFocus={() => setIsearchBarFocused(true)} />
+                            {isSearchBarFocused && searchbar.length > 0 &&
+                            (
+                                <SearchBarSuggestionsContainer>
+                                    <SearchBarSuggestions>
+                                        {suggestionList.map((suggestion, index) => 
+                                        (
+                                            <SearchBarSuggestion key={`${suggestion.id}-${index}`} id={suggestion.id} onMouseDown={(e) => handleSuggestion(e.target.id)}>{suggestion.name}</SearchBarSuggestion>
+                                        ))}
+                                    </SearchBarSuggestions>
+                                </SearchBarSuggestionsContainer>
+                            )}
                         {/* Radio buttons under search bar */}
                         <ProjectRadiosContainer>
                             <RadioSection>
@@ -163,11 +202,11 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatform,
                 {/* Project type checkboxes */}
                 <ProjectTypeCards>
                     {/* Type card */}
-                    {projectTypes.map((type, index) =>
+                    {workPlatforms.map((type, index) =>
                     (
                         <ProjectTypeLabel key={`${type.id}-${index}`} htmlFor={type.id}>
                             {/* checkbox input */}
-                            <ProjectTypeInput type="checkbox" name="projectType" id={type.id} onChange={(e) => handlePlatform(e.target.id, e.target.checked)} checked={platforms.find((input) => input.id === type.id)?.checked} defaultChecked={projectTypes.defaultCheck}/>
+                            <ProjectTypeInput type="checkbox" name="projectType" id={type.id} onChange={(e) => handlePlatform(e.target.id, e.target.checked)} checked={platforms.find((input) => input.id === type.id)?.checked} defaultChecked={workPlatforms.defaultCheck}/>
                             <ProjectTypeContentWrapper checked={platforms.find((input) => input.id === type.id)?.checked}>
                                 <ProjectTypeRadioButton checked={platforms.find((input) => input.id === type.id)?.checked}/>
                                 {/* Content of the card */}

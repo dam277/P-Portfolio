@@ -1,9 +1,9 @@
 /** Import libraries */
 import { styled } from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 /** Import styles */
 import { responsive, colorPalette } from '../styles'
-import eCompletionIds from '../../datas/enums/works/eCompletionIds'
 import GetColorFromCompletion from '../../../utils/globals/getColorFromCompletion'
 import GetNumberFromEvenOrOdd from '../../../utils/globals/getNumberFromEvenOrOdd'
 
@@ -15,12 +15,9 @@ export const WorkContainer = styled.div`
     text-align: left;
     padding-bottom: 10px;
     transition: .2s ease-in-out;
-    cursor: pointer;
-
-    &:hover
-    {
-        width: 81%;
-    }
+    text-decoration: none;
+    color: ${colorPalette.primary.colorDefault};
+    position: relative;
 `
 
 export const WorkImageWrapper = styled.div`
@@ -143,12 +140,29 @@ export const WorkDescriptionAssociatedWorksContainer = styled.div`
 `
 
 export const WorkCompletion = styled.sub`
+    flex: 1;
     margin-left: 10%;
     font-size: 11px;
+    min-width: 55px;
     color: ${(props) => GetColorFromCompletion(props.completion).workCompletionColor};
 
     @media (min-width: ${responsive.mobile}) 
     {
         font-size: 14px;
     }
+`
+
+export const WorkFooter = styled.div`
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+`
+
+export const DetailsWrapper = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-right: 10px;
 `

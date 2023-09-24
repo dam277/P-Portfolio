@@ -10,27 +10,23 @@ export const MainContainer = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
 `
 
-export const TitleSection = styled.section`
-    font-family: Arial;
+export const ErrorTitle = styled.h1`
+    text-transform: uppercase;
+    font-size: 60px;
+    margin: 0;
 `
 
-export const Title = styled.h1`
-    font-size : 35px;
+export const ErrorSubtitle = styled.h2`
+    text-transform: uppercase;
 `
 
-export const Subtitle = styled.h2`
-    font-size : 20px;
+export const ErrorImage = styled.img`
 `
 
-export const WorksSection = styled.section`
-    margin-top: 20px;
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+export const ErrorDescription = styled.p`
+    
 `

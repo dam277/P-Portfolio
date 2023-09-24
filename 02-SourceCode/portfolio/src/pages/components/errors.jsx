@@ -29,6 +29,7 @@
 //#endregion
 
 //#region - Import Styles
+import { MainContainer } from "../../resources/css/errorsStyle";
 //#endregion
 
 //#region - Import Images
@@ -63,9 +64,9 @@ function Errors({ children })
 
     // Return html elements
     return (
-        <>
+        <MainContainer>
             {children}
-        </>
+        </MainContainer>
     )
 
     
