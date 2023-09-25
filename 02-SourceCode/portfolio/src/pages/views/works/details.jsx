@@ -107,14 +107,14 @@ function Details()
                     <>
                         <DescriptionTitle>{description.title}</DescriptionTitle>
                         <DescriptionContainer>
-                            {description.text.map((paragraph) => 
+                            {description.text.map((paragraph, index) => 
                             (
                                 typeof paragraph === 'string' ? 
                                 (
                                     paragraph.includes(eKeyWords.title) ?
-                                    <DescriptionSubtitle>{paragraph.replace(eKeyWords.title, "")}</DescriptionSubtitle>
+                                    <DescriptionSubtitle key={`paragraph-${actualWork.name}-${index}`}>{paragraph.replace(eKeyWords.title, "")}</DescriptionSubtitle>
                                     :
-                                    <Description>
+                                    <Description key={`paragraph-${actualWork.name}-${index}`}>
                                         {paragraph.includes(eKeyWords.color[1]) ?
                                         (
                                             <ColoredText text={paragraph}/>
