@@ -79,7 +79,7 @@ export const WorkDistinctionImage = styled.img`
     }
 `
 
-export const WorkDescription = styled.p`
+export const WorkDescription = styled.span`
     margin-left: 10px;
     margin-right: 10px;
     font-size: 13px;

@@ -43,6 +43,7 @@ import { Text, Button } from "../../../resources/css/mainStyle";
 import smallPortrait from "../../../resources/images/about/smallPortrait.png"
 import eKeyWords from "../../../resources/datas/enums/eKeyWords";
 import ColoredText from "../../components/smallElements/ColoredText";
+import ReplaceSpecificString from "../../../utils/globals/replaceSpecificString";
 //#endregion
 
 /**
@@ -69,12 +70,12 @@ function About()
                         <p key={`presentation-${index}`}>
                             {content.text.includes(eKeyWords.color[1]) ?
                             (
-                                <ColoredText text={content.text}/>
+                                <ColoredText text={ReplaceSpecificString(content.text)}/>
                             )
                             :
                             (
                                 <Text setResponsive={true} size="18">
-                                    {content.text}
+                                    {ReplaceSpecificString(content.text)}
                                 </Text>
                             )}
 

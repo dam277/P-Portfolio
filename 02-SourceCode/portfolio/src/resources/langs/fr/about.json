@@ -2,7 +2,7 @@
     "presentation" : 
     [
         { "text" : "{color:#71003a,id:0}BONJOUR{/color}"},
-        { "text" : "Je m'appelle Damien et j'ai 19 ans !"},
+        { "text" : "Je m'appelle Damien et j'ai {age:04.03.2004} ans !"},
         { "text" : "Mes passions sont :"},
         { "text" : "{color:#C7046A,id:0}Badminton - Développement - Jeux vidéo{/color}"},
         { "text" : "Je suis apprenti en développement en 3ème année à l'ETML en Suisse"},

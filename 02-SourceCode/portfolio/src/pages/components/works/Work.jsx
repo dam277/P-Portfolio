@@ -89,7 +89,6 @@ function Work({ translations, keyValue, work})
                             <WorkDistinctionImage key={`${index}-${keyValue}`} src={platform.image} alt={platform.name}/>
                         ))}
                     </WorkDistinctionImagesContainer>
-                    
                 </WorkTitleContainer>
                 <WorkDescription>
                     {descriptionTranslations[work.id].map((description, index) => 

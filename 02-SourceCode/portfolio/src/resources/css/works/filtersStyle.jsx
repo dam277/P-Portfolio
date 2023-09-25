@@ -235,6 +235,10 @@ export const LanguagesContainer = styled.div`
     }
 `
 
+export const LanguageContainer = styled.div`
+    display: flex;
+`
+
 export const LanguageLabel = styled.label`
     margin: -16px 10px 3px 10px;
     padding: 0;
