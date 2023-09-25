@@ -8,7 +8,7 @@
             "My name's ",
             "Damien ",
             "and I am ",
-            "19 ",
+            "{age:04.03.2004} ",
             "years old"
         ],
         "work" : [
@@ -20,7 +20,7 @@
         ]
     },
     "works" : {
-        "last" : "Last projects I did",
-        "actual" : "Actual project(s) i'm working on"
+        "last" : "Last works I did",
+        "actual" : "Actual works i'm working on"
     }
 }
