@@ -93,6 +93,7 @@ export const WorkBox = styled.div`
     {
         min-width: 612.5px;
         max-width: 1300px;
+        
     }
 `
 
