@@ -114,7 +114,7 @@ function Work({ translations, keyValue, work})
                                                 -&nbsp;
                                                 {paragraph.includes(eKeyWords.color[1]) ?
                                                 (
-                                                    <ColoredText text={paragraph} color={eKeyWords.color} />
+                                                    <ColoredText text={paragraph}/>
                                                 )
                                                 :
                                                 (
