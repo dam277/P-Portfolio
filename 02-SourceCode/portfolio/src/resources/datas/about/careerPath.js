@@ -21,6 +21,51 @@ export const CareerPath =
         }
     },
     {
+        name: "schoolStage",
+        image: school,
+        current: false,
+        dates: 
+        {
+            "start" : "01.01.2008",
+            "end" : "31.08.2018"
+        },
+        position: 
+        {
+            date: "right",
+            card: "left"
+        }
+    },
+    {
+        name: "etmlStage",
+        image: etml,
+        current: false,
+        dates:         
+        {
+            "start" : "01.02.2019",
+            "end" : "01.02.2019"
+        },
+        position: 
+        {
+            date: "left",
+            card: "right"
+        }
+    },
+    {
+        name: "etmlPreapp",
+        image: etml,
+        current: false,
+        dates:         
+        {
+            "start" : "01.02.2019",
+            "end" : "{today}"
+        },
+        position: 
+        {
+            date: "right",
+            card: "left"
+        }
+    },
+    {
         name: "etml",
         image: etml,
         current: true,

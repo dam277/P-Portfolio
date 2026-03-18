@@ -9,6 +9,43 @@
             ""
         ]
     },
+    "schoolStage" : 
+    {
+        "title" : "Stage ecole obligatoire",
+        "subtitle" : "Collèges : Combe, Chavanne, Platane",
+        "place" : "Lieu : Cugy & Froideville - Suisse",
+        "text" : 
+        [
+            "Stage de developpement d'application, réseau et hacking"
+        ]
+    },
+    "etmlStage" : 
+    {
+        "title" : "Stage ETML",
+        "subtitle" : "ETML - Ecole des Métiers Lausanne",
+        "place" : "Lieu : Lausanne - Suisse",
+        "text" : 
+        [
+            "Stage de robotique, et developpement d'application"
+        ]
+    },
+    "etmlPreapp" : 
+    {
+        "title" : "ETML Préapprentissage",
+        "subtitle" : "ETML - Ecole des Métiers Lausanne",
+        "place" : "Lieu : Lausanne - Suisse",
+        "text" : 
+        [
+            "Un an de préapprentissage pour trouver notre voie",
+            "Il y avait plusieurs métiers proposés que l'on pouvait choisir",
+            "Polymécanique, Informatique, Ebeniste, Electronique",
+            "L'année à été découpée en 3 grosses périodes",
+            "La première période était composée de 4 stages",
+            "L'intégration dans différents métiers : Choisir un des métiers proposés et apprendre la base de celui-ci",
+            "La seconde période était un projet commun avec toute la classe qui consistait à mettre ensemble tous les métiers afin de créer un gros projet",
+            "La dernière période était un projet personnel dans le métier voulu (J'ai choisi informatique)"
+        ]
+    },
     "etml" : 
     {
         "title" : "Apprentissage en développement Fullstack",

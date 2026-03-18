@@ -9,6 +9,43 @@
             ""
         ]
     },
+    "schoolStage" : 
+    {
+        "title" : "School stage",
+        "subtitle" : "Kudelski Nagravision",
+        "place" : "Place : Echallens - Suisse",
+        "text" : 
+        [
+            "IT stage of development, networking and hacking"
+        ]
+    },
+    "etmlStage" : 
+    {
+        "title" : "Etml stage",
+        "subtitle" : "ETML - Ecole des Métiers Lausanne",
+        "place" : "Place : Lausanne - Switzerland",
+        "text" : 
+        [
+            "Stage of robotics and application development"
+        ]
+    },
+    "etmlPreapp" : 
+    {
+        "title" : "Etml pre-learning",
+        "subtitle" : "ETML - Ecole des Métiers Lausanne",
+        "place" : "Place : Lausanne - Switzerland",
+        "text" : 
+        [
+            "One year pre-learning to see find our way",
+            "There was different jobs that we could chose",
+            "Polymechanic, IT, Cabinetmaker, Electronic",
+            "The year was split into 3 big periods",
+            "The first period is composed of 4 stages",
+            "Integration in different jobs : Chose job for each 4 stages to do and learn the bases of these",
+            "The second period is a common project in all the class using all the different jobs to make a big project",
+            "The last period is a personal project in the job selected (I did IT)"
+        ]
+    },
     "etml" : 
     {
         "title" : "Fullstack development learning",

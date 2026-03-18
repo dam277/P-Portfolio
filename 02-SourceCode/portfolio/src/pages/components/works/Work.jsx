@@ -89,7 +89,6 @@ function Work({ translations, keyValue, work})
                             <WorkDistinctionImage key={`${index}-${keyValue}`} src={platform.image} alt={platform.name}/>
                         ))}
                     </WorkDistinctionImagesContainer>
-                    
                 </WorkTitleContainer>
                 <WorkDescription>
                     {descriptionTranslations[work.id].map((description, index) => 
@@ -114,7 +113,7 @@ function Work({ translations, keyValue, work})
                                                 -&nbsp;
                                                 {paragraph.includes(eKeyWords.color[1]) ?
                                                 (
-                                                    <ColoredText text={paragraph} color={eKeyWords.color} />
+                                                    <ColoredText text={paragraph}/>
                                                 )
                                                 :
                                                 (

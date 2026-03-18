@@ -21,20 +21,30 @@ const replaceFunctions =
     },
     age : (value) => 
     {
-        const dateMatched = [...value.matchAll(/\{age:(.*?)}/g)];
+        // Get the matched dates
+        const dateMatched = [...value.matchAll(/(\{age:(.*?)})/g)];
+
+        // Check if there is a match
         if(dateMatched.length < 1)
             return value;
 
+        // Set dates
         const today = new Date();
-        const receivedDate = new Date(dateMatched[0][1]);
+        const receivedDate = new Date(dateMatched[0][2]);
+
+        // Set result
         const result = today.getFullYear() - receivedDate.getFullYear();
     
         // Adjust result if birthday hasn't occurred yet this year
         if (today.getMonth() < receivedDate.getMonth() || (today.getMonth() === receivedDate.getMonth() && today.getDate() < receivedDate.getDate())) {
             result--;
         }
+
+        // Set the replace value
+        const replace = dateMatched[0][1]
     
-        return {result : result, replace : value};
+        // Return the object of values
+        return {result : result, replace : replace};
     }
 }
 
@@ -53,9 +63,11 @@ function ReplaceSpecificString(value)
 {
     elementsToReplace.forEach((element) => 
     {
+        // Check if value includes a tag
         if (!value.includes(element.string))
             return;
         
+        // Get the replace and result value to replace the text
         const { replace, result } = element.function(value);
         value = value.toString().replace(replace, result + " ");
     });

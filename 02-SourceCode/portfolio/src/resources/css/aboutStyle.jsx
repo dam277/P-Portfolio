@@ -55,13 +55,8 @@ export const MainImg = styled.img`
     width: 260px;
     border: 2px solid ${colorPalette.main.image.border[0]};
     border-radius: 10px;
-
-    @media (min-width: ${responsive.mobile})  
-    {
-        height: 525px;
-        width: 360px;
-    }
-
+    
+    height: 100%;
 `
 
 export const SocialNetworksContainer = styled.section`

@@ -40,7 +40,10 @@ import { Text, Button } from "../../../resources/css/mainStyle";
 //#endregion
 
 //#region - Import Images
-import smallPortrait from "../../../resources/images/about/smallPortait.png"
+import smallPortrait from "../../../resources/images/about/smallPortrait.png"
+import eKeyWords from "../../../resources/datas/enums/eKeyWords";
+import ColoredText from "../../components/smallElements/ColoredText";
+import ReplaceSpecificString from "../../../utils/globals/replaceSpecificString";
 //#endregion
 
 /**
@@ -65,9 +68,17 @@ function About()
                     {translations.presentation.map((content, index) => 
                     (
                         <p key={`presentation-${index}`}>
-                            <Text setResponsive={true} size="18" color={content.color}>
-                                {content.text}
-                            </Text>
+                            {content.text.includes(eKeyWords.color[1]) ?
+                            (
+                                <ColoredText text={ReplaceSpecificString(content.text)}/>
+                            )
+                            :
+                            (
+                                <Text setResponsive={true} size="18">
+                                    {ReplaceSpecificString(content.text)}
+                                </Text>
+                            )}
+
                         </p>
                     ))}
                 </PresentationText>

@@ -31,7 +31,7 @@ import GithubWorks from "../../../resources/datas/githubWorks";
 //#endregion
 
 //#region - Import Styles
-import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, SearchBarSuggestionsContainer, SearchBarSuggestions, SearchBarSuggestion, ProjectRadiosContainer, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
+import { FiltersSection, FiltersLineSection, FiltersRowSection, RowWrapper, SearchBar, SearchBarSuggestionsContainer, SearchBarSuggestions, SearchBarSuggestion, ProjectRadiosContainer, ProjectTypeCards, ProjectTypeLabel, ProjectTypeInput, ProjectTypeContentWrapper, ProjectTypeRadioButton, ProjectTypeContent, ProjectTypeImage, ProjectTypeTitle, LanguagesContainer, LanguageContainer, LanguageLabel, LanguageCheckbox, LanguageImage } from "../../../resources/css/works/filtersStyle";
 import { Text, RadioSection, RadioWrapper, RadioLabel, RadioButton, RadioDesign } from "../../../resources/css/mainStyle";
 //#endregion
 
@@ -61,7 +61,6 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms
 {
     //#region Set states
     const [isSearchBarFocused, setIsearchBarFocused] = useState(false);
-    console.log(isSearchBarFocused);
     //#endregion
 
     //#region Set refs
@@ -165,7 +164,7 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms
                                     <SearchBarSuggestions>
                                         {suggestionList.map((suggestion, index) => 
                                         (
-                                            <SearchBarSuggestion key={`${suggestion.id}-${index}`} id={suggestion.id} onMouseDown={(e) => handleSuggestion(e.target.id)}>{suggestion.name}</SearchBarSuggestion>
+                                            <SearchBarSuggestion key={`suggestion-${suggestion.id}-${index}`} id={suggestion.id} onMouseDown={(e) => handleSuggestion(e.target.id)}>{suggestion.name}</SearchBarSuggestion>
                                         ))}
                                     </SearchBarSuggestions>
                                 </SearchBarSuggestionsContainer>
@@ -175,7 +174,7 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms
                             <RadioSection>
                                 {completionRadioButtons.map((button, index) => 
                                 (
-                                    <RadioWrapper key={`${button.id}-${index}`} checked={completionRadio === button.id}>
+                                    <RadioWrapper key={`completion-${button.id}-${index}`} checked={completionRadio === button.id}>
                                         <RadioLabel htmlFor={button.id}>
                                             <RadioButton type="radio" name="completion" id={button.id} value={button.value} onChange={(e) => handleRadio(e.target.id, e.target.name)} defaultChecked={button.defaultCheck}/>
                                             <RadioDesign checked={completionRadio === button.id} />
@@ -187,7 +186,7 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms
                             <RadioSection>
                                 {typeRadioButtons.map((button, index) => 
                                 (
-                                    <RadioWrapper key={`${button.id}-${index}`} checked={typeRadio === button.id}>
+                                    <RadioWrapper key={`type-${button.id}-${index}`} checked={typeRadio === button.id}>
                                         <RadioLabel htmlFor={button.id}>
                                             <RadioButton type="radio" name="type" id={button.id} value={button.value} onChange={(e) => handleRadio(e.target.id, e.target.name)} defaultChecked={button.defaultCheck}/>
                                             <RadioDesign checked={typeRadio === button.id} />
@@ -204,7 +203,7 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms
                     {/* Type card */}
                     {workPlatforms.map((type, index) =>
                     (
-                        <ProjectTypeLabel key={`${type.id}-${index}`} htmlFor={type.id}>
+                        <ProjectTypeLabel key={`platform-${type.id}-${index}`} htmlFor={type.id}>
                             {/* checkbox input */}
                             <ProjectTypeInput type="checkbox" name="projectType" id={type.id} onChange={(e) => handlePlatform(e.target.id, e.target.checked)} checked={platforms.find((input) => input.id === type.id)?.checked} defaultChecked={workPlatforms.defaultCheck}/>
                             <ProjectTypeContentWrapper checked={platforms.find((input) => input.id === type.id)?.checked}>
@@ -224,13 +223,13 @@ function Filters({translations, searchbar, setSearchbar, platforms, setPlatforms
                     {/* Languages */}
                     {languagesButtons.map((language, index) =>
                     (
-                        <>
-                            <LanguageLabel key={`${language.id}-${index}`}>
+                        <LanguageContainer key={`language-${language.id}-${index}`}>
+                            <LanguageLabel>
                                 <LanguageCheckbox id={language.id} name="languages" type="checkbox" onChange={(e) => handleLanguages(e.target.id, e.target.checked)} checked={languages.find((input) => input.id === language.id)?.checked} defaultChecked={language.defaultCheck}/>
                                 <LanguageImage checked={languages.find((input) => input.id === language.id)?.checked} src={language.image} />
                             </LanguageLabel>
-                            {index === 0 && (<hr />)}
-                        </>
+                            {index === 0 && (<hr key="language-sparator"/>)}
+                        </LanguageContainer>
                     ))}
                 </LanguagesContainer>
             </FiltersLineSection>

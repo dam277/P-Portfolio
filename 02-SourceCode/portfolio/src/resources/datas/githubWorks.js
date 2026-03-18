@@ -31,8 +31,8 @@ const GithubWorks =
             link : "https://dam277.github.io/dam277/",
         },
         download : "",
-        version: "0.9",
-        completion: eCompletionIds.inDevelopment,   // Completion
+        version: "1",
+        completion: eCompletionIds.finished,        // Completion
         type : eTypeIds.projects,                   // Type of work
         platforms :                                 // Platform
         [
@@ -1268,8 +1268,8 @@ const GithubWorks =
         },
         download : "",
         version: "",
-        completion: eCompletionIds.notStarted,      // Completion
-        type : eTypeIds.projects,                   // Type of work
+        completion: eCompletionIds.inDevelopment,    // Completion
+        type : eTypeIds.projects,                    // Type of work
         platforms :                                  // Platform
         [
             {id: ePlatformIds.software, image: ePlatforms.software},
@@ -1301,8 +1301,8 @@ const GithubWorks =
         },
         download : "",
         version: "",
-        completion: eCompletionIds.notStarted,      // Completion
-        type : eTypeIds.courses,                    // Type of work
+        completion: eCompletionIds.inDevelopment,    // Completion
+        type : eTypeIds.courses,                     // Type of work
         platforms :                                  // Platform
         [
             {id: ePlatformIds.software, image: ePlatforms.software},  

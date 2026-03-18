@@ -32,12 +32,12 @@ function ColoredText({ text })
 
     // Return the html elements
     return (
-        textDatas.map(({ color, contentInsideTag, contentOutsideTag }) =>
+        textDatas.map(({ color, contentInsideTag, contentOutsideTag }, index) =>
         (
-            <>
+            <span key={`text-${color}-${index}`}>
                 <Text color={color}>{contentInsideTag}</Text>
                 {contentOutsideTag}
-            </>
+            </span>
             
         ))
     );

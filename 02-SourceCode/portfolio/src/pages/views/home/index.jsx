@@ -60,7 +60,6 @@ function Home()
     const [pageActual, setPageActual] = useState(worksWorkingOn[0].id);        // "Actual" carousel page
     //#endregion
     
-    console.log(worksFinished.find((work) => work.id === pageLast));
     //#region - Other functions
     /**
      * Check if the index is pair
