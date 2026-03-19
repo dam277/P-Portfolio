@@ -49,4 +49,4 @@ Hope you enjoy !
 
 ## 🔗 License & Links
 
-* **Live Project:** [github.io](https://dam277.github.io/dam277/)
+* **Live Project:** [github.io/dam277](https://dam277.github.io/dam277/)
