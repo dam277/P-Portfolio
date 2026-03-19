@@ -1,49 +1,52 @@
-<div align="center">
-    <h1>Portfolio</h1>
-    <i>Hi, welcome to my project, hope you will like it !</i>                        <br />
-    <b> > ENJOY < </b>
-</div>
-<div align="center">
-    <h2>Languages and libraries used for this project</h2>
-    <h3> Languages </h3>
-    <img height="50" src="https://github.com/dam277/dam277/raw/master/src/images/Html.png" />
-    <img height="50" src="https://github.com/dam277/dam277/raw/master/src/images/Css.png" />
-    <img height="50" src="https://github.com/dam277/dam277/raw/master/src/images/Javascript.png" />
-                                                                                     <br />
-    <h3> Databases </h3>
-    -
-                                                                                     <br />
-    <h3> Libraries </h3>
-    <img height="50" src="https://github.com/dam277/dam277/raw/master/src/images/React.png" />
-                                                                                     <br />
-</div>
-<div align="center">
-   <h2 align="center">Table of Contents</h2>
-  
-   [What's the project ?](#the-project)                                              <br />
-   [Features](#features)                                                             <br />
-   [Contributors](#contributors)                                                     <br />
-   [Other links](#other-links)
-</div>
+# 🚀 Portfolio
 
-<div align="center">
+Welcome to my portfolio project coded with Astro framework.
 
-   ## The project
-   The project consists to create my own portfolio of my skill level and tell what about me <br />
-   This portfolio will show you what project i did and what i learned. <br />
-   Every projects have a website who present itself what about and the documentation. This portfolio will have redirection buttons to these other sites.
+Hope you enjoy !
 
-   ## Features
-   What about me <br />
-   My projects <br />
-   My competences / skill level <br />
-   Redirection to the other projects
+---
 
-   ## Contributors
-   | <b> <a href="https://github.com/dam277">Damien Loup</a> </b>       |
-   |:------------------------------------------------------------------:|
-   | <img height="200px" src="https://avatars.githubusercontent.com/u/60733960?v=4" /> |
-   
-   ## Other links
-   <a href="https://dam277.github.io/dam277/">Portfolio</a>                     <br />
-</div>
+## 🛠️ Tech Stack
+
+### Languages
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+### Libraries & Frameworks
+![Astro](https://img.shields.io/badge/astro-%2320232a.svg?style=for-the-badge&logo=astro&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+---
+
+## 📑 Table of Contents
+
+1. [Features](#features)
+2. [Contributors](#contributors)
+3. [License & Links](#license--links)
+
+---
+
+## ✨ Features
+
+* **About me:**
+* **My career path**
+* **My knowledge**
+* **My projects**
+
+---
+
+## 🤝 Contributors
+
+| **[Damien Loup](https://github.com/dam277)** | 
+| :---: | 
+| [![Damien Loup](https://avatars.githubusercontent.com/u/60733960?v=4&s=150)](https://github.com/dam277) |
+| 👑 *Project Creator <br> & Developer* |
+
+---
+
+## 🔗 License & Links
+
+* **Live Project:** [github.io](https://dam277.github.io/dam277/)
